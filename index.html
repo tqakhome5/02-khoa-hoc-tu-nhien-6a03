@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cổng Học Tập Khoa học tự nhiên 6 — Lớp 6A03</title>
-  <meta name="description" content="Cổng học tập tương tác môn Khoa học tự nhiên Lớp 6 (Kết nối tri thức với cuộc sống) dành cho học sinh Lớp 6A03." />
+  <title>KHTN 6 — Lớp 6A03 (Học nhanh 5 phút mỗi bài)</title>
+  <meta name="description" content="Trang học nhanh Khoa học tự nhiên 6 dành cho học sinh Lớp 6A03: chia rõ 3 môn Vật lí, Hoá học, Sinh học." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -20,34 +20,20 @@
     };
   </script>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased selection:bg-emerald-200 dark:selection:bg-emerald-800">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
 
-  <!-- Thanh điều hướng trên cùng -->
+  <!-- Thanh trên cùng siêu gọn -->
   <header class="sticky top-0 z-40 border-b border-slate-200/80 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
-      <a href="index.html" class="flex items-center gap-2.5 group">
-        <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-md">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9 3h6" /><path d="M10 3v6.2a2 2 0 0 1-.4 1.2L4.8 17A2 2 0 0 0 6.4 20h11.2a2 2 0 0 0 1.6-3l-4.8-6.6a2 2 0 0 1-.4-1.2V3" />
-            <path d="M7.5 14h9" />
-          </svg>
-        </span>
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-600 text-white text-lg shadow-sm">🔬</span>
         <div>
-          <div class="text-sm font-extrabold tracking-tight text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">Khoa học tự nhiên 6</div>
-          <div class="text-xs text-slate-500 dark:text-slate-400">Lớp 6A03 · Kết nối tri thức</div>
+          <div class="text-sm font-extrabold leading-tight">KHTN 6 · Lớp 6A03</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-400">Học nhanh 5 phút mỗi bài</div>
         </div>
       </a>
-
-      <nav class="hidden md:flex items-center gap-1 text-sm font-medium">
-        <a href="#ban-do" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">🗺️ Bản đồ môn học</a>
-        <a href="#on-tap" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">📚 Ôn tập 10 Chương</a>
-        <a href="#thi-nghiem" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔬 Thí nghiệm &amp; Giải mã</a>
-      </nav>
-
       <div class="flex items-center gap-2">
-        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-          🔗 Chia sẻ link
-        </button>
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
         <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
           <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
         </button>
@@ -55,249 +41,175 @@
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-8 space-y-12 pb-28">
+  <main class="max-w-4xl mx-auto px-4 py-6 space-y-6 pb-24">
 
-    <!-- Hero Banner -->
-    <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 text-white p-6 md:p-10 shadow-xl">
-      <div class="relative z-10 max-w-3xl space-y-4">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur text-xs font-semibold tracking-wide">
-          <span>🧪 Cổng Học Tập Tương Tác</span>
-          <span>·</span>
-          <span>Lớp 6A03</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">
-          Khám phá Khoa học tự nhiên 6 qua Sơ đồ, Thí nghiệm ảo &amp; Quiz trực quan
-        </h1>
-        <p class="text-sm md:text-base text-emerald-50/95 leading-relaxed">
-          Trọn bộ <strong>10 Chương · 55 Bài học</strong> theo SGK <em>Kết nối tri thức với cuộc sống</em> — tích hợp giọng đọc Tiếng Việt, giao diện Sáng/Tối và mô phỏng SVG nhẹ mượt trên cả điện thoại lẫn máy tính.
-        </p>
-        <div class="flex flex-wrap items-center gap-3 pt-1">
-          <a href="#ban-do" class="px-4 py-2.5 rounded-xl bg-white text-emerald-700 font-bold text-sm shadow hover:bg-emerald-50 transition">
-            🗺️ Xem Bản đồ Môn học
-          </a>
-          <button type="button" onclick="startTTS('hero-intro', 'Giới thiệu Cổng học tập KHTN 6', 'Chào mừng các bạn học sinh lớp 6A03 đến với Cổng học tập môn Khoa học tự nhiên 6, bộ sách Kết nối tri thức với cuộc sống. Tại đây có đầy đủ 10 chương với 55 bài học, bản đồ tổng quan, bài ôn tập và thí nghiệm trực quan giúp học nhanh, hiểu sâu và nhớ lâu.')" class="px-4 py-2.5 rounded-xl bg-emerald-800/50 hover:bg-emerald-800/70 border border-white/25 text-white font-semibold text-sm transition">
-            🔊 Nghe giới thiệu
-          </button>
-        </div>
-      </div>
-
-      <!-- Hình trang trí SVG nhẹ -->
-      <svg class="hidden lg:block absolute right-6 bottom-4 w-56 h-56 opacity-20 pointer-events-none" viewBox="0 0 200 200" fill="none" aria-hidden="true">
-        <circle cx="100" cy="100" r="80" stroke="white" stroke-width="2" stroke-dasharray="6 6" />
-        <ellipse cx="100" cy="100" rx="80" ry="30" stroke="white" stroke-width="2" transform="rotate(35 100 100)" />
-        <ellipse cx="100" cy="100" rx="80" ry="30" stroke="white" stroke-width="2" transform="rotate(-35 100 100)" />
-        <circle cx="100" cy="100" r="14" fill="white" />
-        <circle cx="165" cy="100" r="6" fill="white" />
-        <circle cx="52" cy="54" r="5" fill="white" />
-      </svg>
+    <!-- Lời chào ngắn gọn cho học sinh 11 tuổi -->
+    <section class="rounded-3xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white p-6 shadow-md">
+      <h1 class="text-2xl md:text-3xl font-extrabold">Chào bạn lớp 6A03! 👋</h1>
+      <p class="text-sm md:text-base text-emerald-50 mt-1.5">
+        Chọn 1 trong 3 môn bên dưới để mở đúng bài học hôm nay. Mỗi bài chỉ cần <strong>5 phút</strong>: đọc ngắn, bấm thử hình vẽ, rồi làm 5 câu kiếm sao ⭐!
+      </p>
     </section>
 
-    <!-- KHU VỰC 1: BẢN ĐỒ TỔNG QUAN MÔN KHTN 6 -->
-    <section id="ban-do" class="space-y-5 scroll-mt-20">
-      <div class="flex flex-wrap items-end justify-between gap-2">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Khu vực 01</span>
-          <h2 class="text-2xl font-extrabold mt-0.5">🗺️ Bản đồ Tổng quan môn KHTN 6</h2>
-        </div>
-        <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300">
-          4 Mạch kiến thức · 10 Chương · 55 Bài
-        </span>
+    <!-- 3 NÚT CHỌN MÔN TO, RÕ -->
+    <section aria-label="Chọn môn học">
+      <div class="grid grid-cols-3 gap-3">
+        <button id="tab-hoa-hoc" type="button" onclick="selectSubject('hoa-hoc')" class="subject-tab rounded-2xl p-4 text-left border-2 transition focus:outline-none">
+          <div class="text-2xl md:text-3xl">🧪</div>
+          <div class="font-extrabold text-sm md:text-base mt-1.5">Hoá học</div>
+          <div class="text-[11px] md:text-xs opacity-80 mt-0.5">Chất &amp; Tách chất</div>
+        </button>
+
+        <button id="tab-vat-li" type="button" onclick="selectSubject('vat-li')" class="subject-tab rounded-2xl p-4 text-left border-2 transition focus:outline-none">
+          <div class="text-2xl md:text-3xl">⚡</div>
+          <div class="font-extrabold text-sm md:text-base mt-1.5">Vật lí</div>
+          <div class="text-[11px] md:text-xs opacity-80 mt-0.5">Đo, Lực &amp; Bầu trời</div>
+        </button>
+
+        <button id="tab-sinh-hoc" type="button" onclick="selectSubject('sinh-hoc')" class="subject-tab rounded-2xl p-4 text-left border-2 transition focus:outline-none">
+          <div class="text-2xl md:text-3xl">🌿</div>
+          <div class="font-extrabold text-sm md:text-base mt-1.5">Sinh học</div>
+          <div class="text-[11px] md:text-xs opacity-80 mt-0.5">Tế bào, Cây &amp; Con vật</div>
+        </button>
+      </div>
+    </section>
+
+    <!-- DANH SÁCH BÀI HỌC: HOÁ HỌC -->
+    <section id="panel-hoa-hoc" class="subject-panel space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-extrabold text-sky-700 dark:text-sky-400">🧪 Môn Hoá học (9 bài)</h2>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300">Đã có 1/9 bài</span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-emerald-400 dark:hover:border-emerald-600 transition flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="text-2xl">📏</span>
-              <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Chương I</span>
+      <!-- Bài đã sẵn sàng -->
+      <a href="hoa-bai-10-cac-the-cua-chat.html" class="block rounded-2xl p-5 bg-white dark:bg-slate-900 border-2 border-sky-400 dark:border-sky-600 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="space-y-1">
+            <div class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 dark:text-sky-400">
+              <span>Bài 10</span><span>·</span><span>⏱️ 5 phút</span><span>·</span><span>🎮 Có thí nghiệm kéo nhiệt độ</span>
             </div>
-            <h3 class="font-bold text-base mt-3">Mở đầu &amp; Đo lường</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">An toàn phòng thực hành, kính lúp, kính hiển vi và đo chiều dài, khối lượng, thời gian, nhiệt độ.</p>
+            <h3 class="text-base md:text-lg font-extrabold text-slate-900 dark:text-white">Các thể của chất và sự chuyển thể</h3>
+            <p class="text-xs md:text-sm text-slate-600 dark:text-slate-400">Rắn – Lỏng – Khí khác nhau thế nào? Kéo nhiệt độ xem đá tan, nước sôi và làm 5 câu kiếm sao!</p>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-500">8 bài (Bài 1–8)</span>
-            <span class="font-semibold text-amber-600 dark:text-amber-400">Sắp ra mắt</span>
-          </div>
+          <span class="shrink-0 px-4 py-2.5 rounded-xl bg-sky-600 text-white text-sm font-bold shadow-sm">Học ngay ▶</span>
         </div>
+      </a>
 
-        <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-sky-400 dark:hover:border-sky-600 transition flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="text-2xl">⚗️</span>
-              <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Chương II–IV</span>
-            </div>
-            <h3 class="font-bold text-base mt-3">Chất, Vật liệu &amp; Hỗn hợp</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">Các thể của chất, Oxygen &amp; Không khí, vật liệu–nhiên liệu–lương thực và kỹ thuật tách chất.</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-500">9 bài (Bài 9–17)</span>
-            <span class="font-semibold text-amber-600 dark:text-amber-400">Sắp ra mắt</span>
-          </div>
-        </div>
+      <!-- Các bài còn lại xếp gọn trong hộp đóng/mở -->
+      <details class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-4">
+        <summary class="cursor-pointer text-sm font-bold text-slate-600 dark:text-slate-300 select-none">
+          📋 Xem các bài Hoá học sắp lên sóng (8 bài)
+        </summary>
+        <ul class="mt-3 space-y-2 text-sm text-slate-500 dark:text-slate-400 pl-1">
+          <li>• Bài 9: Sự đa dạng của chất</li>
+          <li>• Bài 11: Oxygen. Không khí</li>
+          <li>• Bài 12: Một số vật liệu</li>
+          <li>• Bài 13: Một số nguyên liệu</li>
+          <li>• Bài 14: Một số nhiên liệu</li>
+          <li>• Bài 15: Một số lương thực, thực phẩm</li>
+          <li>• Bài 16: Hỗn hợp các chất</li>
+          <li>• Bài 17: Tách chất khỏi hỗn hợp</li>
+        </ul>
+      </details>
+    </section>
 
-        <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-lime-400 dark:hover:border-lime-600 transition flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="text-2xl">🧬</span>
-              <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Chương V–VII</span>
-            </div>
-            <h3 class="font-bold text-base mt-3">Tế bào &amp; Thế giới sống</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">Cấu tạo tế bào, cơ thể đơn bào–đa bào, khoá lưỡng phân, vi khuẩn, virus, nấm, thực vật &amp; động vật.</p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-500">22 bài (Bài 18–39)</span>
-            <span class="font-semibold text-amber-600 dark:text-amber-400">Sắp ra mắt</span>
-          </div>
-        </div>
+    <!-- DANH SÁCH BÀI HỌC: VẬT LÍ -->
+    <section id="panel-vat-li" class="subject-panel hidden space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-extrabold text-amber-600 dark:text-amber-400">⚡ Môn Vật lí (20 bài)</h2>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">Đang chuẩn bị</span>
+      </div>
 
-        <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-indigo-400 dark:hover:border-indigo-600 transition flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="text-2xl">🪐</span>
-              <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Chương VIII–X</span>
-            </div>
-            <h3 class="font-bold text-base mt-3">Lực, Năng lượng &amp; Vũ trụ</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">Biểu diễn lực, lò xo, ma sát, chuyển hoá năng lượng, Mặt Trời, Mặt Trăng, Hệ Mặt Trời &amp; Ngân Hà.</p>
+      <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm text-slate-600 dark:text-slate-400 space-y-3">
+        <p class="font-semibold text-slate-800 dark:text-slate-200">Các nhóm bài nhỏ sắp ra mắt trong môn Vật lí:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+            <div class="font-bold text-slate-800 dark:text-slate-200">📏 Đo lường (Bài 5–8)</div>
+            <div class="mt-1">Đo chiều dài, khối lượng, thời gian, nhiệt độ</div>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-500">16 bài (Bài 40–55)</span>
-            <span class="font-semibold text-amber-600 dark:text-amber-400">Sắp ra mắt</span>
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+            <div class="font-bold text-slate-800 dark:text-slate-200">🧲 Lực trong đời sống (Bài 40–45)</div>
+            <div class="mt-1">Lực là gì, lò xo, trọng lượng, lực ma sát, lực cản</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+            <div class="font-bold text-slate-800 dark:text-slate-200">🔋 Năng lượng (Bài 46–51)</div>
+            <div class="mt-1">Các dạng năng lượng, chuyển hoá &amp; tiết kiệm</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+            <div class="font-bold text-slate-800 dark:text-slate-200">🌕 Trái Đất &amp; Bầu trời (Bài 52–55)</div>
+            <div class="mt-1">Mặt Trời, Mặt Trăng, Hệ Mặt Trời &amp; Ngân Hà</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- KHU VỰC 2: ÔN TẬP THEO CHỦ ĐỀ / CHƯƠNG -->
-    <section id="on-tap" class="space-y-5 scroll-mt-20">
-      <div>
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Khu vực 02</span>
-        <h2 class="text-2xl font-extrabold mt-0.5">📚 Ôn tập theo Chủ đề / Chương</h2>
+    <!-- DANH SÁCH BÀI HỌC: SINH HỌC -->
+    <section id="panel-sinh-hoc" class="subject-panel hidden space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-extrabold text-emerald-700 dark:text-emerald-400">🌿 Môn Sinh học (24 bài)</h2>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300">Đang chuẩn bị</span>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <article class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start justify-between gap-3">
-          <div>
-            <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Chương I · Bài 1–8</div>
-            <h3 class="font-bold text-sm mt-1">Mở đầu về Khoa học tự nhiên</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">An toàn, kính hiển vi, đo chiều dài, khối lượng, thời gian, nhiệt độ.</p>
+      <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm text-slate-600 dark:text-slate-400 space-y-3">
+        <p class="font-semibold text-slate-800 dark:text-slate-200">Các nhóm bài nhỏ sắp ra mắt trong môn Sinh học:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+            <div class="font-bold text-slate-800 dark:text-slate-200">🔬 Kính lúp &amp; Kính hiển vi (Bài 3–4)</div>
+            <div class="mt-1">Cách dùng kính để nhìn những thứ siêu nhỏ</div>
           </div>
-          <span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500">Sắp ra mắt</span>
-        </article>
-
-        <article class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start justify-between gap-3">
-          <div>
-            <div class="text-xs font-bold text-sky-600 dark:text-sky-400">Chương II · Bài 9–11</div>
-            <h3 class="font-bold text-sm mt-1">Chất quanh ta</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Sự đa dạng của chất, các thể &amp; chuyển thể, Oxygen và Không khí.</p>
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+            <div class="font-bold text-slate-800 dark:text-slate-200">🧬 Tế bào &amp; Cơ thể (Bài 18–24)</div>
+            <div class="mt-1">Cấu tạo tế bào, lớn lên, sinh sản, đơn bào &amp; đa bào</div>
           </div>
-          <span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500">Sắp ra mắt</span>
-        </article>
-
-        <article class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start justify-between gap-3">
-          <div>
-            <div class="text-xs font-bold text-sky-600 dark:text-sky-400">Chương III · Bài 12–15</div>
-            <h3 class="font-bold text-sm mt-1">Vật liệu, Nguyên liệu, Nhiên liệu, Lương thực</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Tính chất, ứng dụng và sử dụng an toàn, hiệu quả, bền vững.</p>
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 sm:col-span-2">
+            <div class="font-bold text-slate-800 dark:text-slate-200">🦋 Thế giới sống muôn màu (Bài 25–39)</div>
+            <div class="mt-1">Vi khuẩn, làm sữa chua, virus, nấm, thực vật, động vật &amp; bảo vệ thiên nhiên</div>
           </div>
-          <span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500">Sắp ra mắt</span>
-        </article>
-
-        <article class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start justify-between gap-3">
-          <div>
-            <div class="text-xs font-bold text-sky-600 dark:text-sky-400">Chương IV · Bài 16–17</div>
-            <h3 class="font-bold text-sm mt-1">Hỗn hợp &amp; Tách chất</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Dung dịch, huyền phù, nhũ tương; lọc, cô cạn, chiết tách chất.</p>
-          </div>
-          <span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500">Sắp ra mắt</span>
-        </article>
-
-        <article class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start justify-between gap-3">
-          <div>
-            <div class="text-xs font-bold text-lime-600 dark:text-lime-400">Chương V · Bài 18–21</div>
-            <h3 class="font-bold text-sm mt-1">Tế bào</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Đơn vị cơ bản của sự sống, cấu tạo, sự lớn lên và sinh sản tế bào.</p>
-          </div>
-          <span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500">Sắp ra mắt</span>
-        </article>
-
-        <article class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start justify-between gap-3">
-          <div>
-            <div class="text-xs font-bold text-lime-600 dark:text-lime-400">Chương VI · Bài 22–24</div>
-            <h3 class="font-bold text-sm mt-1">Từ tế bào đến cơ thể</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Cơ thể đơn bào, đa bào và các cấp độ tổ chức cơ thể.</p>
-          </div>
-          <span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500">Sắp ra mắt</span>
-        </article>
-
-        <article class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start justify-between gap-3">
-          <div>
-            <div class="text-xs font-bold text-lime-600 dark:text-lime-400">Chương VII · Bài 25–39</div>
-            <h3 class="font-bold text-sm mt-1">Đa dạng thế giới sống</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Phân loại, khoá lưỡng phân, vi khuẩn, virus, nấm, thực vật, động vật.</p>
-          </div>
-          <span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500">Sắp ra mắt</span>
-        </article>
-
-        <article class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start justify-between gap-3">
-          <div>
-            <div class="text-xs font-bold text-indigo-600 dark:text-indigo-400">Chương VIII · Bài 40–45</div>
-            <h3 class="font-bold text-sm mt-1">Lực trong đời sống</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Biểu diễn lực, biến dạng lò xo, trọng lượng, ma sát và lực cản.</p>
-          </div>
-          <span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500">Sắp ra mắt</span>
-        </article>
-
-        <article class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-start justify-between gap-3">
-          <div>
-            <div class="text-xs font-bold text-indigo-600 dark:text-indigo-400">Chương IX &amp; X · Bài 46–55</div>
-            <h3 class="font-bold text-sm mt-1">Năng lượng · Trái Đất &amp; Bầu trời</h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Chuyển hoá năng lượng, năng lượng tái tạo, Mặt Trăng, Hệ Mặt Trời &amp; Ngân Hà.</p>
-          </div>
-          <span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500">Sắp ra mắt</span>
-        </article>
-      </div>
-    </section>
-
-    <!-- KHU VỰC 3: CHUYÊN ĐỀ GIẢI MÃ & THÍ NGHIỆM TRỰC QUAN -->
-    <section id="thi-nghiem" class="space-y-5 scroll-mt-20">
-      <div>
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Khu vực 03</span>
-        <h2 class="text-2xl font-extrabold mt-0.5">🔬 Chuyên đề Giải mã &amp; Thí nghiệm Trực quan</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="rounded-2xl p-5 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-900 dark:to-slate-900 border border-emerald-200/70 dark:border-slate-800">
-          <div class="text-2xl">🔬</div>
-          <h3 class="font-bold text-base mt-2">Phòng Thí Nghiệm Kính Hiển Vi &amp; Tế Bào</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">So sánh tế bào nhân sơ, nhân thực, động vật và thực vật bằng mô hình SVG tương tác.</p>
-          <div class="mt-4 inline-block text-xs font-semibold px-2.5 py-1 rounded-lg bg-white/80 dark:bg-slate-800 text-amber-600 dark:text-amber-400">⏳ Sắp ra mắt</div>
-        </div>
-
-        <div class="rounded-2xl p-5 bg-gradient-to-br from-sky-50 to-cyan-50 dark:from-slate-900 dark:to-slate-900 border border-sky-200/70 dark:border-slate-800">
-          <div class="text-2xl">🧪</div>
-          <h3 class="font-bold text-base mt-2">Mô Phỏng Chuyển Thể &amp; Tách Chất</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">Thay đổi nhiệt độ quan sát nóng chảy, sôi, ngưng tụ và thực hành lọc – chiết – cô cạn.</p>
-          <div class="mt-4 inline-block text-xs font-semibold px-2.5 py-1 rounded-lg bg-white/80 dark:bg-slate-800 text-amber-600 dark:text-amber-400">⏳ Sắp ra mắt</div>
-        </div>
-
-        <div class="rounded-2xl p-5 bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-slate-900 dark:to-slate-900 border border-indigo-200/70 dark:border-slate-800">
-          <div class="text-2xl">🌕</div>
-          <h3 class="font-bold text-base mt-2">Giải Mã Lực, Năng Lượng &amp; Các Pha Mặt Trăng</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">Thí nghiệm lực kế – lò xo và mô phỏng quỹ đạo Trái Đất – Mặt Trăng quanh Mặt Trời.</p>
-          <div class="mt-4 inline-block text-xs font-semibold px-2.5 py-1 rounded-lg bg-white/80 dark:bg-slate-800 text-amber-600 dark:text-amber-400">⏳ Sắp ra mắt</div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-6 text-center text-xs text-slate-500 dark:text-slate-400">
-    <div class="max-w-6xl mx-auto px-4 space-y-1">
-      <p class="font-semibold text-slate-700 dark:text-slate-300">Cổng Học Tập Khoa học tự nhiên 6 — Lớp 6A03</p>
-      <p>Học liệu tương tác theo chương trình GDPT 2018 (Kết nối tri thức với cuộc sống) · Xuất bản trên GitHub Pages</p>
-    </div>
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-5 text-center text-xs text-slate-500 dark:text-slate-400">
+    Khoa học tự nhiên 6 · Lớp 6A03 · Học vui mỗi ngày
   </footer>
 
+  <script>
+    var TAB_STYLES = {
+      'hoa-hoc': {
+        active: 'border-sky-500 bg-sky-50 dark:bg-sky-950/60 text-sky-800 dark:text-sky-200 shadow-sm',
+        idle: 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-sky-300'
+      },
+      'vat-li': {
+        active: 'border-amber-500 bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-200 shadow-sm',
+        idle: 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-amber-300'
+      },
+      'sinh-hoc': {
+        active: 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200 shadow-sm',
+        idle: 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-emerald-300'
+      }
+    };
+
+    function selectSubject(key) {
+      if (!TAB_STYLES[key]) key = 'hoa-hoc';
+      Object.keys(TAB_STYLES).forEach(function (k) {
+        var btn = document.getElementById('tab-' + k);
+        var panel = document.getElementById('panel-' + k);
+        var isActive = (k === key);
+        if (btn) btn.className = 'subject-tab rounded-2xl p-4 text-left border-2 transition focus:outline-none ' + (isActive ? TAB_STYLES[k].active : TAB_STYLES[k].idle);
+        if (panel) panel.classList.toggle('hidden', !isActive);
+      });
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', '#' + key);
+      }
+    }
+
+    (function initTab() {
+      var hash = (window.location.hash || '').replace('#', '');
+      selectSubject(TAB_STYLES[hash] ? hash : 'hoa-hoc');
+    })();
+  </script>
   <script src="assets/common.js"></script>
 </body>
 </html>

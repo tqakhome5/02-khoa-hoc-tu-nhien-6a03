@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài 10: Các thể của chất và sự chuyển thể — Hoá học 6 (6A03)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] } } }
+    };
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+
+  <!-- Thanh điều hướng gọn -->
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html#hoa-hoc" class="px-3 py-1.5 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300 text-sm font-bold hover:bg-sky-100 transition">← Môn Hoá học</a>
+      <div class="flex items-center gap-2">
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6 space-y-6 pb-28">
+
+    <!-- Tiêu đề bài học -->
+    <section class="rounded-3xl p-6 bg-gradient-to-r from-sky-500 to-cyan-600 text-white shadow-md">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">🧪 Hoá học · Bài 10 · 5 phút</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Các thể của chất &amp; Sự chuyển thể</h1>
+          <p class="text-sm text-sky-50 mt-1">Tại sao cục nước đá tan thành nước, đun lên lại thành hơi bay đi mất nhỉ?</p>
+        </div>
+        <button type="button" onclick="startTTS('bai10-summary', 'Tóm tắt Bài 10: Các thể của chất', 'Mọi chất quanh ta thường ở 3 thể: rắn, lỏng và khí. Thể rắn có hình dạng cố định và rất khó nén, như viên đá hay chiếc thìa. Thể lỏng chảy được, mang hình dạng vật chứa, như nước cam trong cốc. Thể khí dễ bị nén và bay lan ra khắp nơi, như mùi nước hoa hay khí trong bóng bay. Khi nóng lên, rắn chuyển thành lỏng gọi là nóng chảy, lỏng chuyển thành khí gọi là hoá hơi. Ngược lại, khi lạnh đi, khí chuyển thành lỏng gọi là ngưng tụ, lỏng chuyển thành rắn gọi là đông đặc. Nhớ nhé: nước nóng chảy và đông đặc ở 0 độ C, sôi ở 100 độ C, còn bay hơi và ngưng tụ xảy ra ở mọi nhiệt độ.')" class="shrink-0 px-4 py-2.5 rounded-xl bg-white text-sky-700 font-bold text-xs md:text-sm shadow hover:bg-sky-50 transition">
+          🔊 Nghe tóm tắt bài
+        </button>
+      </div>
+    </section>
+
+    <!-- BƯỚC 1: HIỂU NHANH TRONG 2 PHÚT -->
+    <section class="space-y-4">
+      <h2 class="text-lg font-extrabold">💡 Bước 1: Hiểu nhanh trong 2 phút</h2>
+
+      <!-- 3 thẻ Rắn - Lỏng - Khí -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="text-2xl">🧊</div>
+          <h3 class="font-extrabold text-base mt-1 text-sky-700 dark:text-sky-400">1. Thể Rắn</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Có <strong>hình dạng cố định</strong>, không tự chảy, <strong>rất khó nén</strong>.</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Ví dụ: viên đá, cái thìa, miếng gỗ.</p>
+        </div>
+
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="text-2xl">🥤</div>
+          <h3 class="font-extrabold text-base mt-1 text-cyan-700 dark:text-cyan-400">2. Thể Lỏng</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1"><strong>Chảy được</strong>, có hình dạng giống cốc/chai đựng nó, <strong>khó nén</strong>.</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Ví dụ: nước uống, dầu ăn, nước cam.</p>
+        </div>
+
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="text-2xl">🎈</div>
+          <h3 class="font-extrabold text-base mt-1 text-indigo-700 dark:text-indigo-400">3. Thể Khí</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 mt-1"><strong>Bay lan ra khắp phòng</strong>, chiếm đầy vật chứa, <strong>dễ bị nén</strong>.</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Ví dụ: khí trong bóng bay, mùi nước hoa.</p>
+        </div>
+      </div>
+
+      <!-- 4 tên chuyển thể cực dễ nhớ -->
+      <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+        <h3 class="font-extrabold text-sm md:text-base">🔄 4 tên gọi "biến hình" của chất (Cực hay ra thi!)</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm">
+          <div class="p-3 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200/70 dark:border-rose-900">
+            <span class="font-extrabold text-rose-700 dark:text-rose-300">🔥 Nóng chảy (Rắn → Lỏng):</span> Que kem chảy, nước đá tan ở <strong>0°C</strong>.
+          </div>
+          <div class="p-3 rounded-xl bg-sky-50 dark:bg-sky-950/40 border border-sky-200/70 dark:border-sky-900">
+            <span class="font-extrabold text-sky-700 dark:text-sky-300">❄️ Đông đặc (Lỏng → Rắn):</span> Làm đá trong tủ lạnh ở <strong>0°C</strong>.
+          </div>
+          <div class="p-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200/70 dark:border-amber-900">
+            <span class="font-extrabold text-amber-700 dark:text-amber-300">♨️ Hoá hơi (Lỏng → Khí):</span> Gồm <strong>bay hơi</strong> (phơi áo khô, ở <em>mọi nhiệt độ</em>) và <strong>sôi</strong> (nồi nước sủi bọt ở <strong>100°C</strong>).
+          </div>
+          <div class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200/70 dark:border-indigo-900">
+            <span class="font-extrabold text-indigo-700 dark:text-indigo-300">💧 Ngưng tụ (Khí → Lỏng):</span> Giọt nước đọng ngoài <strong>cốc trà đá</strong>, hơi nước tạo thành mây (xảy ra ở <em>mọi nhiệt độ</em>).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 2: THỬ CHẠM XEM SAO! (MÔ PHỎNG SVG TƯƠNG TÁC) -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">🎮 Bước 2: Thử kéo nhiệt độ xem nước "biến hình"!</h2>
+        <span id="stateBadge" class="px-3 py-1 rounded-full text-xs font-extrabold bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300">💧 Thể Lỏng · 25°C</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+        <!-- SVG Cốc thí nghiệm & các hạt nước -->
+        <div class="rounded-2xl bg-slate-100 dark:bg-slate-950 p-3 flex justify-center">
+          <svg id="labSvg" viewBox="0 0 320 220" class="w-full max-w-[320px] h-auto" role="img" aria-label="Mô phỏng nước ở các nhiệt độ khác nhau">
+            <!-- Bàn đỡ -->
+            <rect x="20" y="195" width="280" height="10" rx="5" fill="#94a3b8" />
+            <!-- Nhiệt kế bên trái -->
+            <rect x="34" y="34" width="16" height="130" rx="8" fill="#e2e8f0" stroke="#64748b" stroke-width="2" />
+            <circle cx="42" cy="170" r="14" fill="#ef4444" stroke="#64748b" stroke-width="2" />
+            <rect id="thermMercury" x="38" y="110" width="8" height="58" rx="4" fill="#ef4444" />
+            <text id="thermText" x="42" y="24" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">25°C</text>
+
+            <!-- Cốc thuỷ tinh -->
+            <path d="M95 55 L95 182 Q95 192 105 192 L225 192 Q235 192 235 182 L235 55" fill="none" stroke="#64748b" stroke-width="4" stroke-linecap="round" />
+
+            <!-- Nước lỏng trong cốc -->
+            <rect id="liquidFill" x="98" y="115" width="134" height="74" rx="6" fill="#38bdf8" opacity="0.45" />
+
+            <!-- Cục nước đá (hiện khi <= 0°C) -->
+            <g id="iceGroup" opacity="0">
+              <rect x="122" y="128" width="86" height="58" rx="10" fill="#bae6fd" stroke="#0284c7" stroke-width="2.5" />
+              <line x1="136" y1="142" x2="156" y2="142" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+              <line x1="136" y1="152" x2="148" y2="152" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+            </g>
+
+            <!-- Làn hơi nước (hiện khi >= 100°C) -->
+            <g id="steamGroup" opacity="0" stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round">
+              <path d="M130 50 Q122 36 132 22" />
+              <path d="M165 46 Q157 30 167 16" />
+              <path d="M200 50 Q192 36 202 22" />
+            </g>
+
+            <!-- Nhóm các hạt cấu tạo chất (vẽ bằng JS) -->
+            <g id="particlesGroup"></g>
+
+            <!-- Ngọn lửa nhỏ khi đun nóng >= 70°C -->
+            <g id="flameGroup" opacity="0">
+              <path d="M165 196 Q152 208 165 218 Q178 208 165 196 Z" fill="#f97316" />
+              <path d="M165 202 Q159 209 165 215 Q171 209 165 202 Z" fill="#fde047" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- Thanh kéo & Giải thích gần gũi -->
+        <div class="space-y-4">
+          <div>
+            <label for="tempSlider" class="flex items-center justify-between text-sm font-bold">
+              <span>🌡️ Kéo chỉnh nhiệt độ:</span>
+              <span id="tempVal" class="text-lg font-extrabold text-sky-600 dark:text-sky-400">25°C</span>
+            </label>
+            <input id="tempSlider" type="range" min="-10" max="120" value="25" class="w-full mt-2 accent-sky-600 cursor-pointer" />
+            <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+              <span>-10°C (Đông đá)</span>
+              <span>0°C</span>
+              <span>100°C (Sôi)</span>
+              <span>120°C</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <button type="button" onclick="setTemp(-5)" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-200 hover:bg-sky-200 transition">❄️ -5°C (Nước đá)</button>
+            <button type="button" onclick="setTemp(25)" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-cyan-100 dark:bg-cyan-900/50 text-cyan-800 dark:text-cyan-200 hover:bg-cyan-200 transition">💧 25°C (Nước mát)</button>
+            <button type="button" onclick="setTemp(100)" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 hover:bg-amber-200 transition">♨️ 100°C (Đang sôi)</button>
+          </div>
+
+          <div id="tempExplain" class="rounded-2xl p-3.5 bg-slate-50 dark:bg-slate-800/70 text-sm leading-relaxed">
+            Ở <strong>25°C</strong>, nước ở <strong>thể lỏng</strong>. Các hạt nước nằm gần nhau và trượt qua lại nên nước rót vào cốc nào sẽ có hình dạng của cốc đó!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 3: THỬ THÁCH 5 CÂU KIẾM 5 SAO -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">⭐ Bước 3: Thử thách 5 câu (Kiếm 5 sao!)</h2>
+        <div class="flex items-center gap-2">
+          <span id="starScore" class="px-3 py-1 rounded-full text-sm font-extrabold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">⭐ 0 / 5</span>
+          <button type="button" onclick="resetQuiz()" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Làm lại</button>
+        </div>
+      </div>
+
+      <div id="quizContainer" class="space-y-4"></div>
+      <div id="quizFinish" class="hidden rounded-2xl p-4 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-center space-y-1"></div>
+    </section>
+
+  </main>
+
+  <script>
+    /* ===== 1. MÔ PHỎNG NHIỆT ĐỘ & CÁC HẠT NƯỚC ===== */
+    var slider = document.getElementById('tempSlider');
+    var particlesGroup = document.getElementById('particlesGroup');
+    var particleCount = 12;
+    var particles = [];
+
+    for (var i = 0; i < particleCount; i++) {
+      var c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c.setAttribute('r', '5.5');
+      c.setAttribute('fill', '#f97316');
+      c.setAttribute('stroke', '#ffffff');
+      c.setAttribute('stroke-width', '1.2');
+      particlesGroup.appendChild(c);
+      particles.push({ el: c, x: 130 + (i % 4) * 22, y: 140 + Math.floor(i / 4) * 18, vx: (Math.random() - 0.5) * 2, vy: (Math.random() - 0.5) * 2 });
+    }
+
+    var currentTemp = 25;
+
+    function setTemp(val) {
+      slider.value = val;
+      updateTempUI(val);
+    }
+
+    function updateTempUI(t) {
+      currentTemp = parseInt(t, 10);
+      document.getElementById('tempVal').textContent = currentTemp + '°C';
+      document.getElementById('thermText').textContent = currentTemp + '°C';
+
+      // Chiều cao cột thuỷ ngân nhiệt kế
+      var ratio = (currentTemp + 10) / 130;
+      var h = Math.round(16 + ratio * 112);
+      var merc = document.getElementById('thermMercury');
+      merc.setAttribute('y', 168 - h);
+      merc.setAttribute('height', h);
+
+      var ice = document.getElementById('iceGroup');
+      var liq = document.getElementById('liquidFill');
+      var stm = document.getElementById('steamGroup');
+      var flm = document.getElementById('flameGroup');
+      var badge = document.getElementById('stateBadge');
+      var exp = document.getElementById('tempExplain');
+
+      flm.setAttribute('opacity', currentTemp >= 70 ? '1' : '0');
+
+      if (currentTemp < 0) {
+        ice.setAttribute('opacity', '1');
+        liq.setAttribute('opacity', '0');
+        stm.setAttribute('opacity', '0');
+        badge.textContent = '🧊 Thể Rắn (Nước đá) · ' + currentTemp + '°C';
+        exp.innerHTML = 'Dưới <strong>0°C</strong>, nước đông thành <strong>thể rắn (nước đá)</strong>. Các hạt xếp hàng ngay ngắn, chỉ rung nhẹ tại chỗ nên cục đá giữ nguyên hình dạng!';
+      } else if (currentTemp === 0) {
+        ice.setAttribute('opacity', '0.75');
+        liq.setAttribute('opacity', '0.35');
+        stm.setAttribute('opacity', '0');
+        badge.textContent = '❄️ Đang Nóng chảy / Đông đặc · 0°C';
+        exp.innerHTML = 'Đúng <strong>0°C</strong> là mốc <strong>nóng chảy</strong> (đá tan thành nước) và cũng là mốc <strong>đông đặc</strong> (nước đóng thành đá)!';
+      } else if (currentTemp < 100) {
+        ice.setAttribute('opacity', '0');
+        liq.setAttribute('opacity', '0.5');
+        stm.setAttribute('opacity', currentTemp >= 60 ? '0.4' : '0');
+        badge.textContent = '💧 Thể Lỏng · ' + currentTemp + '°C';
+        exp.innerHTML = 'Ở <strong>' + currentTemp + '°C</strong>, nước ở <strong>thể lỏng</strong>. Các hạt trượt lên nhau thoải mái; bề mặt nước vẫn âm thầm <strong>bay hơi</strong> dù chưa sôi.';
+      } else {
+        ice.setAttribute('opacity', '0');
+        liq.setAttribute('opacity', currentTemp === 100 ? '0.35' : '0.12');
+        stm.setAttribute('opacity', '1');
+        badge.textContent = (currentTemp === 100 ? '♨️ Đang Sôi · 100°C' : '☁️ Thể Khí (Hơi nước) · ' + currentTemp + '°C');
+        exp.innerHTML = 'Từ <strong>100°C</strong> trở lên, nước <strong>sôi</strong> mạnh và chuyển sang <strong>thể khí (hơi nước)</strong>. Các hạt bay vèo vèo tự do khắp mọi hướng!';
+      }
+    }
+
+    function animateParticles() {
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        if (currentTemp <= 0) {
+          // Rắn: rung nhẹ quanh hàng cột cố định
+          var gx = 132 + (i % 4) * 22;
+          var gy = 140 + Math.floor(i / 4) * 18;
+          p.x = gx + (Math.random() - 0.5) * 1.6;
+          p.y = gy + (Math.random() - 0.5) * 1.6;
+        } else if (currentTemp < 100) {
+          // Lỏng: trượt chậm trong vùng nước
+          var spd = 0.7 + (currentTemp / 100) * 1.2;
+          p.x += p.vx * spd;
+          p.y += p.vy * spd;
+          if (p.x < 106 || p.x > 224) p.vx *= -1;
+          if (p.y < 122 || p.y > 182) p.vy *= -1;
+          p.x = Math.max(106, Math.min(224, p.x));
+          p.y = Math.max(122, Math.min(182, p.y));
+        } else {
+          // Khí: bay nhanh khắp cốc và bay lên
+          p.x += p.vx * 3.0;
+          p.y += p.vy * 3.0;
+          if (p.x < 106 || p.x > 224) p.vx *= -1;
+          if (p.y < 45 || p.y > 182) p.vy *= -1;
+          p.x = Math.max(106, Math.min(224, p.x));
+          p.y = Math.max(45, Math.min(182, p.y));
+        }
+        p.el.setAttribute('cx', p.x.toFixed(1));
+        p.el.setAttribute('cy', p.y.toFixed(1));
+      }
+      requestAnimationFrame(animateParticles);
+    }
+
+    slider.addEventListener('input', function () { updateTempUI(this.value); });
+    updateTempUI(25);
+    animateParticles();
+
+    /* ===== 2. THỬ THÁCH 5 CÂU KIẾM 5 SAO ===== */
+    var QUESTIONS = [
+      {
+        q: 'Câu 1: Mở lọ nước hoa ở góc phòng, một lát sau cả phòng đều ngửi thấy mùi thơm. Điều này cho thấy chất khí có tính chất gì?',
+        opts: ['Có hình dạng cố định', 'Dễ dàng lan toả ra mọi hướng', 'Rất khó bị nén'],
+        ans: 1,
+        why: 'Chất ở thể khí chuyển động tự do nên mùi thơm lan toả rất nhanh khắp phòng!'
+      },
+      {
+        q: 'Câu 2: Để cốc trà đá trên bàn một lúc, ta thấy có nhiều giọt nước đọng bên ngoài thành cốc. Đó là hiện tượng gì?',
+        opts: ['Sự ngưng tụ', 'Sự nóng chảy', 'Sự đông đặc'],
+        ans: 0,
+        why: 'Hơi nước trong không khí gặp thành cốc lạnh đã chuyển từ thể khí sang thể lỏng — gọi là sự ngưng tụ!'
+      },
+      {
+        q: 'Câu 3: Nước đá bắt đầu nóng chảy và nước lỏng bắt đầu đông đặc ở cùng nhiệt độ nào?',
+        opts: ['100°C', '25°C', '0°C'],
+        ans: 2,
+        why: 'Chuẩn luôn! Nước nóng chảy và đông đặc cùng ở mốc 0°C.'
+      },
+      {
+        q: 'Câu 4: Khi phơi quần áo ướt ngoài nắng gió, nước trong áo biến mất nhờ quá trình nào?',
+        opts: ['Sự sôi', 'Sự bay hơi', 'Sự đông đặc'],
+        ans: 1,
+        why: 'Nước tự hoá hơi trên bề mặt quần áo ở nhiệt độ thường gọi là sự bay hơi (không cần đun đến 100°C).'
+      },
+      {
+        q: 'Câu 5: Chọn câu ĐÚNG về sự bay hơi và sự sôi:',
+        opts: ['Cả hai chỉ xảy ra ở 100°C', 'Bay hơi xảy ra ở mọi nhiệt độ, còn sôi chỉ xảy ra ở nhiệt độ sôi', 'Sôi xảy ra ở mọi nhiệt độ'],
+        ans: 1,
+        why: 'Chính xác! Bay hơi và ngưng tụ xảy ra ở mọi nhiệt độ, còn sự sôi chỉ xảy ra ở nhiệt độ sôi (100°C với nước).'
+      }
+    ];
+
+    var answered = {};
+    var stars = 0;
+
+    function renderQuiz() {
+      var box = document.getElementById('quizContainer');
+      box.innerHTML = '';
+      QUESTIONS.forEach(function (item, idx) {
+        var card = document.createElement('div');
+        card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-2.5';
+        var html = '<div class="font-bold text-sm">' + item.q + '</div><div class="grid grid-cols-1 gap-2">';
+        item.opts.forEach(function (opt, oIdx) {
+          html += '<button type="button" id="q-' + idx + '-o-' + oIdx + '" onclick="pickAnswer(' + idx + ',' + oIdx + ')" class="text-left px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-400 transition">' + opt + '</button>';
+        });
+        html += '</div><div id="fb-' + idx + '" class="hidden text-xs font-semibold pt-1"></div>';
+        card.innerHTML = html;
+        box.appendChild(card);
+      });
+    }
+
+    function pickAnswer(qIdx, oIdx) {
+      if (answered[qIdx]) return;
+      answered[qIdx] = true;
+      var item = QUESTIONS[qIdx];
+      var isRight = (oIdx === item.ans);
+      var fb = document.getElementById('fb-' + qIdx);
+      fb.classList.remove('hidden');
+
+      item.opts.forEach(function (_, i) {
+        var b = document.getElementById('q-' + qIdx + '-o-' + i);
+        b.disabled = true;
+        if (i === item.ans) {
+          b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm font-bold border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200';
+        } else if (i === oIdx && !isRight) {
+          b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm border-2 border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300';
+        }
+      });
+
+      if (isRight) {
+        stars += 1;
+        fb.className = 'text-xs font-semibold pt-1 text-emerald-700 dark:text-emerald-400';
+        fb.textContent = '🌟 Đúng rồi (+1 sao)! ' + item.why;
+      } else {
+        fb.className = 'text-xs font-semibold pt-1 text-rose-600 dark:text-rose-400';
+        fb.textContent = '💡 Chưa đúng mất rồi! ' + item.why;
+      }
+
+      document.getElementById('starScore').textContent = '⭐ ' + stars + ' / ' + QUESTIONS.length;
+
+      if (Object.keys(answered).length === QUESTIONS.length) {
+        var fin = document.getElementById('quizFinish');
+        fin.classList.remove('hidden');
+        var msg = stars === 5 ? '🏆 Xuất sắc! Bạn giành trọn 5/5 sao — hiểu bài 10 chắc như đinh đóng cột rồi!'
+          : stars >= 3 ? '👏 Khá lắm! Bạn đạt ' + stars + '/5 sao — bấm "Làm lại" để săn đủ 5 sao nhé!'
+          : '💪 Cố lên nhé! Đọc lại Bước 1 rồi bấm "Làm lại" là lấy đủ 5 sao ngay!';
+        fin.innerHTML = '<div class="font-extrabold text-base text-emerald-800 dark:text-emerald-200">' + msg + '</div>';
+      }
+    }
+
+    function resetQuiz() {
+      answered = {};
+      stars = 0;
+      document.getElementById('starScore').textContent = '⭐ 0 / 5';
+      document.getElementById('quizFinish').classList.add('hidden');
+      renderQuiz();
+    }
+
+    renderQuiz();
+  </script>
+  <script src="assets/common.js"></script>
+</body>
+</html>

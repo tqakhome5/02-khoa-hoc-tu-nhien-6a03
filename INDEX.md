@@ -7,12 +7,13 @@
 
 ## DANH MỤC SẢN PHẨM ĐẦU RA (DELIVERABLES REGISTRY)
 
-| STT | Tên sản phẩm / Hạ tầng | File nguồn | Trạng thái | Ghi chú |
-| :---: | :--- | :--- | :---: | :--- |
-| 1 | Cổng Học Tập KHTN 6 (Trang chủ) | [index.html](index.html) | ✅ Sẵn sàng | 3 khu vực: Bản đồ, Ôn tập 10 Chương, Thí nghiệm trực quan |
-| 2 | Thư viện dùng chung (Dark Mode + Chunked TTS + Share) | [assets/common.js](assets/common.js) | ✅ Sẵn sàng | Key `khtn6_theme`, TTS `< 170` ký tự, `#ttsBar` tự chèn |
-| 3 | Quy tắc Fast-Path & GitHub Issues | [GEMINI.md](GEMINI.md) | ✅ Sẵn sàng | 6 quy tắc tối ưu tốc độ, tiết kiệm token & xuất bản |
-| 4 | Skill khung bài giảng trực quan | [SKILL.md](.agents/skills/bai-giang-truc-quan/SKILL.md) | ✅ Sẵn sàng | Boilerplate ~45 dòng, CẤM Base64, ưu tiên SVG tương tác |
+| STT | Phân môn | Tên sản phẩm / Bài học | File nguồn | Trạng thái | Ghi chú |
+| :---: | :---: | :--- | :--- | :---: | :--- |
+| 1 | Hạ tầng | Cổng Học Tập KHTN 6 (3 môn: Hoá · Lí · Sinh) | [index.html](index.html) | ✅ Sẵn sàng | Giao diện tối giản cho HS lớp 6 (2015) |
+| 2 | Hạ tầng | Thư viện dùng chung (Dark Mode + TTS + Share) | [assets/common.js](assets/common.js) | ✅ Sẵn sàng | Key `khtn6_theme`, TTS `< 170` ký tự, `#ttsBar` |
+| 3 | Hạ tầng | Quy tắc Fast-Path & GitHub Issues | [GEMINI.md](GEMINI.md) | ✅ Sẵn sàng | 6 quy tắc tối ưu tốc độ & xuất bản |
+| 4 | Hạ tầng | Skill khung bài giảng 5 phút lớp 6 | [SKILL.md](.agents/skills/bai-giang-truc-quan/SKILL.md) | ✅ Sẵn sàng | 3 bước 5 phút, CẤM Base64, SVG tương tác |
+| 5 | **Hoá học** | **Bài 10: Các thể của chất và sự chuyển thể** | [hoa-bai-10-cac-the-cua-chat.html](hoa-bai-10-cac-the-cua-chat.html) | ✅ Sẵn sàng | Mô phỏng nhiệt độ -10°C→120°C + Quiz 5 sao |
 
 ### CODE MAP (Định vị mã nguồn cho các file HTML tổng hợp > 500 dòng)
 
