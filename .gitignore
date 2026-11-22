@@ -1,0 +1,35 @@
+# ==============================================================================
+# BẢO VỆ BẢN QUYỀN SGK — CHẶN TUYỆT ĐỐI TƯ LIỆU GỐC TRÊN KHO PUBLIC
+# Chỉ đẩy sản phẩm tự thiết kế: index.html, *.html, assets/, GEMINI.md,
+# INDEX.md, .agents/, .gitignore
+# ==============================================================================
+
+# 1. Chặn file PDF gốc SGK
+*.pdf
+05-sgk-Khoa-Học-Tự-Nhiên-6.pdf
+
+# 2. Chặn thư mục ảnh trang gốc SGK (198 trang)
+pages/
+
+# 3. Chặn toàn bộ thư mục & file .md trích xuất nội dung SGK
+00-mo-dau/
+chuong-01/
+chuong-02/
+chuong-03/
+chuong-04/
+chuong-05/
+chuong-06/
+chuong-07/
+chuong-08/
+chuong-09/
+chuong-10/
+chuong-*/
+phu-luc/
+
+# 4. File rác hệ thống & tạm thời
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+*.log
