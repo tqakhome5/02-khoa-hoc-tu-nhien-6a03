@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài 14: Một số nhiên liệu — Hoá học 6 (6A03)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] } } } };</script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html#hoa-hoc" class="px-3 py-1.5 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300 text-sm font-bold hover:bg-sky-100 transition">← Môn Hoá học</a>
+      <div class="flex items-center gap-2">
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6 space-y-6 pb-28">
+    <section class="rounded-3xl p-6 bg-gradient-to-r from-orange-500 to-rose-600 text-white shadow-md">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">🧪 Hoá học · Bài 14 · SGK tr. 50–51 · 5 phút</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Một số nhiên liệu</h1>
+          <p class="text-sm text-orange-50 mt-1">Than đá, xăng dầu, khí gas đều là nhiên liệu. Nếu chúng cạn kiệt thì con người sẽ dùng gì thay thế?</p>
+        </div>
+        <button type="button" onclick="startTTS('bai14', 'Tóm tắt Bài 14: Một số nhiên liệu', 'Nhiên liệu là những chất cháy được và khi cháy toả nhiều nhiệt, dùng để nấu ăn, sưởi ấm, chạy xe và phát điện. Nhiên liệu có 3 thể: rắn như củi và than đá; lỏng như xăng và dầu hoả; khí như khí gas và khí thiên nhiên. Hầu hết nhiên liệu nhẹ hơn nước và không tan trong nước. Than đá, dầu mỏ, khí thiên nhiên gọi là nhiên liệu hoá thạch, mất hàng triệu năm mới tạo thành nên sẽ cạn kiệt dần. Ta cần dùng tiết kiệm và chuyển sang năng lượng tái tạo như năng lượng mặt trời, gió, thuỷ điện.')" class="shrink-0 px-4 py-2.5 rounded-xl bg-white text-orange-700 font-bold text-xs md:text-sm shadow hover:bg-orange-50 transition">🔊 Nghe tóm tắt</button>
+      </div>
+    </section>
+
+    <!-- BƯỚC 1 -->
+    <section class="space-y-4">
+      <h2 class="text-lg font-extrabold">💡 Bước 1: Hiểu nhanh trong 2 phút</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="text-2xl">🔥</div>
+          <h3 class="font-extrabold mt-1 text-orange-600 dark:text-orange-400">1. Nhiên liệu là gì?</h3>
+          <p class="text-xs mt-1">Là chất <strong>cháy được và toả nhiều nhiệt</strong>: rắn (củi, than đá), lỏng (xăng, dầu hoả), khí (gas, khí thiên nhiên).</p>
+          <p class="text-xs text-slate-500 mt-1.5">👉 Hầu hết <strong>nhẹ hơn nước</strong> (trừ than đá) &amp; <strong>không tan trong nước</strong> (trừ cồn).</p>
+        </div>
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="text-2xl">⛽</div>
+          <h3 class="font-extrabold mt-1 text-rose-600 dark:text-rose-400">2. Nhiên liệu hoá thạch</h3>
+          <p class="text-xs mt-1"><strong>Than đá</strong> (nhiều ở Quảng Ninh, gây ô nhiễm nhất), <strong>dầu mỏ &amp; khí thiên nhiên</strong> (mỏ Bạch Hổ, Lan Tây ở biển Đông).</p>
+          <p class="text-xs text-slate-500 mt-1.5">👉 Mất hàng triệu năm tạo thành → <strong>không tái tạo</strong>, sẽ cạn dần!</p>
+        </div>
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="text-2xl">☀️</div>
+          <h3 class="font-extrabold mt-1 text-emerald-600 dark:text-emerald-400">3. Năng lượng thay thế</h3>
+          <p class="text-xs mt-1">Tiết kiệm xăng/gas và dùng <strong>năng lượng tái tạo</strong>: Mặt Trời, gió, thuỷ điện, địa nhiệt, năng lượng sinh học.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 2: CẤU TRÚC MỎ DẦU (GIỐNG HÌNH 14.2 SGK) -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">🎮 Bước 2: Khám phá Cấu trúc Mỏ Dầu dưới lòng đất (giống Hình 14.2 SGK)</h2>
+        <span id="oilBadge" class="px-3 py-1 rounded-full text-xs font-extrabold bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300">Bấm vào từng lớp mỏ dầu!</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+        <div class="rounded-2xl bg-slate-100 dark:bg-slate-950 p-3 flex justify-center">
+          <svg viewBox="0 0 320 200" class="w-full max-w-[320px] h-auto" role="img" aria-label="Sơ đồ cấu trúc 3 lớp của mỏ dầu: Khí, Dầu, Nước">
+            <!-- Mặt đất & Giàn khoan -->
+            <rect x="0" y="0" width="320" height="44" fill="#dbeafe" />
+            <rect x="0" y="44" width="320" height="156" fill="#d6d3d1" />
+            <!-- Giàn khoan mini -->
+            <polygon points="100,44 112,10 124,44" fill="none" stroke="#475569" stroke-width="2.5" />
+            <polygon points="200,44 212,14 224,44" fill="none" stroke="#475569" stroke-width="2.5" />
+            <!-- Vòm mỏ dầu 3 lớp -->
+            <path id="layerGas" onclick="pickLayer('gas')" class="cursor-pointer" d="M60 112 Q160 56 260 112 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="2" />
+            <path id="layerOil" onclick="pickLayer('oil')" class="cursor-pointer" d="M44 148 Q60 112 60 112 L260 112 Q260 112 276 148 Z" fill="#292524" stroke="#0c0a09" stroke-width="2" />
+            <rect id="layerWater" onclick="pickLayer('water')" class="cursor-pointer" x="44" y="148" width="232" height="36" rx="6" fill="#38bdf8" stroke="#0284c7" stroke-width="2" />
+            <!-- Ống khoan -->
+            <line x1="112" y1="44" x2="112" y2="96" stroke="#334155" stroke-width="4" />
+            <line x1="212" y1="44" x2="212" y2="132" stroke="#334155" stroke-width="4" />
+            <!-- Nhãn 3 lớp -->
+            <text x="160" y="98" text-anchor="middle" font-size="12" font-weight="800" fill="#854d0e" pointer-events="none">1. Lớp KHÍ (nhẹ nhất)</text>
+            <text x="160" y="135" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff" pointer-events="none">2. Lớp DẦU MỎ (ở giữa)</text>
+            <text x="160" y="170" text-anchor="middle" font-size="12" font-weight="800" fill="#0c4a6e" pointer-events="none">3. Lớp NƯỚC (nặng nhất)</text>
+          </svg>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex flex-wrap gap-2">
+            <button type="button" onclick="pickLayer('gas')" class="px-3 py-2 rounded-xl text-xs font-bold bg-yellow-100 dark:bg-yellow-900/40 text-yellow-800 dark:text-yellow-200">☁️ Lớp Khí (trên)</button>
+            <button type="button" onclick="pickLayer('oil')" class="px-3 py-2 rounded-xl text-xs font-bold bg-stone-800 text-white">🛢️ Lớp Dầu (giữa)</button>
+            <button type="button" onclick="pickLayer('water')" class="px-3 py-2 rounded-xl text-xs font-bold bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-200">💧 Lớp Nước (dưới)</button>
+          </div>
+          <div id="oilExplain" class="rounded-2xl p-3.5 bg-slate-50 dark:bg-slate-800/70 text-sm leading-relaxed">
+            Trong mỏ dầu (Hình 14.2 SGK), 3 lớp tự xếp từ trên xuống dưới theo độ nặng: <strong>Khí → Dầu → Nước</strong>. Bấm vào từng lớp để xem bí mật khai thác nhé!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 3: QUIZ 5 SAO -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">⭐ Bước 3: Thử thách 5 câu (Kiếm 5 sao!)</h2>
+        <div class="flex items-center gap-2">
+          <span id="starScore" class="px-3 py-1 rounded-full text-sm font-extrabold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">⭐ 0 / 5</span>
+          <button type="button" onclick="resetQuiz()" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Làm lại</button>
+        </div>
+      </div>
+      <div id="quizContainer" class="space-y-4"></div>
+      <div id="quizFinish" class="hidden rounded-2xl p-4 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-center"></div>
+    </section>
+
+    <nav class="flex items-center justify-between pt-2">
+      <a href="hoa-bai-13-mot-so-nguyen-lieu.html" class="px-4 py-2.5 rounded-xl text-sm font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">← Bài 13: Một số nguyên liệu</a>
+      <a href="hoa-bai-15-mot-so-luong-thuc-thuc-pham.html" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-sky-600 text-white hover:bg-sky-700 transition">Bài 15: Lương thực, thực phẩm →</a>
+    </nav>
+  </main>
+
+  <script>
+    function pickLayer(k) {
+      var badge = document.getElementById('oilBadge'), exp = document.getElementById('oilExplain');
+      if (k === 'gas') {
+        badge.textContent = '☁️ Lớp Khí thiên nhiên';
+        exp.innerHTML = '<strong>Lớp Khí</strong> nhẹ nhất nên nằm trên cùng! Khí này nén mạnh giúp tự đẩy dầu lên khi mới khoan, dùng làm khí đốt và phát điện.';
+      } else if (k === 'oil') {
+        badge.textContent = '🛢️ Lớp Dầu mỏ (nhẹ hơn nước)';
+        exp.innerHTML = '<strong>Lớp Dầu mỏ</strong> nhẹ hơn nước và không tan trong nước nên nổi lên trên lớp nước. Chưng cất dầu thô thu được <strong>xăng, dầu hoả và khí đốt</strong>!';
+      } else {
+        badge.textContent = '💧 Lớp Nước (nặng nhất)';
+        exp.innerHTML = '<strong>Lớp Nước</strong> nặng nhất nên nằm dưới cùng. Khi áp suất giảm, người ta <strong>bơm thêm nước hoặc khí</strong> xuống dưới để đẩy dầu mỏ trồi lên!';
+      }
+    }
+
+    var QUESTIONS = [
+      { q: 'Câu 1: Nhóm chất nào sau đây đều là NHIÊN LIỆU?', opts: ['Cát, đá vôi, thuỷ tinh', 'Than đá, xăng, khí gas', 'Muối ăn, nước cất, sắt'], ans: 1, why: 'Than đá (rắn), xăng (lỏng), khí gas (khí) đều cháy được và toả nhiều nhiệt!' },
+      { q: 'Câu 2: Trong cấu trúc mỏ dầu (Hình 14.2 SGK), thứ tự 3 lớp từ TRÊN xuống DƯỚI là gì?', opts: ['Nước → Dầu → Khí', 'Khí → Dầu → Nước', 'Dầu → Nước → Khí'], ans: 1, why: 'Khí nhẹ nhất nằm trên, dầu nhẹ hơn nước nằm giữa, nước nặng nhất nằm dưới cùng!' },
+      { q: 'Câu 3: Trong các nhiên liệu hoá thạch, loại nào gây ô nhiễm môi trường NHIỀU NHẤT do chứa nhiều tạp chất?', opts: ['Than đá', 'Khí thiên nhiên', 'Năng lượng gió'], ans: 0, why: 'Than đá chứa nhiều tạp chất nên khi đốt sinh ra nhiều khói bụi và khí độc hại nhất.' },
+      { q: 'Câu 4: Nguồn năng lượng nào sau đây là NĂNG LƯỢNG TÁI TẠO (dùng thay thế nhiên liệu hoá thạch)?', opts: ['Than đá và dầu mỏ', 'Năng lượng Mặt Trời, gió, thuỷ điện', 'Xăng và dầu hoả'], ans: 1, why: 'Mặt Trời, gió, nước là nguồn năng lượng tái tạo sạch và vô tận!' },
+      { q: 'Câu 5: Khi mở nắp bình xăng ta ngửi thấy mùi xăng rất rõ. Điều đó chứng tỏ xăng có tính chất gì?', opts: ['Dễ bay hơi (và rất dễ bắt lửa, cần để xa nguồn lửa!)', 'Không bao giờ bay hơi', 'Rất nặng và ở thể rắn'], ans: 0, why: 'Xăng rất dễ bay hơi và cực kỳ dễ bắt lửa — tuyệt đối không mang lửa lại gần cây xăng!' }
+    ];
+    var answered = {}, stars = 0;
+    function renderQuiz() {
+      var box = document.getElementById('quizContainer'); box.innerHTML = '';
+      QUESTIONS.forEach(function (item, idx) {
+        var card = document.createElement('div'); card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-2.5';
+        var html = '<div class="font-bold text-sm">' + item.q + '</div><div class="grid grid-cols-1 gap-2">';
+        item.opts.forEach(function (opt, oIdx) {
+          html += '<button type="button" id="q-' + idx + '-o-' + oIdx + '" onclick="pickAnswer(' + idx + ',' + oIdx + ')" class="text-left px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-400 transition">' + opt + '</button>';
+        });
+        html += '</div><div id="fb-' + idx + '" class="hidden text-xs font-semibold pt-1"></div>';
+        card.innerHTML = html; box.appendChild(card);
+      });
+    }
+    function pickAnswer(qIdx, oIdx) {
+      if (answered[qIdx]) return; answered[qIdx] = true;
+      var item = QUESTIONS[qIdx], isRight = (oIdx === item.ans), fb = document.getElementById('fb-' + qIdx);
+      fb.classList.remove('hidden');
+      item.opts.forEach(function (_, i) {
+        var b = document.getElementById('q-' + qIdx + '-o-' + i); b.disabled = true;
+        if (i === item.ans) b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm font-bold border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200';
+        else if (i === oIdx && !isRight) b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm border-2 border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300';
+      });
+      if (isRight) { stars++; fb.className = 'text-xs font-semibold pt-1 text-emerald-700 dark:text-emerald-400'; fb.textContent = '🌟 Đúng rồi (+1 sao)! ' + item.why; }
+      else { fb.className = 'text-xs font-semibold pt-1 text-rose-600 dark:text-rose-400'; fb.textContent = '💡 Chưa đúng mất rồi! ' + item.why; }
+      document.getElementById('starScore').textContent = '⭐ ' + stars + ' / ' + QUESTIONS.length;
+      if (Object.keys(answered).length === QUESTIONS.length) {
+        var fin = document.getElementById('quizFinish'); fin.classList.remove('hidden');
+        fin.innerHTML = '<div class="font-extrabold text-base text-emerald-800 dark:text-emerald-200">' + (stars === 5 ? '🏆 Quá đỉnh! Trọn 5/5 sao Bài 14!' : '👏 Bạn đạt ' + stars + '/5 sao — bấm "Làm lại" để săn đủ 5 sao nhé!') + '</div>';
+      }
+    }
+    function resetQuiz() { answered = {}; stars = 0; document.getElementById('starScore').textContent = '⭐ 0 / 5'; document.getElementById('quizFinish').classList.add('hidden'); renderQuiz(); }
+    renderQuiz();
+  </script>
+  <script src="assets/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài 15: Một số lương thực, thực phẩm — Hoá học 6 (6A03)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] } } } };</script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html#hoa-hoc" class="px-3 py-1.5 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300 text-sm font-bold hover:bg-sky-100 transition">← Môn Hoá học</a>
+      <div class="flex items-center gap-2">
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6 space-y-6 pb-28">
+    <section class="rounded-3xl p-6 bg-gradient-to-r from-emerald-500 to-lime-600 text-white shadow-md">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">🧪 Hoá học · Bài 15 · SGK tr. 52–55 · 5 phút</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Một số lương thực, thực phẩm</h1>
+          <p class="text-sm text-emerald-50 mt-1">Bữa cơm hằng ngày cần những nhóm chất nào để lớn nhanh, học giỏi và khoẻ mạnh?</p>
+        </div>
+        <button type="button" onclick="startTTS('bai15', 'Tóm tắt Bài 15: Lương thực và thực phẩm', 'Thức ăn gồm lương thực như gạo, ngô, khoai, sắn và thực phẩm như thịt, cá, rau, quả. Có 4 nhóm chất dinh dưỡng chính: Một là Carbohydrate gồm tinh bột và đường, là nguồn năng lượng chính. Hai là Protein hay chất đạm trong thịt, cá, trứng, sữa, đậu đỗ giúp xây dựng cơ thể. Ba là Lipid hay chất béo trong dầu ăn, bơ, lạc, vừng giúp dự trữ năng lượng và chống lạnh. Bốn là Vitamin và chất khoáng trong rau xanh, hoa quả, hải sản; thiếu vitamin A làm mắt kém, thiếu vitamin D và calcium làm xương yếu. Nhớ bảo quản thức ăn đúng cách để không bị ôi thiu hay nấm mốc nhé!')" class="shrink-0 px-4 py-2.5 rounded-xl bg-white text-emerald-700 font-bold text-xs md:text-sm shadow hover:bg-emerald-50 transition">🔊 Nghe tóm tắt</button>
+      </div>
+    </section>
+
+    <!-- BƯỚC 1 -->
+    <section class="space-y-4">
+      <h2 class="text-lg font-extrabold">💡 Bước 1: 4 nhóm chất dinh dưỡng cần nhớ (2 phút)</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="font-extrabold text-amber-600 dark:text-amber-400">🍚 1. Carbohydrate (Tinh bột &amp; Đường)</div>
+          <p class="text-xs mt-1"><strong>Nguồn năng lượng chính!</strong> Có trong gạo, ngô, khoai, sắn, bánh mì, mía, mật ong.</p>
+        </div>
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="font-extrabold text-rose-600 dark:text-rose-400">🍗 2. Protein (Chất đạm)</div>
+          <p class="text-xs mt-1"><strong>Giúp cơ thể lớn lên &amp; khoẻ mạnh!</strong> Có trong thịt, cá, trứng, sữa, đậu đỗ.</p>
+        </div>
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="font-extrabold text-yellow-600 dark:text-yellow-400">🥜 3. Lipid (Chất béo)</div>
+          <p class="text-xs mt-1"><strong>Dự trữ năng lượng &amp; chống lạnh!</strong> Có trong dầu thực vật, mỡ, bơ, lạc, vừng. <em>Mẹo hay: cần dầu mỡ để hấp thụ Vitamin A!</em></p>
+        </div>
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="font-extrabold text-emerald-600 dark:text-emerald-400">🥕 4. Vitamin &amp; Chất khoáng</div>
+          <p class="text-xs mt-1">Cần lượng nhỏ nhưng cực quan trọng! <strong>Vitamin A</strong> tốt cho mắt; <strong>Vitamin D + Calcium</strong> giúp chắc xương; thiếu <strong>Iodine</strong> gây bướu cổ.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 2: TỰ XẾP KHAY CƠM ĐỦ 4 NHÓM CHẤT -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">🎮 Bước 2: Tự xếp Khay cơm đủ 4 nhóm chất (từ Hình 15.1 SGK)!</h2>
+        <span id="trayBadge" class="px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300">Đủ 0/4 nhóm chất</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+        <div class="rounded-2xl bg-slate-100 dark:bg-slate-950 p-3 flex justify-center">
+          <svg viewBox="0 0 320 200" class="w-full max-w-[320px] h-auto" role="img" aria-label="Khay cơm dinh dưỡng 4 ngăn">
+            <rect x="15" y="15" width="290" height="170" rx="22" fill="#e2e8f0" stroke="#64748b" stroke-width="3" />
+            <!-- Ngăn 1: Tinh bột -->
+            <rect id="slotCarb" x="28" y="28" width="126" height="68" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+            <text id="txtCarb" x="91" y="66" text-anchor="middle" font-size="12" font-weight="800" fill="#94a3b8">Ngăn 1: Tinh bột?</text>
+            <!-- Ngăn 2: Đạm -->
+            <rect id="slotProt" x="166" y="28" width="126" height="68" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+            <text id="txtProt" x="229" y="66" text-anchor="middle" font-size="12" font-weight="800" fill="#94a3b8">Ngăn 2: Chất đạm?</text>
+            <!-- Ngăn 3: Béo -->
+            <rect id="slotLipid" x="28" y="106" width="126" height="66" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+            <text id="txtLipid" x="91" y="143" text-anchor="middle" font-size="12" font-weight="800" fill="#94a3b8">Ngăn 3: Chất béo?</text>
+            <!-- Ngăn 4: Vitamin -->
+            <rect id="slotVit" x="166" y="106" width="126" height="66" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+            <text id="txtVit" x="229" y="143" text-anchor="middle" font-size="12" font-weight="800" fill="#94a3b8">Ngăn 4: Rau/Quả?</text>
+          </svg>
+        </div>
+
+        <div class="space-y-3">
+          <div class="grid grid-cols-2 gap-2">
+            <button type="button" onclick="addFood('carb','🍚 Cơm trắng')" class="px-3 py-2 rounded-xl text-xs font-bold bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-200">🍚 Cơm / Khoai lang</button>
+            <button type="button" onclick="addFood('prot','🍗 Thịt / Cá / Trứng')" class="px-3 py-2 rounded-xl text-xs font-bold bg-rose-100 dark:bg-rose-900/40 text-rose-800 dark:text-rose-200">🍗 Thịt / Cá / Đậu</button>
+            <button type="button" onclick="addFood('lipid','🥜 Dầu ăn / Lạc')" class="px-3 py-2 rounded-xl text-xs font-bold bg-yellow-100 dark:bg-yellow-900/40 text-yellow-800 dark:text-yellow-200">🥜 Dầu ăn / Lạc / Bơ</button>
+            <button type="button" onclick="addFood('vit','🥕 Rau xanh / Cà rốt')" class="px-3 py-2 rounded-xl text-xs font-bold bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200">🥕 Rau xanh / Cà rốt</button>
+          </div>
+          <div id="trayExplain" class="rounded-2xl p-3.5 bg-slate-50 dark:bg-slate-800/70 text-sm leading-relaxed">
+            Bấm chọn các món ăn bên trên để xếp vào khay cơm đủ 4 nhóm chất nhé! Nhớ đừng ăn đồ ôi thiu hay gạo lạc bị mốc vì rất độc!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 3: QUIZ 5 SAO -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">⭐ Bước 3: Thử thách 5 câu (Kiếm 5 sao!)</h2>
+        <div class="flex items-center gap-2">
+          <span id="starScore" class="px-3 py-1 rounded-full text-sm font-extrabold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">⭐ 0 / 5</span>
+          <button type="button" onclick="resetQuiz()" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Làm lại</button>
+        </div>
+      </div>
+      <div id="quizContainer" class="space-y-4"></div>
+      <div id="quizFinish" class="hidden rounded-2xl p-4 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-center"></div>
+    </section>
+
+    <nav class="flex items-center justify-between pt-2">
+      <a href="hoa-bai-14-mot-so-nhien-lieu.html" class="px-4 py-2.5 rounded-xl text-sm font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">← Bài 14: Một số nhiên liệu</a>
+      <a href="hoa-bai-16-hon-hop-cac-chat.html" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-sky-600 text-white hover:bg-sky-700 transition">Bài 16: Hỗn hợp các chất →</a>
+    </nav>
+  </main>
+
+  <script>
+    var tray = { carb: false, prot: false, lipid: false, vit: false };
+    var COLORS = { carb: ['#fef3c7', '#b45309', 'slotCarb', 'txtCarb'], prot: ['#ffe4e6', '#be123c', 'slotProt', 'txtProt'], lipid: ['#fef9c3', '#a16207', 'slotLipid', 'txtLipid'], vit: ['#d1fae5', '#047857', 'slotVit', 'txtVit'] };
+    function addFood(k, label) {
+      tray[k] = true;
+      var c = COLORS[k];
+      document.getElementById(c[2]).setAttribute('fill', c[0]);
+      var t = document.getElementById(c[3]);
+      t.textContent = label; t.setAttribute('fill', c[1]);
+      var cnt = Object.values(tray).filter(Boolean).length;
+      document.getElementById('trayBadge').textContent = 'Đủ ' + cnt + '/4 nhóm chất';
+      var exp = document.getElementById('trayExplain');
+      if (cnt === 4) {
+        exp.innerHTML = '🎉 <strong>Tuyệt vời! Khay cơm chuẩn 4 nhóm chất!</strong> Đặc biệt: cà rốt nấu cùng chút dầu ăn sẽ giúp cơ thể hấp thụ <strong>Vitamin A</strong> tốt nhất!';
+      } else {
+        exp.innerHTML = 'Đã thêm <strong>' + label + '</strong>! Bạn chọn thêm các nhóm còn thiếu để bữa cơm đủ 4 chất nhé.';
+      }
+    }
+
+    var QUESTIONS = [
+      { q: 'Câu 1: Nhóm chất nào là nguồn cung cấp NĂNG LƯỢNG CHÍNH cho cơ thể (có nhiều trong gạo, ngô, khoai, sắn)?', opts: ['Carbohydrate (tinh bột, đường)', 'Vitamin', 'Chất khoáng'], ans: 0, why: 'Carbohydrate (tinh bột và đường) là nguồn năng lượng chính của cơ thể!' },
+      { q: 'Câu 2: Thịt, cá, trứng, sữa, đậu đỗ cung cấp nhiều chất dinh dưỡng nào nhất?', opts: ['Protein (chất đạm)', 'Tinh bột', 'Chất xơ'], ans: 0, why: 'Thịt, cá, trứng, sữa, đậu đỗ rất giàu Protein (chất đạm) giúp xây dựng và phát triển cơ thể.' },
+      { q: 'Câu 3: Thiếu VITAMIN A thường gây ảnh hưởng trực tiếp tới bộ phận nào?', opts: ['Làm mắt kém (bệnh quáng gà)', 'Làm tóc bạc sớm', 'Làm đau răng'], ans: 0, why: 'Vitamin A cực kỳ tốt cho mắt! Nhớ ăn cà rốt, cà chua nấu cùng chút dầu mỡ để hấp thụ Vitamin A nhé.' },
+      { q: 'Câu 4: Để xương phát triển chắc khoẻ, cơ thể rất cần bổ sung chất khoáng nào cùng với Vitamin D?', opts: ['Calcium', 'Sắt', 'Iodine'], ans: 0, why: 'Calcium và Vitamin D là bộ đôi giúp xương chắc khoẻ, còn thiếu Iodine mới gây bướu cổ.' },
+      { q: 'Câu 5: Vì sao KHÔNG ĐƯỢC ăn gạo, lạc đã bị mốc hoặc thịt cá đã ôi thiu?', opts: ['Vì không ngon thôi chứ không sao', 'Vì chúng sinh ra chất độc gây ngộ độc, thậm chí ung thư', 'Vì ăn vào sẽ bị lạnh bụng nhẹ'], ans: 1, why: 'Đúng rồi! Thức ăn ôi thiu bị nhiễm khuẩn gây ngộ độc; gạo, lạc mốc sinh chất cực độc gây ung thư.' }
+    ];
+    var answered = {}, stars = 0;
+    function renderQuiz() {
+      var box = document.getElementById('quizContainer'); box.innerHTML = '';
+      QUESTIONS.forEach(function (item, idx) {
+        var card = document.createElement('div'); card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-2.5';
+        var html = '<div class="font-bold text-sm">' + item.q + '</div><div class="grid grid-cols-1 gap-2">';
+        item.opts.forEach(function (opt, oIdx) {
+          html += '<button type="button" id="q-' + idx + '-o-' + oIdx + '" onclick="pickAnswer(' + idx + ',' + oIdx + ')" class="text-left px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-400 transition">' + opt + '</button>';
+        });
+        html += '</div><div id="fb-' + idx + '" class="hidden text-xs font-semibold pt-1"></div>';
+        card.innerHTML = html; box.appendChild(card);
+      });
+    }
+    function pickAnswer(qIdx, oIdx) {
+      if (answered[qIdx]) return; answered[qIdx] = true;
+      var item = QUESTIONS[qIdx], isRight = (oIdx === item.ans), fb = document.getElementById('fb-' + qIdx);
+      fb.classList.remove('hidden');
+      item.opts.forEach(function (_, i) {
+        var b = document.getElementById('q-' + qIdx + '-o-' + i); b.disabled = true;
+        if (i === item.ans) b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm font-bold border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200';
+        else if (i === oIdx && !isRight) b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm border-2 border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300';
+      });
+      if (isRight) { stars++; fb.className = 'text-xs font-semibold pt-1 text-emerald-700 dark:text-emerald-400'; fb.textContent = '🌟 Đúng rồi (+1 sao)! ' + item.why; }
+      else { fb.className = 'text-xs font-semibold pt-1 text-rose-600 dark:text-rose-400'; fb.textContent = '💡 Chưa đúng mất rồi! ' + item.why; }
+      document.getElementById('starScore').textContent = '⭐ ' + stars + ' / ' + QUESTIONS.length;
+      if (Object.keys(answered).length === QUESTIONS.length) {
+        var fin = document.getElementById('quizFinish'); fin.classList.remove('hidden');
+        fin.innerHTML = '<div class="font-extrabold text-base text-emerald-800 dark:text-emerald-200">' + (stars === 5 ? '🏆 Quá đỉnh! Trọn 5/5 sao Bài 15!' : '👏 Bạn đạt ' + stars + '/5 sao — bấm "Làm lại" để săn đủ 5 sao nhé!') + '</div>';
+      }
+    }
+    function resetQuiz() { answered = {}; stars = 0; document.getElementById('starScore').textContent = '⭐ 0 / 5'; document.getElementById('quizFinish').classList.add('hidden'); renderQuiz(); }
+    renderQuiz();
+  </script>
+  <script src="assets/common.js"></script>
+</body>
+</html>

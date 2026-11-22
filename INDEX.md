@@ -13,7 +13,15 @@
 | 2 | Hạ tầng | Thư viện dùng chung (Dark Mode + TTS + Share) | [assets/common.js](assets/common.js) | ✅ Sẵn sàng | Key `khtn6_theme`, TTS `< 170` ký tự, `#ttsBar` |
 | 3 | Hạ tầng | Quy tắc Fast-Path & GitHub Issues | [GEMINI.md](GEMINI.md) | ✅ Sẵn sàng | 6 quy tắc tối ưu tốc độ & xuất bản |
 | 4 | Hạ tầng | Skill khung bài giảng 5 phút lớp 6 | [SKILL.md](.agents/skills/bai-giang-truc-quan/SKILL.md) | ✅ Sẵn sàng | 3 bước 5 phút, CẤM Base64, SVG tương tác |
-| 5 | **Hoá học** | **Bài 10: Các thể của chất và sự chuyển thể** | [hoa-bai-10-cac-the-cua-chat.html](hoa-bai-10-cac-the-cua-chat.html) | ✅ Sẵn sàng | Mô phỏng nhiệt độ -10°C→120°C + Quiz 5 sao |
+| 5 | **Hoá học** | **Bài 9: Sự đa dạng của chất** (SGK tr. 28–29) | [hoa-bai-09-su-da-dang-cua-chat.html](hoa-bai-09-su-da-dang-cua-chat.html) | ✅ Sẵn sàng | Thí nghiệm đun muối & đường (Hình 9.3) + Quiz 5 sao |
+| 6 | **Hoá học** | **Bài 10: Các thể của chất và sự chuyển thể** (SGK tr. 30–35) | [hoa-bai-10-cac-the-cua-chat.html](hoa-bai-10-cac-the-cua-chat.html) | ✅ Sẵn sàng | Mô phỏng nhiệt độ -10°C→120°C + Quiz 5 sao |
+| 7 | **Hoá học** | **Bài 11: Oxygen. Không khí** (SGK tr. 36–41) | [hoa-bai-11-oxygen-khong-khi.html](hoa-bai-11-oxygen-khong-khi.html) | ✅ Sẵn sàng | Úp cốc lên nến (Hình 11.5) & Biểu đồ 78–21–1% + Quiz 5 sao |
+| 8 | **Hoá học** | **Bài 12: Một số vật liệu** (SGK tr. 42–45) | [hoa-bai-12-mot-so-vat-lieu.html](hoa-bai-12-mot-so-vat-lieu.html) | ✅ Sẵn sàng | Mạch điện kẹp thử dẫn điện (Hình 12.3) & 3R + Quiz 5 sao |
+| 9 | **Hoá học** | **Bài 13: Một số nguyên liệu** (SGK tr. 46–49) | [hoa-bai-13-mot-so-nguyen-lieu.html](hoa-bai-13-mot-so-nguyen-lieu.html) | ✅ Sẵn sàng | Thử đá vôi với acid & các loại quặng + Quiz 5 sao |
+| 10 | **Hoá học** | **Bài 14: Một số nhiên liệu** (SGK tr. 50–51) | [hoa-bai-14-mot-so-nhien-lieu.html](hoa-bai-14-mot-so-nhien-lieu.html) | ✅ Sẵn sàng | Cấu trúc 3 lớp mỏ dầu (Hình 14.2) + Quiz 5 sao |
+| 11 | **Hoá học** | **Bài 15: Một số lương thực, thực phẩm** (SGK tr. 52–55) | [hoa-bai-15-mot-so-luong-thuc-thuc-pham.html](hoa-bai-15-mot-so-luong-thuc-thuc-pham.html) | ✅ Sẵn sàng | Tự xếp khay cơm đủ 4 nhóm chất + Quiz 5 sao |
+| 12 | **Hoá học** | **Bài 16: Hỗn hợp các chất** (SGK tr. 56–59) | [hoa-bai-16-hon-hop-cac-chat.html](hoa-bai-16-hon-hop-cac-chat.html) | ✅ Sẵn sàng | Quầy pha Dung dịch · Huyền phù · Nhũ tương (Hình 16.3) + Quiz 5 sao |
+| 13 | **Hoá học** | **Bài 17: Tách chất khỏi hỗn hợp** (SGK tr. 60–63) | [hoa-bai-17-tach-chat-khoi-hon-hop.html](hoa-bai-17-tach-chat-khoi-hon-hop.html) | ✅ Sẵn sàng | 3 bộ dụng cụ Lọc · Cô cạn · Chiết (Hình 17.4–17.6) + Quiz 5 sao |
 
 ### CODE MAP (Định vị mã nguồn cho các file HTML tổng hợp > 500 dòng)
 

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài 17: Tách chất khỏi hỗn hợp — Hoá học 6 (6A03)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] } } } };</script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html#hoa-hoc" class="px-3 py-1.5 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300 text-sm font-bold hover:bg-sky-100 transition">← Môn Hoá học</a>
+      <div class="flex items-center gap-2">
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6 space-y-6 pb-28">
+    <section class="rounded-3xl p-6 bg-gradient-to-r from-teal-500 to-sky-600 text-white shadow-md">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">🧪 Hoá học · Bài 17 · SGK tr. 60–63 · 5 phút</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Tách chất khỏi hỗn hợp</h1>
+          <p class="text-sm text-teal-50 mt-1">Làm sao tách riêng cát ra khỏi nước, muối ra khỏi nước biển, và dầu ăn ra khỏi nước?</p>
+        </div>
+        <button type="button" onclick="startTTS('bai17', 'Tóm tắt Bài 17: Tách chất khỏi hỗn hợp', 'Ta tách chất khỏi hỗn hợp dựa vào sự khác nhau về tính chất vật lí của chúng. Có 3 cách tách chất cực quan trọng: Một là Lọc bằng giấy lọc để tách chất rắn không tan ra khỏi chất lỏng, như tách đất cát khỏi nước đục. Hai là Cô cạn bằng cách đun hoặc phơi nắng cho nước bay hơi hết để thu lại chất rắn tan trong nước, như diêm dân làm muối từ nước biển. Ba là Chiết bằng phễu chiết để tách hai chất lỏng không tan vào nhau, như tách dầu ăn nổi ở trên ra khỏi nước ở dưới.')" class="shrink-0 px-4 py-2.5 rounded-xl bg-white text-teal-700 font-bold text-xs md:text-sm shadow hover:bg-teal-50 transition">🔊 Nghe tóm tắt</button>
+      </div>
+    </section>
+
+    <!-- BƯỚC 1 -->
+    <section class="space-y-4">
+      <h2 class="text-lg font-extrabold">💡 Bước 1: 3 "chiêu" tách chất kinh điển (2 phút)</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="text-2xl">🔽</div>
+          <h3 class="font-extrabold mt-1 text-sky-700 dark:text-sky-400">1. Lọc (Hình 17.4 SGK)</h3>
+          <p class="text-xs mt-1">Tách <strong>chất rắn KHÔNG tan</strong> khỏi chất lỏng (nước lẫn cát/đất). Nước chui qua lỗ nhỏ giấy lọc, cát bị giữ lại ở trên!</p>
+        </div>
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="text-2xl">🔥</div>
+          <h3 class="font-extrabold mt-1 text-amber-700 dark:text-amber-400">2. Cô cạn (Hình 17.5 SGK)</h3>
+          <p class="text-xs mt-1">Tách <strong>chất rắn TAN</strong> khỏi nước (nước muối, nước biển). Đun nóng hoặc phơi nắng cho nước bay hơi hết, còn lại muối rắn!</p>
+        </div>
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="text-2xl">🧪</div>
+          <h3 class="font-extrabold mt-1 text-emerald-700 dark:text-emerald-400">3. Chiết (Hình 17.6 SGK)</h3>
+          <p class="text-xs mt-1">Tách <strong>2 chất lỏng KHÔNG tan vào nhau</strong> (dầu ăn + nước). Dầu nổi trên, nước ở dưới → mở khoá phễu chiết lấy nước trước!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 2: 3 BỘ DỤNG CỤ TÁCH CHẤT (GIỐNG HÌNH 17.4, 17.5, 17.6 SGK) -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">🎮 Bước 2: Chọn đúng bộ dụng cụ tách chất (Hình 17.4–17.6 SGK)</h2>
+        <span id="sepBadge" class="px-3 py-1 rounded-full text-xs font-extrabold bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300">🔽 Bộ dụng cụ Lọc</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+        <div class="rounded-2xl bg-slate-100 dark:bg-slate-950 p-3 flex justify-center">
+          <svg viewBox="0 0 300 210" class="w-full max-w-[300px] h-auto" role="img" aria-label="Mô phỏng 3 phương pháp tách chất: Lọc, Cô cạn, Chiết">
+            <!-- BỘ 1: PHỄU LỌC (Hình 17.4) -->
+            <g id="rigFilter">
+              <polygon points="105,35 195,35 158,105 142,105" fill="#f8fafc" stroke="#475569" stroke-width="2.5" />
+              <line x1="150" y1="105" x2="150" y2="128" stroke="#475569" stroke-width="4" />
+              <!-- Cặn đất giữ trên giấy lọc -->
+              <path d="M126 68 L174 68 L156 98 L144 98 Z" fill="#92400e" />
+              <text x="150" y="25" text-anchor="middle" font-size="11" font-weight="800" fill="#92400e">Đất cát bị giữ lại trên giấy lọc</text>
+              <!-- Giọt nước lọc trong -->
+              <circle cx="150" cy="138" r="3.5" fill="#38bdf8" />
+              <!-- Cốc hứng nước trong -->
+              <path d="M115 140 L115 190 Q115 196 122 196 L178 196 Q185 196 185 190 L185 140" fill="none" stroke="#475569" stroke-width="3" />
+              <rect x="118" y="164" width="64" height="29" rx="4" fill="#38bdf8" opacity="0.55" />
+              <text x="150" y="183" text-anchor="middle" font-size="10" font-weight="800" fill="#0369a1">Nước lọc trong</text>
+            </g>
+
+            <!-- BỘ 2: CÔ CẠN (Hình 17.5) -->
+            <g id="rigEvap" opacity="0">
+              <!-- Hơi nước bay lên -->
+              <g stroke="#38bdf8" stroke-width="2.5" fill="none" stroke-linecap="round">
+                <path d="M128 65 Q120 48 130 32" /><path d="M150 60 Q142 44 152 28" /><path d="M172 65 Q164 48 174 32" />
+              </g>
+              <text x="150" y="20" text-anchor="middle" font-size="11" font-weight="800" fill="#0284c7">Nước bay hơi hết!</text>
+              <!-- Bát sứ đựng muối -->
+              <path d="M98 92 Q150 132 202 92 Z" fill="#f8fafc" stroke="#475569" stroke-width="2.5" />
+              <ellipse cx="150" cy="92" rx="52" ry="12" fill="#e2e8f0" stroke="#475569" stroke-width="2" />
+              <ellipse cx="150" cy="94" rx="34" ry="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+              <text x="150" y="97" text-anchor="middle" font-size="10" font-weight="800" fill="#334155">Muối ăn rắn</text>
+              <!-- Ngọn lửa đèn cồn -->
+              <path d="M150 132 Q138 150 150 166 Q162 150 150 132 Z" fill="#f97316" />
+              <path d="M150 140 Q144 152 150 160 Q156 152 150 140 Z" fill="#fde047" />
+              <rect x="130" y="166" width="40" height="28" rx="6" fill="#cbd5e1" stroke="#475569" stroke-width="2" />
+              <text x="150" y="184" text-anchor="middle" font-size="10" font-weight="700" fill="#334155">Đèn cồn</text>
+            </g>
+
+            <!-- BỘ 3: PHỄU CHIẾT (Hình 17.6) -->
+            <g id="rigFunnel" opacity="0">
+              <!-- Phễu chiết hình quả lê -->
+              <path d="M120 26 L180 26 Q195 70 156 112 L156 138 L144 138 L144 112 Q105 70 120 26 Z" fill="#ffffff" stroke="#475569" stroke-width="2.5" />
+              <!-- Lớp Dầu ăn (vàng nổi trên) -->
+              <path d="M122 46 L178 46 Q183 62 176 74 L124 74 Q117 62 122 46 Z" fill="#facc15" />
+              <text x="150" y="64" text-anchor="middle" font-size="10" font-weight="800" fill="#854d0e">Dầu ăn (trên)</text>
+              <!-- Lớp Nước (xanh ở dưới) -->
+              <path d="M124 74 L176 74 Q168 95 154 110 L146 110 Q132 95 124 74 Z" fill="#38bdf8" opacity="0.7" />
+              <text x="150" y="92" text-anchor="middle" font-size="10" font-weight="800" fill="#0c4a6e">Nước</text>
+              <!-- Khoá phễu chiết -->
+              <rect x="136" y="118" width="28" height="8" rx="3" fill="#ef4444" />
+              <!-- Cốc hứng nước dưới -->
+              <path d="M118 148 L118 192 Q118 198 124 198 L176 198 Q182 198 182 192 L182 148" fill="none" stroke="#475569" stroke-width="3" />
+              <rect x="121" y="168" width="58" height="27" rx="4" fill="#38bdf8" opacity="0.6" />
+              <text x="150" y="186" text-anchor="middle" font-size="10" font-weight="800" fill="#0369a1">Hứng nước</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex flex-wrap gap-2">
+            <button type="button" onclick="showRig('filter')" class="px-3 py-2 rounded-xl text-xs font-bold bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-200">🔽 Lọc (Nước + Cát)</button>
+            <button type="button" onclick="showRig('evap')" class="px-3 py-2 rounded-xl text-xs font-bold bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-200">🔥 Cô cạn (Nước muối)</button>
+            <button type="button" onclick="showRig('funnel')" class="px-3 py-2 rounded-xl text-xs font-bold bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200">🧪 Chiết (Dầu + Nước)</button>
+          </div>
+          <div id="sepExplain" class="rounded-2xl p-3.5 bg-slate-50 dark:bg-slate-800/70 text-sm leading-relaxed">
+            <strong>Phương pháp LỌC (Hình 17.4 SGK):</strong> Dùng phễu lót giấy lọc để tách hạt đất cát không tan ra khỏi nước. Máy lọc nước ở nhà cũng hoạt động theo nguyên lí lọc qua nhiều lõi lọc!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 3: QUIZ 5 SAO -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">⭐ Bước 3: Thử thách 5 câu (Kiếm 5 sao!)</h2>
+        <div class="flex items-center gap-2">
+          <span id="starScore" class="px-3 py-1 rounded-full text-sm font-extrabold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">⭐ 0 / 5</span>
+          <button type="button" onclick="resetQuiz()" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Làm lại</button>
+        </div>
+      </div>
+      <div id="quizContainer" class="space-y-4"></div>
+      <div id="quizFinish" class="hidden rounded-2xl p-4 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-center"></div>
+    </section>
+
+    <nav class="flex items-center justify-between pt-2">
+      <a href="hoa-bai-16-hon-hop-cac-chat.html" class="px-4 py-2.5 rounded-xl text-sm font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">← Bài 16: Hỗn hợp các chất</a>
+      <a href="index.html#hoa-hoc" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-emerald-600 text-white hover:bg-emerald-700 transition">🎉 Xong môn Hoá học! Về trang chủ</a>
+    </nav>
+  </main>
+
+  <script>
+    function showRig(k) {
+      document.getElementById('rigFilter').setAttribute('opacity', k === 'filter' ? '1' : '0');
+      document.getElementById('rigEvap').setAttribute('opacity', k === 'evap' ? '1' : '0');
+      document.getElementById('rigFunnel').setAttribute('opacity', k === 'funnel' ? '1' : '0');
+      var badge = document.getElementById('sepBadge'), exp = document.getElementById('sepExplain');
+      if (k === 'filter') {
+        badge.textContent = '🔽 Bộ dụng cụ Lọc';
+        exp.innerHTML = '<strong>Phương pháp LỌC (Hình 17.4 SGK):</strong> Dùng phễu lót giấy lọc để tách hạt đất cát không tan ra khỏi nước. Nước sạch chảy qua lỗ giấy lọc, còn cát bị giữ lại!';
+      } else if (k === 'evap') {
+        badge.textContent = '🔥 Bộ dụng cụ Cô cạn';
+        exp.innerHTML = '<strong>Phương pháp CÔ CẠN (Hình 17.5 SGK):</strong> Đun nước muối trên đèn cồn (hoặc phơi nước biển dưới nắng gió) cho nước bay hơi hết, thu lại muối ăn rắn!';
+      } else {
+        badge.textContent = '🧪 Phễu Chiết dầu ăn & nước';
+        exp.innerHTML = '<strong>Phương pháp CHIẾT (Hình 17.6 SGK):</strong> Dầu ăn nhẹ hơn và không tan trong nước nên nổi lên trên. Mở khoá từ từ cho nước chảy xuống trước, đến lớp dầu thì đóng khoá lại!';
+      }
+    }
+
+    var QUESTIONS = [
+      { q: 'Câu 1: Để tách CÁT không tan ra khỏi nước, ta dùng phương pháp nào nhanh và chuẩn nhất?', opts: ['Lọc qua giấy lọc', 'Cô cạn', 'Chiết bằng phễu chiết'], ans: 0, why: 'Lọc dùng để tách chất rắn không tan (cát) ra khỏi chất lỏng (nước)!' },
+      { q: 'Câu 2: Diêm dân phơi nước biển dưới nắng gió để thu được muối ăn là áp dụng phương pháp nào?', opts: ['Lọc', 'Cô cạn (bay hơi nước)', 'Chiết'], ans: 1, why: 'Nước biển bay hơi hết, muối không bay hơi ở lại — đó chính là phương pháp cô cạn!' },
+      { q: 'Câu 3: Để tách hỗn hợp DẦU ĂN và NƯỚC (hai chất lỏng không tan vào nhau), ta dùng dụng cụ nào?', opts: ['Giấy lọc', 'Phễu chiết', 'Đèn cồn'], ans: 1, why: 'Phễu chiết tách riêng lớp nước ở dưới và lớp dầu ăn nổi ở trên!' },
+      { q: 'Câu 4: Đeo khẩu trang chống bụi mịn khi ra đường là ứng dụng của phương pháp tách chất nào?', opts: ['Lọc (tách hạt bụi rắn khỏi không khí)', 'Cô cạn', 'Chiết'], ans: 0, why: 'Khẩu trang giống như màng lọc giữ lại hạt bụi bẩn và cho không khí sạch đi qua!' },
+      { q: 'Câu 5: Nếu muối ăn bị lẫn với cát, ta tách muối riêng ra khỏi cát bằng cách nào?', opts: ['Hoà vào nước → Lọc bỏ cát → Cô cạn nước muối thu lại muối', 'Chỉ cần dùng phễu chiết', 'Chỉ cần đun nóng ngay lập tức'], ans: 0, why: 'Đỉnh cao! Hoà tan vào nước (muối tan, cát không tan) → Lọc bỏ cát → Cô cạn dung dịch thu lại muối sạch!' }
+    ];
+    var answered = {}, stars = 0;
+    function renderQuiz() {
+      var box = document.getElementById('quizContainer'); box.innerHTML = '';
+      QUESTIONS.forEach(function (item, idx) {
+        var card = document.createElement('div'); card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-2.5';
+        var html = '<div class="font-bold text-sm">' + item.q + '</div><div class="grid grid-cols-1 gap-2">';
+        item.opts.forEach(function (opt, oIdx) {
+          html += '<button type="button" id="q-' + idx + '-o-' + oIdx + '" onclick="pickAnswer(' + idx + ',' + oIdx + ')" class="text-left px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-400 transition">' + opt + '</button>';
+        });
+        html += '</div><div id="fb-' + idx + '" class="hidden text-xs font-semibold pt-1"></div>';
+        card.innerHTML = html; box.appendChild(card);
+      });
+    }
+    function pickAnswer(qIdx, oIdx) {
+      if (answered[qIdx]) return; answered[qIdx] = true;
+      var item = QUESTIONS[qIdx], isRight = (oIdx === item.ans), fb = document.getElementById('fb-' + qIdx);
+      fb.classList.remove('hidden');
+      item.opts.forEach(function (_, i) {
+        var b = document.getElementById('q-' + qIdx + '-o-' + i); b.disabled = true;
+        if (i === item.ans) b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm font-bold border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200';
+        else if (i === oIdx && !isRight) b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm border-2 border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300';
+      });
+      if (isRight) { stars++; fb.className = 'text-xs font-semibold pt-1 text-emerald-700 dark:text-emerald-400'; fb.textContent = '🌟 Đúng rồi (+1 sao)! ' + item.why; }
+      else { fb.className = 'text-xs font-semibold pt-1 text-rose-600 dark:text-rose-400'; fb.textContent = '💡 Chưa đúng mất rồi! ' + item.why; }
+      document.getElementById('starScore').textContent = '⭐ ' + stars + ' / ' + QUESTIONS.length;
+      if (Object.keys(answered).length === QUESTIONS.length) {
+        var fin = document.getElementById('quizFinish'); fin.classList.remove('hidden');
+        fin.innerHTML = '<div class="font-extrabold text-base text-emerald-800 dark:text-emerald-200">' + (stars === 5 ? '🏆 Quá đỉnh! Trọn 5/5 sao Bài 17 — Chúc mừng bạn hoàn thành trọn bộ Hoá học 6!' : '👏 Bạn đạt ' + stars + '/5 sao — bấm "Làm lại" để săn đủ 5 sao nhé!') + '</div>';
+      }
+    }
+    function resetQuiz() { answered = {}; stars = 0; document.getElementById('starScore').textContent = '⭐ 0 / 5'; document.getElementById('quizFinish').classList.add('hidden'); renderQuiz(); }
+    renderQuiz();
+  </script>
+  <script src="assets/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài 9: Sự đa dạng của chất — Hoá học 6 (6A03)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] } } } };</script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html#hoa-hoc" class="px-3 py-1.5 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300 text-sm font-bold hover:bg-sky-100 transition">← Môn Hoá học</a>
+      <div class="flex items-center gap-2">
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6 space-y-6 pb-28">
+    <section class="rounded-3xl p-6 bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">🧪 Hoá học · Bài 9 · SGK tr. 28–29 · 5 phút</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Sự đa dạng của chất</h1>
+          <p class="text-sm text-sky-50 mt-1">Ở đâu có vật thể, ở đó có chất! Đun đường thành nước hàng là tính chất gì nhỉ?</p>
+        </div>
+        <button type="button" onclick="startTTS('bai9', 'Tóm tắt Bài 9: Sự đa dạng của chất', 'Mọi vật xung quanh ta đều gọi là vật thể, gồm vật thể tự nhiên như núi đá, con sư tử, và vật thể nhân tạo như bánh mì, cầu Long Biên. Vật sống biết lớn lên, trao đổi chất và sinh sản; vật không sống thì không. Chất tạo nên vật thể. Mỗi chất có hai loại tính chất: Tính chất vật lí là màu sắc, mùi vị, thể rắn lỏng khí, nhiệt độ nóng chảy, sôi, không tạo ra chất mới. Tính chất hoá học là khả năng biến đổi tạo ra chất mới, ví dụ đun đường thành nước hàng màu nâu đen, hay đinh sắt để lâu bị gỉ nâu.')" class="shrink-0 px-4 py-2.5 rounded-xl bg-white text-sky-700 font-bold text-xs md:text-sm shadow hover:bg-sky-50 transition">🔊 Nghe tóm tắt</button>
+      </div>
+    </section>
+
+    <!-- BƯỚC 1 -->
+    <section class="space-y-4">
+      <h2 class="text-lg font-extrabold">💡 Bước 1: Hiểu nhanh trong 2 phút</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+          <h3 class="font-extrabold text-sky-700 dark:text-sky-400">🌍 Vật thể &amp; Chất (giống Hình 9.1 SGK)</h3>
+          <p class="text-sm"><strong>Vật thể tự nhiên:</strong> có sẵn trong tự nhiên (núi đá vôi, con sư tử, mủ cao su).</p>
+          <p class="text-sm"><strong>Vật thể nhân tạo:</strong> do con người làm ra (bánh mì, cầu Long Biên, nước ngọt).</p>
+          <p class="text-sm"><strong>Vật sống</strong> biết lớn lên &amp; sinh sản (cây, sư tử); <strong>vật không sống</strong> thì không (đá, cầu).</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">👉 Nhớ nhanh: <strong>Chất tạo nên vật thể</strong> (cây kem làm từ nước, đường, sữa...).</p>
+        </div>
+
+        <div class="rounded-2xl p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+          <h3 class="font-extrabold text-amber-600 dark:text-amber-400">🔍 Phân biệt 2 tính chất của chất</h3>
+          <div class="p-2.5 rounded-xl bg-sky-50 dark:bg-sky-950/40 text-sm">
+            <strong>Tính chất VẬT LÍ (không tạo chất mới):</strong> màu sắc, mùi vị, thể rắn/lỏng/khí, độ cứng, tính tan, dẫn điện, nhiệt độ nóng chảy/sôi.
+          </div>
+          <div class="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/40 text-sm">
+            <strong>Tính chất HOÁ HỌC (tạo ra chất MỚI):</strong> đun đường cháy thành nước hàng nâu đen, đinh sắt bị gỉ nâu, than cháy sinh khí carbon dioxide.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 2: THÍ NGHIỆM ĐUN MUỐI & ĐƯỜNG (GIỐNG HÌNH 9.3 SGK) -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">🎮 Bước 2: Thí nghiệm đun Muối ăn &amp; Đường (giống Hình 9.3 SGK)</h2>
+        <span id="expBadge" class="px-3 py-1 rounded-full text-xs font-extrabold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Chưa đun nóng</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+        <div class="rounded-2xl bg-slate-100 dark:bg-slate-950 p-3 flex justify-center">
+          <svg viewBox="0 0 340 200" class="w-full max-w-[340px] h-auto" role="img" aria-label="Thí nghiệm đun muối ăn và đường trong bát sứ">
+            <!-- Bát 1: Muối ăn -->
+            <g>
+              <text x="85" y="24" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">Bát 1: Muối ăn</text>
+              <path d="M35 85 Q85 125 135 85 Z" fill="#f8fafc" stroke="#64748b" stroke-width="2.5" />
+              <ellipse cx="85" cy="85" rx="50" ry="12" fill="#e2e8f0" stroke="#64748b" stroke-width="2" />
+              <!-- Hạt muối trắng -->
+              <ellipse id="saltMass" cx="85" cy="86" rx="34" ry="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+              <text id="saltNote" x="85" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#0284c7">Hạt rắn màu trắng</text>
+            </g>
+            <!-- Bát 2: Đường -->
+            <g>
+              <text x="255" y="24" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">Bát 2: Đường</text>
+              <path d="M205 85 Q255 125 305 85 Z" fill="#f8fafc" stroke="#64748b" stroke-width="2.5" />
+              <ellipse cx="255" cy="85" rx="50" ry="12" fill="#e2e8f0" stroke="#64748b" stroke-width="2" />
+              <ellipse id="sugarMass" cx="255" cy="86" rx="34" ry="7" fill="#fffbeb" stroke="#cbd5e1" stroke-width="1.5" />
+              <!-- Khói khi đường cháy -->
+              <g id="sugarSmoke" opacity="0" stroke="#94a3b8" stroke-width="2.5" fill="none" stroke-linecap="round">
+                <path d="M240 68 Q232 54 242 40" />
+                <path d="M265 66 Q257 50 267 36" />
+              </g>
+              <text id="sugarNote" x="255" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">Hạt rắn màu trắng</text>
+            </g>
+            <!-- 2 Ngọn lửa đèn cồn -->
+            <g id="flames" opacity="0">
+              <path d="M85 148 Q75 162 85 174 Q95 162 85 148 Z" fill="#f97316" />
+              <path d="M85 154 Q80 163 85 170 Q90 163 85 154 Z" fill="#fde047" />
+              <path d="M255 148 Q245 162 255 174 Q265 162 255 148 Z" fill="#f97316" />
+              <path d="M255 154 Q250 163 255 170 Q260 163 255 154 Z" fill="#fde047" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="space-y-3">
+          <div class="flex flex-wrap gap-2">
+            <button type="button" onclick="setHeatStage(0)" class="px-3 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 transition">1️⃣ Ban đầu</button>
+            <button type="button" onclick="setHeatStage(1)" class="px-3 py-2 rounded-xl text-xs font-bold bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 hover:bg-amber-200 transition">2️⃣ Bắt đầu đun</button>
+            <button type="button" onclick="setHeatStage(2)" class="px-3 py-2 rounded-xl text-xs font-bold bg-rose-600 text-white hover:bg-rose-700 transition">3️⃣ Đun nóng mạnh 🔥</button>
+          </div>
+          <div id="expText" class="rounded-2xl p-3.5 bg-slate-50 dark:bg-slate-800/70 text-sm leading-relaxed">
+            Bấm nút <strong>"Bắt đầu đun"</strong> rồi <strong>"Đun nóng mạnh"</strong> để xem bát muối ăn và bát đường khác nhau thế nào nhé!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 3: QUIZ 5 SAO -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">⭐ Bước 3: Thử thách 5 câu (Kiếm 5 sao!)</h2>
+        <div class="flex items-center gap-2">
+          <span id="starScore" class="px-3 py-1 rounded-full text-sm font-extrabold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">⭐ 0 / 5</span>
+          <button type="button" onclick="resetQuiz()" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Làm lại</button>
+        </div>
+      </div>
+      <div id="quizContainer" class="space-y-4"></div>
+      <div id="quizFinish" class="hidden rounded-2xl p-4 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-center"></div>
+    </section>
+
+    <!-- Điều hướng bài tiếp -->
+    <nav class="flex items-center justify-between pt-2">
+      <a href="index.html#hoa-hoc" class="px-4 py-2.5 rounded-xl text-sm font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">← Danh sách Hoá học</a>
+      <a href="hoa-bai-10-cac-the-cua-chat.html" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-sky-600 text-white hover:bg-sky-700 transition">Bài 10: Các thể của chất →</a>
+    </nav>
+  </main>
+
+  <script>
+    function setHeatStage(stage) {
+      var flames = document.getElementById('flames');
+      var sugar = document.getElementById('sugarMass');
+      var smoke = document.getElementById('sugarSmoke');
+      var saltNote = document.getElementById('saltNote');
+      var sugarNote = document.getElementById('sugarNote');
+      var badge = document.getElementById('expBadge');
+      var txt = document.getElementById('expText');
+
+      if (stage === 0) {
+        flames.setAttribute('opacity', '0');
+        sugar.setAttribute('fill', '#fffbeb');
+        smoke.setAttribute('opacity', '0');
+        saltNote.textContent = 'Hạt rắn màu trắng';
+        sugarNote.textContent = 'Hạt rắn màu trắng';
+        badge.textContent = 'Chưa đun nóng';
+        txt.innerHTML = 'Ban đầu cả muối ăn và đường đều là <strong>hạt rắn màu trắng</strong>, dễ tan trong nước (đây là <strong>tính chất vật lí</strong>).';
+      } else if (stage === 1) {
+        flames.setAttribute('opacity', '1');
+        sugar.setAttribute('fill', '#f59e0b');
+        smoke.setAttribute('opacity', '0');
+        saltNote.textContent = 'Nổ lách tách, vẫn trắng';
+        sugarNote.textContent = 'Chảy lỏng, chuyển vàng nâu';
+        badge.textContent = '🔥 Đang đun nóng...';
+        txt.innerHTML = 'Bát muối ăn kêu lách tách nhưng <strong>vẫn là muối trắng</strong>. Bát đường bắt đầu chảy lỏng và chuyển màu vàng (giống lúc mẹ thắng nước hàng kho thịt!).';
+      } else {
+        flames.setAttribute('opacity', '1');
+        sugar.setAttribute('fill', '#451a03');
+        smoke.setAttribute('opacity', '1');
+        saltNote.textContent = 'Vẫn là muối ăn trắng!';
+        sugarNote.textContent = 'Cháy nâu sẫm + bốc khói!';
+        badge.textContent = '✅ Đường đã biến thành chất mới!';
+        txt.innerHTML = '<strong>Kết luận:</strong> Muối ăn không biến đổi thành chất khác. Còn <strong>đường đã biến thành chất mới</strong> màu nâu sẫm, vị đắng và có khói — đó là <strong>tính chất hoá học</strong>!';
+      }
+    }
+
+    var QUESTIONS = [
+      { q: 'Câu 1: Trong các vật sau (Hình 9.1 SGK), đâu là vật thể TỰ NHIÊN và là VẬT SỐNG?', opts: ['Cầu Long Biên', 'Con sư tử', 'Bánh mì'], ans: 1, why: 'Con sư tử có sẵn trong tự nhiên, biết ăn uống, lớn lên và sinh sản nên là vật thể tự nhiên & vật sống!' },
+      { q: 'Câu 2: Đặc điểm nào sau đây là TÍNH CHẤT VẬT LÍ của nước?', opts: ['Nước không màu, không mùi, sôi ở 100°C', 'Sắt để lâu bị gỉ nâu', 'Than cháy tạo khí carbon dioxide'], ans: 0, why: 'Màu sắc, mùi vị, nhiệt độ sôi không tạo ra chất mới nên là tính chất vật lí.' },
+      { q: 'Câu 3: Nhận xét nào nói về TÍNH CHẤT HOÁ HỌC của sắt?', opts: ['Đinh sắt cứng, màu trắng xám', 'Đinh sắt bị nam châm hút', 'Để lâu ngoài không khí, đinh sắt biến thành gỉ sắt màu nâu, giòn và xốp'], ans: 2, why: 'Sắt biến thành gỉ sắt (chất mới có màu nâu, giòn xốp) chính là tính chất hoá học!' },
+      { q: 'Câu 4: Khi đun nóng đường trong bát sứ đến khi chuyển màu nâu sẫm (làm nước hàng), đường thể hiện tính chất gì?', opts: ['Tính chất vật lí', 'Tính chất hoá học', 'Cả hai đều sai'], ans: 1, why: 'Đường đã biến đổi tạo ra chất mới màu nâu sẫm nên đây là tính chất hoá học.' },
+      { q: 'Câu 5: Chọn câu ĐÚNG về mối liên hệ giữa vật thể và chất:', opts: ['Chất tạo nên vật thể, ở đâu có vật thể là ở đó có chất', 'Mỗi vật thể chỉ được làm từ đúng 1 chất', 'Nước ngọt là vật thể tự nhiên'], ans: 0, why: 'Chuẩn luôn! Một vật thể có thể làm từ 1 chất hoặc nhiều chất (như cây kem gồm nước, đường, sữa...).' }
+    ];
+    var answered = {}, stars = 0;
+    function renderQuiz() {
+      var box = document.getElementById('quizContainer'); box.innerHTML = '';
+      QUESTIONS.forEach(function (item, idx) {
+        var card = document.createElement('div');
+        card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-2.5';
+        var html = '<div class="font-bold text-sm">' + item.q + '</div><div class="grid grid-cols-1 gap-2">';
+        item.opts.forEach(function (opt, oIdx) {
+          html += '<button type="button" id="q-' + idx + '-o-' + oIdx + '" onclick="pickAnswer(' + idx + ',' + oIdx + ')" class="text-left px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-400 transition">' + opt + '</button>';
+        });
+        html += '</div><div id="fb-' + idx + '" class="hidden text-xs font-semibold pt-1"></div>';
+        card.innerHTML = html; box.appendChild(card);
+      });
+    }
+    function pickAnswer(qIdx, oIdx) {
+      if (answered[qIdx]) return; answered[qIdx] = true;
+      var item = QUESTIONS[qIdx], isRight = (oIdx === item.ans), fb = document.getElementById('fb-' + qIdx);
+      fb.classList.remove('hidden');
+      item.opts.forEach(function (_, i) {
+        var b = document.getElementById('q-' + qIdx + '-o-' + i); b.disabled = true;
+        if (i === item.ans) b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm font-bold border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200';
+        else if (i === oIdx && !isRight) b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm border-2 border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300';
+      });
+      if (isRight) { stars++; fb.className = 'text-xs font-semibold pt-1 text-emerald-700 dark:text-emerald-400'; fb.textContent = '🌟 Đúng rồi (+1 sao)! ' + item.why; }
+      else { fb.className = 'text-xs font-semibold pt-1 text-rose-600 dark:text-rose-400'; fb.textContent = '💡 Chưa đúng mất rồi! ' + item.why; }
+      document.getElementById('starScore').textContent = '⭐ ' + stars + ' / ' + QUESTIONS.length;
+      if (Object.keys(answered).length === QUESTIONS.length) {
+        var fin = document.getElementById('quizFinish'); fin.classList.remove('hidden');
+        fin.innerHTML = '<div class="font-extrabold text-base text-emerald-800 dark:text-emerald-200">' + (stars === 5 ? '🏆 Quá đỉnh! Trọn 5/5 sao Bài 9!' : '👏 Bạn đạt ' + stars + '/5 sao — bấm "Làm lại" để săn đủ 5 sao nhé!') + '</div>';
+      }
+    }
+    function resetQuiz() { answered = {}; stars = 0; document.getElementById('starScore').textContent = '⭐ 0 / 5'; document.getElementById('quizFinish').classList.add('hidden'); renderQuiz(); }
+    renderQuiz();
+  </script>
+  <script src="assets/common.js"></script>
+</body>
+</html>

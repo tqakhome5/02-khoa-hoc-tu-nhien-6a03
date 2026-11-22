@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài 12: Một số vật liệu — Hoá học 6 (6A03)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] } } } };</script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html#hoa-hoc" class="px-3 py-1.5 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300 text-sm font-bold hover:bg-sky-100 transition">← Môn Hoá học</a>
+      <div class="flex items-center gap-2">
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6 space-y-6 pb-28">
+    <section class="rounded-3xl p-6 bg-gradient-to-r from-indigo-500 to-sky-600 text-white shadow-md">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">🧪 Hoá học · Bài 12 · SGK tr. 42–45 · 5 phút</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Một số vật liệu quanh ta</h1>
+          <p class="text-sm text-indigo-50 mt-1">Tại sao nồi nấu bằng kim loại nhưng tay cầm lại bọc nhựa hoặc gỗ?</p>
+        </div>
+        <button type="button" onclick="startTTS('bai12', 'Tóm tắt Bài 12: Một số vật liệu', 'Mỗi vật liệu có tính chất riêng nên được dùng làm đồ vật phù hợp. Kim loại dẫn điện, dẫn nhiệt tốt nên làm dây điện và nồi nấu. Nhựa, gỗ, cao su không dẫn điện và dẫn nhiệt kém nên dùng bọc dây điện, làm quai nồi chống bỏng, làm lốp xe. Thuỷ tinh và gốm sứ không bị ăn mòn nhưng giòn, dễ vỡ. Để bảo vệ môi trường, hãy nhớ quy tắc 3R: Reduce là giảm thiểu, Reuse là tái sử dụng, Recycle là tái chế. Lưu ý không dùng lại nhiều lần chai nhựa số 1 PETE như chai nước suối nhé!')" class="shrink-0 px-4 py-2.5 rounded-xl bg-white text-indigo-700 font-bold text-xs md:text-sm shadow hover:bg-indigo-50 transition">🔊 Nghe tóm tắt</button>
+      </div>
+    </section>
+
+    <!-- BƯỚC 1 -->
+    <section class="space-y-4">
+      <h2 class="text-lg font-extrabold">💡 Bước 1: Hiểu nhanh trong 2 phút</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+        <div class="rounded-2xl p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="font-extrabold text-sky-700 dark:text-sky-400">🔩 Kim loại</div>
+          <p class="text-xs mt-1">Dẫn điện &amp; dẫn nhiệt tốt, cứng, có ánh kim, có thể bị gỉ → làm dây điện, nồi, cầu.</p>
+        </div>
+        <div class="rounded-2xl p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="font-extrabold text-cyan-700 dark:text-cyan-400">🪟 Thuỷ tinh</div>
+          <p class="text-xs mt-1">Trong suốt, không dẫn điện, cứng nhưng giòn dễ vỡ → làm cửa kính, cốc, chai lọ.</p>
+        </div>
+        <div class="rounded-2xl p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="font-extrabold text-amber-700 dark:text-amber-400">🪑 Nhựa</div>
+          <p class="text-xs mt-1">Dẻo, nhẹ, không dẫn điện, dẫn nhiệt kém, dễ biến dạng khi gặp nóng → làm vỏ dây điện, ghế.</p>
+        </div>
+        <div class="rounded-2xl p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="font-extrabold text-rose-700 dark:text-rose-400">🥣 Gốm, sứ</div>
+          <p class="text-xs mt-1">Không bị ăn mòn, dẫn nhiệt kém, cứng nhưng giòn dễ vỡ → làm bát đĩa, ấm trà.</p>
+        </div>
+        <div class="rounded-2xl p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="font-extrabold text-slate-700 dark:text-slate-300">🛞 Cao su</div>
+          <p class="text-xs mt-1">Đàn hồi tốt, không thấm nước, không dẫn điện &amp; nhiệt → làm lốp xe, găng tay, đệm.</p>
+        </div>
+        <div class="rounded-2xl p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+          <div class="font-extrabold text-emerald-700 dark:text-emerald-400">♻️ Quy tắc 3R</div>
+          <p class="text-xs mt-1"><strong>Reduce</strong> (Giảm dùng) · <strong>Reuse</strong> (Dùng lại) · <strong>Recycle</strong> (Tái chế). Không dùng lại chai nhựa số <strong>1 PETE</strong>!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 2: THÍ NGHIỆM KẸP THỬ DẪN ĐIỆN (GIỐNG HÌNH 12.3 SGK) -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">🎮 Bước 2: Kẹp thử vật liệu xem đèn có sáng không! (giống Hình 12.3 SGK)</h2>
+        <span id="bulbBadge" class="px-3 py-1 rounded-full text-xs font-extrabold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Chọn 1 vật liệu để kẹp</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+        <div class="rounded-2xl bg-slate-100 dark:bg-slate-950 p-3 flex justify-center">
+          <svg viewBox="0 0 320 200" class="w-full max-w-[320px] h-auto" role="img" aria-label="Mạch điện thử khả năng dẫn điện của vật liệu">
+            <!-- Dây dẫn -->
+            <path d="M55 70 L55 40 L160 40" fill="none" stroke="#475569" stroke-width="3" />
+            <path d="M190 40 L265 40 L265 150 L215 150" fill="none" stroke="#475569" stroke-width="3" />
+            <path d="M55 120 L55 150 L105 150" fill="none" stroke="#475569" stroke-width="3" />
+            <!-- Pin 1.5V -->
+            <rect x="40" y="70" width="30" height="50" rx="5" fill="#0ea5e9" stroke="#0369a1" stroke-width="2" />
+            <rect x="48" y="64" width="14" height="6" fill="#94a3b8" />
+            <text x="55" y="100" text-anchor="middle" font-size="10" font-weight="800" fill="#ffffff">1.5V</text>
+            <!-- Bóng đèn -->
+            <circle id="bulbGlow" cx="175" cy="40" r="24" fill="#fde047" opacity="0" />
+            <circle id="bulbGlass" cx="175" cy="40" r="15" fill="#e2e8f0" stroke="#64748b" stroke-width="2.5" />
+            <path d="M169 40 Q175 30 181 40" fill="none" stroke="#64748b" stroke-width="2" />
+            <text x="175" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor">Bóng đèn</text>
+            <!-- 2 Kẹp cá sấu -->
+            <polygon points="105,144 118,150 105,156" fill="#ef4444" />
+            <polygon points="215,144 202,150 215,156" fill="#ef4444" />
+            <!-- Vật liệu đang kẹp ở giữa -->
+            <rect id="sampleBar" x="118" y="138" width="84" height="24" rx="6" fill="#cbd5e1" stroke="#64748b" stroke-width="2" />
+            <text id="sampleLabel" x="160" y="154" text-anchor="middle" font-size="11" font-weight="800" fill="#1e293b">Chưa kẹp</text>
+          </svg>
+        </div>
+
+        <div class="space-y-3">
+          <div class="grid grid-cols-2 gap-2">
+            <button type="button" onclick="testMat('metal')" class="px-3 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900/40 transition">🥄 Thìa kim loại</button>
+            <button type="button" onclick="testMat('plastic')" class="px-3 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900/40 transition">📏 Thước nhựa</button>
+            <button type="button" onclick="testMat('wood')" class="px-3 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900/40 transition">🥢 Đũa gỗ khô</button>
+            <button type="button" onclick="testMat('rubber')" class="px-3 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900/40 transition">🧤 Dây cao su</button>
+            <button type="button" onclick="testMat('glass')" class="px-3 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900/40 transition">🧪 Ống thuỷ tinh</button>
+            <button type="button" onclick="testMat('ceramic')" class="px-3 py-2 rounded-xl text-xs font-bold bg-slate-200 dark:bg-slate-800 hover:bg-sky-100 dark:hover:bg-sky-900/40 transition">🥣 Mảnh gốm sứ</button>
+          </div>
+          <div id="matExplain" class="rounded-2xl p-3.5 bg-slate-50 dark:bg-slate-800/70 text-sm leading-relaxed">
+            Bấm vào từng vật liệu bên trên để kẹp vào hai đầu kẹp màu đỏ xem bóng đèn có sáng không nhé!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BƯỚC 3: QUIZ 5 SAO -->
+    <section class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-extrabold">⭐ Bước 3: Thử thách 5 câu (Kiếm 5 sao!)</h2>
+        <div class="flex items-center gap-2">
+          <span id="starScore" class="px-3 py-1 rounded-full text-sm font-extrabold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">⭐ 0 / 5</span>
+          <button type="button" onclick="resetQuiz()" class="px-2.5 py-1 rounded-lg text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Làm lại</button>
+        </div>
+      </div>
+      <div id="quizContainer" class="space-y-4"></div>
+      <div id="quizFinish" class="hidden rounded-2xl p-4 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-center"></div>
+    </section>
+
+    <nav class="flex items-center justify-between pt-2">
+      <a href="hoa-bai-11-oxygen-khong-khi.html" class="px-4 py-2.5 rounded-xl text-sm font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">← Bài 11: Oxygen &amp; Không khí</a>
+      <a href="hoa-bai-13-mot-so-nguyen-lieu.html" class="px-4 py-2.5 rounded-xl text-sm font-bold bg-sky-600 text-white hover:bg-sky-700 transition">Bài 13: Một số nguyên liệu →</a>
+    </nav>
+  </main>
+
+  <script>
+    var MATS = {
+      metal: { label: 'Kim loại', color: '#94a3b8', light: true, text: '💡 <strong>ĐÈN SÁNG RỰC!</strong> Kim loại <strong>dẫn điện và dẫn nhiệt rất tốt</strong> nên được dùng làm lõi dây điện và thân nồi đun nấu.' },
+      plastic: { label: 'Nhựa', color: '#fbbf24', light: false, text: '❌ <strong>Đèn không sáng.</strong> Nhựa <strong>cách điện và dẫn nhiệt kém</strong>, nên người ta dùng nhựa bọc vỏ dây điện và làm tay cầm ấm/nồi chống bỏng!' },
+      wood: { label: 'Gỗ khô', color: '#b45309', light: false, text: '❌ <strong>Đèn không sáng.</strong> Gỗ khô cách điện, dẫn nhiệt kém, bền chịu lực tốt → làm bàn ghế, quai nồi.' },
+      rubber: { label: 'Cao su', color: '#334155', light: false, text: '❌ <strong>Đèn không sáng.</strong> Cao su cách điện, đàn hồi, không thấm nước → làm lốp xe và găng tay thợ điện!' },
+      glass: { label: 'Thuỷ tinh', color: '#bae6fd', light: false, text: '❌ <strong>Đèn không sáng.</strong> Thuỷ tinh không dẫn điện, trong suốt cho ánh sáng đi qua nhưng giòn dễ vỡ.' },
+      ceramic: { label: 'Gốm sứ', color: '#fca5a5', light: false, text: '❌ <strong>Đèn không sáng.</strong> Gốm sứ cách điện, không bị ăn mòn, dẫn nhiệt kém → làm bát đĩa, ấm trà, sứ cách điện.' }
+    };
+    function testMat(k) {
+      var m = MATS[k];
+      document.getElementById('sampleBar').setAttribute('fill', m.color);
+      document.getElementById('sampleLabel').textContent = m.label;
+      document.getElementById('sampleLabel').setAttribute('fill', k === 'rubber' || k === 'wood' ? '#ffffff' : '#0f172a');
+      document.getElementById('bulbGlow').setAttribute('opacity', m.light ? '0.85' : '0');
+      document.getElementById('bulbGlass').setAttribute('fill', m.light ? '#fef08a' : '#e2e8f0');
+      document.getElementById('bulbBadge').textContent = m.light ? '💡 Dẫn điện (Đèn sáng!)' : '🛡️ Cách điện (Đèn tắt)';
+      document.getElementById('matExplain').innerHTML = m.text;
+    }
+
+    var QUESTIONS = [
+      { q: 'Câu 1: Tại sao dây dẫn điện có lõi bằng đồng (kim loại) nhưng vỏ ngoài lại bọc nhựa?', opts: ['Cho đẹp mắt', 'Vì kim loại dẫn điện tốt, còn nhựa cách điện để chống giật', 'Vì nhựa dẫn điện tốt hơn đồng'], ans: 1, why: 'Chính xác! Lõi kim loại dẫn điện, vỏ nhựa cách điện giúp ta cầm vào không bị điện giật.' },
+      { q: 'Câu 2: Nhúng 4 chiếc thìa (kim loại, sứ, nhựa, gỗ) vào bát nước nóng 90°C (Hình 12.4 SGK), cán thìa nào nóng nhanh nhất?', opts: ['Thìa kim loại', 'Thìa gỗ', 'Thìa nhựa'], ans: 0, why: 'Kim loại dẫn nhiệt rất tốt nên nóng lên rất nhanh!' },
+      { q: 'Câu 3: Tính chất nổi bật của CAO SU giúp nó được chọn làm lốp xe là gì?', opts: ['Trong suốt và dễ vỡ', 'Đàn hồi, bền, không thấm nước', 'Dẫn điện và dẫn nhiệt tốt'], ans: 1, why: 'Cao su đàn hồi, bền và không thấm nước nên cực kỳ hợp làm lốp xe, đệm, găng tay.' },
+      { q: 'Câu 4: Trong chu trình 3R bảo vệ môi trường, 3 chữ R là gì?', opts: ['Giảm thiểu – Tái sử dụng – Tái chế', 'Đốt bỏ – Chôn lấp – Xả sông', 'Mua mới – Dùng 1 lần – Vứt đi'], ans: 0, why: 'Reduce (Giảm thiểu) – Reuse (Tái sử dụng) – Recycle (Tái chế)!' },
+      { q: 'Câu 5: Chai nước suối có kí hiệu tam giác số 1 (PETE) có nên dùng đi dùng lại nhiều lần không?', opts: ['Có, dùng càng lâu càng tốt', 'Không nên, vì đây là nhựa chỉ dùng 1 lần, dùng lại dễ thôi hoá chất độc hại', 'Chỉ dùng lại để đựng nước sôi'], ans: 1, why: 'Nhớ mẹo hay SGK tr. 45 nhé: nhựa số 1 PETE chỉ dùng 1 lần, không nên tái sử dụng nhiều lần!' }
+    ];
+    var answered = {}, stars = 0;
+    function renderQuiz() {
+      var box = document.getElementById('quizContainer'); box.innerHTML = '';
+      QUESTIONS.forEach(function (item, idx) {
+        var card = document.createElement('div'); card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-2.5';
+        var html = '<div class="font-bold text-sm">' + item.q + '</div><div class="grid grid-cols-1 gap-2">';
+        item.opts.forEach(function (opt, oIdx) {
+          html += '<button type="button" id="q-' + idx + '-o-' + oIdx + '" onclick="pickAnswer(' + idx + ',' + oIdx + ')" class="text-left px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-400 transition">' + opt + '</button>';
+        });
+        html += '</div><div id="fb-' + idx + '" class="hidden text-xs font-semibold pt-1"></div>';
+        card.innerHTML = html; box.appendChild(card);
+      });
+    }
+    function pickAnswer(qIdx, oIdx) {
+      if (answered[qIdx]) return; answered[qIdx] = true;
+      var item = QUESTIONS[qIdx], isRight = (oIdx === item.ans), fb = document.getElementById('fb-' + qIdx);
+      fb.classList.remove('hidden');
+      item.opts.forEach(function (_, i) {
+        var b = document.getElementById('q-' + qIdx + '-o-' + i); b.disabled = true;
+        if (i === item.ans) b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm font-bold border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200';
+        else if (i === oIdx && !isRight) b.className = 'text-left px-3.5 py-2.5 rounded-xl text-sm border-2 border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300';
+      });
+      if (isRight) { stars++; fb.className = 'text-xs font-semibold pt-1 text-emerald-700 dark:text-emerald-400'; fb.textContent = '🌟 Đúng rồi (+1 sao)! ' + item.why; }
+      else { fb.className = 'text-xs font-semibold pt-1 text-rose-600 dark:text-rose-400'; fb.textContent = '💡 Chưa đúng mất rồi! ' + item.why; }
+      document.getElementById('starScore').textContent = '⭐ ' + stars + ' / ' + QUESTIONS.length;
+      if (Object.keys(answered).length === QUESTIONS.length) {
+        var fin = document.getElementById('quizFinish'); fin.classList.remove('hidden');
+        fin.innerHTML = '<div class="font-extrabold text-base text-emerald-800 dark:text-emerald-200">' + (stars === 5 ? '🏆 Quá đỉnh! Trọn 5/5 sao Bài 12!' : '👏 Bạn đạt ' + stars + '/5 sao — bấm "Làm lại" để săn đủ 5 sao nhé!') + '</div>';
+      }
+    }
+    function resetQuiz() { answered = {}; stars = 0; document.getElementById('starScore').textContent = '⭐ 0 / 5'; document.getElementById('quizFinish').classList.add('hidden'); renderQuiz(); }
+    renderQuiz();
+  </script>
+  <script src="assets/common.js"></script>
+</body>
+</html>
