@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tổng Quan &amp; Ôn Thi 10 Điểm — Hoá học 6 (Lớp 6A03)</title>
+  <meta name="description" content="Bản đồ tư duy, 3 nguyên lý gốc, 12 flashcard, 8 câu tự luận Tại sao và Đề thi thử 20 câu thang 10 điểm môn Hoá học 6." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] } } } };</script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html#hoa-hoc" class="px-3 py-1.5 rounded-xl bg-sky-50 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300 text-sm font-bold hover:bg-sky-100 transition">← Trang chủ Hoá học 6</a>
+      <div class="flex items-center gap-2">
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-6 space-y-6 pb-28">
+
+    <!-- HERO -->
+    <section class="rounded-3xl p-6 bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 text-white shadow-lg">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div class="max-w-2xl">
+          <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">🎯 Trung tâm Tổng quan &amp; Luyện thi 10 điểm · Hoá học 6</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Hiểu Tận Gốc Bản Chất — Tự Tin 10 Điểm Hoá Học 6</h1>
+          <p class="text-sm text-sky-50 mt-1">Gom trọn 3 Chương (Bài 9–17) vào 1 bản đồ trực quan, 3 nguyên lý gốc, 8 câu tự luận ăn điểm 9–10 và Đề thi thử 20 câu chấm điểm 10.</p>
+        </div>
+        <button type="button" onclick="startTTS('hoa-3-nguyen-ly', '3 Nguyên lý gốc của Hoá học lớp 6', 'Cả 9 bài Hoá học lớp 6 chỉ xoay quanh đúng 3 nguyên lý gốc rất dễ nhớ. Nguyên lý 1 là Hạt và Nhiệt độ: mọi chất đều làm từ hạt siêu nhỏ; nóng lên hạt chạy nhanh hơn nên đá tan, nước sôi và đường tan nhanh hơn trong nước nóng. Nguyên lý 2 là Có tạo chất mới hay không: không tạo chất mới là tính chất vật lí như chuyển thể hay hoà tan; tạo ra chất mới là tính chất hoá học như đường cháy thành nước hàng hay đinh sắt bị gỉ. Nguyên lý 3 là Khác tính chất nên chọn đúng việc và tách được chất: nhờ tính dẫn điện, tính tan, nặng nhẹ khác nhau mà ta chọn đúng vật liệu an toàn và tách mọi hỗn hợp bằng lọc, cô cạn hoặc chiết!')" class="shrink-0 px-4 py-2.5 rounded-xl bg-white text-sky-700 font-bold text-xs md:text-sm shadow hover:bg-sky-50 transition">
+          🔊 Nghe 3 Nguyên lý gốc
+        </button>
+      </div>
+    </section>
+
+    <!-- 4 TAB CHÍNH -->
+    <nav class="grid grid-cols-2 md:grid-cols-4 gap-2.5" aria-label="4 phần ôn tập Hoá học 6">
+      <button id="hub-tab-ban-do" type="button" onclick="switchHubTab('ban-do')" class="hub-tab rounded-2xl p-3.5 text-left border-2 transition">
+        <div class="text-xl">🗺️</div>
+        <div class="font-extrabold text-sm mt-1">1. Bản đồ &amp; Bản chất</div>
+        <div class="text-[11px] opacity-80">Mind Map + 3 Nguyên lý</div>
+      </button>
+      <button id="hub-tab-on-nhanh" type="button" onclick="switchHubTab('on-nhanh')" class="hub-tab rounded-2xl p-3.5 text-left border-2 transition">
+        <div class="text-xl">⚡</div>
+        <div class="font-extrabold text-sm mt-1">2. Bẫy thi &amp; Flashcard</div>
+        <div class="text-[11px] opacity-80">5 Bảng + 12 Thẻ lật</div>
+      </button>
+      <button id="hub-tab-tu-luan" type="button" onclick="switchHubTab('tu-luan')" class="hub-tab rounded-2xl p-3.5 text-left border-2 transition">
+        <div class="text-xl">💬</div>
+        <div class="font-extrabold text-sm mt-1">3. Tự luận "Tại sao?"</div>
+        <div class="text-[11px] opacity-80">8 câu ăn điểm 9–10</div>
+      </button>
+      <button id="hub-tab-thi-thu" type="button" onclick="switchHubTab('thi-thu')" class="hub-tab rounded-2xl p-3.5 text-left border-2 transition">
+        <div class="text-xl">📝</div>
+        <div class="font-extrabold text-sm mt-1">4. Đề Thi Thử 20 Câu</div>
+        <div class="text-[11px] opacity-80">Thang 10 + Ôn câu sai</div>
+      </button>
+    </nav>
+
+    <!-- =================================================================== -->
+    <!-- TAB 1: BẢN ĐỒ MIND MAP SVG & 3 NGUYÊN LÝ GỐC                         -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-ban-do" class="hub-panel space-y-6">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">🗺️ Bản Đồ Tư Duy Trọn Bộ Hoá Học 6 (Bấm vào từng ô để xem nhanh!)</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Toàn bộ Hoá học 6 là 1 câu chuyện liền mạch gồm 3 Chương: Chất là gì? → Dùng làm gì? → Trộn &amp; Tách ra sao?</p>
+          </div>
+        </div>
+
+        <!-- SVG MIND MAP TƯƠNG TÁC -->
+        <div class="rounded-2xl bg-slate-50 dark:bg-slate-950 p-2 overflow-x-auto">
+          <svg viewBox="0 0 820 350" class="w-full min-w-[660px] h-auto" role="img" aria-label="Bản đồ tư duy Hoá học 6 gồm 3 chương và 9 bài">
+            <!-- Đường nối từ tâm tới 3 Chương -->
+            <path d="M125 175 C180 175, 180 65, 240 65" fill="none" stroke="#0284c7" stroke-width="4" />
+            <path d="M125 175 L240 175" fill="none" stroke="#d97706" stroke-width="4" />
+            <path d="M125 175 C180 175, 180 285, 240 285" fill="none" stroke="#0d9488" stroke-width="4" />
+
+            <!-- Đường nối Chương II -> Bài 9, 10, 11 -->
+            <path d="M420 65 C460 65, 460 28, 505 28" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+            <path d="M420 65 L505 65" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+            <path d="M420 65 C460 65, 460 102, 505 102" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+
+            <!-- Đường nối Chương III -> Bài 12, 13, 14, 15 -->
+            <path d="M420 175 C460 175, 460 138, 505 138" fill="none" stroke="#fbbf24" stroke-width="2.5" />
+            <path d="M420 175 C460 175, 460 165, 505 165" fill="none" stroke="#fbbf24" stroke-width="2.5" />
+            <path d="M420 175 C460 175, 460 192, 505 192" fill="none" stroke="#fbbf24" stroke-width="2.5" />
+            <path d="M420 175 C460 175, 460 219, 505 219" fill="none" stroke="#fbbf24" stroke-width="2.5" />
+
+            <!-- Đường nối Chương IV -> Bài 16, 17 -->
+            <path d="M420 285 C460 285, 460 264, 505 264" fill="none" stroke="#2dd4bf" stroke-width="2.5" />
+            <path d="M420 285 C460 285, 460 306, 505 306" fill="none" stroke="#2dd4bf" stroke-width="2.5" />
+
+            <!-- TÂM: HOÁ HỌC 6 -->
+            <rect x="14" y="135" width="114" height="80" rx="20" fill="#0284c7" />
+            <text x="71" y="170" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">🧪 HOÁ HỌC 6</text>
+            <text x="71" y="191" text-anchor="middle" font-size="11" fill="#e0f2fe">3 Chương · 9 Bài</text>
+
+            <!-- 3 NHÁNH CHƯƠNG -->
+            <rect x="240" y="38" width="180" height="54" rx="14" fill="#0369a1" />
+            <text x="330" y="61" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">CHƯƠNG II: CHẤT LÀ GÌ?</text>
+            <text x="330" y="79" text-anchor="middle" font-size="10.5" fill="#bae6fd">3 Thể · Chuyển thể · Không khí</text>
+
+            <rect x="240" y="148" width="180" height="54" rx="14" fill="#b45309" />
+            <text x="330" y="171" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">CHƯƠNG III: DÙNG LÀM GÌ?</text>
+            <text x="330" y="189" text-anchor="middle" font-size="10.5" fill="#fef3c7">Vật · Nguyên · Nhiên · Thực phẩm</text>
+
+            <rect x="240" y="258" width="180" height="54" rx="14" fill="#0f766e" />
+            <text x="330" y="281" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">CHƯƠNG IV: TRỘN &amp; TÁCH</text>
+            <text x="330" y="299" text-anchor="middle" font-size="10.5" fill="#ccfbf1">Hỗn hợp · Lọc · Cô cạn · Chiết</text>
+
+            <!-- 9 Ô BÀI CLICK ĐƯỢC -->
+            <g onclick="selectMapNode(9)" class="cursor-pointer"><rect x="505" y="12" width="300" height="30" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8" /><text x="518" y="31" font-size="11.5" font-weight="800" fill="#0c4a6e">Bài 9: Sự đa dạng của chất (Vật lí vs Hoá học)</text></g>
+            <g onclick="selectMapNode(10)" class="cursor-pointer"><rect x="505" y="49" width="300" height="30" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8" /><text x="518" y="68" font-size="11.5" font-weight="800" fill="#0c4a6e">Bài 10: Rắn – Lỏng – Khí &amp; 4 Chuyển thể (0°C/100°C)</text></g>
+            <g onclick="selectMapNode(11)" class="cursor-pointer"><rect x="505" y="86" width="300" height="30" rx="9" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8" /><text x="518" y="105" font-size="11.5" font-weight="800" fill="#0c4a6e">Bài 11: Oxygen &amp; Không khí (78% N₂ · 21% O₂)</text></g>
+
+            <g onclick="selectMapNode(12)" class="cursor-pointer"><rect x="505" y="124" width="300" height="24" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.6" /><text x="518" y="140" font-size="11" font-weight="800" fill="#78350f">Bài 12: Vật liệu (Dẫn điện/nhiệt, 3R, PETE số 1)</text></g>
+            <g onclick="selectMapNode(13)" class="cursor-pointer"><rect x="505" y="152" width="300" height="24" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.6" /><text x="518" y="168" font-size="11" font-weight="800" fill="#78350f">Bài 13: Nguyên liệu (Đá vôi + Acid, Quặng sắt/nhôm)</text></g>
+            <g onclick="selectMapNode(14)" class="cursor-pointer"><rect x="505" y="180" width="300" height="24" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.6" /><text x="518" y="196" font-size="11" font-weight="800" fill="#78350f">Bài 14: Nhiên liệu (Mỏ dầu 3 lớp, Tái tạo)</text></g>
+            <g onclick="selectMapNode(15)" class="cursor-pointer"><rect x="505" y="208" width="300" height="24" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.6" /><text x="518" y="224" font-size="11" font-weight="800" fill="#78350f">Bài 15: Lương thực, thực phẩm (4 nhóm dinh dưỡng)</text></g>
+
+            <g onclick="selectMapNode(16)" class="cursor-pointer"><rect x="505" y="246" width="300" height="34" rx="9" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.8" /><text x="518" y="267" font-size="11.5" font-weight="800" fill="#134e4a">Bài 16: Hỗn hợp (Dung dịch · Huyền phù · Nhũ tương)</text></g>
+            <g onclick="selectMapNode(17)" class="cursor-pointer"><rect x="505" y="288" width="300" height="34" rx="9" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.8" /><text x="518" y="309" font-size="11.5" font-weight="800" fill="#134e4a">Bài 17: Tách chất (Lọc · Cô cạn · Chiết)</text></g>
+          </svg>
+        </div>
+
+        <!-- HỘP CHI TIẾT KHI BẤM VÀO NHÁNH BẢN ĐỒ -->
+        <div id="mapDetailBox" class="rounded-2xl p-4 bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-800 flex flex-wrap items-center justify-between gap-3">
+          <div class="space-y-1 flex-1 min-w-[220px]">
+            <div id="mapDetailTitle" class="font-extrabold text-sm md:text-base text-sky-900 dark:text-sky-200">👆 Bấm vào bất kỳ ô Bài 9–17 trên bản đồ để xem tóm tắt cốt lõi!</div>
+            <p id="mapDetailText" class="text-xs md:text-sm text-slate-700 dark:text-slate-300">Mỗi nhánh nối thẳng tới bài thí nghiệm tương tác 5 phút để con ôn lại ngay khi cần.</p>
+          </div>
+          <a id="mapDetailLink" href="hoa-bai-10-cac-the-cua-chat.html" class="hidden shrink-0 px-4 py-2 rounded-xl bg-sky-600 text-white text-xs md:text-sm font-bold hover:bg-sky-700 transition">🔬 Mở bài chi tiết →</a>
+        </div>
+      </div>
+
+      <!-- 3 NGUYÊN LÝ GỐC -->
+      <div class="space-y-3">
+        <h2 class="text-lg font-extrabold">🧠 3 Nguyên Lý Gốc (Hiểu 3 điều này = tự suy luận được mọi câu khó!)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border-t-4 border-t-sky-500 border border-slate-200 dark:border-slate-800 space-y-2">
+            <div class="font-extrabold text-base text-sky-700 dark:text-sky-400">1. Hạt &amp; Nhiệt độ</div>
+            <p class="text-sm leading-relaxed">Mọi chất đều làm từ <strong>hạt siêu nhỏ</strong>. Càng <strong>nóng</strong>, hạt chạy càng nhanh!</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">👉 Suy ra ngay: Đun nóng làm đá tan → nước sôi; pha đường/muối trong nước nóng tan nhanh và nhiều hơn!</p>
+          </div>
+          <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border-t-4 border-t-rose-500 border border-slate-200 dark:border-slate-800 space-y-2">
+            <div class="font-extrabold text-base text-rose-700 dark:text-rose-400">2. Có tạo chất MỚI không?</div>
+            <p class="text-sm leading-relaxed"><strong>Không chất mới</strong> = Vật lí (chuyển thể, hoà tan, tách chất). <strong>Có chất mới</strong> = Hoá học (cháy, gỉ sắt, nung vôi, đường cháy).</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">👉 Gặp câu nào lạ cứ hỏi: "Xong rồi nó có biến thành chất khác không?" là chọn đúng 100%!</p>
+          </div>
+          <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border-t-4 border-t-emerald-500 border border-slate-200 dark:border-slate-800 space-y-2">
+            <div class="font-extrabold text-base text-emerald-700 dark:text-emerald-400">3. Khác tính chất → Chọn &amp; Tách</div>
+            <p class="text-sm leading-relaxed">Mỗi chất có tính chất riêng (dẫn điện, tan, nặng/nhẹ, bay hơi) nên ta <strong>chọn vật liệu đúng việc</strong> và <strong>tách được mọi hỗn hợp</strong>!</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">👉 Suy ra ngay: Không tan → Lọc; Tan khó bay hơi → Cô cạn; 2 lỏng không tan → Chiết!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 2: 5 BẪY HAY RA THI & 12 FLASHCARD LẬT THẺ                      -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-on-nhanh" class="hub-panel hidden space-y-6">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <h2 class="text-lg font-extrabold">⚡ 5 Bảng So Sánh Hay Ra Thi Nhất (Tránh mất điểm oan!)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+          <div class="rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-1.5">
+            <div class="font-extrabold text-sky-700 dark:text-sky-400">1. Bay hơi vs Sôi vs Ngưng tụ</div>
+            <p>• <strong>Bay hơi &amp; Ngưng tụ:</strong> xảy ra ở <strong>MỌI nhiệt độ</strong> (phơi áo, cốc trà đá).</p>
+            <p>• <strong>Sôi, Nóng chảy, Đông đặc:</strong> chỉ ở <strong>nhiệt độ xác định</strong> (nước: 0°C và 100°C).</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-1.5">
+            <div class="font-extrabold text-violet-700 dark:text-violet-400">2. Dung dịch vs Huyền phù vs Nhũ tương</div>
+            <p>• <strong>Dung dịch:</strong> đồng nhất, trong suốt (nước đường, nước muối).</p>
+            <p>• <strong>Huyền phù:</strong> Rắn lơ lửng trong Lỏng (bột sắn dây, nước phù sa).</p>
+            <p>• <strong>Nhũ tương:</strong> Lỏng lơ lửng trong Lỏng (sữa, dầu ăn + nước lắc).</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-1.5">
+            <div class="font-extrabold text-teal-700 dark:text-teal-400">3. Khi nào Lọc – Cô cạn – Chiết?</div>
+            <p>• <strong>Lọc:</strong> Rắn KHÔNG tan + Lỏng (cát + nước).</p>
+            <p>• <strong>Cô cạn:</strong> Rắn TAN + Lỏng (muối + nước).</p>
+            <p>• <strong>Chiết:</strong> 2 Lỏng KHÔNG tan vào nhau (dầu ăn + nước).</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-1.5">
+            <div class="font-extrabold text-emerald-700 dark:text-emerald-400">4. Dinh dưỡng &amp; Bệnh khi thiếu</div>
+            <p>• <strong>Vitamin A</strong> (tan trong dầu mỡ) → thiếu bị <strong>mắt kém, quáng gà</strong>.</p>
+            <p>• <strong>Vitamin D + Calcium</strong> → thiếu làm <strong>xương xốp, còi xương</strong>.</p>
+            <p>• <strong>Iodine</strong> → thiếu gây <strong>bướu cổ</strong> (bệnh tuyến giáp).</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 space-y-1.5 md:col-span-2">
+            <div class="font-extrabold text-amber-700 dark:text-amber-400">5. Con số &amp; Kí hiệu "Vàng" cực hay hỏi trắc nghiệm</div>
+            <p>Không khí = <strong>78% N₂ · 21% O₂ (~1/5) · 1% khí khác</strong> | Nhựa <strong>số 1 (PETE)</strong> chỉ dùng 1 lần | <strong>3R</strong> = Reduce (Giảm) – Reuse (Dùng lại) – Recycle (Tái chế) | <strong>Quặng bauxite</strong> → Nhôm, <strong>Quặng sắt</strong> → Gang/Thép | Mỏ dầu từ trên xuống: <strong>Khí → Dầu → Nước</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12 FLASHCARD LẬT MẶT -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">🃏 12 Thẻ Flashcard Lật Nhanh (Bố mẹ có thể cầm hỏi miệng con!)</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Bấm vào từng thẻ để lật xem đáp án. Tự trả lời trong đầu trước khi bấm nhé!</p>
+          </div>
+          <button type="button" onclick="resetFlashcards()" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Úp lại tất cả</button>
+        </div>
+        <div id="flashcardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 3: 8 CÂU TỰ LUẬN "TẠI SAO?" ĂN ĐIỂM 9-10                         -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-tu-luan" class="hub-panel hidden space-y-4">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">💬 8 Câu Tự Luận "Tại sao?" &amp; "Làm thế nào?" (Bí quyết ăn điểm 9–10)</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Con thử tự nói miệng câu trả lời (hoặc nói cho bố/mẹ nghe), rồi bấm mở <strong>Khung trả lời 2 bước</strong> để đối chiếu xem đã đủ ý ăn trọn điểm chưa nhé!</p>
+          </div>
+          <span id="essayCount" class="px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300">✅ Đã thuộc 0 / 8 câu</span>
+        </div>
+        <div id="essayList" class="space-y-3"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 4: ĐỀ THI THỬ 20 CÂU (THANG 10 + LÀM LẠI RIÊNG CÂU SAI)         -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-thi-thu" class="hub-panel hidden space-y-4">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">📝 Đề Thi Thử Tổng Hợp Hoá Học 6 (20 câu · Thang 10 điểm)</h2>
+            <p id="examSubtitle" class="text-xs text-slate-500 dark:text-slate-400">Gồm đủ 3 Chương (0,5 điểm/câu). Chọn đáp án xong bấm <strong>Nộp bài</strong> để xem điểm 10 và báo cáo bài đang yếu!</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="startFullExam()" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Làm lại cả 20 câu</button>
+          </div>
+        </div>
+
+        <!-- KẾT QUẢ CHẤM ĐIỂM 10 & PHÂN TÍCH LỖI SAI -->
+        <div id="examResult" class="hidden rounded-2xl p-5 bg-gradient-to-br from-sky-50 to-emerald-50 dark:from-slate-800 dark:to-slate-800 border-2 border-sky-300 dark:border-sky-700 space-y-3"></div>
+
+        <!-- DANH SÁCH CÂU HỎI -->
+        <div id="examContainer" class="space-y-4"></div>
+
+        <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+          <button id="submitExamBtn" type="button" onclick="gradeExam()" class="px-6 py-3 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-extrabold text-sm md:text-base shadow-md transition">
+            ✅ Nộp bài &amp; Chấm điểm 10
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    /* ===== 1. ĐIỀU KHIỂN 4 TAB CHÍNH ===== */
+    var HUB_TABS = ['ban-do', 'on-nhanh', 'tu-luan', 'thi-thu'];
+    function switchHubTab(key) {
+      if (HUB_TABS.indexOf(key) === -1) key = 'ban-do';
+      HUB_TABS.forEach(function (k) {
+        var btn = document.getElementById('hub-tab-' + k);
+        var pnl = document.getElementById('hub-panel-' + k);
+        var active = (k === key);
+        if (btn) btn.className = 'hub-tab rounded-2xl p-3.5 text-left border-2 transition ' + (active
+          ? 'border-sky-500 bg-sky-50 dark:bg-sky-950/60 text-sky-900 dark:text-sky-100 shadow-sm'
+          : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-sky-300');
+        if (pnl) pnl.classList.toggle('hidden', !active);
+      });
+      if (window.history && window.history.replaceState) window.history.replaceState(null, '', '#' + key);
+    }
+    (function () {
+      var h = (window.location.hash || '').replace('#', '');
+      switchHubTab(HUB_TABS.indexOf(h) !== -1 ? h : 'ban-do');
+    })();
+
+    /* ===== 2. BẢN ĐỒ TƯ DUY SVG ===== */
+    var MAP_NODES = {
+      9: { title: 'Bài 9: Sự đa dạng của chất (SGK tr. 28–29)', text: 'Chất tạo nên vật thể (tự nhiên/nhân tạo, sống/không sống). Tính chất vật lí không tạo chất mới; tính chất hoá học tạo ra chất mới (như đun đường thành nước hàng).', url: 'hoa-bai-09-su-da-dang-cua-chat.html' },
+      10: { title: 'Bài 10: Các thể của chất & sự chuyển thể (SGK tr. 30–35)', text: '3 thể Rắn – Lỏng – Khí. 4 chuyển thể: Nóng chảy & Đông đặc (0°C), Sôi (100°C), còn Bay hơi & Ngưng tụ xảy ra ở mọi nhiệt độ.', url: 'hoa-bai-10-cac-the-cua-chat.html' },
+      11: { title: 'Bài 11: Oxygen & Không khí (SGK tr. 36–41)', text: 'Oxygen cần cho hô hấp và sự cháy. Không khí gồm 78% N₂, 21% O₂ (~1/5) và 1% khí khác. Trồng cây, đi xe buýt để giảm ô nhiễm & mưa acid.', url: 'hoa-bai-11-oxygen-khong-khi.html' },
+      12: { title: 'Bài 12: Một số vật liệu (SGK tr. 42–45)', text: 'Kim loại dẫn điện/nhiệt; nhựa/gỗ/cao su cách điện/nhiệt; thuỷ tinh/gốm giòn dễ vỡ. Nhớ 3R (Giảm – Dùng lại – Tái chế) và không dùng lại chai số 1 PETE.', url: 'hoa-bai-12-mot-so-vat-lieu.html' },
+      13: { title: 'Bài 13: Một số nguyên liệu (SGK tr. 46–49)', text: 'Đá vôi (calcium carbonate) gặp acid sủi bọt khí, dùng nung vôi/xi măng. Quặng sắt → gang thép; Quặng bauxite → nhôm. Tài nguyên hữu hạn cần tiết kiệm!', url: 'hoa-bai-13-mot-so-nguyen-lieu.html' },
+      14: { title: 'Bài 14: Một số nhiên liệu (SGK tr. 50–51)', text: 'Nhiên liệu cháy toả nhiệt (rắn, lỏng, khí). Mỏ dầu xếp 3 lớp từ trên xuống: Khí → Dầu → Nước. Nhiên liệu hoá thạch sẽ cạn → dùng năng lượng tái tạo.', url: 'hoa-bai-14-mot-so-nhien-lieu.html' },
+      15: { title: 'Bài 15: Một số lương thực, thực phẩm (SGK tr. 52–55)', text: '4 nhóm chất: Carbohydrate (năng lượng chính), Protein (xây cơ thể), Lipid (dự trữ, giúp hấp thụ Vitamin A), Vitamin & khoáng (mắt, xương, tuyến giáp).', url: 'hoa-bai-15-mot-so-luong-thuc-thuc-pham.html' },
+      16: { title: 'Bài 16: Hỗn hợp các chất (SGK tr. 56–59)', text: 'Tinh khiết (1 chất) vs Hỗn hợp (≥2 chất). Dung dịch (trong suốt), Huyền phù (rắn trong lỏng), Nhũ tương (lỏng trong lỏng). Nóng + khuấy + nhỏ → tan nhanh!', url: 'hoa-bai-16-hon-hop-cac-chat.html' },
+      17: { title: 'Bài 17: Tách chất khỏi hỗn hợp (SGK tr. 60–63)', text: 'Dựa vào sự khác nhau về tính chất vật lí: Lọc (rắn không tan + lỏng), Cô cạn (rắn tan + lỏng), Chiết (2 chất lỏng không tan vào nhau).', url: 'hoa-bai-17-tach-chat-khoi-hon-hop.html' }
+    };
+    function selectMapNode(n) {
+      var d = MAP_NODES[n];
+      document.getElementById('mapDetailTitle').textContent = '📌 ' + d.title;
+      document.getElementById('mapDetailText').textContent = d.text;
+      var a = document.getElementById('mapDetailLink');
+      a.href = d.url; a.classList.remove('hidden');
+    }
+
+    /* ===== 3. 12 FLASHCARD LẬT MẶT ===== */
+    var FLASHCARDS = [
+      { q: 'Phân biệt nhanh Tính chất Vật lí và Tính chất Hoá học?', a: 'Vật lí: KHÔNG tạo chất mới (màu, thể, tan). Hoá học: TẠO RA CHẤT MỚI (cháy, gỉ sắt, đường cháy).' },
+      { q: 'Nước nóng chảy, đông đặc và sôi ở những nhiệt độ nào?', a: 'Nóng chảy & đông đặc cùng ở 0°C; sôi ở 100°C (áp suất thường).' },
+      { q: 'Sự bay hơi khác sự sôi ở điểm nào quan trọng nhất?', a: 'Bay hơi xảy ra ở MỌI nhiệt độ trên mặt thoáng; sôi chỉ ở nhiệt độ sôi và có bọt khí trong lòng nước.' },
+      { q: 'Thành phần phần trăm thể tích của không khí là bao nhiêu?', a: '78% Nitrogen (nhiều nhất), 21% Oxygen (~1/5), 1% CO₂, hơi nước và khí khác.' },
+      { q: 'Tại sao không nên tái sử dụng nhiều lần chai nước suối kí hiệu số 1 (PETE)?', a: 'Đó là nhựa dùng 1 lần; dùng đi dùng lại có thể thôi hoá chất độc hại vào nước uống.' },
+      { q: '3 chữ R trong chu trình 3R là gì?', a: 'Reduce (Giảm thiểu) – Reuse (Tái sử dụng) – Recycle (Tái chế).' },
+      { q: 'Nhỏ giọt acid lên viên đá vôi thấy hiện tượng gì?', a: 'Sủi bọt khí mạnh! (Vì đá vôi chứa chủ yếu calcium carbonate).' },
+      { q: 'Quặng bauxite và quặng sắt dùng sản xuất kim loại nào?', a: 'Quặng bauxite → Nhôm (Tây Nguyên); Quặng sắt → Gang và Thép (Thái Nguyên).' },
+      { q: 'Trong mỏ dầu, 3 lớp Khí – Dầu – Nước xếp theo thứ tự nào từ trên xuống?', a: 'Trên cùng: Khí (nhẹ nhất) → Giữa: Dầu mỏ → Dưới cùng: Nước (nặng nhất).' },
+      { q: 'Thiếu Vitamin A, thiếu Calcium/Vitamin D và thiếu Iodine gây ra gì?', a: 'Thiếu Vit A: mắt kém (quáng gà); thiếu Calcium/Vit D: xương yếu; thiếu Iodine: bướu cổ.' },
+      { q: 'Phân biệt nhanh Huyền phù và Nhũ tương?', a: 'Huyền phù: RẮN lơ lửng trong lỏng (bột sắn dây). Nhũ tương: LỎNG lơ lửng trong lỏng (sữa, dầu + nước).' },
+      { q: 'Muốn tách cát khỏi nước, muối khỏi nước, dầu khỏi nước dùng 3 cách nào?', a: 'Cát + nước → Lọc; Muối + nước → Cô cạn; Dầu + nước → Chiết bằng phễu chiết!' }
+    ];
+    function renderFlashcards() {
+      var g = document.getElementById('flashcardGrid'); g.innerHTML = '';
+      FLASHCARDS.forEach(function (fc, idx) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.id = 'fc-' + idx;
+        btn.dataset.flipped = '0';
+        btn.onclick = function () { toggleCard(idx); };
+        btn.className = 'text-left rounded-2xl p-4 min-h-[126px] border-2 border-sky-200 dark:border-slate-700 bg-sky-50/60 dark:bg-slate-800/70 hover:border-sky-400 transition flex flex-col justify-between';
+        btn.innerHTML = '<div class="text-[11px] font-bold text-sky-600 dark:text-sky-400">Thẻ ' + (idx + 1) + ' · Bấm để lật đáp án 🔄</div><div class="font-bold text-sm mt-1">' + fc.q + '</div>';
+        g.appendChild(btn);
+      });
+    }
+    function toggleCard(idx) {
+      var el = document.getElementById('fc-' + idx), fc = FLASHCARDS[idx];
+      var flipped = el.dataset.flipped === '1';
+      el.dataset.flipped = flipped ? '0' : '1';
+      if (!flipped) {
+        el.className = 'text-left rounded-2xl p-4 min-h-[126px] border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 transition flex flex-col justify-between';
+        el.innerHTML = '<div class="text-[11px] font-bold text-emerald-700 dark:text-emerald-300">✅ Đáp án (Bấm để úp lại)</div><div class="font-semibold text-sm text-emerald-950 dark:text-emerald-100 mt-1">' + fc.a + '</div>';
+      } else {
+        el.className = 'text-left rounded-2xl p-4 min-h-[126px] border-2 border-sky-200 dark:border-slate-700 bg-sky-50/60 dark:bg-slate-800/70 hover:border-sky-400 transition flex flex-col justify-between';
+        el.innerHTML = '<div class="text-[11px] font-bold text-sky-600 dark:text-sky-400">Thẻ ' + (idx + 1) + ' · Bấm để lật đáp án 🔄</div><div class="font-bold text-sm mt-1">' + fc.q + '</div>';
+      }
+    }
+    function resetFlashcards() { renderFlashcards(); }
+    renderFlashcards();
+
+    /* ===== 4. 8 CÂU TỰ LUẬN "TẠI SAO?" ===== */
+    var ESSAYS = [
+      { q: 'Câu 1 (Bài 17 — Hay ra thi nhất!): Có một mẫu muối ăn bị lẫn cát. Em hãy trình bày cách tách riêng muối ăn sạch ra khỏi cát?', step1: 'Dựa vào tính tan khác nhau: muối ăn TAN trong nước và không bay hơi, còn cát KHÔNG tan trong nước.', step2: 'Bước 1: Đổ nước vào khuấy đều cho muối tan hết (cát lắng xuống). Bước 2: Dùng phễu LỌC để giữ lại cát trên giấy lọc, thu được nước muối trong. Bước 3: CÔ CẠN (đun bay hơi hết nước) sẽ thu lại muối ăn sạch!' },
+      { q: 'Câu 2 (Bài 10): Tại sao để một cốc trà đá trên bàn một lúc lại thấy có nhiều giọt nước đọng bên ngoài thành cốc?', step1: 'Trong không khí luôn có sẵn hơi nước (thể khí) và sự ngưng tụ xảy ra ở mọi nhiệt độ.', step2: 'Hơi nước trong không khí xung quanh chạm vào thành cốc lạnh nên NGƯNG TỤ (chuyển từ thể khí sang thể lỏng), tạo thành các giọt nước đọng bên ngoài cốc (không phải nước thấm qua cốc đâu nhé!).' },
+      { q: 'Câu 3 (Bài 15): Tại sao khi xào hoặc nấu cà rốt, cà chua nên cho thêm một ít dầu ăn hoặc mỡ?', step1: 'Cà rốt, cà chua rất giàu Vitamin A (tốt cho mắt), mà Vitamin A thuộc nhóm vitamin TAN TRONG CHẤT BÉO.', step2: 'Vì vậy cần có dầu, mỡ trong bữa ăn để hoà tan và giúp cơ thể hấp thụ được Vitamin A tốt nhất.' },
+      { q: 'Câu 4 (Bài 12): Tại sao dây điện có lõi bằng đồng nhưng vỏ bọc ngoài bằng nhựa, còn nồi nấu bằng kim loại nhưng quai cầm lại bằng gỗ/nhựa?', step1: 'Dựa vào tính dẫn điện và dẫn nhiệt khác nhau của vật liệu.', step2: 'Kim loại (đồng, nhôm, inox) dẫn điện và dẫn nhiệt TỐT nên làm lõi dây dẫn điện và thân nồi nấu nhanh chín; nhựa và gỗ CÁCH ĐIỆN, dẫn nhiệt KÉM nên bọc ngoài chống điện giật và chống bỏng tay.' },
+      { q: 'Câu 5 (Bài 16): Tại sao trên vỏ nhiều hộp sữa hoặc chai nước ép hoa quả hay ghi dòng chữ "Lắc đều trước khi sử dụng"?', step1: 'Sữa là nhũ tương, nước ép thường là huyền phù — đều là HỖN HỢP KHÔNG ĐỒNG NHẤT.', step2: 'Khi để yên lâu ngày, các hạt chất dinh dưỡng/giọt béo dễ bị lắng xuống đáy hoặc tách lớp. Lắc đều giúp chúng phân bố đều trở lại để uống ngon và đủ chất.' },
+      { q: 'Câu 6 (Bài 10): Tại sao khi lên núi cao, người ta nấu cơm thường lâu chín hoặc khó chín?', step1: 'Nhiệt độ sôi của chất lỏng phụ thuộc vào áp suất khí quyển trên mặt thoáng.', step2: 'Càng lên núi cao, không khí càng loãng, áp suất khí quyển giảm nên nước sôi ở nhiệt độ THẤP HƠN 100°C → nhiệt độ không đủ cao nên gạo lâu chín hơn ở đồng bằng.' },
+      { q: 'Câu 7 (Bài 11): Tại sao khi lặn sâu dưới biển hoặc lên vũ trụ, con người bắt buộc phải mang theo bình dưỡng khí?', step1: 'Con người cần khí oxygen để duy trì sự hô hấp và sự sống.', step2: 'Ở sâu dưới nước (oxygen tan rất ít, phổi người không lấy được như mang cá) hay ngoài vũ trụ (không có không khí) đều thiếu oxygen, nên phải mang bình dưỡng khí cung cấp oxygen trực tiếp.' },
+      { q: 'Câu 8 (Bài 16): Tại sao khi mở nắp chai nước ngọt có gas lạnh lại nghe tiếng "xì" và thấy nhiều bọt khí nổi lên?', step1: 'Khí carbon dioxide (CO₂) được nén tan vào nước ngọt dưới áp suất cao tạo thành dung dịch.', step2: 'Khi mở nắp, áp suất giảm đột ngột (và nhiệt độ tăng dần ngoài không khí) khiến khí CO₂ tan ít hơn và thoát nhanh ra ngoài tạo tiếng "xì" và bọt khí.' }
+    ];
+    var masteredEssays = {};
+    function renderEssays() {
+      var box = document.getElementById('essayList'); box.innerHTML = '';
+      ESSAYS.forEach(function (e, i) {
+        var div = document.createElement('div');
+        div.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5';
+        div.innerHTML =
+          '<div class="font-bold text-sm md:text-base">' + e.q + '</div>' +
+          '<div class="flex flex-wrap items-center gap-2">' +
+            '<button type="button" onclick="toggleEssay(' + i + ')" id="ebtn-' + i + '" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-200 hover:bg-sky-200 transition">💡 Xem khung trả lời 2 bước</button>' +
+            '<button type="button" onclick="markEssay(' + i + ')" id="emrk-' + i + '" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition">⬜ Đánh dấu đã hiểu</button>' +
+          '</div>' +
+          '<div id="eans-' + i + '" class="hidden rounded-xl p-3.5 bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-800 text-xs md:text-sm space-y-1.5">' +
+            '<div><span class="font-extrabold text-sky-700 dark:text-sky-400">Bước 1 (Nêu bản chất):</span> ' + e.step1 + '</div>' +
+            '<div><span class="font-extrabold text-emerald-700 dark:text-emerald-400">Bước 2 (Giải thích ăn trọn điểm):</span> ' + e.step2 + '</div>' +
+          '</div>';
+        box.appendChild(div);
+      });
+    }
+    function toggleEssay(i) {
+      var a = document.getElementById('eans-' + i), b = document.getElementById('ebtn-' + i);
+      var show = a.classList.contains('hidden');
+      a.classList.toggle('hidden');
+      b.textContent = show ? '🙈 Ẩn khung trả lời' : '💡 Xem khung trả lời 2 bước';
+    }
+    function markEssay(i) {
+      masteredEssays[i] = !masteredEssays[i];
+      var b = document.getElementById('emrk-' + i);
+      b.textContent = masteredEssays[i] ? '✅ Con đã trả lời được!' : '⬜ Đánh dấu đã hiểu';
+      b.className = masteredEssays[i]
+        ? 'px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white transition'
+        : 'px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-600 hover:bg-emerald-50 transition';
+      var cnt = Object.values(masteredEssays).filter(Boolean).length;
+      document.getElementById('essayCount').textContent = '✅ Đã thuộc ' + cnt + ' / ' + ESSAYS.length + ' câu';
+    }
+    renderEssays();
+
+    /* ===== 5. ĐỀ THI THỬ 20 CÂU (THANG 10 + LÀM LẠI CÂU SAI) ===== */
+    var EXAM_BANK = [
+      // Chương II (7 câu)
+      { id: 1, ch: 2, bai: 'Bài 9', url: 'hoa-bai-09-su-da-dang-cua-chat.html', q: 'Hiện tượng nào sau đây thể hiện TÍNH CHẤT HOÁ HỌC của chất?', opts: ['Nước đá tan thành nước lỏng', 'Đun đường đến khi chuyển màu nâu sẫm có mùi khét', 'Hoà tan muối ăn vào nước'], ans: 1, why: 'Đường biến thành chất mới màu nâu sẫm → tính chất hoá học.' },
+      { id: 2, ch: 2, bai: 'Bài 9', url: 'hoa-bai-09-su-da-dang-cua-chat.html', q: 'Vật thể nào sau đây là vật thể TỰ NHIÊN và là VẬT SỐNG?', opts: ['Cầu Long Biên', 'Cây mía ngoài ruộng', 'Hòn đá vôi'], ans: 1, why: 'Cây mía có sẵn trong tự nhiên, biết lớn lên và sinh sản.' },
+      { id: 3, ch: 2, bai: 'Bài 10', url: 'hoa-bai-10-cac-the-cua-chat.html', q: 'Chất ở thể KHÍ có đặc điểm nổi bật nào sau đây?', opts: ['Có hình dạng cố định, rất khó nén', 'Dễ dàng lan toả ra mọi hướng và dễ bị nén', 'Không chảy được'], ans: 1, why: 'Hạt chất khí nằm xa nhau, bay tự do nên dễ lan toả và dễ nén.' },
+      { id: 4, ch: 2, bai: 'Bài 10', url: 'hoa-bai-10-cac-the-cua-chat.html', q: 'Sự chuyển thể nào sau đây xảy ra ở MỌI NHIỆT ĐỘ?', opts: ['Sự nóng chảy và đông đặc', 'Sự bay hơi và sự ngưng tụ', 'Sự sôi'], ans: 1, why: 'Bay hơi & ngưng tụ xảy ra ở mọi nhiệt độ; sôi, nóng chảy, đông đặc chỉ ở nhiệt độ xác định.' },
+      { id: 5, ch: 2, bai: 'Bài 10', url: 'hoa-bai-10-cac-the-cua-chat.html', q: 'Hơi nước bay lên cao gặp lạnh tạo thành mây là quá trình chuyển thể nào?', opts: ['Sự ngưng tụ', 'Sự nóng chảy', 'Sự đông đặc'], ans: 0, why: 'Hơi nước (khí) gặp lạnh chuyển thành giọt nước nhỏ li ti (lỏng) là sự ngưng tụ.' },
+      { id: 6, ch: 2, bai: 'Bài 11', url: 'hoa-bai-11-oxygen-khong-khi.html', q: 'Trong không khí, khí nitrogen và khí oxygen chiếm lần lượt khoảng bao nhiêu % thể tích?', opts: ['21% và 78%', '78% và 21%', '50% và 50%'], ans: 1, why: 'Không khí gồm 78% nitrogen, 21% oxygen và 1% các khí khác.' },
+      { id: 7, ch: 2, bai: 'Bài 11', url: 'hoa-bai-11-oxygen-khong-khi.html', q: 'Thí nghiệm úp cốc thuỷ tinh lên cây nến đang cháy trong chậu nước vôi trong cho thấy mực nước dâng lên khoảng:', opts: ['1/2 chiều cao cốc', '1/5 chiều cao cốc (ứng với ~21% oxygen)', '4/5 chiều cao cốc'], ans: 1, why: 'Oxygen chiếm ~1/5 thể tích không khí nên khi cháy hết, nước dâng chiếm đúng 1/5 cốc.' },
+      // Chương III (7 câu)
+      { id: 8, ch: 3, bai: 'Bài 12', url: 'hoa-bai-12-mot-so-vat-lieu.html', q: 'Vật liệu nào sau đây dẫn điện và dẫn nhiệt TỐT nhất?', opts: ['Kim loại (đồng, nhôm, sắt)', 'Nhựa', 'Thuỷ tinh'], ans: 0, why: 'Kim loại dẫn điện, dẫn nhiệt tốt; nhựa và thuỷ tinh cách điện, dẫn nhiệt kém.' },
+      { id: 9, ch: 3, bai: 'Bài 12', url: 'hoa-bai-12-mot-so-vat-lieu.html', q: 'Kí hiệu tam giác tái chế có số 1 (PETE) dưới đáy chai nước suối nhắc ta điều gì?', opts: ['Dùng lại càng nhiều lần càng tốt', 'Chỉ nên dùng 1 lần, không tái sử dụng nhiều lần đựng nước uống', 'Có thể đun trực tiếp trên bếp'], ans: 1, why: 'Nhựa số 1 PETE dùng lại nhiều lần dễ thôi hoá chất độc hại.' },
+      { id: 10, ch: 3, bai: 'Bài 13', url: 'hoa-bai-13-mot-so-nguyen-lieu.html', q: 'Nhỏ vài giọt dung dịch hydrochloric acid lên viên đá vôi sẽ thấy hiện tượng gì?', opts: ['Đá vôi đóng băng', 'Sủi bọt khí mạnh', 'Đá vôi tan ngay không có bọt'], ans: 1, why: 'Đá vôi chứa calcium carbonate nên tác dụng với acid tạo bọt khí.' },
+      { id: 11, ch: 3, bai: 'Bài 13', url: 'hoa-bai-13-mot-so-nguyen-lieu.html', q: 'Quặng BAUXITE là nguyên liệu chính để sản xuất kim loại nào?', opts: ['Sắt', 'Nhôm (Aluminium)', 'Đồng'], ans: 1, why: 'Quặng bauxite (nhiều ở Tây Nguyên) dùng sản xuất nhôm.' },
+      { id: 12, ch: 3, bai: 'Bài 14', url: 'hoa-bai-14-mot-so-nhien-lieu.html', q: 'Trong mỏ dầu dưới lòng đất, 3 lớp từ TRÊN xuống DƯỚI xếp theo thứ tự nào?', opts: ['Khí → Dầu → Nước', 'Nước → Dầu → Khí', 'Dầu → Khí → Nước'], ans: 0, why: 'Khí nhẹ nhất nằm trên, dầu nhẹ hơn nước ở giữa, nước nặng nhất ở dưới cùng.' },
+      { id: 13, ch: 3, bai: 'Bài 14', url: 'hoa-bai-14-mot-so-nhien-lieu.html', q: 'Nguồn năng lượng nào sau đây là NĂNG LƯỢNG TÁI TẠO?', opts: ['Than đá', 'Năng lượng Mặt Trời và gió', 'Dầu mỏ'], ans: 1, why: 'Mặt Trời, gió, thuỷ điện là năng lượng tái tạo; than đá và dầu mỏ là nhiên liệu hoá thạch sẽ cạn kiệt.' },
+      { id: 14, ch: 3, bai: 'Bài 15', url: 'hoa-bai-15-mot-so-luong-thuc-thuc-pham.html', q: 'Nhóm chất nào là nguồn cung cấp NĂNG LƯỢNG CHÍNH cho cơ thể (gạo, ngô, khoai, sắn)?', opts: ['Carbohydrate (tinh bột, đường)', 'Protein (chất đạm)', 'Chất khoáng'], ans: 0, why: 'Carbohydrate là nguồn cung cấp năng lượng chính; Protein xây dựng cơ thể.' },
+      // Chương IV (6 câu)
+      { id: 15, ch: 4, bai: 'Bài 15', url: 'hoa-bai-15-mot-so-luong-thuc-thuc-pham.html', q: 'Cơ thể thiếu chất nào dễ gây bệnh bướu cổ (rối loạn tuyến giáp)?', opts: ['Iodine', 'Vitamin C', 'Tinh bột'], ans: 0, why: 'Thiếu Iodine gây bệnh bướu cổ; thiếu Calcium/Vitamin D làm xương yếu.' },
+      { id: 16, ch: 4, bai: 'Bài 16', url: 'hoa-bai-16-hon-hop-cac-chat.html', q: 'Chất nào sau đây là CHẤT TINH KHIẾT?', opts: ['Nước cất pha tiêm', 'Nước cam vắt', 'Nước đường'], ans: 0, why: 'Nước cất chỉ gồm duy nhất 1 chất là nước.' },
+      { id: 17, ch: 4, bai: 'Bài 16', url: 'hoa-bai-16-hon-hop-cac-chat.html', q: 'Nước bột sắn dây và nước phù sa (hạt rắn lơ lửng trong nước) thuộc loại nào?', opts: ['Dung dịch', 'Huyền phù', 'Nhũ tương'], ans: 1, why: 'Hạt rắn lơ lửng trong chất lỏng gọi là huyền phù.' },
+      { id: 18, ch: 4, bai: 'Bài 16', url: 'hoa-bai-16-hon-hop-cac-chat.html', q: 'Cách nào giúp hoà tan đường vào nước NHANH và được NHIỀU nhất?', opts: ['Dùng nước lạnh, để yên', 'Dùng nước nóng, khuấy đều, đường hạt mịn', 'Cho thêm đá viên vào'], ans: 1, why: 'Chất rắn tan nhanh & nhiều hơn khi tăng nhiệt độ, khuấy trộn và nghiền nhỏ.' },
+      { id: 19, ch: 4, bai: 'Bài 17', url: 'hoa-bai-17-tach-chat-khoi-hon-hop.html', q: 'Để tách dầu ăn không tan ra khỏi nước, ta dùng phương pháp nào?', opts: ['Lọc qua giấy lọc', 'Chiết bằng phễu chiết', 'Cô cạn'], ans: 1, why: 'Chiết dùng tách 2 chất lỏng không tan vào nhau (dầu nổi trên, nước ở dưới).' },
+      { id: 20, ch: 4, bai: 'Bài 17', url: 'hoa-bai-17-tach-chat-khoi-hon-hop.html', q: 'Diêm dân làm muối từ nước biển là ứng dụng phương pháp tách chất nào?', opts: ['Lọc', 'Cô cạn (bay hơi nước)', 'Chiết'], ans: 1, why: 'Phơi nắng gió cho nước biển bay hơi hết, còn lại muối ăn rắn → cô cạn!' }
+    ];
+
+    var activeQuestions = EXAM_BANK.slice();
+    var userChoices = {};
+    var lastWrongIds = [];
+
+    function renderExam() {
+      var box = document.getElementById('examContainer');
+      box.innerHTML = '';
+      activeQuestions.forEach(function (item, idx) {
+        var card = document.createElement('div');
+        card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5';
+        var html = '<div class="flex items-start justify-between gap-2"><div class="font-bold text-sm">Câu ' + (idx + 1) + ': ' + item.q + '</div><span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">' + item.bai + '</span></div><div class="grid grid-cols-1 gap-2">';
+        item.opts.forEach(function (opt, oIdx) {
+          html += '<label id="ex-lbl-' + item.id + '-' + oIdx + '" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-sky-400 cursor-pointer transition">' +
+            '<input type="radio" name="exq-' + item.id + '" value="' + oIdx + '" onchange="userChoices[' + item.id + ']=' + oIdx + '" class="accent-sky-600" />' +
+            '<span>' + opt + '</span></label>';
+        });
+        html += '</div><div id="ex-fb-' + item.id + '" class="hidden text-xs font-semibold pt-1"></div>';
+        card.innerHTML = html;
+        box.appendChild(card);
+      });
+    }
+
+    function gradeExam() {
+      var total = activeQuestions.length;
+      var correct = 0;
+      var chStats = { 2: { ok: 0, tot: 0 }, 3: { ok: 0, tot: 0 }, 4: { ok: 0, tot: 0 } };
+      var weakMap = {};
+      lastWrongIds = [];
+
+      activeQuestions.forEach(function (item) {
+        var picked = userChoices[item.id];
+        var isRight = (picked === item.ans);
+        if (chStats[item.ch]) chStats[item.ch].tot++;
+        var fb = document.getElementById('ex-fb-' + item.id);
+        fb.classList.remove('hidden');
+
+        item.opts.forEach(function (_, i) {
+          var lbl = document.getElementById('ex-lbl-' + item.id + '-' + i);
+          if (i === item.ans) {
+            lbl.className = 'flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-bold border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200';
+          } else if (i === picked && !isRight) {
+            lbl.className = 'flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm border-2 border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300';
+          }
+        });
+
+        if (isRight) {
+          correct++;
+          if (chStats[item.ch]) chStats[item.ch].ok++;
+          fb.className = 'text-xs font-semibold pt-1 text-emerald-700 dark:text-emerald-400';
+          fb.textContent = '✅ Chính xác! ' + item.why;
+        } else {
+          lastWrongIds.push(item.id);
+          weakMap[item.bai] = item.url;
+          fb.className = 'text-xs font-semibold pt-1 text-rose-600 dark:text-rose-400';
+          fb.innerHTML = '❌ Chưa đúng (' + (picked === undefined ? 'chưa chọn' : 'sai') + ')! ' + item.why + ' → <a href="' + item.url + '" class="underline font-bold">Ôn lại ' + item.bai + '</a>';
+        }
+      });
+
+      var score10 = ((correct / total) * 10).toFixed(1).replace('.0', '');
+      var res = document.getElementById('examResult');
+      res.classList.remove('hidden');
+
+      var weakHtml = '';
+      var weakKeys = Object.keys(weakMap);
+      if (weakKeys.length) {
+        weakHtml = '<div class="text-xs md:text-sm"><strong>📌 Các bài con nên xem lại ngay:</strong> ' +
+          weakKeys.map(function (k) { return '<a href="' + weakMap[k] + '" class="inline-block ml-1 mt-1 px-2.5 py-1 rounded-lg bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-200 font-bold hover:underline">' + k + ' →</a>'; }).join('') +
+          '</div>';
+      }
+
+      var retryWrongBtn = lastWrongIds.length
+        ? '<button type="button" onclick="retryWrongOnly()" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs md:text-sm font-extrabold shadow transition">🔁 Chỉ làm lại ' + lastWrongIds.length + ' câu con vừa sai!</button>'
+        : '<div class="font-extrabold text-emerald-700 dark:text-emerald-300">🏆 TUYỆT ĐỐI 10/10! Con đã nắm chắc trọn bộ Hoá học 6 rồi!</div>';
+
+      res.innerHTML =
+        '<div class="flex flex-wrap items-center justify-between gap-3">' +
+          '<div><div class="text-xs font-bold uppercase text-sky-600 dark:text-sky-400">Kết quả chấm điểm</div>' +
+          '<div class="text-3xl font-extrabold text-slate-900 dark:text-white">' + score10 + ' / 10 điểm <span class="text-sm font-bold text-slate-500">(' + correct + '/' + total + ' câu đúng)</span></div></div>' +
+          retryWrongBtn +
+        '</div>' +
+        '<div class="grid grid-cols-3 gap-2 text-center text-xs">' +
+          '<div class="p-2 rounded-xl bg-white/80 dark:bg-slate-900"><strong>Chương II</strong><br/>' + chStats[2].ok + '/' + chStats[2].tot + ' đúng</div>' +
+          '<div class="p-2 rounded-xl bg-white/80 dark:bg-slate-900"><strong>Chương III</strong><br/>' + chStats[3].ok + '/' + chStats[3].tot + ' đúng</div>' +
+          '<div class="p-2 rounded-xl bg-white/80 dark:bg-slate-900"><strong>Chương IV</strong><br/>' + chStats[4].ok + '/' + chStats[4].tot + ' đúng</div>' +
+        '</div>' + weakHtml;
+
+      res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function retryWrongOnly() {
+      if (!lastWrongIds.length) return;
+      activeQuestions = EXAM_BANK.filter(function (q) { return lastWrongIds.indexOf(q.id) !== -1; });
+      userChoices = {};
+      document.getElementById('examResult').classList.add('hidden');
+      document.getElementById('examSubtitle').innerHTML = '🔁 <strong>Chế độ Lấp Lỗ Hổng:</strong> Chỉ làm lại đúng <strong>' + activeQuestions.length + ' câu vừa sai</strong> cho tới khi đúng 100%!';
+      renderExam();
+      window.scrollTo({ top: 180, behavior: 'smooth' });
+    }
+
+    function startFullExam() {
+      activeQuestions = EXAM_BANK.slice();
+      userChoices = {};
+      lastWrongIds = [];
+      document.getElementById('examResult').classList.add('hidden');
+      document.getElementById('examSubtitle').innerHTML = 'Gồm đủ 3 Chương (0,5 điểm/câu). Chọn đáp án xong bấm <strong>Nộp bài</strong> để xem điểm 10 và báo cáo bài đang yếu!';
+      renderExam();
+    }
+
+    startFullExam();
+  </script>
+  <script src="assets/common.js"></script>
+</body>
+</html>
