@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KHTN 6 — Lớp 6A03 (Học nhanh 5 phút mỗi bài)</title>
-  <meta name="description" content="Trang học nhanh Khoa học tự nhiên 6 dành cho học sinh Lớp 6A03: chia rõ 3 môn Vật lí, Hoá học, Sinh học." />
+  <meta name="description" content="Trang học nhanh Khoa học tự nhiên 6 dành cho học sinh Lớp 6A03: chia rõ 4 phân môn Hoá học, Vật lí, Sinh học và Thiên văn." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -47,13 +47,13 @@
     <section class="rounded-3xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white p-6 shadow-md">
       <h1 class="text-2xl md:text-3xl font-extrabold">Chào bạn lớp 6A03! 👋</h1>
       <p class="text-sm md:text-base text-emerald-50 mt-1.5">
-        Chọn 1 trong 3 môn bên dưới để mở đúng bài học hôm nay. Mỗi bài chỉ cần <strong>5 phút</strong>: đọc ngắn, bấm thử hình vẽ, rồi làm 5 câu kiếm sao ⭐!
+        Chọn 1 trong 4 phân môn bên dưới để mở đúng bài học hôm nay. Mỗi bài chỉ cần <strong>5 phút</strong>: đọc ngắn, bấm thử hình vẽ, rồi làm 5 câu kiếm sao ⭐!
       </p>
     </section>
 
-    <!-- 3 NÚT CHỌN MÔN TO, RÕ -->
-    <section aria-label="Chọn môn học">
-      <div class="grid grid-cols-3 gap-3">
+    <!-- 4 NÚT CHỌN PHÂN MÔN TO, RÕ -->
+    <section aria-label="Chọn phân môn học">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <button id="tab-hoa-hoc" type="button" onclick="selectSubject('hoa-hoc')" class="subject-tab rounded-2xl p-4 text-left border-2 transition focus:outline-none">
           <div class="text-2xl md:text-3xl">🧪</div>
           <div class="font-extrabold text-sm md:text-base mt-1.5">Hoá học</div>
@@ -63,13 +63,19 @@
         <button id="tab-vat-li" type="button" onclick="selectSubject('vat-li')" class="subject-tab rounded-2xl p-4 text-left border-2 transition focus:outline-none">
           <div class="text-2xl md:text-3xl">⚡</div>
           <div class="font-extrabold text-sm md:text-base mt-1.5">Vật lí</div>
-          <div class="text-[11px] md:text-xs opacity-80 mt-0.5">Đo, Lực &amp; Bầu trời</div>
+          <div class="text-[11px] md:text-xs opacity-80 mt-0.5">Đo lường, Lực &amp; Năng lượng</div>
         </button>
 
         <button id="tab-sinh-hoc" type="button" onclick="selectSubject('sinh-hoc')" class="subject-tab rounded-2xl p-4 text-left border-2 transition focus:outline-none">
           <div class="text-2xl md:text-3xl">🌿</div>
           <div class="font-extrabold text-sm md:text-base mt-1.5">Sinh học</div>
           <div class="text-[11px] md:text-xs opacity-80 mt-0.5">Tế bào, Cây &amp; Con vật</div>
+        </button>
+
+        <button id="tab-thien-van" type="button" onclick="selectSubject('thien-van')" class="subject-tab rounded-2xl p-4 text-left border-2 transition focus:outline-none">
+          <div class="text-2xl md:text-3xl">🌌</div>
+          <div class="font-extrabold text-sm md:text-base mt-1.5">Thiên văn</div>
+          <div class="text-[11px] md:text-xs opacity-80 mt-0.5">Trái Đất &amp; Bầu trời</div>
         </button>
       </div>
     </section>
@@ -197,7 +203,7 @@
     <!-- DANH SÁCH BÀI HỌC: VẬT LÍ -->
     <section id="panel-vat-li" class="subject-panel hidden space-y-4">
       <div class="flex items-center justify-between">
-        <h2 class="text-lg font-extrabold text-amber-600 dark:text-amber-400">⚡ Môn Vật lí (20 bài)</h2>
+        <h2 class="text-lg font-extrabold text-amber-600 dark:text-amber-400">⚡ Môn Vật lí (16 bài)</h2>
         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">Đang chuẩn bị</span>
       </div>
 
@@ -212,13 +218,39 @@
             <div class="font-bold text-slate-800 dark:text-slate-200">🧲 Lực trong đời sống (Bài 40–45)</div>
             <div class="mt-1">Lực là gì, lò xo, trọng lượng, lực ma sát, lực cản</div>
           </div>
-          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 sm:col-span-2">
             <div class="font-bold text-slate-800 dark:text-slate-200">🔋 Năng lượng (Bài 46–51)</div>
-            <div class="mt-1">Các dạng năng lượng, chuyển hoá &amp; tiết kiệm</div>
+            <div class="mt-1">Các dạng năng lượng, chuyển hoá, năng lượng tái tạo &amp; tiết kiệm năng lượng</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DANH SÁCH BÀI HỌC: THIÊN VĂN -->
+    <section id="panel-thien-van" class="subject-panel hidden space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-extrabold text-indigo-600 dark:text-indigo-400">🌌 Thiên văn học — Trái Đất &amp; Bầu trời (4 bài)</h2>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300">Đang chuẩn bị</span>
+      </div>
+
+      <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm text-slate-600 dark:text-slate-400 space-y-3">
+        <p class="font-semibold text-slate-800 dark:text-slate-200">Chương X · Trái Đất và Bầu trời (Bài 52–55) sắp ra mắt:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+            <div class="font-bold text-slate-800 dark:text-slate-200">☀️ Bài 52 · Chuyển động nhìn thấy của Mặt Trời. Thiên thể</div>
+            <div class="mt-1">SGK tr. 179–182 · Vì sao thấy Mặt Trời mọc ở Đông, lặn ở Tây &amp; phân biệt sao, hành tinh, vệ tinh</div>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
-            <div class="font-bold text-slate-800 dark:text-slate-200">🌕 Trái Đất &amp; Bầu trời (Bài 52–55)</div>
-            <div class="mt-1">Mặt Trời, Mặt Trăng, Hệ Mặt Trời &amp; Ngân Hà</div>
+            <div class="font-bold text-slate-800 dark:text-slate-200">🌕 Bài 53 · Mặt Trăng</div>
+            <div class="mt-1">SGK tr. 183–186 · Các hình dạng nhìn thấy (pha) của Mặt Trăng theo chu kì tháng âm lịch</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+            <div class="font-bold text-slate-800 dark:text-slate-200">🪐 Bài 54 · Hệ Mặt Trời</div>
+            <div class="mt-1">SGK tr. 187–189 · Mặt Trời ở trung tâm và 8 hành tinh quay quanh cùng tiểu hành tinh, sao chổi</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+            <div class="font-bold text-slate-800 dark:text-slate-200">🌌 Bài 55 · Ngân Hà</div>
+            <div class="mt-1">SGK tr. 190–192 · Cấu trúc xoắn ốc của Ngân Hà và vị trí của Hệ Mặt Trời trong vũ trụ</div>
           </div>
         </div>
       </div>
@@ -269,6 +301,10 @@
       'sinh-hoc': {
         active: 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200 shadow-sm',
         idle: 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-emerald-300'
+      },
+      'thien-van': {
+        active: 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-800 dark:text-indigo-200 shadow-sm',
+        idle: 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-indigo-300'
       }
     };
 

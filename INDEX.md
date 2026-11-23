@@ -9,7 +9,7 @@
 
 | STT | Phân môn | Tên sản phẩm / Bài học | File nguồn | Trạng thái | Ghi chú |
 | :---: | :---: | :--- | :--- | :---: | :--- |
-| 1 | Hạ tầng | Cổng Học Tập KHTN 6 (3 môn: Hoá · Lí · Sinh) | [index.html](index.html) | ✅ Sẵn sàng | Giao diện tối giản cho HS lớp 6 (2015) |
+| 1 | Hạ tầng | Cổng Học Tập KHTN 6 (4 phân môn: Hoá · Lí · Sinh · Thiên văn) | [index.html](index.html) | ✅ Sẵn sàng | Giao diện tối giản cho HS lớp 6 (2015) |
 | 2 | Hạ tầng | Thư viện dùng chung (Dark Mode + TTS + Share) | [assets/common.js](assets/common.js) | ✅ Sẵn sàng | Key `khtn6_theme`, TTS `< 170` ký tự, `#ttsBar` |
 | 3 | Hạ tầng | Quy tắc Fast-Path & GitHub Issues | [GEMINI.md](GEMINI.md) | ✅ Sẵn sàng | 6 quy tắc tối ưu tốc độ & xuất bản |
 | 4 | Hạ tầng | Skill khung bài giảng 5 phút lớp 6 | [SKILL.md](.agents/skills/bai-giang-truc-quan/SKILL.md) | ✅ Sẵn sàng | 3 bước 5 phút, CẤM Base64, SVG tương tác |
