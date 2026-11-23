@@ -23,6 +23,7 @@
 | 12 | **Hoá học** | **Bài 15: Một số lương thực, thực phẩm** (SGK tr. 52–55) | [hoa-bai-15-mot-so-luong-thuc-thuc-pham.html](hoa-bai-15-mot-so-luong-thuc-thuc-pham.html) | ✅ Sẵn sàng | Tự xếp khay cơm đủ 4 nhóm chất + Quiz 5 sao |
 | 13 | **Hoá học** | **Bài 16: Hỗn hợp các chất** (SGK tr. 56–59) | [hoa-bai-16-hon-hop-cac-chat.html](hoa-bai-16-hon-hop-cac-chat.html) | ✅ Sẵn sàng | Quầy pha Dung dịch · Huyền phù · Nhũ tương (Hình 16.3) + Quiz 5 sao |
 | 14 | **Hoá học** | **Bài 17: Tách chất khỏi hỗn hợp** (SGK tr. 60–63) | [hoa-bai-17-tach-chat-khoi-hon-hop.html](hoa-bai-17-tach-chat-khoi-hon-hop.html) | ✅ Sẵn sàng | 3 bộ dụng cụ Lọc · Cô cạn · Chiết (Hình 17.4–17.6) + Quiz 5 sao |
+| 15 | **Sinh học** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Sinh 6** | [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 4 Nguyên lý + 4 Hình SGK tương tác + 6 Bẫy thi + 16 Flashcard + 10 Tự luận + Đề 25 câu |
 
 ### CODE MAP (Định vị mã nguồn cho các file HTML tổng hợp > 500 dòng)
 
@@ -34,6 +35,12 @@
 | [hoa-tong-quan-on-thi.html](hoa-tong-quan-on-thi.html) | Tab 4: Đề Thi Thử 20 câu (HTML) | `236–265` | Khung chấm thang 10 + nút nộp bài |
 | [hoa-tong-quan-on-thi.html](hoa-tong-quan-on-thi.html) | Script: Tabs, Mind Map, Flashcards, Essays | `268–398` | Dữ liệu `MAP_NODES`, `FLASHCARDS`, `ESSAYS` |
 | [hoa-tong-quan-on-thi.html](hoa-tong-quan-on-thi.html) | Script: Đề thi 20 câu & Làm lại câu sai | `399–534` | `EXAM_BANK`, `gradeExam()`, `retryWrongOnly()` |
+| [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | Tab 1: Mind Map SVG & 4 Nguyên lý gốc (HTML) | `75–210` | Sơ đồ tư duy 4 mảng (24 bài) click được |
+| [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | Tab 2: 4 Hình SGK Tương tác SVG (HTML) | `211–435` | Hình 19.2–19.3 (Tế bào), 23.1–23.2 (5 cấp), 27.2 & 29.2 (VK–Virus), 5 Giới |
+| [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | Tab 3: 6 Bẫy thi kinh điển & 16 Flashcard (HTML) | `436–498` | 6 bảng vượt bẫy + lưới 16 thẻ lật |
+| [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | Tab 4 & 5: 10 Tự luận & Đề Thi Thử 25 câu (HTML) | `499–540` | Khung 10 câu 9–10 điểm + Đề 25 câu thang 10 |
+| [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | Script: Tabs, Mind Map, Tế bào, 5 cấp, Flashcard, Essays | `545–742` | `MAP_NODES`, `CELL_PARTS`, `ORG_DATA`, `FLASHCARDS`, `ESSAYS` |
+| [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | Script: Đề thi 25 câu & Làm lại câu sai | `743–885` | `EXAM_BANK`, `gradeExam()`, `retryWrongOnly()` |
 
 ---
 

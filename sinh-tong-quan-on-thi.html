@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tổng Quan &amp; Ôn Thi 10 Điểm — Sinh học 6 (Lớp 6A03)</title>
+  <meta name="description" content="Bản đồ tư duy, 4 nguyên lý gốc, 4 hình SGK tương tác SVG, 6 bẫy thi kinh điển, 16 flashcard, 10 câu tự luận và Đề thi thử 25 câu thang 10 điểm môn Sinh học 6." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] } } } };</script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html#sinh-hoc" class="px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 text-sm font-bold hover:bg-emerald-100 transition">← Trang chủ Sinh học 6</a>
+      <div class="flex items-center gap-2">
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-6 space-y-6 pb-28">
+
+    <!-- HERO -->
+    <section class="rounded-3xl p-6 bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 text-white shadow-lg">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div class="max-w-2xl">
+          <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">🎯 Trung tâm Tổng quan &amp; Luyện thi 10 điểm · Sinh học 6</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Hiểu Tận Gốc Bản Chất — Tự Tin 10 Điểm Sinh Học 6</h1>
+          <p class="text-sm text-emerald-50 mt-1">Gom gọn 24 bài (Kính hiển vi · Tế bào · Cơ thể · Đa dạng thế giới sống) vào 4 nguyên lý gốc, 4 hình vẽ tương tác chuẩn SGK, 6 bẫy thi kinh điển, 10 câu tự luận và Đề thi thử 25 câu chấm điểm 10.</p>
+        </div>
+        <button type="button" onclick="startTTS('sinh-4-nguyen-ly', '4 Nguyên lý gốc của Sinh học lớp 6', 'Toàn bộ 24 bài Sinh học lớp 6 thực ra chỉ xoay quanh đúng 4 nguyên lý gốc rất dễ nhớ. Nguyên lý 1 là Tế bào là viên gạch xây sự sống: mọi sinh vật đều cấu tạo từ tế bào; tế bào lớn lên rồi chia đôi từ 1 thành 2, 4, 8 giúp cơ thể lớn lên và lành vết thương. Nguyên lý 2 là Từ nhỏ ghép thành lớn theo 5 bậc: Tế bào ghép thành Mô, Mô tạo Cơ quan, Cơ quan tạo Hệ cơ quan, Hệ cơ quan tạo nên Cơ thể. Nguyên lý 3 là Phân loại bằng đặc điểm đối lập: nhìn vào có màng nhân không, đơn bào hay đa bào, tự quang hợp hay ăn chất có sẵn là xếp đúng ngay vào 5 Giới sinh vật và lập được khoá lưỡng phân. Nguyên lý 4 là Cấu tạo đi đôi với môi trường sống: từ Rêu chưa có mạch sống nơi ẩm tới Thực vật hạt kín có hoa quả khắp nơi, và từ Cá thở mang dưới nước tới Thú đẻ con nuôi con bằng sữa!')" class="shrink-0 px-4 py-2.5 rounded-xl bg-white text-emerald-700 font-bold text-xs md:text-sm shadow hover:bg-emerald-50 transition">
+          🔊 Nghe 4 Nguyên lý gốc
+        </button>
+      </div>
+    </section>
+
+    <!-- 5 TAB CHÍNH -->
+    <nav class="grid grid-cols-2 sm:grid-cols-5 gap-2.5" aria-label="5 phần ôn tập Sinh học 6">
+      <button id="hub-tab-ban-do" type="button" onclick="switchHubTab('ban-do')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">🗺️</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">1. Bản đồ &amp; Bản chất</div>
+        <div class="text-[11px] opacity-80">Mind Map + 4 Nguyên lý</div>
+      </button>
+      <button id="hub-tab-hinh-sgk" type="button" onclick="switchHubTab('hinh-sgk')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">🖼️</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">2. Hình SGK Tương Tác</div>
+        <div class="text-[11px] opacity-80">4 Sơ đồ chạm để học</div>
+      </button>
+      <button id="hub-tab-on-nhanh" type="button" onclick="switchHubTab('on-nhanh')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">⚡</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">3. Bẫy thi &amp; Flashcard</div>
+        <div class="text-[11px] opacity-80">6 Bẫy khó + 16 Thẻ lật</div>
+      </button>
+      <button id="hub-tab-tu-luan" type="button" onclick="switchHubTab('tu-luan')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">💬</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">4. Tự luận 9–10 điểm</div>
+        <div class="text-[11px] opacity-80">10 câu "Tại sao?" &amp; Bài tập</div>
+      </button>
+      <button id="hub-tab-thi-thu" type="button" onclick="switchHubTab('thi-thu')" class="hub-tab rounded-2xl p-3 text-left border-2 transition col-span-2 sm:col-span-1">
+        <div class="text-xl">📝</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">5. Đề Thi Thử 25 Câu</div>
+        <div class="text-[11px] opacity-80">Thang 10 + Ôn câu sai</div>
+      </button>
+    </nav>
+
+    <!-- =================================================================== -->
+    <!-- TAB 1: BẢN ĐỒ MIND MAP SVG & 4 NGUYÊN LÝ GỐC                         -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-ban-do" class="hub-panel space-y-6">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div>
+          <h2 class="text-lg font-extrabold">🗺️ Bản Đồ Tư Duy Trọn Bộ Sinh Học 6 (Bấm vào từng ô để xem nhanh!)</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">24 bài Sinh học 6 là 1 hành trình phóng to từ siêu nhỏ ra thiên nhiên rộng lớn: <strong>Kính soi → Tế bào → Cơ thể → Thế giới sống 5 Giới</strong>.</p>
+        </div>
+
+        <!-- SVG MIND MAP TƯƠNG TÁC -->
+        <div class="rounded-2xl bg-slate-50 dark:bg-slate-950 p-2 overflow-x-auto">
+          <svg viewBox="0 0 840 390" class="w-full min-w-[680px] h-auto" role="img" aria-label="Bản đồ tư duy Sinh học 6 gồm 4 mảng lớn">
+            <!-- Đường nối tâm -> 4 mảng -->
+            <path d="M132 195 C185 195, 185 45, 240 45" fill="none" stroke="#0284c7" stroke-width="4" />
+            <path d="M132 195 C185 195, 185 125, 240 125" fill="none" stroke="#059669" stroke-width="4" />
+            <path d="M132 195 C185 195, 185 215, 240 215" fill="none" stroke="#d97706" stroke-width="4" />
+            <path d="M132 195 C185 195, 185 320, 240 320" fill="none" stroke="#7c3aed" stroke-width="4" />
+
+            <!-- Đường nối Mảng 1 (Kính) -->
+            <path d="M430 45 L505 45" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+
+            <!-- Đường nối Chương V (Tế bào) -->
+            <path d="M430 125 C468 125, 468 100, 505 100" fill="none" stroke="#34d399" stroke-width="2.5" />
+            <path d="M430 125 C468 125, 468 148, 505 148" fill="none" stroke="#34d399" stroke-width="2.5" />
+
+            <!-- Đường nối Chương VI (Cơ thể) -->
+            <path d="M430 215 C468 215, 468 195, 505 195" fill="none" stroke="#fbbf24" stroke-width="2.5" />
+            <path d="M430 215 C468 215, 468 235, 505 235" fill="none" stroke="#fbbf24" stroke-width="2.5" />
+
+            <!-- Đường nối Chương VII (Đa dạng) -->
+            <path d="M430 320 C468 320, 468 275, 505 275" fill="none" stroke="#a78bfa" stroke-width="2.5" />
+            <path d="M430 320 C468 320, 468 308, 505 308" fill="none" stroke="#a78bfa" stroke-width="2.5" />
+            <path d="M430 320 C468 320, 468 340, 505 340" fill="none" stroke="#a78bfa" stroke-width="2.5" />
+            <path d="M430 320 C468 320, 468 372, 505 372" fill="none" stroke="#a78bfa" stroke-width="2.5" />
+
+            <!-- TÂM: SINH HỌC 6 -->
+            <rect x="12" y="152" width="122" height="86" rx="20" fill="#059669" />
+            <text x="73" y="190" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">🌿 SINH HỌC 6</text>
+            <text x="73" y="211" text-anchor="middle" font-size="11" fill="#d1fae5">4 Mảng · 24 Bài</text>
+
+            <!-- 4 NHÁNH CHÍNH -->
+            <rect x="240" y="18" width="190" height="54" rx="14" fill="#0369a1" />
+            <text x="335" y="41" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">🔬 DỤNG CỤ SOI (B3–4)</text>
+            <text x="335" y="59" text-anchor="middle" font-size="10.5" fill="#bae6fd">Kính lúp · Kính hiển vi</text>
+
+            <rect x="240" y="98" width="190" height="54" rx="14" fill="#047857" />
+            <text x="335" y="121" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">🧬 CHƯƠNG V: TẾ BÀO</text>
+            <text x="335" y="139" text-anchor="middle" font-size="10.5" fill="#a7f3d0">Cấu tạo · Lớn lên · Chia đôi</text>
+
+            <rect x="240" y="188" width="190" height="54" rx="14" fill="#b45309" />
+            <text x="335" y="211" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">🧍 CHƯƠNG VI: CƠ THỂ</text>
+            <text x="335" y="229" text-anchor="middle" font-size="10.5" fill="#fef3c7">Đơn bào · Đa bào 5 cấp độ</text>
+
+            <rect x="240" y="293" width="190" height="54" rx="14" fill="#6d28d9" />
+            <text x="335" y="316" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">🦋 CHƯƠNG VII: ĐA DẠNG</text>
+            <text x="335" y="334" text-anchor="middle" font-size="10.5" fill="#ede9fe">5 Giới · Vi sinh · Cây · Con</text>
+
+            <!-- CÁC NÚT CHI TIẾT CLICK ĐƯỢC -->
+            <g class="cursor-pointer" onclick="selectMapNode('kinh')">
+              <rect x="505" y="27" width="320" height="36" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5" />
+              <text x="518" y="49" font-size="11.5" font-weight="700" fill="#0c4a6e">Bài 3–4: Kính lúp (3–20x) &amp; Kính hiển vi (40–3000x)</text>
+            </g>
+
+            <g class="cursor-pointer" onclick="selectMapNode('tb-cautao')">
+              <rect x="505" y="82" width="320" height="36" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5" />
+              <text x="518" y="104" font-size="11.5" font-weight="700" fill="#064e3b">Bài 18–19: Nhân sơ vs Nhân thực · Động vật vs Thực vật</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode('tb-sinhsan')">
+              <rect x="505" y="130" width="320" height="36" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5" />
+              <text x="518" y="152" font-size="11.5" font-weight="700" fill="#064e3b">Bài 20–21: Lớn lên, Sinh sản tế bào (1→2→4) &amp; Thực hành</text>
+            </g>
+
+            <g class="cursor-pointer" onclick="selectMapNode('ct-donbao')">
+              <rect x="505" y="177" width="320" height="34" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5" />
+              <text x="518" y="198" font-size="11.5" font-weight="700" fill="#78350f">Bài 22 &amp; 24: Cơ thể đơn bào vs Cơ thể đa bào</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode('ct-5cap')">
+              <rect x="505" y="218" width="320" height="34" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5" />
+              <text x="518" y="239" font-size="11.5" font-weight="700" fill="#78350f">Bài 23: 5 cấp độ (Tế bào → Mô → Cơ quan → Hệ → Cơ thể)</text>
+            </g>
+
+            <g class="cursor-pointer" onclick="selectMapNode('phanloai')">
+              <rect x="505" y="260" width="320" height="28" rx="9" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5" />
+              <text x="518" y="278" font-size="11.5" font-weight="700" fill="#4c1d95">Bài 25–26: 7 Bậc phân loại · 5 Giới · Khoá lưỡng phân</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode('visinh')">
+              <rect x="505" y="294" width="320" height="28" rx="9" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5" />
+              <text x="518" y="312" font-size="11.5" font-weight="700" fill="#4c1d95">Bài 27–33: Vi khuẩn · Virus · Nguyên sinh vật · Nấm</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode('thucvat')">
+              <rect x="505" y="328" width="320" height="28" rx="9" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5" />
+              <text x="518" y="346" font-size="11.5" font-weight="700" fill="#4c1d95">Bài 34–35: Thực vật (Rêu · Dương xỉ · Hạt trần · Hạt kín)</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode('dongvat')">
+              <rect x="505" y="362" width="320" height="26" rx="9" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5" />
+              <text x="518" y="379" font-size="11.5" font-weight="700" fill="#4c1d95">Bài 36–39: Động vật (KXS &amp; CXS) · Đa dạng sinh học</text>
+            </g>
+          </svg>
+        </div>
+
+        <!-- HỘP XEM NHANH KHI BẤM VÀO Ô -->
+        <div id="mapDetailBox" class="rounded-2xl p-4 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <div id="mapDetailTitle" class="font-extrabold text-sm text-emerald-900 dark:text-emerald-200">👆 Bấm vào bất kỳ ô nào trên Bản đồ ở trên!</div>
+            <div id="mapDetailText" class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Con sẽ thấy tóm tắt bản chất siêu ngắn + mẹo tránh bẫy thi của từng nhóm bài.</div>
+          </div>
+          <button id="mapDetailBtn" type="button" onclick="switchHubTab('hinh-sgk')" class="hidden shrink-0 px-3.5 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 transition">Xem hình SGK tương tác ▶</button>
+        </div>
+      </div>
+
+      <!-- 4 NGUYÊN LÝ GỐC -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border-2 border-emerald-200 dark:border-emerald-800 shadow-sm space-y-2">
+          <div class="text-xs font-extrabold uppercase text-emerald-600">Nguyên lý 1 · Chương V</div>
+          <h3 class="font-extrabold text-base">🧱 Tế bào là "viên gạch" xây sự sống</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Mọi cơ thể sống đều làm từ tế bào (nhỏ xíu phải soi kính hiển vi). Tế bào <strong>lớn lên</strong> rồi <strong>chia đôi</strong> (1 → 2 → 4 → 8) giúp cơ thể lớn lên và thay tế bào già, làm lành vết thương.</p>
+        </div>
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border-2 border-amber-200 dark:border-amber-800 shadow-sm space-y-2">
+          <div class="text-xs font-extrabold uppercase text-amber-600">Nguyên lý 2 · Chương VI</div>
+          <h3 class="font-extrabold text-base">🏗️ Từ nhỏ ghép thành lớn (Thang 5 bậc)</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300"><strong>Đơn bào</strong> = 1 tế bào tự lo hết. <strong>Đa bào</strong> = hàng tỉ tế bào phân công việc theo đúng 5 cấp: <strong>Tế bào → Mô → Cơ quan → Hệ cơ quan → Cơ thể</strong>.</p>
+        </div>
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border-2 border-violet-200 dark:border-violet-800 shadow-sm space-y-2">
+          <div class="text-xs font-extrabold uppercase text-violet-600">Nguyên lý 3 · Bài 25–33</div>
+          <h3 class="font-extrabold text-base">🗂️ Phân loại bằng câu hỏi "Có / Không"</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Muốn xếp đúng vào <strong>5 Giới</strong> hay lập <strong>Khoá lưỡng phân</strong>, chỉ cần hỏi đặc điểm đối lập: <em>Có màng nhân không? Đơn bào hay đa bào? Tự quang hợp hay dị dưỡng?</em></p>
+        </div>
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border-2 border-sky-200 dark:border-sky-800 shadow-sm space-y-2">
+          <div class="text-xs font-extrabold uppercase text-sky-600">Nguyên lý 4 · Bài 34–38</div>
+          <h3 class="font-extrabold text-base">🌍 Cấu tạo đi đôi với môi trường sống</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Sinh vật tiến hoá từ đơn giản đến phức tạp: <strong>Rêu → Dương xỉ → Hạt trần → Hạt kín</strong>; <strong>Cá → Lưỡng cư → Bò sát → Chim → Thú</strong>. Nhìn cấu tạo (lông, vảy, mang, phổi, hoa, nón) là đoán trúng nhóm!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 2: 4 HÌNH VẼ SGK TƯƠNG TÁC SVG (THÂN THUỘC NHƯ TRÊN LỚP)         -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-hinh-sgk" class="hub-panel hidden space-y-6">
+
+      <!-- HÌNH 1: HÌNH 19.2 & 19.3 SGK — SO SÁNH 3 LOẠI TẾ BÀO -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <span class="text-[11px] font-extrabold uppercase text-emerald-600">Mô phỏng Hình 19.2 &amp; Hình 19.3 SGK (tr. 67–68)</span>
+            <h2 class="text-lg font-extrabold">🔬 1. Chạm vào từng bộ phận của 3 loại Tế bào để nhớ lâu!</h2>
+          </div>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300">Hay ra thi nhất Chương V</span>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 dark:bg-slate-950 p-3 overflow-x-auto">
+          <svg viewBox="0 0 820 270" class="w-full min-w-[660px] h-auto" role="img" aria-label="So sánh Tế bào nhân sơ, Tế bào động vật và Tế bào thực vật theo Hình 19.2 và 19.3 SGK">
+            <!-- 1. TẾ BÀO NHÂN SƠ (VI KHUẨN) -->
+            <text x="130" y="22" text-anchor="middle" font-size="13" font-weight="800" fill="#b45309">a) Tế bào Nhân sơ (Vi khuẩn)</text>
+            <!-- Roi & lông -->
+            <path d="M210 135 Q235 110 250 135 T275 130" fill="none" stroke="#d97706" stroke-width="3" />
+            <!-- Thành & màng -->
+            <rect x="40" y="75" width="170" height="120" rx="58" fill="#fef3c7" stroke="#b45309" stroke-width="5" class="cursor-pointer" onclick="inspectCell('thanh-vk')" />
+            <rect x="49" y="84" width="152" height="102" rx="49" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5" class="cursor-pointer" onclick="inspectCell('mang')" />
+            <!-- Tế bào chất -->
+            <ellipse cx="125" cy="135" rx="64" ry="42" fill="#fde68a" opacity="0.5" class="cursor-pointer" onclick="inspectCell('tbc')" />
+            <!-- Vùng nhân (sợi DNA tự do không có màng nhân) -->
+            <path d="M88 125 C100 105, 130 155, 145 120 C160 105, 155 155, 115 150 C95 148, 85 135, 110 130" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" class="cursor-pointer" onclick="inspectCell('vung-nhan')" />
+            <!-- Ribosome chấm nhỏ -->
+            <circle cx="72" cy="115" r="3" fill="#92400e" /><circle cx="170" cy="155" r="3" fill="#92400e" /><circle cx="165" cy="112" r="3" fill="#92400e" />
+            <text x="125" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626" class="cursor-pointer" onclick="inspectCell('vung-nhan')">🔴 Vùng nhân (CHƯA có màng nhân)</text>
+            <text x="125" y="240" text-anchor="middle" font-size="10.5" fill="#78350f">Chỉ có ribosome · Chưa có bào quan có màng</text>
+
+            <!-- 2. TẾ BÀO ĐỘNG VẬT (NHÂN THỰC) -->
+            <text x="410" y="22" text-anchor="middle" font-size="13" font-weight="800" fill="#be123c">b) Tế bào Động vật (Nhân thực)</text>
+            <circle cx="410" cy="135" r="76" fill="#ffe4e6" stroke="#e11d48" stroke-width="3.5" class="cursor-pointer" onclick="inspectCell('mang')" />
+            <!-- Tế bào chất -->
+            <circle cx="410" cy="135" r="68" fill="#fff1f2" class="cursor-pointer" onclick="inspectCell('tbc')" />
+            <!-- Nhân có màng nhân -->
+            <circle cx="400" cy="128" r="24" fill="#c084fc" stroke="#6b21a8" stroke-width="3" class="cursor-pointer" onclick="inspectCell('nhan')" />
+            <circle cx="400" cy="128" r="8" fill="#581c87" class="cursor-pointer" onclick="inspectCell('nhan')" />
+            <!-- Ti thể -->
+            <ellipse cx="450" cy="115" rx="14" ry="8" transform="rotate(-25 450 115)" fill="#fb923c" stroke="#c2410c" stroke-width="2" class="cursor-pointer" onclick="inspectCell('ti-the')" />
+            <ellipse cx="372" cy="170" rx="14" ry="8" transform="rotate(20 372 170)" fill="#fb923c" stroke="#c2410c" stroke-width="2" class="cursor-pointer" onclick="inspectCell('ti-the')" />
+            <text x="410" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#6b21a8" class="cursor-pointer" onclick="inspectCell('nhan')">🟣 Nhân (CÓ màng nhân) · 🟠 Ti thể</text>
+            <text x="410" y="240" text-anchor="middle" font-size="10.5" fill="#881337">KHÔNG có thành tế bào · KHÔNG có lục lạp</text>
+
+            <!-- 3. TẾ BÀO THỰC VẬT (NHÂN THỰC) -->
+            <text x="680" y="22" text-anchor="middle" font-size="13" font-weight="800" fill="#047857">c) Tế bào Thực vật (Nhân thực)</text>
+            <!-- Thành tế bào cứng ngoài cùng -->
+            <rect x="590" y="56" width="180" height="156" rx="18" fill="#86efac" stroke="#15803d" stroke-width="6" class="cursor-pointer" onclick="inspectCell('thanh-tv')" />
+            <!-- Màng tế bào -->
+            <rect x="600" y="66" width="160" height="136" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2" class="cursor-pointer" onclick="inspectCell('mang')" />
+            <!-- Không bào lớn -->
+            <rect x="652" y="96" width="88" height="84" rx="22" fill="#bae6fd" stroke="#0284c7" stroke-width="2.5" class="cursor-pointer" onclick="inspectCell('khong-bao')" />
+            <text x="696" y="142" text-anchor="middle" font-size="10.5" font-weight="800" fill="#0369a1" class="cursor-pointer" onclick="inspectCell('khong-bao')">Không bào lớn</text>
+            <!-- Nhân bị đẩy lệch -->
+            <circle cx="630" cy="100" r="19" fill="#c084fc" stroke="#6b21a8" stroke-width="3" class="cursor-pointer" onclick="inspectCell('nhan')" />
+            <circle cx="630" cy="100" r="6" fill="#581c87" class="cursor-pointer" onclick="inspectCell('nhan')" />
+            <!-- Lục lạp màu xanh lá -->
+            <ellipse cx="626" cy="148" rx="15" ry="9" fill="#22c55e" stroke="#14532d" stroke-width="2" class="cursor-pointer" onclick="inspectCell('luc-lap')" />
+            <ellipse cx="628" cy="178" rx="15" ry="9" fill="#22c55e" stroke="#14532d" stroke-width="2" class="cursor-pointer" onclick="inspectCell('luc-lap')" />
+            <ellipse cx="732" cy="82" rx="14" ry="8" fill="#22c55e" stroke="#14532d" stroke-width="2" class="cursor-pointer" onclick="inspectCell('luc-lap')" />
+            <!-- Ti thể -->
+            <ellipse cx="680" cy="80" rx="12" ry="7" fill="#fb923c" stroke="#c2410c" stroke-width="2" class="cursor-pointer" onclick="inspectCell('ti-the')" />
+            <text x="680" y="226" text-anchor="middle" font-size="11" font-weight="700" fill="#047857" class="cursor-pointer" onclick="inspectCell('luc-lap')">🟢 Hơn ĐV 3 thứ: Thành TB · Lục lạp · Không bào lớn</text>
+            <text x="680" y="244" text-anchor="middle" font-size="10.5" fill="#065f46">(Bấm thẳng vào từng hình trên để xem chức năng!)</text>
+          </svg>
+        </div>
+
+        <!-- Nút chọn nhanh + Hộp giải thích tế bào -->
+        <div class="flex flex-wrap gap-1.5">
+          <button type="button" onclick="inspectCell('mang')" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/40">Màng tế bào</button>
+          <button type="button" onclick="inspectCell('tbc')" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/40">Tế bào chất</button>
+          <button type="button" onclick="inspectCell('vung-nhan')" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-100 dark:bg-rose-900/40 text-rose-800 dark:text-rose-200">Vùng nhân (Nhân sơ)</button>
+          <button type="button" onclick="inspectCell('nhan')" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-200">Nhân (Nhân thực)</button>
+          <button type="button" onclick="inspectCell('ti-the')" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-200">Ti thể</button>
+          <button type="button" onclick="inspectCell('thanh-tv')" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200">⭐ Thành tế bào (TV)</button>
+          <button type="button" onclick="inspectCell('luc-lap')" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-200">⭐ Lục lạp (TV)</button>
+          <button type="button" onclick="inspectCell('khong-bao')" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-200">⭐ Không bào lớn (TV)</button>
+        </div>
+        <div id="cellInfoBox" class="rounded-2xl p-4 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-sm">
+          <strong>👆 Bấm vào một bộ phận trên hình (hoặc nút màu ở trên):</strong> Ví dụ bấm <strong>Lục lạp</strong> để biết vì sao cây xanh tự làm ra thức ăn còn động vật thì không!
+        </div>
+      </div>
+
+      <!-- HÌNH 2: HÌNH 23.1 & 23.2 SGK — 5 CẤP ĐỘ TỔ CHỨC CƠ THỂ ĐA BÀO -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <span class="text-[11px] font-extrabold uppercase text-amber-600">Mô phỏng Hình 23.1 &amp; Hình 23.2 SGK (tr. 79–80)</span>
+            <h2 class="text-lg font-extrabold">🪜 2. Thang 5 Cấp Độ Tổ Chức Cơ Thể Đa Bào</h2>
+          </div>
+          <div class="flex gap-1.5">
+            <button id="org-btn-nguoi" type="button" onclick="setOrgExample('nguoi')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-600 text-white">🧍 Cơ thể người</button>
+            <button id="org-btn-cacoc" type="button" onclick="setOrgExample('cacoc')" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-700">🦎 Cá cóc VN</button>
+            <button id="org-btn-sam" type="button" onclick="setOrgExample('sam')" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-700">🌿 Cây sâm VN</button>
+          </div>
+        </div>
+        <div id="orgLadder" class="grid grid-cols-1 sm:grid-cols-5 gap-2.5"></div>
+        <p class="text-xs text-slate-500 dark:text-slate-400">💡 <strong>Mẹo nhớ nhanh Hình 23.8 SGK:</strong> Cây xanh có 2 hệ cơ quan chính là <strong>Hệ chồi</strong> (thân, lá, hoa, quả) và <strong>Hệ rễ</strong> (rễ chính, rễ bên).</p>
+      </div>
+
+      <!-- HÌNH 3: HÌNH 27.2 & 29.2 SGK — VI KHUẨN VS VIRUS -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase text-violet-600">Mô phỏng Hình 27.2 (tr. 93) &amp; Hình 29.2 SGK (tr. 98)</span>
+          <h2 class="text-lg font-extrabold">🦠 3. Soi Trực Diện: Vi Khuẩn vs Virus (Bẫy Thi Siêu Kinh Điển!)</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- SVG VI KHUẨN -->
+          <div class="rounded-2xl p-4 bg-amber-50/70 dark:bg-slate-800/60 border border-amber-200 dark:border-amber-800 space-y-2">
+            <div class="font-extrabold text-sm text-amber-800 dark:text-amber-300">🦠 Vi khuẩn (Hình 27.2) — CÓ cấu tạo tế bào</div>
+            <svg viewBox="0 0 360 175" class="w-full h-auto" role="img" aria-label="Cấu tạo vi khuẩn theo Hình 27.2 SGK">
+              <path d="M235 90 Q270 65 295 90 T345 85" fill="none" stroke="#d97706" stroke-width="3.5" />
+              <!-- Lông quanh thành -->
+              <line x1="70" y1="48" x2="62" y2="34" stroke="#b45309" stroke-width="2" />
+              <line x1="120" y1="42" x2="120" y2="28" stroke="#b45309" stroke-width="2" />
+              <line x1="175" y1="46" x2="182" y2="32" stroke="#b45309" stroke-width="2" />
+              <line x1="85" y1="138" x2="78" y2="152" stroke="#b45309" stroke-width="2" />
+              <line x1="150" y1="138" x2="155" y2="152" stroke="#b45309" stroke-width="2" />
+              <!-- Thành + Màng + TBC + Vùng nhân -->
+              <rect x="40" y="45" width="195" height="90" rx="45" fill="#fde68a" stroke="#b45309" stroke-width="5" />
+              <rect x="50" y="55" width="175" height="70" rx="35" fill="#fffbeb" stroke="#f59e0b" stroke-width="2" />
+              <path d="M95 85 C115 65, 145 110, 165 80 C180 70, 175 110, 130 105 C105 103, 95 92, 120 88" fill="none" stroke="#dc2626" stroke-width="3.5" stroke-linecap="round" />
+              <!-- Nhãn chuẩn SGK -->
+              <text x="15" y="25" font-size="10.5" font-weight="700" fill="#92400e">Lông</text>
+              <text x="275" y="65" font-size="10.5" font-weight="700" fill="#92400e">Roi (di chuyển)</text>
+              <text x="135" y="168" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b45309">Thành TB · Màng TB · Tế bào chất · Vùng nhân</text>
+            </svg>
+            <ul class="text-xs space-y-1 text-slate-700 dark:text-slate-300">
+              <li>• Là cơ thể <strong>đơn bào nhân sơ</strong> (Giới Khởi sinh), sống độc lập được.</li>
+              <li>• Có lợi (làm sữa chua, muối dưa, phân huỷ rác) &amp; có hại (tả, lao phổi, uốn ván).</li>
+              <li>• 💊 Chữa bệnh do vi khuẩn bằng <strong>thuốc kháng sinh</strong>.</li>
+            </ul>
+          </div>
+
+          <!-- SVG VIRUS -->
+          <div class="rounded-2xl p-4 bg-violet-50/70 dark:bg-slate-800/60 border border-violet-200 dark:border-violet-800 space-y-2">
+            <div class="font-extrabold text-sm text-violet-800 dark:text-violet-300">👾 Virus (Hình 29.2) — CHƯA có cấu tạo tế bào!</div>
+            <svg viewBox="0 0 360 175" class="w-full h-auto" role="img" aria-label="Cấu tạo virus có vỏ ngoài theo Hình 29.2 SGK">
+              <!-- Gai glycoprotein -->
+              <g stroke="#7c3aed" stroke-width="3">
+                <line x1="160" y1="22" x2="160" y2="38" /><circle cx="160" cy="20" r="5" fill="#ec4899" stroke="none" />
+                <line x1="160" y1="142" x2="160" y2="158" /><circle cx="160" cy="160" r="5" fill="#ec4899" stroke="none" />
+                <line x1="92" y1="90" x2="108" y2="90" /><circle cx="90" cy="90" r="5" fill="#ec4899" stroke="none" />
+                <line x1="212" y1="90" x2="228" y2="90" /><circle cx="230" cy="90" r="5" fill="#ec4899" stroke="none" />
+                <line x1="112" y1="42" x2="123" y2="53" /><circle cx="110" cy="40" r="5" fill="#ec4899" stroke="none" />
+                <line x1="208" y1="42" x2="197" y2="53" /><circle cx="210" cy="40" r="5" fill="#ec4899" stroke="none" />
+                <line x1="112" y1="138" x2="123" y2="127" /><circle cx="110" cy="140" r="5" fill="#ec4899" stroke="none" />
+                <line x1="208" y1="138" x2="197" y2="127" /><circle cx="210" cy="140" r="5" fill="#ec4899" stroke="none" />
+              </g>
+              <!-- Vỏ ngoài -->
+              <circle cx="160" cy="90" r="52" fill="#ede9fe" stroke="#7c3aed" stroke-width="4" />
+              <!-- Vỏ protein (hình lục giác) -->
+              <polygon points="160,52 193,71 193,109 160,128 127,109 127,71" fill="#ddd6fe" stroke="#4c1d95" stroke-width="2.5" />
+              <!-- Lõi vật chất di truyền -->
+              <path d="M142 85 Q150 70 160 85 T178 85 Q170 105 155 98" fill="none" stroke="#dc2626" stroke-width="3.5" stroke-linecap="round" />
+              <!-- Chú thích -->
+              <text x="235" y="42" font-size="10.5" font-weight="700" fill="#be185d">Gai glycoprotein</text>
+              <text x="235" y="72" font-size="10.5" font-weight="700" fill="#6d28d9">Vỏ ngoài</text>
+              <text x="235" y="102" font-size="10.5" font-weight="700" fill="#4c1d95">Vỏ protein</text>
+              <text x="235" y="132" font-size="10.5" font-weight="700" fill="#dc2626">Vật chất di truyền</text>
+            </svg>
+            <ul class="text-xs space-y-1 text-slate-700 dark:text-slate-300">
+              <li>• <strong>KHÔNG thuộc 5 Giới sinh vật</strong>; chỉ gồm vỏ protein + lõi di truyền (+ vỏ ngoài ở một số loài).</li>
+              <li>• Bắt buộc <strong>kí sinh nội bào</strong> (ra ngoài tế bào chủ là "vật không sống").</li>
+              <li>• 💉 Phòng bằng <strong>VACCINE</strong>! <strong>Thuốc kháng sinh KHÔNG diệt được virus!</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- HÌNH 4: SƠ ĐỒ 5 GIỚI & PHÂN NHÓM THỰC VẬT / ĐỘNG VẬT -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase text-sky-600">Mô phỏng Hình 25.4 (tr. 88), Bài 34 &amp; Bài 36 SGK</span>
+          <h2 class="text-lg font-extrabold">🌳 4. Sơ Đồ 5 Giới · 4 Nhóm Thực Vật · Động Vật Không &amp; Có Xương Sống</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-xs">
+          <div class="p-3 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800">
+            <div class="font-extrabold text-amber-800 dark:text-amber-300">1. Khởi sinh</div>
+            <div class="mt-1">Đơn bào · <strong>Nhân sơ</strong></div>
+            <div class="text-slate-500 mt-0.5">VD: Vi khuẩn</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-800">
+            <div class="font-extrabold text-cyan-800 dark:text-cyan-300">2. Nguyên sinh</div>
+            <div class="mt-1">Đa số đơn bào · <strong>Nhân thực</strong></div>
+            <div class="text-slate-500 mt-0.5">VD: Trùng roi, trùng giày, tảo</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-800">
+            <div class="font-extrabold text-orange-800 dark:text-orange-300">3. Nấm</div>
+            <div class="mt-1">Đơn/đa bào · Nhân thực · <strong>Dị dưỡng</strong></div>
+            <div class="text-slate-500 mt-0.5">VD: Nấm men, nấm hương, nấm mốc</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800">
+            <div class="font-extrabold text-emerald-800 dark:text-emerald-300">4. Thực vật</div>
+            <div class="mt-1">Đa bào · Nhân thực · <strong>Tự dưỡng</strong></div>
+            <div class="text-slate-500 mt-0.5">Rêu → Dương xỉ → Hạt trần → Hạt kín</div>
+          </div>
+          <div class="p-3 rounded-2xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800">
+            <div class="font-extrabold text-rose-800 dark:text-rose-300">5. Động vật</div>
+            <div class="mt-1">Đa bào · Nhân thực · <strong>Dị dưỡng, di chuyển</strong></div>
+            <div class="text-slate-500 mt-0.5">KXS (~95%) &amp; CXS (~5%)</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+          <div class="rounded-2xl p-4 bg-emerald-50/70 dark:bg-slate-800/60 border border-emerald-200 dark:border-slate-700 space-y-1.5">
+            <div class="font-extrabold text-emerald-800 dark:text-emerald-300 text-sm">🌿 Thang tiến hoá 4 Nhóm Thực Vật (Bài 34)</div>
+            <p>1️⃣ <strong>Rêu:</strong> CHƯA có mạch dẫn, rễ giả, sinh sản bằng <em>bào tử</em> (rêu tường).</p>
+            <p>2️⃣ <strong>Dương xỉ:</strong> CÓ mạch dẫn, rễ thật, lá non cuộn tròn, sinh sản bằng <em>bào tử</em> (dương xỉ, cỏ bợ, <strong>bèo ong</strong>).</p>
+            <p>3️⃣ <strong>Hạt trần:</strong> CÓ hạt nhưng nằm lộ trên <em>nón</em> — <strong>CHƯA có hoa và quả</strong> (thông, vạn tuế, pơmu).</p>
+            <p>4️⃣ <strong>Hạt kín:</strong> Hoàn thiện nhất — <strong>CÓ hoa và quả chứa hạt bên trong</strong> (lúa, cam, bưởi, <strong>bèo tấm</strong>).</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-rose-50/70 dark:bg-slate-800/60 border border-rose-200 dark:border-slate-700 space-y-1.5">
+            <div class="font-extrabold text-rose-800 dark:text-rose-300 text-sm">🐾 Phân nhánh Động Vật (Bài 36)</div>
+            <p><strong>• Không xương sống (6 ngành):</strong> Ruột khoang (sứa, san hô) · Giun dẹp (sán) · Giun tròn (giun đũa) · Giun đốt (giun đất, rươi) · Thân mềm (ốc, mực, bạch tuộc) · Chân khớp (tôm, cua, nhện, châu chấu).</p>
+            <p><strong>• Có xương sống (5 nhóm lớp):</strong> Cá (Cá sụn &amp; Cá xương — thở mang) → Lưỡng cư (ếch, cá cóc — thở da &amp; phổi) → Bò sát (thằn lằn, rùa, cá sấu — vảy sừng) → Chim (lông vũ) → Thú (lông mao, đẻ con, nuôi con bằng sữa).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 3: 6 BẪY THI KINH ĐIỂN & 16 FLASHCARD LẬT THẺ                    -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-on-nhanh" class="hub-panel hidden space-y-6">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <h2 class="text-lg font-extrabold">⚡ 6 Bẫy Thi Sinh Học 6 Kinh Điển (Đọc kỹ để KHÔNG mất điểm oan!)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+          <div class="rounded-2xl p-4 bg-rose-50/70 dark:bg-slate-800/60 border border-rose-200 dark:border-slate-700 space-y-1.5">
+            <div class="font-extrabold text-rose-700 dark:text-rose-400">1. Bẫy "Tên giả" Động vật (Hay gài nhất!)</div>
+            <p>• <strong>Cá voi, cá heo, dơi</strong> → Lớp <strong>Thú</strong> (thở phổi, đẻ con, nuôi con bằng sữa).</p>
+            <p>• <strong>Chim cánh cụt, đà điểu</strong> → Lớp <strong>Chim</strong> (dù không bay, có lông vũ).</p>
+            <p>• <strong>Cá sấu</strong> → <strong>Bò sát</strong> (vảy sừng); <strong>Cá cóc Tam Đảo</strong> → <strong>Lưỡng cư</strong>.</p>
+            <p>• <strong>San hô</strong> → Ruột khoang; <strong>Mực, bạch tuộc</strong> → Thân mềm; <strong>Nhện, cua</strong> → Chân khớp.</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-emerald-50/70 dark:bg-slate-800/60 border border-emerald-200 dark:border-slate-700 space-y-1.5">
+            <div class="font-extrabold text-emerald-700 dark:text-emerald-400">2. Bẫy Nhóm Thực vật (Bài 34)</div>
+            <p>• <strong>Nón thông</strong> KHÔNG phải hoa hay quả → Thông, vạn tuế là <strong>Hạt trần</strong>.</p>
+            <p>• <strong>Bèo ong</strong> = <strong>Dương xỉ</strong>; còn <strong>Bèo tấm</strong> = <strong>Hạt kín</strong>!</p>
+            <p>• <strong>Rêu</strong> chỉ có <strong>rễ giả</strong>, chưa có mạch dẫn (nên cây chỉ cao 1–2 cm).</p>
+            <p>• <strong>Khoai tây, gừng</strong> là biến dạng của <strong>thân</strong> (không phải rễ).</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-violet-50/70 dark:bg-slate-800/60 border border-violet-200 dark:border-slate-700 space-y-1.5">
+            <div class="font-extrabold text-violet-700 dark:text-violet-400">3. Bẫy Virus · Vi khuẩn · Nguyên sinh · Nấm</div>
+            <p>• <strong>Virus:</strong> CHƯA có tế bào → <strong>Kháng sinh KHÔNG diệt được</strong>, phòng bằng vaccine.</p>
+            <p>• <strong>Vi khuẩn:</strong> Đơn bào <strong>nhân sơ</strong> → trị bằng thuốc kháng sinh.</p>
+            <p>• <strong>Nấm:</strong> Dị dưỡng (KHÔNG phải thực vật); "cây nấm" trên đất chỉ là cơ quan sinh sản.</p>
+            <p>• <strong>Địa y</strong> = Nấm + Tảo sống cộng sinh.</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-amber-50/70 dark:bg-slate-800/60 border border-amber-200 dark:border-slate-700 space-y-1.5">
+            <div class="font-extrabold text-amber-700 dark:text-amber-400">4. Bẫy Tác nhân gây bệnh vs Vật truyền bệnh</div>
+            <p>• <strong>Sốt rét:</strong> Tác nhân = <strong>Trùng sốt rét</strong> (Nguyên sinh vật); vật truyền = <strong>muỗi Anophen</strong>.</p>
+            <p>• <strong>Sốt xuất huyết:</strong> Tác nhân = <strong>Virus Dengue</strong>; vật truyền = <strong>muỗi vằn</strong>.</p>
+            <p>• <strong>Kiết lị:</strong> Amip lị (NSV); <strong>Bệnh lợn gạo:</strong> Ấu trùng sán dây (Giun dẹp).</p>
+            <p>• <strong>Hắc lào, lang ben:</strong> do <strong>Nấm</strong>; <strong>Tả, lao phổi:</strong> do <strong>Vi khuẩn</strong>.</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-sky-50/70 dark:bg-slate-800/60 border border-sky-200 dark:border-slate-700 space-y-1.5">
+            <div class="font-extrabold text-sky-700 dark:text-sky-400">5. Bẫy Tế bào &amp; Kính hiển vi (Bài 4, 19, 20)</div>
+            <p>• <strong>Tế bào nhân sơ</strong> chỉ có duy nhất 1 bào quan là <strong>ribosome</strong>.</p>
+            <p>• <strong>Không phải mọi tế bào đều chia suốt đời:</strong> tế bào thần kinh trưởng thành không phân chia; tế bào chia mất kiểm soát tạo <strong>khối u</strong>.</p>
+            <p>• <strong>Độ phóng đại KHV</strong> = Thị kính × Vật kính (VD: 10× × 40× = 400 lần).</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-teal-50/70 dark:bg-slate-800/60 border border-teal-200 dark:border-slate-700 space-y-1.5">
+            <div class="font-extrabold text-teal-700 dark:text-teal-400">6. Bẫy 7 Bậc phân loại &amp; Tên khoa học (Bài 25)</div>
+            <p>• Thứ tự từ lớn → nhỏ: <strong>Giới → Ngành → Lớp → Bộ → Họ → Chi (Giống) → Loài</strong>.</p>
+            <p>• Mẹo thuộc 7 chữ đầu: <strong>"Giỏi Nhất Lớp Bởi Học Chăm Luôn"</strong>!</p>
+            <p>• <strong>Tên khoa học</strong> viết nghiêng gồm 2 từ: <em>Tên chi (Viết hoa) + tên loài (viết thường)</em>. VD: <em>Panthera leo</em>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16 FLASHCARD LẬT MẶT -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">🃏 16 Thẻ Flashcard Lật Nhanh (Bố mẹ cầm hỏi miệng con cực tiện!)</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Con tự trả lời trong đầu rồi bấm thẻ để kiểm tra đáp án nhé!</p>
+          </div>
+          <button type="button" onclick="resetFlashcards()" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Úp lại tất cả</button>
+        </div>
+        <div id="flashcardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 4: 10 CÂU TỰ LUẬN "TẠI SAO?" & BÀI TẬP ĂN ĐIỂM 9–10              -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-tu-luan" class="hub-panel hidden space-y-4">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">💬 10 Câu Tự Luận "Tại sao?" &amp; Dạng Bài Tập Ăn Điểm 9–10</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Con tự nói miệng (hoặc nháp ra giấy) rồi mở <strong>Khung trả lời 2 bước</strong> để chấm xem đã đủ ý chưa nhé!</p>
+          </div>
+          <span id="essayCount" class="px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300">✅ Đã thuộc 0 / 10 câu</span>
+        </div>
+        <div id="essayList" class="space-y-3"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 5: ĐỀ THI THỬ 25 CÂU (THANG 10 + LÀM LẠI RIÊNG CÂU SAI)          -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-thi-thu" class="hub-panel hidden space-y-4">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">📝 Đề Thi Thử Tổng Hợp Sinh Học 6 (25 câu · Thang 10 điểm)</h2>
+            <p id="examSubtitle" class="text-xs text-slate-500 dark:text-slate-400">Phủ đủ 4 mảng trọng tâm (0,4 điểm/câu), có sẵn các câu gài bẫy thi thật. Nộp bài xong xem ngay điểm 10 và mảng con cần ôn lại!</p>
+          </div>
+          <button type="button" onclick="startFullExam()" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Làm lại cả 25 câu</button>
+        </div>
+
+        <div id="examResult" class="hidden rounded-2xl p-5 bg-gradient-to-br from-emerald-50 to-sky-50 dark:from-slate-800 dark:to-slate-800 border-2 border-emerald-300 dark:border-emerald-700 space-y-3"></div>
+        <div id="examContainer" class="space-y-4"></div>
+
+        <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+          <button id="submitExamBtn" type="button" onclick="gradeExam()" class="px-6 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm md:text-base shadow-md transition">
+            ✅ Nộp bài &amp; Chấm điểm 10
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-5 text-center text-xs text-slate-500 dark:text-slate-400">
+    Trung tâm Tổng quan &amp; Ôn thi 10 điểm Sinh học 6 · Lớp 6A03 · Học hiểu bản chất
+  </footer>
+
+  <script>
+    /* ===== 1. ĐIỀU KHIỂN 5 TAB CHÍNH ===== */
+    var HUB_TABS = ['ban-do', 'hinh-sgk', 'on-nhanh', 'tu-luan', 'thi-thu'];
+    function switchHubTab(key) {
+      if (HUB_TABS.indexOf(key) === -1) key = 'ban-do';
+      HUB_TABS.forEach(function (k) {
+        var btn = document.getElementById('hub-tab-' + k);
+        var pnl = document.getElementById('hub-panel-' + k);
+        var active = (k === key);
+        var spanCls = (k === 'thi-thu') ? ' col-span-2 sm:col-span-1' : '';
+        if (btn) btn.className = 'hub-tab rounded-2xl p-3 text-left border-2 transition' + spanCls + ' ' + (active
+          ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-100 shadow-sm'
+          : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-emerald-300');
+        if (pnl) pnl.classList.toggle('hidden', !active);
+      });
+      if (window.history && window.history.replaceState) window.history.replaceState(null, '', '#' + key);
+    }
+    (function () {
+      var h = (window.location.hash || '').replace('#', '');
+      switchHubTab(HUB_TABS.indexOf(h) !== -1 ? h : 'ban-do');
+    })();
+
+    /* ===== 2. BẢN ĐỒ TƯ DUY SVG ===== */
+    var MAP_NODES = {
+      'kinh': { title: 'Bài 3–4: Kính lúp & Kính hiển vi quang học (SGK tr. 13–16)', text: 'Kính lúp phóng to 3–20 lần (đặt sát vật rồi đưa dần ra xa). Kính hiển vi phóng to 40–3000 lần; tổng độ phóng đại = Thị kính × Vật kính. Khi soi: hạ vật kính bằng ốc to, nhìn thị kính nâng dần lên rồi chỉnh nét bằng ốc nhỏ.' },
+      'tb-cautao': { title: 'Bài 18–19: Tế bào — Nhân sơ vs Nhân thực, ĐV vs TV (SGK tr. 64–69)', text: '3 thành phần chính: Màng tế bào, Tế bào chất, Nhân/Vùng nhân. Nhân sơ chưa có màng nhân (chỉ có ribosome). Tế bào Thực vật hơn Động vật 3 thứ: Thành tế bào, Lục lạp (quang hợp) và Không bào lớn.' },
+      'tb-sinhsan': { title: 'Bài 20–21: Sự lớn lên & sinh sản của tế bào (SGK tr. 70–74)', text: 'Tế bào lớn lên rồi chia đôi (1 → 2 → 4 → 8, sau n lần tạo 2ⁿ tế bào con) giúp cơ thể lớn lên và lành vết thương. Tế bào thần kinh trưởng thành không phân chia; tế bào chia mất kiểm soát tạo khối u.' },
+      'ct-donbao': { title: 'Bài 22 & 24: Cơ thể đơn bào vs Cơ thể đa bào (SGK tr. 75–78, 83–85)', text: 'Đơn bào chỉ có 1 tế bào tự thực hiện mọi chức năng sống (vi khuẩn, trùng roi, trùng giày, nấm men). Đa bào gồm rất nhiều tế bào chuyên hoá phối hợp với nhau (cây xanh, con người, động vật).' },
+      'ct-5cap': { title: 'Bài 23: Tổ chức cơ thể đa bào — 5 cấp độ (SGK tr. 79–82)', text: 'Nhớ thuộc lòng thang 5 bậc: Tế bào → Mô → Cơ quan → Hệ cơ quan → Cơ thể. Ví dụ chuẩn SGK: Tế bào cơ → Mô cơ → Tim → Hệ tuần hoàn → Cá cóc Việt Nam; Tế bào TV → Mô TV → Lá → Hệ chồi → Cây sâm Việt Nam.' },
+      'phanloai': { title: 'Bài 25–26: 7 Bậc phân loại · 5 Giới · Khoá lưỡng phân (SGK tr. 86–91)', text: '7 bậc: Giới → Ngành → Lớp → Bộ → Họ → Chi (Giống) → Loài. 5 Giới: Khởi sinh, Nguyên sinh, Nấm, Thực vật, Động vật. Khoá lưỡng phân tách đôi nhóm sinh vật liên tiếp bằng đặc điểm đối lập (Có/Không).' },
+      'visinh': { title: 'Bài 27–33: Vi khuẩn · Virus · Nguyên sinh vật · Nấm (SGK tr. 92–114)', text: 'Vi khuẩn (nhân sơ, trị bằng kháng sinh) ≠ Virus (chưa có tế bào, kí sinh bắt buộc, phòng bằng vaccine). Nguyên sinh vật (trùng sốt rét, amip lị, tảo). Nấm dị dưỡng (nấm men, nấm mốc, nấm mũ).' },
+      'thucvat': { title: 'Bài 34–35: Thực vật — 4 nhóm chính (SGK tr. 115–124)', text: 'Rêu (chưa có mạch, rễ giả, bào tử) → Dương xỉ (có mạch, bào tử, bèo ong) → Hạt trần (có nón & hạt lộ, chưa hoa quả: thông, vạn tuế) → Hạt kín (có hoa & quả chứa hạt: lúa, bưởi, bèo tấm).' },
+      'dongvat': { title: 'Bài 36–39: Động vật & Đa dạng sinh học (SGK tr. 125–143)', text: 'Không xương sống (~95%: Ruột khoang, 3 ngành Giun, Thân mềm, Chân khớp) & Có xương sống (~5%: Cá, Lưỡng cư, Bò sát, Chim, Thú). Đa dạng sinh học giúp cân bằng hệ sinh thái, cung cấp thức ăn, thuốc, lọc khí.' }
+    };
+    function selectMapNode(key) {
+      var d = MAP_NODES[key];
+      document.getElementById('mapDetailTitle').textContent = '📌 ' + d.title;
+      document.getElementById('mapDetailText').textContent = d.text;
+      document.getElementById('mapDetailBtn').classList.remove('hidden');
+    }
+
+    /* ===== 3. HÌNH SGK TƯƠNG TÁC: TẾ BÀO & THANG 5 CẤP ĐỘ ===== */
+    var CELL_PARTS = {
+      'mang': '🧱 <strong>Màng tế bào</strong> (Có ở CẢ 3 loại): Bao bọc ngoài tế bào chất, kiểm soát các chất đi vào và đi ra khỏi tế bào (như "cổng bảo vệ").',
+      'tbc': '💧 <strong>Tế bào chất</strong> (Có ở CẢ 3 loại): Chất keo lỏng chứa các bào quan, là nơi diễn ra mọi hoạt động sống của tế bào.',
+      'vung-nhan': '🔴 <strong>Vùng nhân</strong> (Chỉ ở Tế bào Nhân sơ — Vi khuẩn): Chứa vật chất di truyền nằm tự do, <strong>CHƯA có màng nhân</strong> bao bọc.',
+      'nhan': '🟣 <strong>Nhân tế bào</strong> (Ở Tế bào Nhân thực — ĐV & TV): Có <strong>màng nhân</strong> bao bọc vật chất di truyền, điều khiển mọi hoạt động sống của tế bào (như "bộ não").',
+      'ti-the': '🟠 <strong>Ti thể</strong> (Ở Tế bào Nhân thực — ĐV & TV): "Nhà máy điện" giải phóng năng lượng cung cấp cho tế bào hoạt động.',
+      'thanh-vk': '🟡 <strong>Thành tế bào vi khuẩn:</strong> Bao ngoài màng tế bào giúp bảo vệ và quy định hình dạng vi khuẩn (que, cầu, xoắn). <em>Lưu ý bẫy:</em> Vi khuẩn có thành tế bào nhưng là <strong>nhân sơ</strong>, không phải thực vật!',
+      'thanh-tv': '⭐ <strong>Thành tế bào (Đặc trưng Thực vật):</strong> Lớp vỏ cứng bao ngoài màng tế bào giúp tế bào thực vật có hình hộp cố định và nâng đỡ cây đứng vững.',
+      'luc-lap': '⭐ <strong>Lục lạp (Đặc trưng Thực vật):</strong> Chứa sắc tố diệp lục màu xanh lá, hấp thụ ánh sáng Mặt Trời để <strong>quang hợp</strong> tự tạo chất dinh dưỡng!',
+      'khong-bao': '⭐ <strong>Không bào lớn (Đặc trưng Thực vật):</strong> Túi lớn chứa nước, chất dự trữ và chất thải. <em>Bẫy thi:</em> Một số động vật đơn bào cũng có không bào nhỏ (co bóp, tiêu hoá), nhưng tế bào thực vật có không bào trung tâm rất lớn!'
+    };
+    function inspectCell(id) {
+      document.getElementById('cellInfoBox').innerHTML = CELL_PARTS[id] || '';
+    }
+
+    var ORG_DATA = {
+      nguoi: [
+        { lvl: '1. Tế bào', icon: '🔴', name: 'Tế bào biểu mô / cơ', desc: 'Đơn vị cấu tạo nhỏ nhất' },
+        { lvl: '2. Mô', icon: '🧶', name: 'Mô cơ / Mô biểu bì', desc: 'Tập hợp tế bào giống nhau' },
+        { lvl: '3. Cơ quan', icon: '🫁', name: 'Dạ dày', desc: 'Nhiều mô phối hợp 1 việc' },
+        { lvl: '4. Hệ cơ quan', icon: '🍽️', name: 'Hệ tiêu hoá', desc: 'Nhiều cơ quan cùng tiêu hoá' },
+        { lvl: '5. Cơ thể', icon: '🧍', name: 'Cơ thể người', desc: 'Các hệ thống nhất hoạt động' }
+      ],
+      cacoc: [
+        { lvl: '1. Tế bào', icon: '🧬', name: 'Tế bào động vật', desc: 'Hình 23.2 SGK KNTT' },
+        { lvl: '2. Mô', icon: '💪', name: 'Mô cơ tim', desc: 'Tập hợp tế bào cơ' },
+        { lvl: '3. Cơ quan', icon: '❤️', name: 'Tim', desc: 'Bơm máu đi khắp cơ thể' },
+        { lvl: '4. Hệ cơ quan', icon: '🩸', name: 'Hệ tuần hoàn', desc: 'Tim + mạch máu' },
+        { lvl: '5. Cơ thể', icon: '🦎', name: 'Cá cóc Việt Nam', desc: 'Thuộc Lớp Lưỡng cư' }
+      ],
+      sam: [
+        { lvl: '1. Tế bào', icon: '🟩', name: 'Tế bào thực vật', desc: 'Hình 23.2 SGK KNTT' },
+        { lvl: '2. Mô', icon: '🌱', name: 'Mô thực vật', desc: 'Mô biểu bì, mạch gỗ, mạch rây' },
+        { lvl: '3. Cơ quan', icon: '🍃', name: 'Lá cây', desc: 'Thực hiện quang hợp' },
+        { lvl: '4. Hệ cơ quan', icon: '🌿', name: 'Hệ chồi', desc: 'Thân, lá, hoa, quả' },
+        { lvl: '5. Cơ thể', icon: '🪴', name: 'Cây sâm Việt Nam', desc: 'Cơ thể thực vật hoàn chỉnh' }
+      ]
+    };
+    function setOrgExample(key) {
+      ['nguoi', 'cacoc', 'sam'].forEach(function (k) {
+        var b = document.getElementById('org-btn-' + k);
+        b.className = (k === key)
+          ? 'px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-600 text-white'
+          : 'px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800';
+      });
+      var box = document.getElementById('orgLadder');
+      box.innerHTML = '';
+      ORG_DATA[key].forEach(function (step, idx) {
+        var card = document.createElement('div');
+        card.className = 'rounded-2xl p-3.5 bg-amber-50/70 dark:bg-slate-800/70 border border-amber-200 dark:border-slate-700 text-center space-y-1';
+        card.innerHTML =
+          '<div class="text-[11px] font-extrabold text-amber-700 dark:text-amber-400">' + step.lvl + (idx < 4 ? ' →' : ' ★') + '</div>' +
+          '<div class="text-2xl">' + step.icon + '</div>' +
+          '<div class="font-extrabold text-xs md:text-sm">' + step.name + '</div>' +
+          '<div class="text-[11px] text-slate-500 dark:text-slate-400">' + step.desc + '</div>';
+        box.appendChild(card);
+      });
+    }
+    setOrgExample('nguoi');
+
+    /* ===== 4. 16 FLASHCARD LẬT MẶT ===== */
+    var FLASHCARDS = [
+      { q: 'Kính hiển vi có thị kính 10x và vật kính 40x thì phóng đại vật lên bao nhiêu lần?', a: '10 × 40 = 400 lần! (Tổng độ phóng đại = Thị kính × Vật kính).' },
+      { q: '3 thành phần chính có ở MỌI tế bào là gì?', a: 'Màng tế bào, Tế bào chất và Nhân (hoặc Vùng nhân ở tế bào nhân sơ).' },
+      { q: 'Điểm khác nhau CỐT LÕI giữa tế bào nhân sơ và tế bào nhân thực?', a: 'Nhân sơ CHƯA có màng nhân (chỉ có vùng nhân) và chỉ có ribosome; Nhân thực CÓ màng nhân và nhiều bào quan có màng.' },
+      { q: 'Tế bào thực vật có 3 cấu trúc đặc trưng nào mà tế bào động vật không có?', a: 'Thành tế bào, Lục lạp (quang hợp) và Không bào trung tâm lớn.' },
+      { q: '1 tế bào sinh sản liên tiếp 4 lần sẽ tạo ra bao nhiêu tế bào con?', a: '2⁴ = 16 tế bào con! (1 → 2 → 4 → 8 → 16).' },
+      { q: 'Kể đúng thứ tự 5 cấp độ tổ chức cơ thể đa bào từ nhỏ đến lớn?', a: 'Tế bào → Mô → Cơ quan → Hệ cơ quan → Cơ thể.' },
+      { q: 'Kể đúng thứ tự 7 bậc phân loại sinh vật từ lớn đến nhỏ?', a: 'Giới → Ngành → Lớp → Bộ → Họ → Chi (Giống) → Loài ("Giỏi Nhất Lớp Bởi Học Chăm Luôn").' },
+      { q: 'Tên 5 Giới sinh vật trong hệ thống phân loại của SGK là gì?', a: '1. Khởi sinh · 2. Nguyên sinh · 3. Nấm · 4. Thực vật · 5. Động vật.' },
+      { q: 'Tại sao thuốc kháng sinh chữa được bệnh do Vi khuẩn nhưng KHÔNG diệt được Virus?', a: 'Vi khuẩn có cấu tạo tế bào sống độc lập; còn Virus CHƯA có cấu tạo tế bào, kí sinh bên trong tế bào chủ → phòng virus bằng VACCINE!' },
+      { q: 'Phân biệt tác nhân gây bệnh và vật truyền bệnh của Sốt rét & Sốt xuất huyết?', a: 'Sốt rét: Trùng sốt rét (NSV) do muỗi Anophen truyền. Sốt xuất huyết: Virus Dengue do muỗi vằn truyền.' },
+      { q: 'Nấm có phải là Thực vật không? Vì sao?', a: 'KHÔNG! Nấm thuộc Giới Nấm riêng, không có lục lạp nên sống DỊ DƯỠNG (hấp thụ chất hữu cơ có sẵn), không tự quang hợp như thực vật.' },
+      { q: 'Phân biệt nhanh 4 nhóm Thực vật: Rêu, Dương xỉ, Hạt trần, Hạt kín?', a: 'Rêu: chưa mạch, bào tử. Dương xỉ: có mạch, bào tử. Hạt trần: có nón & hạt lộ (chưa hoa quả). Hạt kín: có hoa & quả chứa hạt.' },
+      { q: 'Bèo ong và Bèo tấm thuộc hai ngành thực vật nào?', a: 'Bèo ong → Ngành Dương xỉ; Bèo tấm → Ngành Hạt kín (bẫy thi siêu hay gặp!).' },
+      { q: 'Cá voi, cá heo và dơi thuộc lớp Động vật nào?', a: 'Lớp Động vật có vú (Thú)! Vì chúng thở bằng phổi, đẻ con và nuôi con bằng sữa.' },
+      { q: 'Cá sấu, Cá cóc Tam Đảo và Chim cánh cụt lần lượt thuộc lớp nào?', a: 'Cá sấu → Bò sát; Cá cóc Tam Đảo → Lưỡng cư; Chim cánh cụt → Lớp Chim.' },
+      { q: 'San hô, Bạch tuộc và Nhện thuộc những ngành Động vật không xương sống nào?', a: 'San hô → Ruột khoang; Bạch tuộc → Thân mềm; Nhện → Chân khớp.' }
+    ];
+    function renderFlashcards() {
+      var g = document.getElementById('flashcardGrid'); g.innerHTML = '';
+      FLASHCARDS.forEach(function (fc, idx) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.id = 'fc-' + idx;
+        btn.dataset.flipped = '0';
+        btn.onclick = function () { toggleCard(idx); };
+        btn.className = 'text-left rounded-2xl p-4 min-h-[132px] border-2 border-emerald-200 dark:border-slate-700 bg-emerald-50/50 dark:bg-slate-800/70 hover:border-emerald-400 transition flex flex-col justify-between';
+        btn.innerHTML = '<div class="text-[11px] font-bold text-emerald-700 dark:text-emerald-400">Thẻ ' + (idx + 1) + ' · Bấm lật đáp án 🔄</div><div class="font-bold text-xs md:text-sm mt-1">' + fc.q + '</div>';
+        g.appendChild(btn);
+      });
+    }
+    function toggleCard(idx) {
+      var el = document.getElementById('fc-' + idx), fc = FLASHCARDS[idx];
+      var flipped = el.dataset.flipped === '1';
+      el.dataset.flipped = flipped ? '0' : '1';
+      if (!flipped) {
+        el.className = 'text-left rounded-2xl p-4 min-h-[132px] border-2 border-sky-500 bg-sky-50 dark:bg-sky-950/60 transition flex flex-col justify-between';
+        el.innerHTML = '<div class="text-[11px] font-bold text-sky-700 dark:text-sky-300">✅ Đáp án (Bấm úp lại)</div><div class="font-semibold text-xs md:text-sm text-sky-950 dark:text-sky-100 mt-1">' + fc.a + '</div>';
+      } else {
+        el.className = 'text-left rounded-2xl p-4 min-h-[132px] border-2 border-emerald-200 dark:border-slate-700 bg-emerald-50/50 dark:bg-slate-800/70 hover:border-emerald-400 transition flex flex-col justify-between';
+        el.innerHTML = '<div class="text-[11px] font-bold text-emerald-700 dark:text-emerald-400">Thẻ ' + (idx + 1) + ' · Bấm lật đáp án 🔄</div><div class="font-bold text-xs md:text-sm mt-1">' + fc.q + '</div>';
+      }
+    }
+    function resetFlashcards() { renderFlashcards(); }
+    renderFlashcards();
+
+    /* ===== 5. 10 CÂU TỰ LUẬN & BÀI TẬP ĂN ĐIỂM 9–10 ===== */
+    var ESSAYS = [
+      { q: 'Câu 1 (Bài 19 — Siêu hay ra thi): Tại sao cây xanh có thể tự tổng hợp chất dinh dưỡng nhờ ánh sáng Mặt Trời còn động vật thì không?', step1: 'Dựa vào sự khác nhau về cấu tạo giữa tế bào thực vật và tế bào động vật.', step2: 'Tế bào thực vật có LỤC LẠP chứa chất diệp lục giúp hấp thụ ánh sáng để quang hợp tạo chất hữu cơ; còn tế bào động vật KHÔNG có lục lạp nên phải lấy thức ăn từ sinh vật khác (dị dưỡng).' },
+      { q: 'Câu 2 (Bài 20 — Dạng bài tập tính số tế bào): Có 3 tế bào cùng thực hiện sinh sản liên tiếp 4 lần. Hỏi sau 4 lần tạo ra bao nhiêu tế bào con? Sự sinh sản tế bào có ý nghĩa gì?', step1: 'Mỗi lần sinh sản, 1 tế bào mẹ tách thành 2 tế bào con → sau n lần tạo ra 2ⁿ tế bào con (với a tế bào ban đầu: a × 2ⁿ).', step2: 'Số tế bào con tạo ra = 3 × 2⁴ = 3 × 16 = 48 tế bào. Ý nghĩa: giúp cơ thể lớn lên và thay thế các tế bào già, tế bào bị tổn thương (làm lành vết thương).' },
+      { q: 'Câu 3 (Bài 22 — Bẫy vật sống): Ô tô, xe máy cũng "uống" xăng, lấy khí oxygen và thải ra khí carbon dioxide (CO₂). Tại sao ô tô KHÔNG phải là vật sống?', step1: 'Vật sống phải có ĐẦY ĐỦ các đặc trưng sống: trao đổi chất, lớn lên, sinh sản, cảm ứng và được cấu tạo từ tế bào.', step2: 'Ô tô không được cấu tạo từ tế bào, không thể tự lớn lên, không sinh sản và không có cảm ứng như sinh vật → ô tô là vật không sống.' },
+      { q: 'Câu 4 (Bài 26 — Kỹ năng lập Khoá lưỡng phân): Cho 4 con vật: Con cá chép, con chim bồ câu, con mèo, con giun đất. Em hãy nêu nguyên tắc lập khoá lưỡng phân cho 4 con vật này?', step1: 'Nguyên tắc: Ở mỗi bước, chọn 1 đặc điểm ĐỐI LẬP (Có / Không) để tách nhóm sinh vật thành đúng 2 nhánh cho tới khi tách riêng từng loài.', step2: 'Bước 1: Có xương sống không? (Không → Giun đất; Có → Cá chép, Chim bồ câu, Mèo). Bước 2: Có vây bơi dưới nước? (Có → Cá chép; Không → Chim, Mèo). Bước 3: Có lông vũ? (Có → Chim bồ câu; Không, có lông mao → Mèo).' },
+      { q: 'Câu 5 (Bài 27 & 29 — Hay ra thi nhất!): Tại sao khi bị cảm cúm (do virus), bác sĩ khuyên không nên tự ý uống thuốc kháng sinh? Làm sao phòng bệnh do virus hiệu quả nhất?', step1: 'Thuốc kháng sinh chỉ có tác dụng tiêu diệt VI KHUẨN (sinh vật có cấu tạo tế bào), hoàn toàn KHÔNG diệt được VIRUS (chưa có cấu tạo tế bào, kí sinh trong tế bào chủ).', step2: 'Tự ý uống kháng sinh không khỏi cúm mà còn gây kháng thuốc, hại sức khoẻ. Cách phòng bệnh do virus hữu hiệu nhất là tiêm VACCINE đầy đủ, ăn uống đủ chất, giữ vệ sinh và đeo khẩu trang.' },
+      { q: 'Câu 6 (Bài 28 & 32 — Gắn đời sống): Vì sao sữa chua có vị chua thơm ngon, và vì sao bánh mì để lâu ở nơi ẩm ướt lại bị mốc xanh/đen?', step1: 'Cả hai đều là hoạt động của vi sinh vật trong đời sống: vi khuẩn có lợi và nấm mốc.', step2: 'Làm sữa chua nhờ vi khuẩn lactic (có lợi) lên men đường trong sữa thành chất có vị chua dịu. Còn bánh mì để nơi ẩm ấm tạo điều kiện cho bào tử NẤM MỐC trong không khí bám vào, sinh trưởng nhanh gây hỏng (không được ăn vì có độc tố nấm!).' },
+      { q: 'Câu 7 (Bài 30 — Phòng bệnh): Tại sao ngủ màn, dọn sạch nước đọng quanh nhà và ăn chín uống sôi giúp phòng tránh hiệu quả bệnh sốt rét, sốt xuất huyết và kiết lị?', step1: 'Xác định đúng vật truyền bệnh và con đường lây lan của từng bệnh.', step2: 'Muỗi Anophen truyền trùng sốt rét, muỗi vằn truyền virus sốt xuất huyết → ngủ màn, diệt lăng quăng/bọ gậy cắt đứt đường truyền bệnh. Amip lị gây bệnh kiết lị lây qua đường tiêu hoá → ăn chín, uống sôi, rửa tay sạch sẽ ngăn mầm bệnh vào cơ thể.' },
+      { q: 'Câu 8 (Bài 34): Tại sao cây rêu chỉ sống được ở những nơi ẩm ướt, ít ánh sáng trực tiếp và kích thước rất nhỏ (chỉ cao 1–2 cm), còn cây hạt kín mọc cao to khắp mọi nơi?', step1: 'Dựa vào mức độ hoàn thiện của hệ mạch dẫn và cơ quan rễ, thân, lá.', step2: 'Rêu CHƯA có mạch dẫn nước và mới có rễ giả nên chỉ hút nước trực tiếp qua bề mặt → chỉ sống được nơi ẩm và kích thước rất nhỏ. Thực vật hạt kín có rễ thật, mạch dẫn hoàn chỉnh và hạt được bảo vệ trong quả nên thích nghi mọi môi trường.' },
+      { q: 'Câu 9 (Bài 36 — Bẫy phân loại): Tại sao cá voi sống hoàn toàn dưới biển giống cá nhưng lại được xếp vào Lớp Động vật có vú (Thú), còn cá sấu sống cả dưới nước và trên cạn nhưng lại thuộc Lớp Bò sát?', step1: 'Phân loại động vật dựa vào đặc điểm cấu tạo sinh học cốt lõi, KHÔNG chỉ dựa vào tên gọi hay nơi sống.', step2: 'Cá voi hô hấp bằng PHỔI, đẻ con và nuôi con bằng sữa → Lớp Thú. Cá sấu có da khô phủ VẢY SỪNG, thở hoàn toàn bằng phổi (không thở qua da ẩm như ếch nhái) → Lớp Bò sát.' },
+      { q: 'Câu 10 (Bài 38 — Đa dạng sinh học): Đa dạng sinh học có vai trò gì với tự nhiên và con người? Em học sinh lớp 6 có thể làm gì để bảo vệ đa dạng sinh học?', step1: 'Đa dạng sinh học là sự phong phú về loài, gen và hệ sinh thái trên Trái Đất.', step2: 'Vai trò: duy trì cân bằng tự nhiên, điều hoà khí hậu, chống xói mòn, cung cấp lương thực, thuốc chữa bệnh. Hành động của HS: trồng và chăm sóc cây xanh, không xả rác nhựa, không săn bắt/mua bán động vật hoang dã, tuyên truyền mọi người bảo vệ rừng.' }
+    ];
+    var masteredEssays = {};
+    function renderEssays() {
+      var box = document.getElementById('essayList'); box.innerHTML = '';
+      ESSAYS.forEach(function (e, i) {
+        var div = document.createElement('div');
+        div.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5';
+        div.innerHTML =
+          '<div class="font-bold text-sm md:text-base">' + e.q + '</div>' +
+          '<div class="flex flex-wrap items-center gap-2">' +
+            '<button type="button" onclick="toggleEssay(' + i + ')" id="ebtn-' + i + '" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-200 hover:bg-emerald-200 transition">💡 Xem khung trả lời 2 bước</button>' +
+            '<button type="button" onclick="markEssay(' + i + ')" id="emrk-' + i + '" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition">⬜ Đánh dấu đã hiểu</button>' +
+          '</div>' +
+          '<div id="eans-' + i + '" class="hidden rounded-xl p-3.5 bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-800 text-xs md:text-sm space-y-1.5">' +
+            '<div><span class="font-extrabold text-sky-700 dark:text-sky-400">Bước 1 (Nêu bản chất):</span> ' + e.step1 + '</div>' +
+            '<div><span class="font-extrabold text-emerald-700 dark:text-emerald-400">Bước 2 (Giải thích ăn trọn điểm):</span> ' + e.step2 + '</div>' +
+          '</div>';
+        box.appendChild(div);
+      });
+    }
+    function toggleEssay(i) {
+      var a = document.getElementById('eans-' + i), b = document.getElementById('ebtn-' + i);
+      var show = a.classList.contains('hidden');
+      a.classList.toggle('hidden');
+      b.textContent = show ? '🙈 Ẩn khung trả lời' : '💡 Xem khung trả lời 2 bước';
+    }
+    function markEssay(i) {
+      masteredEssays[i] = !masteredEssays[i];
+      var b = document.getElementById('emrk-' + i);
+      b.textContent = masteredEssays[i] ? '✅ Con đã trả lời được!' : '⬜ Đánh dấu đã hiểu';
+      b.className = masteredEssays[i]
+        ? 'px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white transition'
+        : 'px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-600 hover:bg-emerald-50 transition';
+      var cnt = Object.values(masteredEssays).filter(Boolean).length;
+      document.getElementById('essayCount').textContent = '✅ Đã thuộc ' + cnt + ' / ' + ESSAYS.length + ' câu';
+    }
+    renderEssays();
+
+    /* ===== 6. ĐỀ THI THỬ 25 CÂU (THANG 10 + PHÂN TÍCH LỖI SAI + LÀM LẠI CÂU SAI) ===== */
+    var EXAM_BANK = [
+      // Mảng 1: Kính & Tế bào (6 câu)
+      { id: 1, grp: 1, bai: 'Bài 4', q: 'Quan sát tiêu bản bằng kính hiển vi có thị kính 10x và vật kính 40x. Ảnh của vật được phóng đại lên bao nhiêu lần?', opts: ['50 lần', '400 lần', '4000 lần'], ans: 1, why: 'Độ phóng đại = Thị kính × Vật kính = 10 × 40 = 400 lần.' },
+      { id: 2, grp: 1, bai: 'Bài 4', q: 'Khi đang soi kính hiển vi và đã nhìn thấy mờ mờ mẫu vật, em cần vặn bộ phận nào để hình ảnh thật rõ nét?', opts: ['Vặn ốc nhỏ thật chậm', 'Vặn ốc to thật nhanh', 'Tắt đèn chiếu sáng'], ans: 0, why: 'Ốc to dùng tìm mẫu vật; ốc nhỏ vặn chậm dùng chỉnh hình ảnh sắc nét.' },
+      { id: 3, grp: 1, bai: 'Bài 19', q: 'Điểm khác nhau CƠ BẢN nhất giữa tế bào nhân sơ và tế bào nhân thực là:', opts: ['Tế bào nhân sơ không có màng tế bào', 'Tế bào nhân sơ chưa có màng nhân bao bọc vật chất di truyền', 'Tế bào nhân sơ lớn hơn tế bào nhân thực'], ans: 1, why: 'Nhân sơ chỉ có vùng nhân (chưa có màng nhân) và chỉ có duy nhất bào quan ribosome.' },
+      { id: 4, grp: 1, bai: 'Bài 19', q: 'Bào quan nào chỉ có ở tế bào THỰC VẬT giúp cây xanh thực hiện quá trình quang hợp?', opts: ['Ti thể', 'Lục lạp', 'Nhân tế bào'], ans: 1, why: 'Lục lạp chứa chất diệp lục giúp thực vật quang hợp tạo chất hữu cơ.' },
+      { id: 5, grp: 1, bai: 'Bài 19', q: 'Tế bào thực vật có hình hộp cứng cáp, khác tế bào động vật, nhờ có cấu trúc nào bao ngoài màng tế bào?', opts: ['Thành tế bào', 'Lông bơi', 'Roi'], ans: 0, why: 'Thành tế bào cứng bao ngoài màng tế bào giúp định hình và bảo vệ tế bào thực vật.' },
+      { id: 6, grp: 1, bai: 'Bài 20', q: 'Từ 1 tế bào ban đầu, sau 3 lần sinh sản (phân chia) liên tiếp sẽ tạo ra bao nhiêu tế bào con?', opts: ['6 tế bào', '8 tế bào', '9 tế bào'], ans: 1, why: '1 → 2 → 4 → 8 (tức 2³ = 8 tế bào con).' },
+
+      // Mảng 2: Cơ thể & Phân loại (5 câu)
+      { id: 7, grp: 2, bai: 'Bài 22', q: 'Sinh vật nào sau đây là CƠ THỂ ĐƠN BÀO?', opts: ['Cây hoa hồng', 'Trùng giày và vi khuẩn', 'Con giun đất'], ans: 1, why: 'Vi khuẩn, trùng giày, trùng roi, nấm men chỉ gồm 1 tế bào duy nhất.' },
+      { id: 8, grp: 2, bai: 'Bài 23', q: 'Thứ tự ĐÚNG của 5 cấp độ tổ chức cơ thể đa bào từ nhỏ đến lớn là:', opts: ['Tế bào → Cơ quan → Mô → Hệ cơ quan → Cơ thể', 'Tế bào → Mô → Cơ quan → Hệ cơ quan → Cơ thể', 'Mô → Tế bào → Cơ quan → Hệ cơ quan → Cơ thể'], ans: 1, why: 'Đúng chuẩn Hình 23.1 SGK: Tế bào → Mô → Cơ quan → Hệ cơ quan → Cơ thể.' },
+      { id: 9, grp: 2, bai: 'Bài 23', q: 'Trong cây xanh (Hình 23.8 SGK), thân, lá, hoa, quả thuộc hệ cơ quan nào?', opts: ['Hệ rễ', 'Hệ chồi', 'Hệ tuần hoàn'], ans: 1, why: 'Thực vật có 2 hệ cơ quan chính: Hệ chồi (trên mặt đất) và Hệ rễ (dưới mặt đất).' },
+      { id: 10, grp: 2, bai: 'Bài 25', q: 'Cách viết tên khoa học ĐÚNG theo quy tắc quốc tế của loài Sư tử là:', opts: ['panthera Leo', 'Panthera leo (viết nghiêng)', 'PANTHERA LEO'], ans: 1, why: 'Tên khoa học viết nghiêng gồm: Tên chi/giống (viết hoa chữ cái đầu) + tên loài (viết thường).' },
+      { id: 11, grp: 2, bai: 'Bài 25', q: 'Trong 7 bậc phân loại sinh vật, bậc nào nhỏ nhất (cơ bản nhất) và bậc nào lớn nhất?', opts: ['Nhỏ nhất: Loài · Lớn nhất: Giới', 'Nhỏ nhất: Họ · Lớn nhất: Ngành', 'Nhỏ nhất: Chi · Lớn nhất: Lớp'], ans: 0, why: '7 bậc từ lớn → nhỏ: Giới → Ngành → Lớp → Bộ → Họ → Chi (Giống) → Loài.' },
+
+      // Mảng 3: Vi khuẩn, Virus, Nguyên sinh vật & Nấm (6 câu)
+      { id: 12, grp: 3, bai: 'Bài 27', q: 'Vi khuẩn thuộc Giới nào trong hệ thống phân loại 5 giới?', opts: ['Giới Khởi sinh', 'Giới Nguyên sinh', 'Giới Nấm'], ans: 0, why: 'Vi khuẩn là cơ thể đơn bào nhân sơ → thuộc Giới Khởi sinh.' },
+      { id: 13, grp: 3, bai: 'Bài 29', q: 'Phát biểu nào sau đây ĐÚNG về VIRUS?', opts: ['Virus có cấu tạo tế bào hoàn chỉnh như vi khuẩn', 'Virus chưa có cấu tạo tế bào, bắt buộc kí sinh trong tế bào sống', 'Có thể dùng thuốc kháng sinh để tiêu diệt virus cúm'], ans: 1, why: 'Virus chưa có cấu tạo tế bào, kháng sinh KHÔNG diệt được virus; phòng bệnh bằng vaccine.' },
+      { id: 14, grp: 3, bai: 'Bài 30', q: 'Tác nhân gây bệnh sốt rét ở người và vật trung gian truyền bệnh lần lượt là:', opts: ['Muỗi Anophen và Virus Dengue', 'Trùng sốt rét (Nguyên sinh vật) và Muỗi Anophen', 'Vi khuẩn tả và Ruồi nhà'], ans: 1, why: 'Bẫy hay nhầm! Trùng sốt rét là tác nhân gây bệnh; muỗi Anophen chỉ là vật truyền bệnh.' },
+      { id: 15, grp: 3, bai: 'Bài 30', q: 'Bệnh sốt xuất huyết do tác nhân nào gây ra và do loài muỗi nào truyền?', opts: ['Virus Dengue · Muỗi vằn', 'Trùng sốt rét · Muỗi Anophen', 'Amip lị · Ruồi'], ans: 0, why: 'Sốt xuất huyết do Virus Dengue gây ra, lây truyền qua muỗi vằn.' },
+      { id: 16, grp: 3, bai: 'Bài 32', q: 'Tại sao NẤM không được xếp vào Giới Thực vật?', opts: ['Vì nấm chỉ sống dưới nước', 'Vì nấm không có lục lạp, sống dị dưỡng (hấp thụ chất hữu cơ có sẵn)', 'Vì nấm chưa có cấu tạo tế bào'], ans: 1, why: 'Nấm là sinh vật nhân thực, không quang hợp được (dị dưỡng) nên thuộc Giới Nấm riêng.' },
+      { id: 17, grp: 3, bai: 'Bài 32', q: 'Loại nấm nào sau đây là Nấm ĐƠN BÀO được dùng làm nở bánh mì và sản xuất rượu?', opts: ['Nấm hương', 'Nấm men', 'Nấm mốc'], ans: 1, why: 'Nấm men là nấm đơn bào có lợi; nấm hương/nấm rơm/nấm mốc là nấm đa bào.' },
+
+      // Mảng 4: Thực vật, Động vật & Đa dạng sinh học (8 câu — toàn bẫy thi!)
+      { id: 18, grp: 4, bai: 'Bài 34', q: 'Nhóm thực vật nào CHƯA có mạch dẫn, mới có rễ giả và sinh sản bằng bào tử?', opts: ['Ngành Rêu', 'Ngành Dương xỉ', 'Ngành Hạt trần'], ans: 0, why: 'Rêu là nhóm thực vật đơn giản nhất: chưa có mạch dẫn, rễ giả, sinh sản bằng bào tử.' },
+      { id: 19, grp: 4, bai: 'Bài 34', q: 'Cây thông và cây vạn tuế thuộc ngành thực vật nào? Đặc điểm nhận dạng là gì?', opts: ['Hạt kín — có hoa và quả', 'Hạt trần — có nón, hạt nằm lộ trên lá noãn hở, CHƯA có hoa và quả', 'Dương xỉ — sinh sản bằng bào tử'], ans: 1, why: 'Bẫy thi: Nón thông KHÔNG phải hoa hay quả; thông & vạn tuế là Hạt trần.' },
+      { id: 20, grp: 4, bai: 'Bài 34', q: 'Cặp cây nào sau đây thuộc đúng Ngành Dương xỉ và Ngành Hạt kín tương ứng?', opts: ['Bèo tấm (Dương xỉ) và Bèo ong (Hạt kín)', 'Bèo ong (Dương xỉ) và Bèo tấm (Hạt kín)', 'Cả hai đều là Rêu'], ans: 1, why: 'Nhớ kỹ bẫy SGK Bài 34: Bèo ong thuộc Dương xỉ, còn Bèo tấm thuộc Hạt kín!' },
+      { id: 21, grp: 4, bai: 'Bài 36', q: 'Con sứa và san hô thuộc ngành Động vật không xương sống nào?', opts: ['Ngành Ruột khoang', 'Ngành Thân mềm', 'Ngành Chân khớp'], ans: 0, why: 'Thuỷ tức, sứa, hải quỳ, san hô đều thuộc Ngành Ruột khoang (đối xứng toả tròn).' },
+      { id: 22, grp: 4, bai: 'Bài 36', q: 'Con mực, con bạch tuộc (không có vỏ cứng bên ngoài) và con trai, con ốc cùng thuộc ngành nào?', opts: ['Ngành Giun đốt', 'Ngành Thân mềm', 'Ngành Chân khớp'], ans: 1, why: 'Mực và bạch tuộc có cơ thể mềm (vỏ tiêu giảm) vẫn thuộc Ngành Thân mềm.' },
+      { id: 23, grp: 4, bai: 'Bài 36', q: 'Cá voi, cá heo và con dơi được xếp vào lớp động vật nào?', opts: ['Lớp Cá và Lớp Chim', 'Lớp Động vật có vú (Thú)', 'Lớp Lưỡng cư'], ans: 1, why: 'Bẫy số 1! Cá voi, cá heo, dơi đều thở bằng phổi, đẻ con và nuôi con bằng sữa → Lớp Thú.' },
+      { id: 24, grp: 4, bai: 'Bài 36', q: 'Con cá sấu và con cá cóc Tam Đảo lần lượt thuộc hai lớp động vật nào?', opts: ['Cá sấu: Bò sát · Cá cóc Tam Đảo: Lưỡng cư', 'Cả hai đều thuộc Lớp Cá', 'Cá sấu: Lưỡng cư · Cá cóc Tam Đảo: Bò sát'], ans: 0, why: 'Cá sấu có vảy sừng, thở phổi → Bò sát; Cá cóc Tam Đảo da ẩm, thở da & phổi → Lưỡng cư.' },
+      { id: 25, grp: 4, bai: 'Bài 38', q: 'Hành động nào sau đây góp phần BẢO VỆ đa dạng sinh học?', opts: ['Săn bắt động vật quý hiếm làm đồ trang trí', 'Trồng cây gây rừng, hạn chế rác nhựa, bảo vệ vườn quốc gia', 'Đốt rừng làm nương rẫy bừa bãi'], ans: 1, why: 'Trồng rừng, giảm rác nhựa và bảo vệ môi trường sống giúp giữ gìn đa dạng sinh học.' }
+    ];
+
+    var GRP_NAMES = {
+      1: 'Kính & Tế bào',
+      2: 'Cơ thể & Phân loại',
+      3: 'Vi sinh & Nấm',
+      4: 'Thực vật · Động vật'
+    };
+
+    var activeQuestions = EXAM_BANK.slice();
+    var userChoices = {};
+    var lastWrongIds = [];
+
+    function renderExam() {
+      var box = document.getElementById('examContainer');
+      box.innerHTML = '';
+      activeQuestions.forEach(function (item, idx) {
+        var card = document.createElement('div');
+        card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5';
+        var html = '<div class="flex items-start justify-between gap-2"><div class="font-bold text-sm">Câu ' + (idx + 1) + ': ' + item.q + '</div><span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">' + item.bai + '</span></div><div class="grid grid-cols-1 gap-2">';
+        item.opts.forEach(function (opt, oIdx) {
+          html += '<label id="ex-lbl-' + item.id + '-' + oIdx + '" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-emerald-400 cursor-pointer transition">' +
+            '<input type="radio" name="exq-' + item.id + '" value="' + oIdx + '" onchange="userChoices[' + item.id + ']=' + oIdx + '" class="accent-emerald-600" />' +
+            '<span>' + opt + '</span></label>';
+        });
+        html += '</div><div id="ex-fb-' + item.id + '" class="hidden text-xs font-semibold pt-1"></div>';
+        card.innerHTML = html;
+        box.appendChild(card);
+      });
+    }
+
+    function gradeExam() {
+      var total = activeQuestions.length;
+      var correct = 0;
+      var grpStats = { 1: { ok: 0, tot: 0 }, 2: { ok: 0, tot: 0 }, 3: { ok: 0, tot: 0 }, 4: { ok: 0, tot: 0 } };
+      var weakBai = {};
+      lastWrongIds = [];
+
+      activeQuestions.forEach(function (item) {
+        var picked = userChoices[item.id];
+        var isRight = (picked === item.ans);
+        if (grpStats[item.grp]) grpStats[item.grp].tot++;
+        var fb = document.getElementById('ex-fb-' + item.id);
+        fb.classList.remove('hidden');
+
+        item.opts.forEach(function (_, i) {
+          var lbl = document.getElementById('ex-lbl-' + item.id + '-' + i);
+          if (i === item.ans) {
+            lbl.className = 'flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-bold border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200';
+          } else if (i === picked && !isRight) {
+            lbl.className = 'flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm border-2 border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300';
+          }
+        });
+
+        if (isRight) {
+          correct++;
+          if (grpStats[item.grp]) grpStats[item.grp].ok++;
+          fb.className = 'text-xs font-semibold pt-1 text-emerald-700 dark:text-emerald-400';
+          fb.textContent = '✅ Chính xác! ' + item.why;
+        } else {
+          lastWrongIds.push(item.id);
+          weakBai[item.bai] = (weakBai[item.bai] || 0) + 1;
+          fb.className = 'text-xs font-semibold pt-1 text-rose-600 dark:text-rose-400';
+          fb.textContent = '❌ Chưa đúng (' + (picked === undefined ? 'chưa chọn' : 'sai') + ')! ' + item.why;
+        }
+      });
+
+      var score10 = ((correct / total) * 10).toFixed(1).replace('.0', '');
+      var res = document.getElementById('examResult');
+      res.classList.remove('hidden');
+
+      var weakKeys = Object.keys(weakBai);
+      var weakHtml = weakKeys.length
+        ? '<div class="text-xs md:text-sm"><strong>📌 Các bài con nên xem lại ở Tab 2 &amp; Tab 3:</strong> ' +
+            weakKeys.map(function (k) { return '<span class="inline-block ml-1 mt-1 px-2.5 py-1 rounded-lg bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-200 font-bold">' + k + ' (' + weakBai[k] + ' câu)</span>'; }).join('') +
+          '</div>'
+        : '';
+
+      var retryWrongBtn = lastWrongIds.length
+        ? '<button type="button" onclick="retryWrongOnly()" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs md:text-sm font-extrabold shadow transition">🔁 Chỉ làm lại ' + lastWrongIds.length + ' câu con vừa sai!</button>'
+        : '<div class="font-extrabold text-emerald-700 dark:text-emerald-300">🏆 TUYỆT ĐỐI 10/10! Con đã chinh phục trọn bộ Sinh học 6 rồi!</div>';
+
+      res.innerHTML =
+        '<div class="flex flex-wrap items-center justify-between gap-3">' +
+          '<div><div class="text-xs font-bold uppercase text-emerald-600 dark:text-emerald-400">Kết quả chấm điểm</div>' +
+          '<div class="text-3xl font-extrabold text-slate-900 dark:text-white">' + score10 + ' / 10 điểm <span class="text-sm font-bold text-slate-500">(' + correct + '/' + total + ' câu đúng)</span></div></div>' +
+          retryWrongBtn +
+        '</div>' +
+        '<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">' +
+          [1, 2, 3, 4].map(function (g) {
+            return '<div class="p-2 rounded-xl bg-white/80 dark:bg-slate-900"><strong>' + GRP_NAMES[g] + '</strong><br/>' + grpStats[g].ok + '/' + grpStats[g].tot + ' đúng</div>';
+          }).join('') +
+        '</div>' + weakHtml;
+
+      res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function retryWrongOnly() {
+      if (!lastWrongIds.length) return;
+      activeQuestions = EXAM_BANK.filter(function (q) { return lastWrongIds.indexOf(q.id) !== -1; });
+      userChoices = {};
+      document.getElementById('examResult').classList.add('hidden');
+      document.getElementById('examSubtitle').innerHTML = '🔁 <strong>Chế độ Lấp Lỗ Hổng:</strong> Chỉ làm lại đúng <strong>' + activeQuestions.length + ' câu vừa sai</strong> cho tới khi đúng 100%!';
+      renderExam();
+      window.scrollTo({ top: 180, behavior: 'smooth' });
+    }
+
+    function startFullExam() {
+      activeQuestions = EXAM_BANK.slice();
+      userChoices = {};
+      lastWrongIds = [];
+      document.getElementById('examResult').classList.add('hidden');
+      document.getElementById('examSubtitle').innerHTML = 'Phủ đủ 4 mảng trọng tâm (0,4 điểm/câu), có sẵn các câu gài bẫy thi thật. Nộp bài xong xem ngay điểm 10 và mảng con cần ôn lại!';
+      renderExam();
+    }
+
+    startFullExam();
+  </script>
+  <script src="assets/common.js"></script>
+</body>
+</html>
