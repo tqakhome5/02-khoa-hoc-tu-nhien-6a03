@@ -26,7 +26,7 @@
 | 15 | **Sinh học** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Sinh 6** | [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 4 Nguyên lý + 4 Hình SGK tương tác + 6 Bẫy thi + 16 Flashcard + 10 Tự luận + Đề 25 câu |
 | 16 | **Vật lí** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Vật lí 6** | [ly-tong-quan-on-thi.html](ly-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 3 Nguyên lý + 4 Mô phỏng SGK (Lò xo, Đèn LED 100J) + 6 Bẫy + 16 Flashcard + 10 Tự luận + Đề 25 câu |
 | 17 | **Thiên văn** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Thiên văn 6** | [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 3 Nguyên lý + 4 Mô phỏng SGK (Ngày đêm, 8 Pha Trăng, 8 Hành tinh, Ngân Hà) + 6 Bẫy + 12 Flashcard + 8 Tự luận + Đề 20 câu |
-| 18 | **Thiên văn** | **🪐 Chuyên đề 3D: Mặt Trời – Trái Đất – Mặt Trăng (1 Tuần Trăng)** | [thien-van-chuyen-de-mat-trang-3d.html](thien-van-chuyen-de-mat-trang-3d.html) | ✅ Sẵn sàng | Mô phỏng Three.js 3D xoay 360°: Quỹ đạo nghiêng 5°, 8 Pha Trăng (Góc nhìn từ Trái Đất), Nhật thực & Nguyệt thực + Quiz 5 sao |
+| 18 | **Thiên văn** | **🪐 Chuyên đề 3D: Mặt Trời – Trái Đất – Mặt Trăng (1 Tuần Trăng)** | [thien-van-chuyen-de-mat-trang-3d.html](thien-van-chuyen-de-mat-trang-3d.html) | ✅ Sẵn sàng | Mô phỏng Three.js 3D xoay 360° + Tra cứu pha Trăng hôm nay/ngày bất kỳ + Hỏi–Đáp Nhật/Nguyệt thực thuộc pha nào + Quiz 5 sao |
 
 ### CODE MAP (Định vị mã nguồn cho các file HTML tổng hợp > 500 dòng)
 

@@ -86,9 +86,52 @@
     </section>
 
     <!-- ========================================================= -->
+    <!-- TRA CỨU PHA TRĂNG HÔM NAY HOẶC BẤT KỲ NGÀY NÀO            -->
+    <!-- ========================================================= -->
+    <section class="rounded-3xl bg-white dark:bg-slate-900 border-2 border-indigo-200 dark:border-indigo-800/80 shadow-md p-4 md:p-5 space-y-3.5">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-base md:text-lg font-extrabold text-slate-900 dark:text-white">📅 Tra cứu Pha Trăng Hôm Nay hoặc Bất Kỳ Ngày Nào</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Chọn ngày Dương lịch bất kỳ → tính ngay <strong>Tuổi Trăng, Pha Trăng, Chu kỳ</strong> và <strong>tự động xoay mô hình 3D</strong> đúng vị trí ngày đó!</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-1.5">
+          <button type="button" onclick="stepLookupDate(-1)" class="px-2.5 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Lùi 1 ngày">◀ -1 ngày</button>
+          <input id="datePicker" type="date" onchange="lookupDate(this.value, true)" class="px-3 py-1.5 rounded-xl text-xs font-bold border-2 border-indigo-400 dark:border-indigo-600 bg-indigo-50/60 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none" aria-label="Chọn ngày Dương lịch để xem pha Mặt Trăng" />
+          <button type="button" onclick="stepLookupDate(1)" class="px-2.5 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Tiến 1 ngày">+1 ngày ▶</button>
+          <button type="button" onclick="lookupToday(true)" class="px-3 py-1.5 rounded-xl text-xs font-extrabold bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm transition">📍 Hôm nay</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 text-xs">
+        <div class="rounded-2xl p-3 bg-indigo-50/80 dark:bg-indigo-950/50 border border-indigo-200/70 dark:border-indigo-800/60">
+          <div class="text-[11px] font-bold text-indigo-600 dark:text-indigo-400">🌕 Pha Trăng của ngày chọn</div>
+          <div id="lkPhase" class="text-sm font-extrabold text-slate-900 dark:text-white mt-0.5">—</div>
+          <div id="lkIllum" class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">—</div>
+        </div>
+
+        <div class="rounded-2xl p-3 bg-slate-50 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700">
+          <div class="text-[11px] font-bold text-slate-500 dark:text-slate-400">📆 Tuổi Trăng &amp; Lịch Âm</div>
+          <div id="lkAge" class="text-sm font-extrabold text-slate-900 dark:text-white mt-0.5">—</div>
+          <div id="lkLunar" class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">—</div>
+        </div>
+
+        <div class="rounded-2xl p-3 bg-amber-50/80 dark:bg-amber-950/40 border border-amber-200/70 dark:border-amber-800/60">
+          <div class="text-[11px] font-bold text-amber-700 dark:text-amber-400">🔄 Thuộc giai đoạn nào?</div>
+          <div id="lkCycle" class="text-sm font-extrabold text-slate-900 dark:text-white mt-0.5">—</div>
+          <div id="lkNext" class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">—</div>
+        </div>
+
+        <div class="rounded-2xl p-3 bg-rose-50/80 dark:bg-rose-950/40 border border-rose-200/70 dark:border-rose-800/60">
+          <div class="text-[11px] font-bold text-rose-700 dark:text-rose-400">🌘 Khả năng Nhật / Nguyệt thực</div>
+          <div id="lkEclipseNote" class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1 leading-snug">—</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
     <!-- BƯỚC 1: SÂN KHẤU MÔ PHỎNG 3D TƯƠNG TÁC                    -->
     <!-- ========================================================= -->
-    <section class="space-y-4">
+    <section id="stage3d" class="space-y-4">
 
       <!-- Thanh chọn 3 kịch bản chính -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
@@ -309,6 +352,63 @@
             <li>• <strong>🩸 Nguyệt thực (Ban đêm · Rằm 15):</strong> Thứ tự <em>Mặt Trời → <strong>Trái Đất</strong> → Mặt Trăng</em>. Trái Đất chen vào giữa, đổ bóng che khuất Mặt Trăng.</li>
           </ul>
         </article>
+      </div>
+
+      <!-- BẢNG HỎI – ĐÁP RÕ RÀNG: NHẬT THỰC & NGUYỆT THỰC THUỘC PHA NÀO? -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border-2 border-amber-300/80 dark:border-amber-700/60 shadow-sm space-y-4">
+        <div>
+          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300 text-[11px] font-extrabold">❓ Giải đáp dứt điểm câu hỏi hay nhầm nhất</span>
+          <h3 class="text-base md:text-lg font-extrabold text-slate-900 dark:text-white mt-1.5">Ngày Nhật thực &amp; Ngày Nguyệt thực có phải Ngày Không Trăng không? Thuộc pha nào?</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 text-sm">
+          <div class="rounded-2xl p-4 bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="font-extrabold text-amber-800 dark:text-amber-300">🌑 1. Ngày NHẬT THỰC</div>
+              <span class="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300">✅ ĐÚNG là Ngày Không Trăng!</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              Nhật thực <strong>LUÔN LUÔN</strong> thuộc pha <strong>🌑 Không Trăng (Mùng 1 Âm lịch)</strong>. Vì chỉ vào ngày Không Trăng, Mặt Trăng mới nằm <strong>giữa Mặt Trời và Trái Đất</strong> để che nắng ban ngày.
+            </p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              *(Chú ý: Mọi ngày Nhật thực đều là Không Trăng, nhưng không phải ngày Không Trăng nào cũng có Nhật thực vì quỹ đạo nghiêng 5°!)*
+            </p>
+            <button type="button" onclick="jumpToEclipseDemo('solar')" class="px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold transition">👁️ Xem mô phỏng 3D Nhật thực ▲</button>
+          </div>
+
+          <div class="rounded-2xl p-4 bg-rose-50/80 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800/60 space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="font-extrabold text-rose-800 dark:text-rose-300">🩸 2. Ngày NGUYỆT THỰC</div>
+              <span class="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-rose-100 dark:bg-rose-900/60 text-rose-700 dark:text-rose-300">❌ KHÔNG PHẢI Không Trăng!</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              Nguyệt thực <strong>LUÔN LUÔN</strong> thuộc pha <strong>🌕 Trăng Tròn (Rằm 15–16 Âm lịch)</strong>. Vì chỉ đêm Trăng tròn, Trái Đất mới nằm <strong>giữa Mặt Trời và Mặt Trăng</strong> để đổ bóng che khuất Mặt Trăng!
+            </p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              *(Mặt Trăng chỉ bị tối/đỏ thành "Trăng máu" trong vài chục phút đến vài tiếng khi đi qua bóng Trái Đất, trước và sau đó vẫn là Trăng tròn sáng rực!)*
+            </p>
+            <button type="button" onclick="jumpToEclipseDemo('lunar')" class="px-3 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-extrabold transition">👁️ Xem mô phỏng 3D Nguyệt thực ▲</button>
+          </div>
+        </div>
+
+        <!-- Cách tự biết pha Trăng cho 1 ngày bất kỳ -->
+        <div class="rounded-2xl p-4 bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200/80 dark:border-indigo-800/60 space-y-2">
+          <div class="font-extrabold text-sm text-indigo-800 dark:text-indigo-300">🧮 Làm sao biết một ngày bất kỳ thuộc pha nào của Mặt Trăng?</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+            <div>
+              <strong>Cách 1 — Nhìn ngày Âm lịch (siêu nhanh):</strong> Lịch Âm Việt Nam được lập theo đúng 1 Tuần Trăng (~29,5 ngày), nên cứ nhìn ngày Âm là đoán trúng phóc:
+              <div class="mt-1.5 flex flex-wrap gap-1.5 font-bold">
+                <span class="px-2 py-0.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Mùng 1 → 🌑 Không trăng</span>
+                <span class="px-2 py-0.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Mùng 7–8 → 🌓 Bán nguyệt đầu</span>
+                <span class="px-2 py-0.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Rằm 15–16 → 🌕 Trăng tròn</span>
+                <span class="px-2 py-0.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Ngày 22–23 → 🌗 Bán nguyệt cuối</span>
+              </div>
+            </div>
+            <div>
+              <strong>Cách 2 — Tính từ ngày Dương lịch (công thức máy đang dùng):</strong> Lấy số ngày từ một mốc Không Trăng chuẩn (ví dụ <em>11/01/2024</em>) đến ngày cần xem, rồi <strong>chia lấy số dư cho 29,53 ngày</strong> → ra ngay <strong>Tuổi Trăng (0 → 29,5)</strong>. Anh chỉ cần chọn ngày ở ô lịch đầu trang là máy tự tính và xoay 3D luôn!
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Bảng tóm tắt 1 nhìn cho 1 Tuần Trăng -->
@@ -1259,7 +1359,8 @@
           'Chuyên đề Mặt Trời, Trái Đất và Mặt Trăng trong một tuần trăng 29 phẩy 5 ngày. ' +
           'Thứ nhất: Ngày Không Trăng hay Mùng 1 âm lịch, Mặt Trăng không hề biến mất mà nằm ngay giữa Mặt Trời và Trái Đất. Nửa tối của nó quay về Trái Đất nên ta không nhìn thấy. ' +
           'Thứ hai: Quỹ đạo Mặt Trăng quanh Trái Đất không trùng mặt phẳng với quỹ đạo Trái Đất quanh Mặt Trời, mà nghiêng khoảng 5 phẩy 14 độ. Vì thế bóng tối thường bay sượt qua trên hoặc dưới, nên không phải tháng nào cũng có Nhật thực hay Nguyệt thực. ' +
-          'Thứ ba: Nhật thực xảy ra vào ban ngày Mùng 1 khi Mặt Trăng chắn giữa Mặt Trời và Trái Đất. Còn Nguyệt thực xảy ra vào đêm Rằm 15 khi Trái Đất chắn giữa Mặt Trời và Mặt Trăng, khiến Mặt Trăng chui vào bóng tối Trái Đất và có màu đỏ đồng.';
+          'Thứ ba: Nhật thực luôn luôn thuộc pha Không Trăng ngày Mùng 1 âm lịch khi Mặt Trăng chắn giữa Mặt Trời và Trái Đất. Còn Nguyệt thực không phải ngày Không Trăng, mà luôn thuộc pha Trăng tròn đêm Rằm 15 âm lịch khi Trái Đất chắn giữa Mặt Trời và Mặt Trăng, khiến Mặt Trăng tạm chuyển màu đỏ đồng. ' +
+          'Mẹo nhỏ: Lịch Âm Việt Nam chạy đúng theo chu kỳ Mặt Trăng, nên Mùng 1 là Không Trăng, Mùng 8 là Bán nguyệt đầu, Rằm 15 là Trăng tròn, còn ngày 23 là Bán nguyệt cuối.';
         if (window.startTTS) {
           window.startTTS('chuyen-de-mat-trang-3d', 'Giải thích nhanh: 8 Pha Trăng, Nhật thực & Nguyệt thực', text);
         }
@@ -1366,11 +1467,129 @@
         document.getElementById('quizScore').textContent = count + ' / 5 ⭐' + (count === 5 ? ' 🏆 Xuất sắc!' : '');
       };
 
-      // Khởi chạy toàn bộ trang
+      /* =====================================================================
+       * 11. TRA CỨU PHA TRĂNG CHO HÔM NAY HOẶC BẤT KỲ NGÀY DƯƠNG LỊCH NÀO
+       * ===================================================================== */
+      // Mốc Không Trăng chuẩn thiên văn: 11/01/2024 11:57 UTC
+      var NEW_MOON_EPOCH_UTC = Date.UTC(2024, 0, 11, 11, 57, 0);
+      var EXACT_SYNODIC_MONTH = 29.53058867;
+
+      function formatDateInputValue(d) {
+        var y = d.getFullYear();
+        var m = String(d.getMonth() + 1).padStart(2, '0');
+        var day = String(d.getDate()).padStart(2, '0');
+        return y + '-' + m + '-' + day;
+      }
+
+      function getVietnameseLunarString(dateObj, fallbackAge) {
+        try {
+          var fmt = new Intl.DateTimeFormat('vi-VN-u-ca-chinese', { day: 'numeric', month: 'numeric' });
+          var parts = fmt.formatToParts(dateObj);
+          var lDay = '';
+          var lMonth = '';
+          parts.forEach(function (p) {
+            if (p.type === 'day') lDay = p.value;
+            if (p.type === 'month') lMonth = p.value;
+          });
+          if (lDay && lMonth) {
+            var dNum = parseInt(lDay, 10);
+            var dayTxt = (!isNaN(dNum) && dNum <= 10) ? ('Mùng ' + dNum) : ('Ngày ' + lDay);
+            return dayTxt + ' tháng ' + lMonth + ' Âm lịch';
+          }
+        } catch (e) {}
+        var approx = Math.min(30, Math.floor(fallbackAge) + 1);
+        return 'Khoảng ' + (approx <= 10 ? ('Mùng ' + approx) : ('Ngày ' + approx)) + ' Âm lịch';
+      }
+
+      window.lookupDate = function (isoStr, sync3D) {
+        if (!isoStr) return;
+        var parts = isoStr.split('-');
+        if (parts.length !== 3) return;
+        var y = parseInt(parts[0], 10);
+        var m = parseInt(parts[1], 10) - 1;
+        var d = parseInt(parts[2], 10);
+
+        // Tính tại 19:00 giờ Việt Nam (= 12:00 UTC) để phản ánh đúng bầu trời tối ngày đó
+        var targetUtcMs = Date.UTC(y, m, d, 12, 0, 0);
+        var localDate = new Date(y, m, d, 19, 0, 0);
+
+        var diffDays = (targetUtcMs - NEW_MOON_EPOCH_UTC) / 86400000;
+        var age = ((diffDays % EXACT_SYNODIC_MONTH) + EXACT_SYNODIC_MONTH) % EXACT_SYNODIC_MONTH;
+        var phaseAngle = (age / EXACT_SYNODIC_MONTH) * Math.PI * 2;
+        var illum = Math.round(((1 - Math.cos(phaseAngle)) / 2) * 100);
+        var pIdx = Math.round((age / EXACT_SYNODIC_MONTH) * 8) % 8;
+        var info = PHASES[pIdx];
+
+        var picker = document.getElementById('datePicker');
+        if (picker && picker.value !== isoStr) picker.value = isoStr;
+
+        document.getElementById('lkPhase').textContent = info.emoji + ' ' + info.name;
+        document.getElementById('lkIllum').textContent = 'Độ sáng nhìn từ Trái Đất: ' + illum + '%';
+        document.getElementById('lkAge').textContent = 'Tuổi Trăng: ' + age.toFixed(1) + ' / 29,5 ngày';
+        document.getElementById('lkLunar').textContent = getVietnameseLunarString(localDate, age);
+
+        var isWaxing = age < EXACT_SYNODIC_MONTH / 2;
+        document.getElementById('lkCycle').textContent = isWaxing
+          ? '🌒 Nửa đầu tháng (Đang lớn dần)'
+          : '🌘 Nửa cuối tháng (Đang nhỏ dần)';
+
+        var daysToFull = (EXACT_SYNODIC_MONTH / 2 - age + EXACT_SYNODIC_MONTH) % EXACT_SYNODIC_MONTH;
+        var daysToNew = (EXACT_SYNODIC_MONTH - age) % EXACT_SYNODIC_MONTH;
+        document.getElementById('lkNext').textContent = isWaxing
+          ? ('Còn ~' + daysToFull.toFixed(1) + ' ngày tới Trăng tròn 🌕')
+          : ('Còn ~' + daysToNew.toFixed(1) + ' ngày tới Không trăng 🌑');
+
+        var ecNote = document.getElementById('lkEclipseNote');
+        if (age < 1.2 || age > EXACT_SYNODIC_MONTH - 1.2) {
+          ecNote.textContent = '🌑 Đang ở pha Không Trăng: đây là pha DUY NHẤT có thể xảy ra NHẬT THỰC (nếu thẳng hàng)!';
+        } else if (Math.abs(age - EXACT_SYNODIC_MONTH / 2) < 1.2) {
+          ecNote.textContent = '🌕 Đang ở pha Trăng Tròn: đây là pha DUY NHẤT có thể xảy ra NGUYỆT THỰC (nếu thẳng hàng)!';
+        } else {
+          ecNote.textContent = 'Không thể có Nhật thực hay Nguyệt thực vào pha này (chỉ xảy ra ở Mùng 1 hoặc Rằm 15).';
+        }
+
+        if (sync3D) {
+          state.playing = false;
+          syncPlayUI();
+          state.scenario = 'normal';
+          ['normal', 'solar', 'lunar'].forEach(function (k) {
+            var btn = document.getElementById('mode-' + k);
+            if (!btn) return;
+            var active = (k === 'normal');
+            btn.className = active
+              ? 'scenario-btn rounded-2xl p-3.5 text-left border-2 transition border-indigo-500 bg-indigo-50 dark:bg-indigo-950/60 text-slate-900 dark:text-white shadow-sm'
+              : 'scenario-btn rounded-2xl p-3.5 text-left border-2 transition border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:border-indigo-300';
+          });
+          state.day = Math.min(SYNODIC_MONTH, age);
+          document.getElementById('daySlider').value = state.day;
+          updateSimulation(false);
+        }
+      };
+
+      window.lookupToday = function (sync3D) {
+        var now = new Date();
+        window.lookupDate(formatDateInputValue(now), sync3D);
+      };
+
+      window.stepLookupDate = function (deltaDays) {
+        var picker = document.getElementById('datePicker');
+        var base = picker && picker.value ? new Date(picker.value + 'T12:00:00') : new Date();
+        base.setDate(base.getDate() + deltaDays);
+        window.lookupDate(formatDateInputValue(base), true);
+      };
+
+      window.jumpToEclipseDemo = function (mode) {
+        window.setScenario(mode);
+        var el = document.getElementById('stage3d');
+        if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
+
+      // Khởi chạy toàn bộ trang (mặc định mở đúng pha Trăng của HÔM NAY!)
       renderQuiz();
       setSpeed(1);
       setScenario('normal');
       init3D();
+      lookupToday(true);
     })();
   </script>
 </body>
