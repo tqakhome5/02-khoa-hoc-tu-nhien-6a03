@@ -24,6 +24,8 @@
 | 13 | **Hoá học** | **Bài 16: Hỗn hợp các chất** (SGK tr. 56–59) | [hoa-bai-16-hon-hop-cac-chat.html](hoa-bai-16-hon-hop-cac-chat.html) | ✅ Sẵn sàng | Quầy pha Dung dịch · Huyền phù · Nhũ tương (Hình 16.3) + Quiz 5 sao |
 | 14 | **Hoá học** | **Bài 17: Tách chất khỏi hỗn hợp** (SGK tr. 60–63) | [hoa-bai-17-tach-chat-khoi-hon-hop.html](hoa-bai-17-tach-chat-khoi-hon-hop.html) | ✅ Sẵn sàng | 3 bộ dụng cụ Lọc · Cô cạn · Chiết (Hình 17.4–17.6) + Quiz 5 sao |
 | 15 | **Sinh học** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Sinh 6** | [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 4 Nguyên lý + 4 Hình SGK tương tác + 6 Bẫy thi + 16 Flashcard + 10 Tự luận + Đề 25 câu |
+| 16 | **Vật lí** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Vật lí 6** | [ly-tong-quan-on-thi.html](ly-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 3 Nguyên lý + 4 Mô phỏng SGK (Lò xo, Đèn LED 100J) + 6 Bẫy + 16 Flashcard + 10 Tự luận + Đề 25 câu |
+| 17 | **Thiên văn** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Thiên văn 6** | [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 3 Nguyên lý + 4 Mô phỏng SGK (Ngày đêm, 8 Pha Trăng, 8 Hành tinh, Ngân Hà) + 6 Bẫy + 12 Flashcard + 8 Tự luận + Đề 20 câu |
 
 ### CODE MAP (Định vị mã nguồn cho các file HTML tổng hợp > 500 dòng)
 
@@ -41,6 +43,12 @@
 | [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | Tab 4 & 5: 10 Tự luận & Đề Thi Thử 25 câu (HTML) | `499–540` | Khung 10 câu 9–10 điểm + Đề 25 câu thang 10 |
 | [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | Script: Tabs, Mind Map, Tế bào, 5 cấp, Flashcard, Essays | `545–742` | `MAP_NODES`, `CELL_PARTS`, `ORG_DATA`, `FLASHCARDS`, `ESSAYS` |
 | [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | Script: Đề thi 25 câu & Làm lại câu sai | `743–885` | `EXAM_BANK`, `gradeExam()`, `retryWrongOnly()` |
+| [ly-tong-quan-on-thi.html](ly-tong-quan-on-thi.html) | Tab 1–2: Mind Map SVG, 3 Nguyên lý & 4 Mô phỏng SGK (HTML) | `75–306` | Đo lường · Lò xo & Lực · Đèn LED 100 J · Ma sát & Năng lượng |
+| [ly-tong-quan-on-thi.html](ly-tong-quan-on-thi.html) | Tab 3–5: 6 Bẫy, 16 Flashcard, 10 Tự luận & Đề 25 câu (HTML) | `307–399` | 6 bảng vượt bẫy + 10 tự luận + khung đề 25 câu |
+| [ly-tong-quan-on-thi.html](ly-tong-quan-on-thi.html) | Script: Tabs, Mô phỏng, Flashcard, Tự luận & Đề 25 câu | `400–745` | `updateSpringSim()`, `selectLamp()`, `EXAM_BANK`, `gradeExam()` |
+| [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | Tab 1–2: Mind Map SVG, 3 Nguyên lý & 4 Mô phỏng SGK (HTML) | `75–316` | Ngày đêm · 8 Pha Mặt Trăng · 8 Hành tinh · Ngân Hà |
+| [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | Tab 3–5: 6 Bẫy, 12 Flashcard, 8 Tự luận & Đề 20 câu (HTML) | `317–409` | 6 bảng vượt bẫy + 8 tự luận + khung đề 20 câu |
+| [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | Script: Tabs, Mô phỏng, Flashcard, Tự luận & Đề 20 câu | `410–730` | `updateSunSim()`, `selectMoonPhase()`, `selectPlanet()`, `EXAM_BANK` |
 
 ---
 

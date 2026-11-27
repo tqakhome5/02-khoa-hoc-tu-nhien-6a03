@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tổng Quan &amp; Ôn Thi 10 Điểm — Vật lí 6 (Lớp 6A03)</title>
+  <meta name="description" content="Bản đồ tư duy, 3 nguyên lý gốc, 4 mô phỏng chuẩn SGK (GHĐ-ĐCNN, Lực & Lò xo, Ma sát, Sơ đồ đèn LED 100J), 6 bẫy thi, 16 flashcard, 10 câu tự luận và Đề thi thử 25 câu thang 10 điểm Vật lí 6." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] } } } };</script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html#vat-li" class="px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 text-sm font-bold hover:bg-amber-100 transition">← Trang chủ Vật lí 6</a>
+      <div class="flex items-center gap-2">
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-6 space-y-6 pb-28">
+
+    <!-- HERO -->
+    <section class="rounded-3xl p-6 bg-gradient-to-r from-amber-600 via-orange-600 to-rose-600 text-white shadow-lg">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div class="max-w-2xl">
+          <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">⚡ Trung tâm Tổng quan &amp; Luyện thi 10 điểm · Vật lí 6 (16 Bài)</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Hiểu Tận Gốc Bản Chất — Tự Tin 10 Điểm Vật Lí 6</h1>
+          <p class="text-sm text-amber-50 mt-1">Gom trọn 3 mảng (Đo lường · Lực trong đời sống · Năng lượng) vào 3 nguyên lý gốc, 4 mô phỏng tương tác chuẩn SGK, 6 bẫy thi kinh điển, 10 câu tự luận &amp; bài tập và Đề thi thử 25 câu chấm điểm 10.</p>
+        </div>
+        <button type="button" onclick="startTTS('ly-3-nguyen-ly', '3 Nguyên lý gốc của Vật lí lớp 6', 'Toàn bộ 16 bài Vật lí lớp 6 chỉ xoay quanh đúng 3 nguyên lý rất rõ ràng. Nguyên lý 1 là Đo lường chuẩn xác: trước khi đo chiều dài, khối lượng, thời gian hay nhiệt độ, luôn ước lượng để chọn dụng cụ có giới hạn đo và độ chia nhỏ nhất phù hợp, chỉnh về vạch 0 và đặt mắt nhìn vuông góc. Nguyên lý 2 là Lực làm thay đổi chuyển động hoặc biến dạng vật: mỗi lực biểu diễn bằng 1 mũi tên gồm 4 yếu tố điểm đặt, phương, chiều và độ lớn; nhớ phân biệt khối lượng đo bằng kilôgam không đổi ở mọi nơi, còn trọng lượng đo bằng niutơn gần bằng 10 lần khối lượng. Nguyên lý 3 là Bảo toàn và Hao phí năng lượng: năng lượng không tự sinh ra hay mất đi mà chỉ chuyển hoá giữa 7 dạng, nhưng khi chuyển hoá luôn có phần hao phí thường dưới dạng nhiệt năng nên cần dùng đèn LED và tiết kiệm năng lượng!')" class="shrink-0 px-4 py-2.5 rounded-xl bg-white text-amber-700 font-bold text-xs md:text-sm shadow hover:bg-amber-50 transition">
+          🔊 Nghe 3 Nguyên lý gốc
+        </button>
+      </div>
+    </section>
+
+    <!-- 5 TAB CHÍNH -->
+    <nav class="grid grid-cols-2 sm:grid-cols-5 gap-2.5" aria-label="5 phần ôn tập Vật lí 6">
+      <button id="hub-tab-ban-do" type="button" onclick="switchHubTab('ban-do')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">🗺️</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">1. Bản đồ &amp; Bản chất</div>
+        <div class="text-[11px] opacity-80">Mind Map + 3 Nguyên lý</div>
+      </button>
+      <button id="hub-tab-hinh-sgk" type="button" onclick="switchHubTab('hinh-sgk')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">🎛️</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">2. Mô phỏng SGK</div>
+        <div class="text-[11px] opacity-80">4 Hình kéo thả trực quan</div>
+      </button>
+      <button id="hub-tab-on-nhanh" type="button" onclick="switchHubTab('on-nhanh')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">⚡</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">3. Bẫy thi &amp; Flashcard</div>
+        <div class="text-[11px] opacity-80">6 Bẫy khó + 16 Thẻ lật</div>
+      </button>
+      <button id="hub-tab-tu-luan" type="button" onclick="switchHubTab('tu-luan')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">💬</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">4. Tự luận 9–10 điểm</div>
+        <div class="text-[11px] opacity-80">10 câu "Tại sao?" &amp; Bài tập</div>
+      </button>
+      <button id="hub-tab-thi-thu" type="button" onclick="switchHubTab('thi-thu')" class="hub-tab rounded-2xl p-3 text-left border-2 transition col-span-2 sm:col-span-1">
+        <div class="text-xl">📝</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">5. Đề Thi Thử 25 Câu</div>
+        <div class="text-[11px] opacity-80">Thang 10 + Ôn câu sai</div>
+      </button>
+    </nav>
+
+    <!-- =================================================================== -->
+    <!-- TAB 1: BẢN ĐỒ MIND MAP SVG & 3 NGUYÊN LÝ GỐC                         -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-ban-do" class="hub-panel space-y-6">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div>
+          <h2 class="text-lg font-extrabold">🗺️ Bản Đồ Tư Duy Trọn Bộ Vật Lí 6 (Bấm vào từng ô để xem nhanh!)</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">16 bài Vật lí 6 chia thành 3 mảng cực kỳ mạch lạc: <strong>Đo lường (Bài 5–8) → Lực (Bài 40–45) → Năng lượng (Bài 46–51)</strong>.</p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-50 dark:bg-slate-950 p-2 overflow-x-auto">
+          <svg viewBox="0 0 840 365" class="w-full min-w-[680px] h-auto" role="img" aria-label="Bản đồ tư duy Vật lí 6 gồm 3 mảng lớn">
+            <!-- Đường nối tâm -> 3 mảng -->
+            <path d="M132 182 C185 182, 185 55, 240 55" fill="none" stroke="#0284c7" stroke-width="4" />
+            <path d="M132 182 L240 182" fill="none" stroke="#d97706" stroke-width="4" />
+            <path d="M132 182 C185 182, 185 310, 240 310" fill="none" stroke="#059669" stroke-width="4" />
+
+            <!-- Nhánh Đo lường -->
+            <path d="M430 55 C468 55, 468 32, 505 32" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+            <path d="M430 55 C468 55, 468 78, 505 78" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+
+            <!-- Nhánh Lực -->
+            <path d="M430 182 C468 182, 468 135, 505 135" fill="none" stroke="#fbbf24" stroke-width="2.5" />
+            <path d="M430 182 L505 182" fill="none" stroke="#fbbf24" stroke-width="2.5" />
+            <path d="M430 182 C468 182, 468 229, 505 229" fill="none" stroke="#fbbf24" stroke-width="2.5" />
+
+            <!-- Nhánh Năng lượng -->
+            <path d="M430 310 C468 310, 468 282, 505 282" fill="none" stroke="#34d399" stroke-width="2.5" />
+            <path d="M430 310 C468 310, 468 336, 505 336" fill="none" stroke="#34d399" stroke-width="2.5" />
+
+            <!-- TÂM -->
+            <rect x="12" y="138" width="122" height="88" rx="20" fill="#d97706" />
+            <text x="73" y="177" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">⚡ VẬT LÍ 6</text>
+            <text x="73" y="198" text-anchor="middle" font-size="11" fill="#fef3c7">3 Mảng · 16 Bài</text>
+
+            <!-- 3 NHÁNH -->
+            <rect x="240" y="28" width="190" height="54" rx="14" fill="#0369a1" />
+            <text x="335" y="51" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">📏 ĐO LƯỜNG (B5–8)</text>
+            <text x="335" y="69" text-anchor="middle" font-size="10.5" fill="#bae6fd">Dài · Nặng · Giờ · Nhiệt độ</text>
+
+            <rect x="240" y="155" width="190" height="54" rx="14" fill="#b45309" />
+            <text x="335" y="178" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">🧲 CHƯƠNG VIII: LỰC</text>
+            <text x="335" y="196" text-anchor="middle" font-size="10.5" fill="#fef3c7">Biểu diễn · Lò xo · Ma sát</text>
+
+            <rect x="240" y="283" width="190" height="54" rx="14" fill="#047857" />
+            <text x="335" y="306" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">🔋 CHƯƠNG IX: NĂNG LƯỢNG</text>
+            <text x="335" y="324" text-anchor="middle" font-size="10.5" fill="#a7f3d0">7 Dạng · Bảo toàn · Tái tạo</text>
+
+            <!-- CÁC Ô CLICK ĐƯỢC -->
+            <g class="cursor-pointer" onclick="selectMapNode('do-dai')">
+              <rect x="505" y="14" width="320" height="36" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5" />
+              <text x="518" y="36" font-size="11.5" font-weight="700" fill="#0c4a6e">Bài 5–7: Đo chiều dài (m) · Khối lượng (kg) · Thời gian (s)</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode('do-nhiet')">
+              <rect x="505" y="60" width="320" height="36" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5" />
+              <text x="518" y="82" font-size="11.5" font-weight="700" fill="#0c4a6e">Bài 8: Đo nhiệt độ (°C) · 4 loại nhiệt kế &amp; chỗ thắt y tế</text>
+            </g>
+
+            <g class="cursor-pointer" onclick="selectMapNode('luc-bd')">
+              <rect x="505" y="117" width="320" height="36" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5" />
+              <text x="518" y="139" font-size="11.5" font-weight="700" fill="#78350f">Bài 40–41: Tác dụng lực · Lực tiếp xúc/không TX · Mũi tên lực</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode('luc-trong')">
+              <rect x="505" y="164" width="320" height="36" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5" />
+              <text x="518" y="186" font-size="11.5" font-weight="700" fill="#78350f">Bài 42–43: Biến dạng lò xo · Trọng lượng (P ≈ 10m) &amp; Hấp dẫn</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode('luc-ms')">
+              <rect x="505" y="211" width="320" height="36" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5" />
+              <text x="518" y="233" font-size="11.5" font-weight="700" fill="#78350f">Bài 44–45: Ma sát nghỉ/trượt · Lực cản nước &amp; Khí động học</text>
+            </g>
+
+            <g class="cursor-pointer" onclick="selectMapNode('nl-baotoan')">
+              <rect x="505" y="264" width="320" height="36" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5" />
+              <text x="518" y="286" font-size="11.5" font-weight="700" fill="#064e3b">Bài 46–48: 7 Dạng năng lượng (J) · Chuyển hoá &amp; Bảo toàn</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode('nl-taitao')">
+              <rect x="505" y="318" width="320" height="36" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="1.5" />
+              <text x="518" y="340" font-size="11.5" font-weight="700" fill="#064e3b">Bài 49–51: Hao phí nhiệt (LED vs sợi đốt) · Tái tạo · Tiết kiệm</text>
+            </g>
+          </svg>
+        </div>
+
+        <div id="mapDetailBox" class="rounded-2xl p-4 bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <div id="mapDetailTitle" class="font-extrabold text-sm text-amber-900 dark:text-amber-200">👆 Bấm vào một ô trên Bản đồ ở trên!</div>
+            <div id="mapDetailText" class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Xem ngay tóm tắt công thức, đơn vị SI và mẹo tránh bẫy thi.</div>
+          </div>
+          <button id="mapDetailBtn" type="button" onclick="switchHubTab('hinh-sgk')" class="hidden shrink-0 px-3.5 py-2 rounded-xl bg-amber-600 text-white text-xs font-bold hover:bg-amber-700 transition">Mở mô phỏng SGK ▶</button>
+        </div>
+      </div>
+
+      <!-- 3 NGUYÊN LÝ GỐC -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border-2 border-sky-200 dark:border-sky-800 shadow-sm space-y-2">
+          <div class="text-xs font-extrabold uppercase text-sky-600">Nguyên lý 1 · Bài 5–8</div>
+          <h3 class="font-extrabold text-base">📏 Đo chuẩn = Đúng GHĐ/ĐCNN + Mắt vuông góc</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Đơn vị SI: <strong>m, kg, s</strong> (và <strong>°C</strong>). Luôn ước lượng trước để chọn dụng cụ vừa đủ, chỉnh về vạch <strong>0</strong>, nhìn <strong>vuông góc</strong> với vạch chia.</p>
+        </div>
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border-2 border-amber-200 dark:border-amber-800 shadow-sm space-y-2">
+          <div class="text-xs font-extrabold uppercase text-amber-600">Nguyên lý 2 · Bài 40–45</div>
+          <h3 class="font-extrabold text-base">🧲 Lực đổi chuyển động &amp; biến dạng (N)</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Mũi tên lực có 4 yếu tố. <strong>Khối lượng (kg)</strong> cố định; <strong>Trọng lượng (N)</strong> là lực hút Trái Đất (<strong>P ≈ 10 × m</strong>). Ma sát có thể cản trở HOẶC thúc đẩy!</p>
+        </div>
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border-2 border-emerald-200 dark:border-emerald-800 shadow-sm space-y-2">
+          <div class="text-xs font-extrabold uppercase text-emerald-600">Nguyên lý 3 · Bài 46–51</div>
+          <h3 class="font-extrabold text-base">🔋 Bảo toàn 100% — Nhưng luôn hao phí nhiệt</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">7 dạng năng lượng (đơn vị <strong>J</strong>) không tự mất đi mà chuyển hoá cho nhau; phần hao phí thường là <strong>nhiệt năng</strong> → dùng đèn LED &amp; năng lượng tái tạo!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 2: 4 MÔ PHỎNG HÌNH SGK TƯƠNG TÁC SVG                             -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-hinh-sgk" class="hub-panel hidden space-y-6">
+
+      <!-- MÔ PHỎNG 1: HÌNH 41.6 & 42.2 — KÉO LÒ XO, BIỂU DIỄN LỰC & P ≈ 10×m -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <span class="text-[11px] font-extrabold uppercase text-amber-600">Mô phỏng Hình 41.6, 42.2 &amp; 43 SGK (tr. 149–156)</span>
+            <h2 class="text-lg font-extrabold">🧲 1. Treo Quả Nặng Thử Độ Dãn Lò Xo &amp; Vẽ Mũi Tên Trọng Lực!</h2>
+          </div>
+          <span id="springBadge" class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300">m = 2 kg · P ≈ 20 N · Δl = 4 cm</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+          <div class="rounded-2xl bg-slate-50 dark:bg-slate-950 p-3">
+            <svg viewBox="0 0 360 220" class="w-full h-auto" role="img" aria-label="Mô phỏng lò xo treo quả nặng và mũi tên biểu diễn trọng lực">
+              <!-- Giá treo -->
+              <rect x="60" y="12" width="120" height="10" rx="4" fill="#64748b" />
+              <!-- Thước đo bên trái -->
+              <line x1="45" y1="22" x2="45" y2="205" stroke="#94a3b8" stroke-width="2" />
+              <text x="14" y="88" font-size="10" font-weight="700" fill="#64748b">l₀ = 10cm</text>
+              <line x1="38" y1="84" x2="55" y2="84" stroke="#94a3b8" stroke-dasharray="3 3" />
+              <!-- Lò xo co dãn -->
+              <path id="springCoil" d="M120 22 L120 35 L108 42 L132 50 L108 58 L132 66 L108 74 L132 82 L120 90 L120 100" fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linejoin="round" />
+              <!-- Quả nặng -->
+              <rect id="weightBox" x="96" y="100" width="48" height="32" rx="8" fill="#f59e0b" stroke="#b45309" stroke-width="2.5" />
+              <text id="weightLabel" x="120" y="121" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">2 kg</text>
+              <!-- Mũi tên trọng lực P (tỉ xích 1 đoạn = 10 N) -->
+              <line id="forceArrowLine" x1="120" y1="132" x2="120" y2="172" stroke="#dc2626" stroke-width="4" />
+              <polygon id="forceArrowHead" points="113,168 127,168 120,180" fill="#dc2626" />
+              <text id="forceArrowLabel" x="136" y="160" font-size="12" font-weight="800" fill="#dc2626">P ≈ 20 N</text>
+              <!-- Chú thích tỉ xích bên phải -->
+              <rect x="210" y="34" width="138" height="150" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+              <text x="279" y="56" text-anchor="middle" font-size="11" font-weight="800" fill="#0f172a">4 Yếu tố Trọng lực</text>
+              <text x="220" y="78" font-size="10.5" fill="#334155">• Điểm đặt: tại vật</text>
+              <text x="220" y="98" font-size="10.5" fill="#334155">• Phương: thẳng đứng</text>
+              <text x="220" y="118" font-size="10.5" fill="#334155">• Chiều: trên → dưới</text>
+              <text id="scaleNote" x="220" y="138" font-size="10.5" font-weight="700" fill="#dc2626">• Độ lớn: 20 N (2 đoạn)</text>
+              <text x="220" y="162" font-size="10" fill="#0284c7">Tỉ xích: 1 đoạn = 10 N</text>
+              <text id="deltaNote" x="220" y="177" font-size="10" font-weight="700" fill="#059669">Độ dãn Δl = 4 cm</text>
+            </svg>
+          </div>
+
+          <div class="space-y-3 text-xs md:text-sm">
+            <div>
+              <label for="massSlider" class="font-bold block mb-1">Chọn khối lượng vật treo (m = 1 kg → 5 kg):</label>
+              <input id="massSlider" type="range" min="1" max="5" step="1" value="2" oninput="updateSpringSim(this.value)" class="w-full accent-amber-600" />
+            </div>
+            <div class="rounded-2xl p-3.5 bg-amber-50 dark:bg-slate-800/70 border border-amber-200 dark:border-slate-700 space-y-1">
+              <p>• <strong>Độ dãn lò xo ($\Delta l = l - l_0$):</strong> Tỉ lệ thuận với khối lượng vật treo! (Treo gấp đôi → dãn gấp đôi).</p>
+              <p>• <strong>Quy tắc nhớ nhanh (SGK tr. 156):</strong> Trọng lượng $P \text{ (N)} \approx 10 \times m \text{ (kg)}$.</p>
+              <p>• <strong>⚠️ Cảnh báo:</strong> Không treo vật nặng vượt quá GHĐ kẻo lò xo <em>mất tính đàn hồi</em>!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MÔ PHỎNG 2: HÌNH 49.3 SGK — SƠ ĐỒ SANKEY 100 J ĐIỆN Ở 3 LOẠI ĐÈN -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <span class="text-[11px] font-extrabold uppercase text-emerald-600">Mô phỏng Hình 49.3 SGK (tr. 172)</span>
+            <h2 class="text-lg font-extrabold">💡 2. Soi 100 J Điện Vào 3 Loại Bóng Đèn (Hữu Ích vs Hao Phí Nhiệt)</h2>
+          </div>
+          <div class="flex gap-1.5">
+            <button id="lamp-btn-soi" type="button" onclick="selectLamp('soi')" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-700">Đèn sợi đốt</button>
+            <button id="lamp-btn-compact" type="button" onclick="selectLamp('compact')" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-700">Đèn compact</button>
+            <button id="lamp-btn-led" type="button" onclick="selectLamp('led')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white">⭐ Đèn LED</button>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="w-full h-11 rounded-2xl overflow-hidden flex font-extrabold text-xs md:text-sm text-white shadow-inner">
+            <div id="lampUsefulBar" class="bg-emerald-500 flex items-center justify-center transition-all duration-300" style="width: 80%">✨ 80 J Ánh sáng</div>
+            <div id="lampWasteBar" class="bg-rose-500 flex items-center justify-center transition-all duration-300" style="width: 20%">🔥 20 J Nhiệt</div>
+          </div>
+          <div id="lampDesc" class="rounded-2xl p-3.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-xs md:text-sm">
+            <strong>⭐ Đèn LED (Tiết kiệm nhất!):</strong> Trong <strong>100 J</strong> điện năng đưa vào, có tới <strong>80 J</strong> biến thành ánh sáng có ích, chỉ hao phí <strong>20 J</strong> nhiệt năng — hiệu quả gấp <strong>16 lần</strong> đèn sợi đốt!
+          </div>
+        </div>
+      </div>
+
+      <!-- MÔ PHỎNG 3 & 4: ĐO LƯỜNG (HÌNH 5.2 & 8.5) + MA SÁT & NĂNG LƯỢNG (HÌNH 44.6 & 50.1) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+          <span class="text-[11px] font-extrabold uppercase text-sky-600">Hình 5.2 &amp; Hình 8.5 SGK (tr. 18, 26)</span>
+          <h3 class="text-base font-extrabold">🌡️ 3. 4 Loại Nhiệt Kế &amp; Chỗ Thắt Y Tế</h3>
+          <div class="space-y-2 text-xs">
+            <div class="p-3 rounded-xl bg-rose-50 dark:bg-slate-800/60 border border-rose-200 dark:border-slate-700">
+              <strong>Nhiệt kế y tế thuỷ ngân:</strong> GHĐ <strong>35 °C → 42 °C</strong>, ĐCNN <strong>0,1 °C</strong>. Có <strong>chỗ thắt nhỏ</strong> trên bầu giữ thuỷ ngân không tụt khi lấy ra đọc (trước khi đo phải vẩy mạnh!). <em>Cấm đo nước sôi 100 °C!</em>
+            </div>
+            <div class="p-3 rounded-xl bg-sky-50 dark:bg-slate-800/60 border border-sky-200 dark:border-slate-700">
+              <strong>Nhiệt kế rượu:</strong> Đo nhiệt độ phòng (<code>-20 °C → 50 °C</code>). <strong>Nhiệt kế dầu:</strong> Phòng thí nghiệm. <strong>Hồng ngoại:</strong> Đo không chạm (<code>36,6 °C</code>).
+            </div>
+            <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800/60">
+              <strong>Cơ sở nhiệt kế chất lỏng (Hình 8.4):</strong> Dựa trên <em>sự nở vì nhiệt của chất lỏng</em>. Thang Celsius: nước đá đang tan = <strong>0 °C</strong>, hơi nước đang sôi = <strong>100 °C</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+          <span class="text-[11px] font-extrabold uppercase text-emerald-600">Hình 44.4–45.3 &amp; Hình 50.1 SGK</span>
+          <h3 class="text-base font-extrabold">⚙️ 4. Ma Sát, Lực Cản &amp; Nguồn Năng Lượng</h3>
+          <div class="space-y-2 text-xs">
+            <div class="p-3 rounded-xl bg-amber-50 dark:bg-slate-800/60 border border-amber-200 dark:border-slate-700">
+              <strong>Ma sát nghỉ vs Trượt:</strong> Đẩy thùng chưa nhúc nhích = <em>ma sát nghỉ</em>; thùng trượt đi = <em>ma sát trượt</em>. Dùng <strong>ổ bi / dầu mỡ</strong> để giảm ma sát có hại; khía rãnh lốp để tăng ma sát có ích.
+            </div>
+            <div class="p-3 rounded-xl bg-cyan-50 dark:bg-slate-800/60 border border-cyan-200 dark:border-slate-700">
+              <strong>Lực cản nước (Bài 45):</strong> Diện tích mặt cản càng lớn → lực cản càng mạnh. Cá mập, tàu ngầm, mũ đua xe đạp đều có dạng <strong>thuôn nhọn khí động học</strong> để giảm lực cản.
+            </div>
+            <div class="p-3 rounded-xl bg-emerald-50 dark:bg-slate-800/60 border border-emerald-200 dark:border-slate-700">
+              <strong>5 Nguồn tái tạo:</strong> Mặt Trời, Gió, Nước, Địa nhiệt, Sinh khối.<br/>
+              <strong>4 Nguồn KHÔNG tái tạo:</strong> Than đá, Dầu mỏ, Khí tự nhiên, <strong>Urani (U²³⁵)</strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 3: 6 BẪY THI KINH ĐIỂN & 16 FLASHCARD LẬT THẺ                    -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-on-nhanh" class="hub-panel hidden space-y-6">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <h2 class="text-lg font-extrabold">⚡ 6 Bẫy Thi Vật Lí 6 Kinh Điển (Đọc kỹ để KHÔNG mất điểm oan!)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+          <div class="rounded-2xl p-4 bg-sky-50/70 dark:bg-slate-800/60 border border-sky-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-sky-700 dark:text-sky-400">1. Bẫy GHĐ, ĐCNN &amp; Đặt mắt xiên (Hình 5.2–5.3)</div>
+            <p>Thước có mỗi 1 cm chia làm 2 khoảng nhỏ → <strong>ĐCNN = 0,5 cm</strong> (không phải 1 cm!). Đọc kết quả phải nhìn <strong>vuông góc</strong> cạnh thước và ghi đúng theo ĐCNN.</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-rose-50/70 dark:bg-slate-800/60 border border-rose-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-rose-700 dark:text-rose-400">2. Bẫy Nhiệt kế y tế thuỷ ngân (Bài 8)</div>
+            <p>Chỉ đo từ <strong>35 °C đến 42 °C</strong> → <strong>KHÔNG</strong> dùng đo nước sôi 100 °C (vỡ ngay!). Không cầm tay vào bầu thuỷ ngân khi đọc; nhớ <strong>vẩy mạnh</strong> trước khi đo người khác.</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-amber-50/70 dark:bg-slate-800/60 border border-amber-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-amber-700 dark:text-amber-400">3. Bẫy Khối lượng (kg) vs Trọng lượng (N)</div>
+            <p>• Quên đổi <code>g → kg</code>: vật <strong>500 g = 0,5 kg → P ≈ 5 N</strong> (không phải 5000 N!).<br/>• Lên Mặt Trăng: <strong>khối lượng KHÔNG đổi</strong>, chỉ <strong>trọng lượng giảm ~6 lần</strong>!</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-orange-50/70 dark:bg-slate-800/60 border border-orange-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-orange-700 dark:text-orange-400">4. Bẫy Ma sát nghỉ &amp; Ma sát thúc đẩy đi bộ</div>
+            <p>• Đẩy thùng hàng nhưng thùng <strong>chưa nhúc nhích</strong> → vẫn có <strong>ma sát nghỉ</strong>.<br/>• Khi đi bộ (Hình 44.6e): chân đạp về sau → ma sát đẩy người <strong>tiến về phía trước</strong>!</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-emerald-50/70 dark:bg-slate-800/60 border border-emerald-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-emerald-700 dark:text-emerald-400">5. Bẫy Quả bóng nảy thấp hơn có mất năng lượng không?</div>
+            <p><strong>KHÔNG!</strong> Năng lượng toàn phần luôn <strong>bảo toàn</strong>; bóng nảy thấp hơn vì 1 phần cơ năng đã chuyển hoá thành <strong>nhiệt năng và năng lượng âm</strong> khi va chạm &amp; ma sát.</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-purple-50/70 dark:bg-slate-800/60 border border-purple-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-purple-700 dark:text-purple-400">6. Bẫy Nguồn tái tạo vs Không tái tạo (Bài 50)</div>
+            <p>• <strong>Điện năng</strong> là <em>dạng</em> năng lượng, không phải nguồn tái tạo.<br/>• <strong>Năng lượng hạt nhân (Urani)</strong> là nguồn <strong>KHÔNG tái tạo</strong> (sẽ cạn kiệt).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16 FLASHCARD -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">🃏 16 Thẻ Flashcard Lật Nhanh Vật Lí 6</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Bố mẹ cầm hỏi miệng con từng thẻ, bấm để kiểm tra đáp án ngay!</p>
+          </div>
+          <button type="button" onclick="resetFlashcards()" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Úp lại tất cả</button>
+        </div>
+        <div id="flashcardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 4: 10 CÂU TỰ LUẬN & BÀI TẬP ĂN ĐIỂM 9–10                         -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-tu-luan" class="hub-panel hidden space-y-4">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">💬 10 Câu Tự Luận "Tại sao?" &amp; Bài Tập Ăn Điểm 9–10 Vật Lí 6</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Con tự trả lời trước rồi bấm mở <strong>Khung trả lời 2 bước</strong> để chấm xem đã đủ ý ăn trọn điểm chưa nhé!</p>
+          </div>
+          <span id="essayCount" class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">✅ Đã thuộc 0 / 10 câu</span>
+        </div>
+        <div id="essayList" class="space-y-3"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 5: ĐỀ THI THỬ 25 CÂU (THANG 10 + LÀM LẠI CÂU SAI)                -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-thi-thu" class="hub-panel hidden space-y-4">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">📝 Đề Thi Thử Tổng Hợp Vật Lí 6 (25 câu · Thang 10 điểm)</h2>
+            <p id="examSubtitle" class="text-xs text-slate-500 dark:text-slate-400">Phủ đủ 3 mảng (Đo lường · Lực · Năng lượng — 0,4 điểm/câu), gài sẵn bẫy thi thật. Nộp bài xem điểm 10 và làm lại riêng câu sai!</p>
+          </div>
+          <button type="button" onclick="startFullExam()" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Làm lại cả 25 câu</button>
+        </div>
+
+        <div id="examResult" class="hidden rounded-2xl p-5 bg-gradient-to-br from-amber-50 to-emerald-50 dark:from-slate-800 dark:to-slate-800 border-2 border-amber-300 dark:border-amber-700 space-y-3"></div>
+        <div id="examContainer" class="space-y-4"></div>
+
+        <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+          <button id="submitExamBtn" type="button" onclick="gradeExam()" class="px-6 py-3 rounded-2xl bg-amber-600 hover:bg-amber-700 text-white font-extrabold text-sm md:text-base shadow-md transition">
+            ✅ Nộp bài &amp; Chấm điểm 10
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-5 text-center text-xs text-slate-500 dark:text-slate-400">
+    Trung tâm Tổng quan &amp; Ôn thi 10 điểm Vật lí 6 · Lớp 6A03 · Học hiểu bản chất
+  </footer>
+
+  <script>
+    /* ===== 1. ĐIỀU KHIỂN 5 TAB CHÍNH ===== */
+    var HUB_TABS = ['ban-do', 'hinh-sgk', 'on-nhanh', 'tu-luan', 'thi-thu'];
+    function switchHubTab(key) {
+      if (HUB_TABS.indexOf(key) === -1) key = 'ban-do';
+      HUB_TABS.forEach(function (k) {
+        var btn = document.getElementById('hub-tab-' + k);
+        var pnl = document.getElementById('hub-panel-' + k);
+        var active = (k === key);
+        var spanCls = (k === 'thi-thu') ? ' col-span-2 sm:col-span-1' : '';
+        if (btn) btn.className = 'hub-tab rounded-2xl p-3 text-left border-2 transition' + spanCls + ' ' + (active
+          ? 'border-amber-500 bg-amber-50 dark:bg-amber-950/60 text-amber-900 dark:text-amber-100 shadow-sm'
+          : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-amber-300');
+        if (pnl) pnl.classList.toggle('hidden', !active);
+      });
+      if (window.history && window.history.replaceState) window.history.replaceState(null, '', '#' + key);
+    }
+    (function () {
+      var h = (window.location.hash || '').replace('#', '');
+      switchHubTab(HUB_TABS.indexOf(h) !== -1 ? h : 'ban-do');
+    })();
+
+    /* ===== 2. BẢN ĐỒ TƯ DUY ===== */
+    var MAP_NODES = {
+      'do-dai': { title: 'Bài 5–7: Đo chiều dài, Khối lượng, Thời gian (SGK tr. 17–23)', text: 'Đơn vị SI: mét (m), kilôgam (kg), giây (s). Trước khi đo phải ước lượng để chọn GHĐ và ĐCNN phù hợp, đặt mắt vuông góc. Đo thể tích vật rắn không thấm nước bằng bình chia độ hoặc bình tràn (1 mL = 1 cm³).' },
+      'do-nhiet': { title: 'Bài 8: Đo nhiệt độ (SGK tr. 24–27)', text: 'Thang Celsius: 0 °C (nước đá đang tan) và 100 °C (hơi nước đang sôi). Nhiệt kế chất lỏng hoạt động nhờ sự nở vì nhiệt. Nhiệt kế y tế (35–42 °C, ĐCNN 0,1 °C) có chỗ thắt nhỏ giữ thuỷ ngân không tụt.' },
+      'luc-bd': { title: 'Bài 40–41: Lực & Biểu diễn lực (SGK tr. 144–150)', text: 'Lực (đơn vị N, đo bằng lực kế) làm thay đổi chuyển động hoặc biến dạng vật. Gồm lực tiếp xúc và không tiếp xúc (nam châm, lực hấp dẫn). Mũi tên lực có 4 yếu tố: điểm đặt, phương, chiều, độ lớn (theo tỉ xích).' },
+      'luc-trong': { title: 'Bài 42–43: Biến dạng lò xo · Trọng lượng & Lực hấp dẫn (SGK tr. 151–156)', text: 'Độ dãn lò xo (Δl = l - l₀) tỉ lệ với khối lượng vật treo. Khối lượng (kg) không đổi ở mọi nơi; Trọng lượng (N) là độ lớn lực hút Trái Đất (phương thẳng đứng, chiều từ trên xuống), P ≈ 10 × m (kg).' },
+      'luc-ms': { title: 'Bài 44–45: Lực ma sát & Lực cản của nước (SGK tr. 157–161)', text: 'Ma sát nghỉ giữ vật đứng yên; ma sát trượt xuất hiện khi vật trượt. Ma sát có ích (đi bộ, phanh, rãnh lốp) & có hại (mòn trục → ổ bi, dầu mỡ). Lực cản nước lớn → cá mập, tàu ngầm có hình dạng thuôn nhọn khí động học.' },
+      'nl-baotoan': { title: 'Bài 46–48: 7 Dạng năng lượng · Chuyển hoá & Bảo toàn (SGK tr. 162–170)', text: 'Đơn vị jun (J). 7 dạng: Động năng, Thế năng hấp dẫn, Hoá năng, Điện năng, Quang năng, Năng lượng âm, Nhiệt năng. Định luật bảo toàn: năng lượng không tự sinh ra hay mất đi mà chỉ chuyển hoá hoặc truyền đi.' },
+      'nl-taitao': { title: 'Bài 49–51: Hao phí · Năng lượng tái tạo & Tiết kiệm (SGK tr. 171–178)', text: 'Hao phí thường là nhiệt năng: với 100 J điện, đèn sợi đốt chỉ cho 5 J sáng (95 J nhiệt), compact 20 J, đèn LED tới 80 J sáng! 5 nguồn tái tạo: Mặt Trời, Gió, Nước, Địa nhiệt, Sinh khối.' }
+    };
+    function selectMapNode(key) {
+      var d = MAP_NODES[key];
+      document.getElementById('mapDetailTitle').textContent = '📌 ' + d.title;
+      document.getElementById('mapDetailText').textContent = d.text;
+      document.getElementById('mapDetailBtn').classList.remove('hidden');
+    }
+
+    /* ===== 3. MÔ PHỎNG LÒ XO + MŨI TÊN LỰC & 3 LOẠI BÓNG ĐÈN ===== */
+    function updateSpringSim(mVal) {
+      var m = Number(mVal);
+      var P = m * 10;
+      var dl = m * 2; // 2 cm mỗi 1 kg
+      var yEnd = 74 + m * 13; // đầu dưới lò xo
+      // Vẽ lò xo zig-zag từ y=32 tới y=yEnd-6
+      var steps = 6;
+      var stepH = (yEnd - 38) / steps;
+      var d = 'M120 22 L120 32 ';
+      for (var i = 0; i < steps; i++) {
+        var y1 = 32 + (i + 0.5) * stepH;
+        var y2 = 32 + (i + 1) * stepH;
+        d += 'L' + (i % 2 === 0 ? 108 : 132) + ' ' + y1.toFixed(1) + ' L120 ' + y2.toFixed(1) + ' ';
+      }
+      d += 'L120 ' + yEnd;
+      document.getElementById('springCoil').setAttribute('d', d);
+      document.getElementById('weightBox').setAttribute('y', yEnd);
+      document.getElementById('weightLabel').setAttribute('y', yEnd + 21);
+      document.getElementById('weightLabel').textContent = m + ' kg';
+
+      var arrowY1 = yEnd + 32;
+      var arrowLen = m * 14;
+      var arrowY2 = Math.min(208, arrowY1 + arrowLen);
+      document.getElementById('forceArrowLine').setAttribute('y1', arrowY1);
+      document.getElementById('forceArrowLine').setAttribute('y2', arrowY2 - 6);
+      document.getElementById('forceArrowHead').setAttribute('points', '113,' + (arrowY2 - 8) + ' 127,' + (arrowY2 - 8) + ' 120,' + (arrowY2 + 3));
+      document.getElementById('forceArrowLabel').setAttribute('y', (arrowY1 + arrowY2) / 2 + 4);
+      document.getElementById('forceArrowLabel').textContent = 'P ≈ ' + P + ' N';
+
+      document.getElementById('springBadge').textContent = 'm = ' + m + ' kg · P ≈ ' + P + ' N · Δl = ' + dl + ' cm';
+      document.getElementById('scaleNote').textContent = '• Độ lớn: ' + P + ' N (' + m + ' đoạn)';
+      document.getElementById('deltaNote').textContent = 'Độ dãn Δl = ' + dl + ' cm';
+    }
+    updateSpringSim(2);
+
+    var LAMP_DATA = {
+      soi: { u: 5, w: 95, txt: '<strong>🔥 Đèn sợi đốt (Hao phí nhiều nhất!):</strong> Trong <strong>100 J</strong> điện vào, chỉ có <strong>5 J</strong> biến thành ánh sáng, còn tới <strong>95 J</strong> bị hao phí thành nhiệt làm nóng bỏng bóng đèn!' },
+      compact: { u: 20, w: 80, txt: '<strong>💡 Đèn compact:</strong> Trong <strong>100 J</strong> điện vào, tạo ra <strong>20 J</strong> ánh sáng (gấp 4 lần đèn sợi đốt) và hao phí <strong>80 J</strong> nhiệt năng.' },
+      led: { u: 80, w: 20, txt: '<strong>⭐ Đèn LED (Tiết kiệm nhất!):</strong> Trong <strong>100 J</strong> điện năng đưa vào, có tới <strong>80 J</strong> biến thành ánh sáng có ích, chỉ hao phí <strong>20 J</strong> nhiệt năng — hiệu quả gấp <strong>16 lần</strong> đèn sợi đốt!' }
+    };
+    function selectLamp(k) {
+      var d = LAMP_DATA[k];
+      ['soi', 'compact', 'led'].forEach(function (id) {
+        var b = document.getElementById('lamp-btn-' + id);
+        b.className = (id === k)
+          ? 'px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white'
+          : 'px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800';
+      });
+      var ub = document.getElementById('lampUsefulBar');
+      var wb = document.getElementById('lampWasteBar');
+      ub.style.width = Math.max(d.u, 14) + '%';
+      wb.style.width = (100 - Math.max(d.u, 14)) + '%';
+      ub.textContent = '✨ ' + d.u + ' J Sáng';
+      wb.textContent = '🔥 ' + d.w + ' J Nhiệt';
+      document.getElementById('lampDesc').innerHTML = d.txt;
+    }
+    selectLamp('led');
+
+    /* ===== 4. 16 FLASHCARD ===== */
+    var FLASHCARDS = [
+      { q: 'Đơn vị đo chuẩn (SI) của chiều dài, khối lượng, thời gian và lực lần lượt là gì?', a: 'Chiều dài: mét (m) · Khối lượng: kilôgam (kg) · Thời gian: giây (s) · Lực: niutơn (N).' },
+      { q: 'GHĐ và ĐCNN của một dụng cụ đo là gì?', a: 'GHĐ (Giới hạn đo): giá trị lớn nhất ghi trên dụng cụ. ĐCNN (Độ chia nhỏ nhất): giá trị giữa 2 vạch chia liên tiếp.' },
+      { q: 'Thang nhiệt độ Celsius lấy 2 mốc 0 °C và 100 °C là nhiệt độ của gì?', a: '0 °C là nhiệt độ nước đá đang tan; 100 °C là nhiệt độ hơi nước đang sôi.' },
+      { q: 'Nhiệt kế y tế thuỷ ngân có GHĐ, ĐCNN bao nhiêu và tại sao có chỗ thắt nhỏ?', a: 'GHĐ: 35 °C – 42 °C; ĐCNN: 0,1 °C. Chỗ thắt giữ cột thuỷ ngân không tụt xuống khi lấy ra khỏi cơ thể để đọc chính xác.' },
+      { q: 'Đổi nhanh: 1 mL = ? cm³; 1 lạng (héctôgam) = ? g; 1 tấn = ? kg?', a: '1 mL = 1 cm³ · 1 lạng = 100 g · 1 tấn = 1 000 kg.' },
+      { q: 'Lực tác dụng lên một vật có thể gây ra những kết quả nào?', a: 'Làm biến đổi chuyển động (nhanh/chậm, dừng lại, đổi hướng) HOẶC làm biến dạng vật (hoặc cả hai cùng lúc).' },
+      { q: 'Kể tên 4 yếu tố của mũi tên biểu diễn lực (Hình 41.6 SGK)?', a: '1. Điểm đặt (gốc mũi tên) · 2. Phương · 3. Chiều (đầu mũi tên) · 4. Độ lớn (độ dài theo tỉ xích).' },
+      { q: 'Nêu ví dụ 1 lực tiếp xúc và 2 lực không tiếp xúc?', a: 'Tiếp xúc: tay đẩy bàn, lực ma sát. Không tiếp xúc: lực hút Trái Đất (hấp dẫn), lực hút/đẩy giữa 2 nam châm.' },
+      { q: 'Độ dãn của lò xo treo thẳng đứng phụ thuộc thế nào vào khối lượng vật treo?', a: 'Độ dãn lò xo (Δl = l - l₀) tỉ lệ thuận với khối lượng vật treo (trong giới hạn đàn hồi).' },
+      { q: 'Vật nặng 500 g có trọng lượng khoảng bao nhiêu N trên Trái Đất? Lên Mặt Trăng khối lượng có đổi không?', a: '500 g = 0,5 kg → P ≈ 10 × 0,5 = 5 N. Lên Mặt Trăng khối lượng KHÔNG đổi (vẫn 0,5 kg), chỉ trọng lượng giảm ~6 lần!' },
+      { q: 'Phân biệt Ma sát nghỉ và Ma sát trượt?', a: 'Ma sát nghỉ giữ cho vật đứng yên khi bị kéo/đẩy; Ma sát trượt xuất hiện cản trở khi vật trượt trên bề mặt vật khác.' },
+      { q: 'Tại sao cá mập, cá ngừ và tàu ngầm có thân thuôn dài, đầu nhọn?', a: 'Vì lực cản của nước rất lớn; hình dạng thuôn nhọn (khí động học) làm giảm diện tích mặt cản → giảm lực cản của nước.' },
+      { q: 'Đơn vị đo năng lượng là gì? Kể đủ 7 dạng năng lượng trong SGK?', a: 'Đơn vị: jun (J). 7 dạng: Động năng, Thế năng hấp dẫn, Hoá năng, Điện năng, Quang năng, Năng lượng âm, Nhiệt năng.' },
+      { q: 'Phát biểu ngắn gọn Định luật bảo toàn năng lượng (Bài 48)?', a: 'Năng lượng không tự sinh ra hoặc tự mất đi mà chỉ chuyển hoá từ dạng này sang dạng khác hoặc truyền từ vật này sang vật khác.' },
+      { q: 'Với 100 J điện năng, đèn sợi đốt, đèn compact và đèn LED tạo ra bao nhiêu J ánh sáng?', a: 'Đèn sợi đốt: 5 J (95 J nhiệt) · Compact: 20 J (80 J nhiệt) · Đèn LED: 80 J (chỉ 20 J nhiệt)!' },
+      { q: 'Kể tên 5 nguồn năng lượng tái tạo và 4 nguồn không tái tạo (Hình 50.1)?', a: 'Tái tạo: Mặt Trời, Gió, Nước, Địa nhiệt, Sinh khối. Không tái tạo: Than đá, Dầu mỏ, Khí tự nhiên, Urani (U²³⁵).' }
+    ];
+    function renderFlashcards() {
+      var g = document.getElementById('flashcardGrid'); g.innerHTML = '';
+      FLASHCARDS.forEach(function (fc, idx) {
+        var btn = document.createElement('button');
+        btn.type = 'button'; btn.id = 'fc-' + idx; btn.dataset.flipped = '0';
+        btn.onclick = function () { toggleCard(idx); };
+        btn.className = 'text-left rounded-2xl p-4 min-h-[132px] border-2 border-amber-200 dark:border-slate-700 bg-amber-50/50 dark:bg-slate-800/70 hover:border-amber-400 transition flex flex-col justify-between';
+        btn.innerHTML = '<div class="text-[11px] font-bold text-amber-700 dark:text-amber-400">Thẻ ' + (idx + 1) + ' · Bấm lật đáp án 🔄</div><div class="font-bold text-xs md:text-sm mt-1">' + fc.q + '</div>';
+        g.appendChild(btn);
+      });
+    }
+    function toggleCard(idx) {
+      var el = document.getElementById('fc-' + idx), fc = FLASHCARDS[idx];
+      var flipped = el.dataset.flipped === '1';
+      el.dataset.flipped = flipped ? '0' : '1';
+      if (!flipped) {
+        el.className = 'text-left rounded-2xl p-4 min-h-[132px] border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 transition flex flex-col justify-between';
+        el.innerHTML = '<div class="text-[11px] font-bold text-emerald-700 dark:text-emerald-300">✅ Đáp án (Bấm úp lại)</div><div class="font-semibold text-xs md:text-sm text-emerald-950 dark:text-emerald-100 mt-1">' + fc.a + '</div>';
+      } else {
+        el.className = 'text-left rounded-2xl p-4 min-h-[132px] border-2 border-amber-200 dark:border-slate-700 bg-amber-50/50 dark:bg-slate-800/70 hover:border-amber-400 transition flex flex-col justify-between';
+        el.innerHTML = '<div class="text-[11px] font-bold text-amber-700 dark:text-amber-400">Thẻ ' + (idx + 1) + ' · Bấm lật đáp án 🔄</div><div class="font-bold text-xs md:text-sm mt-1">' + fc.q + '</div>';
+      }
+    }
+    function resetFlashcards() { renderFlashcards(); }
+    renderFlashcards();
+
+    /* ===== 5. 10 CÂU TỰ LUẬN & BÀI TẬP ===== */
+    var ESSAYS = [
+      { q: 'Câu 1 (Bài 5): Tại sao trước khi đo chiều dài, khối lượng hay nhiệt độ ta cần ước lượng giá trị cần đo?', step1: 'Mỗi dụng cụ đo chỉ có một Giới hạn đo (GHĐ) và Độ chia nhỏ nhất (ĐCNN) nhất định.', step2: 'Ước lượng trước giúp chọn đúng dụng cụ có GHĐ lớn hơn vật cần đo và ĐCNN phù hợp → đo 1 lần được ngay, tránh hỏng dụng cụ (vỡ nhiệt kế, hỏng cân) và đảm bảo kết quả chính xác.' },
+      { q: 'Câu 2 (Bài 8 — Hay ra thi nhất!): Tại sao nhiệt kế y tế thuỷ ngân có chỗ thắt nhỏ phía trên bầu, và tại sao phải vẩy mạnh trước khi đo cho người tiếp theo?', step1: 'Dựa trên cơ chế giữ mực chất lỏng khi đọc nhiệt độ cơ thể.', step2: 'Khi lấy nhiệt kế ra khỏi cơ thể gặp không khí lạnh, chỗ thắt nhỏ ngăn không cho cột thuỷ ngân tụt ngay về bầu → ta kịp đọc chính xác nhiệt độ. Do đó trước khi đo lần sau phải vẩy mạnh để đẩy thuỷ ngân tụt qua chỗ thắt xuống dưới 35 °C.' },
+      { q: 'Câu 3 (Bài 41 — Bài tập biểu diễn lực): Hãy mô tả cách vẽ mũi tên biểu diễn một lực kéo có độ lớn 30 N, phương nằm ngang, chiều từ trái sang phải (tỉ xích 1 cm ứng với 10 N)?', step1: 'Xác định đủ 4 yếu tố: Điểm đặt (tại vật), Phương (nằm ngang), Chiều (trái → phải), Độ lớn (30 N).', step2: 'Với tỉ xích 1 cm = 10 N, ta vẽ mũi tên dài 30 : 10 = 3 cm (chia rõ 3 đoạn bằng nhau), gốc đặt tại vật, nằm ngang hướng sang phải và ghi chữ F = 30 N.' },
+      { q: 'Câu 4 (Bài 42 — Bài tập lò xo): Một lò xo có chiều dài tự nhiên 10 cm. Khi treo quả nặng 100 g, lò xo dài 12 cm. Hỏi khi treo quả nặng 250 g (trong giới hạn đàn hồi), lò xo dài bao nhiêu cm?', step1: 'Độ dãn của lò xo treo thẳng đứng tỉ lệ thuận với khối lượng vật treo (Δl = l - l₀).', step2: 'Treo 100 g lò xo dãn Δl₁ = 12 - 10 = 2 cm (tức mỗi 50 g dãn 1 cm). Vậy treo 250 g lò xo dãn Δl₂ = (250 / 100) × 2 = 5 cm → Chiều dài lúc này là l = 10 + 5 = 15 cm!' },
+      { q: 'Câu 5 (Bài 43 — Bẫy Khối lượng vs Trọng lượng): Một nhà du hành vũ trụ mặc bộ đồ nặng tổng cộng 120 kg. Hỏi trọng lượng của họ trên Trái Đất khoảng bao nhiêu N? Khi lên Mặt Trăng, khối lượng và trọng lượng của họ thay đổi ra sao?', step1: 'Áp dụng quy tắc P (N) ≈ 10 × m (kg) và bản chất của khối lượng vs lực hấp dẫn.', step2: 'Trên Trái Đất: P ≈ 10 × 120 = 1 200 N. Khi lên Mặt Trăng: KHỐI LƯỢNG không đổi (vẫn 120 kg), nhưng TRỌNG LƯỢNG giảm đi khoảng 6 lần (~200 N) vì lực hấp dẫn của Mặt Trăng nhỏ hơn Trái Đất nhiều → nhảy rất nhẹ nhàng!' },
+      { q: 'Câu 6 (Bài 44): Tại sao trên mặt lốp xe máy, ô tô lại có nhiều khía rãnh, còn khi ô tô bị sa lầy người ta thường lót ván gỗ hoặc rải cát/đá dưới bánh xe?', step1: 'Dựa vào tác dụng có ích của lực ma sát trong việc bám đường và thúc đẩy xe tiến lên.', step2: 'Khía rãnh trên lốp giúp TĂNG lực ma sát bám đường (lốp mòn dễ trơn trượt). Khi sa lầy bùn trơn, ma sát quá nhỏ khiến bánh quay tại chỗ; lót ván gỗ/cát đá làm tăng độ nhám → tăng lực ma sát giúp bánh bám được và đẩy xe thoát lầy.' },
+      { q: 'Câu 7 (Bài 44): Tại sao trong các trục quay của xe đạp, quạt máy người ta lại lắp ổ bi và thường xuyên tra dầu mỡ?', step1: 'Ma sát trượt ở trục quay là ma sát CÓ HẠI (cản trở chuyển động, làm mòn trục và nóng máy).', step2: 'Lắp ổ bi chuyển ma sát trượt thành ma sát lăn (nhỏ hơn nhiều) và tra dầu mỡ làm trơn bề mặt tiếp xúc → giảm tối đa ma sát có hại, giúp xe chạy nhẹ và bền máy.' },
+      { q: 'Câu 8 (Bài 45): Tại sao tàu ngầm, cá mập, cá ngừ có thân thuôn dài, đầu nhọn và VĐV đua xe đạp phải cúi gập người, đội mũ khí động học?', step1: 'Lực cản của nước và không khí phụ thuộc vào diện tích mặt cản và hình dạng vật.', step2: 'Hình dạng thuôn dài, đầu nhọn (khí động học) giúp thu nhỏ diện tích mặt cản, rẽ dòng nước/không khí êm hơn → giảm lực cản, giúp di chuyển nhanh hơn và đỡ tốn sức.' },
+      { q: 'Câu 9 (Bài 48 — Bẫy Bảo toàn năng lượng): Thả một quả bóng tennis từ độ cao 1 m xuống sàn (Hình 48.7 SGK), thấy bóng chỉ nảy lên được khoảng 0,7 m. Hiện tượng này có vi phạm Định luật bảo toàn năng lượng không? Vì sao?', step1: 'Định luật bảo toàn năng lượng luôn đúng: năng lượng không tự mất đi.', step2: 'KHÔNG vi phạm! Khi bóng rơi, đập xuống sàn và đi qua không khí, một phần cơ năng đã chuyển hoá thành NHIỆT NĂNG (làm nóng nhẹ bóng và sàn) và NĂNG LƯỢNG ÂM (tiếng "bộp") → tổng năng lượng vẫn bảo toàn 100%.' },
+      { q: 'Câu 10 (Bài 49 & 51): Tại sao gia đình nên thay bóng đèn sợi đốt bằng đèn LED, và tại sao chúng ta phải tiết kiệm năng lượng?', step1: 'So sánh tỉ lệ năng lượng hữu ích và hao phí nhiệt (Hình 49.3 SGK).', step2: 'Với 100 J điện, đèn LED cho tới 80 J ánh sáng (chỉ hao phí 20 J nhiệt), tiết kiệm gấp 16 lần đèn sợi đốt (chỉ 5 J sáng, 95 J nhiệt). Tiết kiệm năng lượng giúp giảm tiền điện, bảo tồn nguồn nhiên liệu không tái tạo (than, dầu, khí) và giảm ô nhiễm môi trường.' }
+    ];
+    var masteredEssays = {};
+    function renderEssays() {
+      var box = document.getElementById('essayList'); box.innerHTML = '';
+      ESSAYS.forEach(function (e, i) {
+        var div = document.createElement('div');
+        div.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5';
+        div.innerHTML =
+          '<div class="font-bold text-sm md:text-base">' + e.q + '</div>' +
+          '<div class="flex flex-wrap items-center gap-2">' +
+            '<button type="button" onclick="toggleEssay(' + i + ')" id="ebtn-' + i + '" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-200 hover:bg-amber-200 transition">💡 Xem khung trả lời 2 bước</button>' +
+            '<button type="button" onclick="markEssay(' + i + ')" id="emrk-' + i + '" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition">⬜ Đánh dấu đã hiểu</button>' +
+          '</div>' +
+          '<div id="eans-' + i + '" class="hidden rounded-xl p-3.5 bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-800 text-xs md:text-sm space-y-1.5">' +
+            '<div><span class="font-extrabold text-amber-700 dark:text-amber-400">Bước 1 (Nêu bản chất):</span> ' + e.step1 + '</div>' +
+            '<div><span class="font-extrabold text-emerald-700 dark:text-emerald-400">Bước 2 (Giải thích ăn trọn điểm):</span> ' + e.step2 + '</div>' +
+          '</div>';
+        box.appendChild(div);
+      });
+    }
+    function toggleEssay(i) {
+      var a = document.getElementById('eans-' + i), b = document.getElementById('ebtn-' + i);
+      var show = a.classList.contains('hidden');
+      a.classList.toggle('hidden');
+      b.textContent = show ? '🙈 Ẩn khung trả lời' : '💡 Xem khung trả lời 2 bước';
+    }
+    function markEssay(i) {
+      masteredEssays[i] = !masteredEssays[i];
+      var b = document.getElementById('emrk-' + i);
+      b.textContent = masteredEssays[i] ? '✅ Con đã trả lời được!' : '⬜ Đánh dấu đã hiểu';
+      b.className = masteredEssays[i]
+        ? 'px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white transition'
+        : 'px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-600 hover:bg-emerald-50 transition';
+      var cnt = Object.values(masteredEssays).filter(Boolean).length;
+      document.getElementById('essayCount').textContent = '✅ Đã thuộc ' + cnt + ' / ' + ESSAYS.length + ' câu';
+    }
+    renderEssays();
+
+    /* ===== 6. ĐỀ THI THỬ 25 CÂU ===== */
+    var EXAM_BANK = [
+      // Mảng 1: Đo lường (7 câu)
+      { id: 1, grp: 1, bai: 'Bài 5', q: 'Một thước thẳng dài 10 cm, mỗi khoảng 1 cm được chia đều thành 2 phần nhỏ (Hình 5.2b). GHĐ và ĐCNN của thước là:', opts: ['GHĐ: 10 cm · ĐCNN: 1 cm', 'GHĐ: 10 cm · ĐCNN: 0,5 cm', 'GHĐ: 10 cm · ĐCNN: 0,1 cm'], ans: 1, why: '1 cm chia 2 khoảng → ĐCNN = 0,5 cm (bẫy hay nhìn nhầm là 1 cm!).' },
+      { id: 2, grp: 1, bai: 'Bài 5', q: 'Khi đọc chiều dài của chiếc lá bằng thước kẻ, cách đặt mắt ĐÚNG là:', opts: ['Đặt mắt nhìn theo hướng vuông góc với cạnh thước tại đầu vật', 'Đặt mắt nhìn xiên từ bên trái sang', 'Đặt mắt nhìn xiên từ bên phải sang'], ans: 0, why: 'Đặt mắt vuông góc với cạnh thước để tránh sai số thị sai (Hình 5.3 SGK).' },
+      { id: 3, grp: 1, bai: 'Bài 5', q: 'Thả chìm hòn sỏi vào bình chia độ đang chứa 60 mL nước, mực nước dâng lên vạch 80 mL. Thể tích hòn sỏi là:', opts: ['80 cm³', '20 cm³ (20 mL)', '140 cm³'], ans: 1, why: 'V = 80 - 60 = 20 mL = 20 cm³.' },
+      { id: 4, grp: 1, bai: 'Bài 6', q: 'Đơn vị đo khối lượng chuẩn trong hệ SI là gì? 2 lạng (2 héctôgam) bằng bao nhiêu gam?', opts: ['gam (g) · 20 g', 'kilôgam (kg) · 200 g', 'tấn · 2000 g'], ans: 1, why: 'Đơn vị SI của khối lượng là kg; 1 lạng = 100 g → 2 lạng = 200 g.' },
+      { id: 5, grp: 1, bai: 'Bài 7', q: 'Đơn vị đo thời gian chuẩn trong hệ SI là:', opts: ['Giờ (h)', 'Phút (min)', 'Giây (s)'], ans: 2, why: 'Đơn vị đo thời gian chuẩn (SI) là giây (kí hiệu: s).' },
+      { id: 6, grp: 1, bai: 'Bài 8', q: 'Nhiệt kế chất lỏng (thuỷ ngân, rượu, dầu) hoạt động dựa trên hiện tượng vật lí nào?', opts: ['Sự nở vì nhiệt của chất lỏng', 'Sự đóng băng của nước', 'Lực hấp dẫn của Trái Đất'], ans: 0, why: 'Nóng lên chất lỏng nở ra dâng cao trong ống; lạnh đi co lại hạ xuống.' },
+      { id: 7, grp: 1, bai: 'Bài 8', q: 'Tại sao KHÔNG ĐƯỢC dùng nhiệt kế y tế thuỷ ngân để đo nhiệt độ của nước đang sôi (100 °C)?', opts: ['Vì nhiệt kế y tế chỉ có GHĐ từ 35 °C đến 42 °C, đo nước sôi sẽ làm vỡ nhiệt kế', 'Vì nhiệt kế y tế không đo được chất lỏng', 'Vì nước sôi không làm nở thuỷ ngân'], ans: 0, why: '100 °C vượt xa GHĐ 42 °C của nhiệt kế y tế → thuỷ ngân nở mạnh làm vỡ ống!' },
+
+      // Mảng 2: Lực trong đời sống (10 câu)
+      { id: 8, grp: 2, bai: 'Bài 40', q: 'Lực nào sau đây là LỰC KHÔNG TIẾP XÚC?', opts: ['Lực của tay kéo cửa tủ', 'Lực hút của nam châm lên đinh sắt và lực hút của Trái Đất', 'Lực ma sát giữa lốp xe và mặt đường'], ans: 1, why: 'Nam châm hút sắt và lực hấp dẫn của Trái Đất tác dụng từ xa, không cần chạm nhau.' },
+      { id: 9, grp: 2, bai: 'Bài 41', q: 'Đơn vị đo lực là gì và dụng cụ dùng để đo lực là gì?', opts: ['Kilôgam (kg) · Cân đồng hồ', 'Niutơn (N) · Lực kế', 'Jun (J) · Nhiệt kế'], ans: 1, why: 'Lực đo bằng lực kế, đơn vị là niutơn (kí hiệu: N).' },
+      { id: 10, grp: 2, bai: 'Bài 41', q: 'Để biểu diễn một lực 40 N với tỉ xích 1 cm ứng với 10 N, cần vẽ mũi tên dài bao nhiêu cm?', opts: ['4 cm (chia 4 đoạn bằng nhau)', '40 cm', '10 cm'], ans: 0, why: 'Độ dài mũi tên = 40 : 10 = 4 cm.' },
+      { id: 11, grp: 2, bai: 'Bài 42', q: 'Lò xo dài ban đầu 10 cm, treo vật 100 g thì dài 12 cm. Nếu treo vật 300 g (trong giới hạn đàn hồi) thì lò xo dài:', opts: ['14 cm', '16 cm', '18 cm'], ans: 1, why: '100 g dãn 2 cm → 300 g dãn 6 cm → chiều dài = 10 + 6 = 16 cm!' },
+      { id: 12, grp: 2, bai: 'Bài 43', q: 'Một túi đường có khối lượng 500 g. Trọng lượng của túi đường này trên Trái Đất xấp xỉ bao nhiêu?', opts: ['5000 N', '5 N', '50 N'], ans: 1, why: 'Bẫy đổi đơn vị! 500 g = 0,5 kg → P ≈ 10 × 0,5 = 5 N.' },
+      { id: 13, grp: 2, bai: 'Bài 43', q: 'Khi đưa một hòn đá 6 kg từ Trái Đất lên Mặt Trăng thì:', opts: ['Khối lượng vẫn là 6 kg, chỉ trọng lượng giảm đi khoảng 6 lần', 'Cả khối lượng và trọng lượng đều giảm 6 lần', 'Cả khối lượng và trọng lượng đều không đổi'], ans: 0, why: 'Khối lượng là lượng chất nên KHÔNG ĐỔI ở mọi nơi; chỉ trọng lượng (lực hấp dẫn) thay đổi.' },
+      { id: 14, grp: 2, bai: 'Bài 43', q: 'Trọng lực (lực hút của Trái Đất tác dụng lên vật) có phương và chiều như thế nào?', opts: ['Phương nằm ngang, chiều từ trái sang phải', 'Phương thẳng đứng, chiều từ trên xuống dưới', 'Không có phương và chiều'], ans: 1, why: 'Trọng lực luôn có phương thẳng đứng, chiều hướng về tâm Trái Đất (từ trên xuống dưới).' },
+      { id: 15, grp: 2, bai: 'Bài 44', q: 'Một người đẩy thùng hàng nặng trên sàn nhà nhưng thùng VẪN ĐỨNG YÊN. Lực ma sát giữa thùng và sàn lúc này là:', opts: ['Không có lực ma sát', 'Lực ma sát nghỉ', 'Lực ma sát trượt'], ans: 1, why: 'Vật chịu lực đẩy nhưng chưa chuyển động → lực giữ vật đứng yên chính là ma sát nghỉ!' },
+      { id: 16, grp: 2, bai: 'Bài 44', q: 'Khi em đi bộ về phía trước, bàn chân đạp mặt đường về phía sau. Lực ma sát của mặt đường tác dụng lên bàn chân có hướng nào?', opts: ['Hướng về phía trước (thúc đẩy người tiến lên)', 'Hướng về phía sau', 'Hướng thẳng lên trời'], ans: 0, why: 'Hình 44.6e SGK: lực ma sát hướng về phía trước giúp đẩy cơ thể tiến lên!' },
+      { id: 17, grp: 2, bai: 'Bài 45', q: 'Cá mập, cá kiếm và tàu ngầm có thân thuôn dài, đầu nhọn là để:', opts: ['Tăng lực cản của nước', 'Giảm diện tích mặt cản, từ đó giảm lực cản lớn của nước', 'Tăng khối lượng của vật'], ans: 1, why: 'Hình dạng khí động học (thuôn, đầu nhọn) làm giảm lực cản của nước (Bài 45).' },
+
+      // Mảng 3: Năng lượng (8 câu)
+      { id: 18, grp: 3, bai: 'Bài 46', q: 'Đơn vị đo năng lượng là gì?', opts: ['Niutơn (N)', 'Jun (J)', 'Kilôgam (kg)'], ans: 1, why: 'Đơn vị đo năng lượng là jun (kí hiệu: J; 1 kJ = 1 000 J).' },
+      { id: 19, grp: 3, bai: 'Bài 47', q: 'Một quyển sách nằm yên trên giá sách cao 2 m so với mặt sàn đang có dạng năng lượng nào?', opts: ['Động năng', 'Thế năng hấp dẫn', 'Năng lượng âm'], ans: 1, why: 'Vật ở trên cao so với mặt đất (kể cả khi đứng yên) đều có thế năng hấp dẫn.' },
+      { id: 20, grp: 3, bai: 'Bài 47', q: 'Năng lượng dự trữ trong thức ăn, pin điện thoại và xăng dầu thuộc dạng nào?', opts: ['Năng lượng hoá học (hoá năng)', 'Quang năng', 'Năng lượng âm'], ans: 0, why: 'Thức ăn, pin, nhiên liệu đều dự trữ năng lượng hoá học (hoá năng).' },
+      { id: 21, grp: 3, bai: 'Bài 48', q: 'Khi bật quạt điện đang quay, dạng năng lượng chính đã chuyển hoá như thế nào?', opts: ['Nhiệt năng → Điện năng', 'Điện năng → Động năng (và 1 phần hao phí thành nhiệt năng + âm thanh)', 'Hoá năng → Quang năng'], ans: 1, why: 'Quạt dùng điện năng chuyển thành động năng làm quay cánh quạt (có hao phí nhiệt & âm).' },
+      { id: 22, grp: 3, bai: 'Bài 48', q: 'Thả quả bóng từ độ cao 1 m xuống sàn, bóng chỉ nảy lên 0,7 m vì:', opts: ['Một phần năng lượng đã tự biến mất hoàn toàn', 'Một phần cơ năng đã chuyển hoá thành nhiệt năng và năng lượng âm (tổng năng lượng vẫn bảo toàn)', 'Trái Đất ngừng hút quả bóng'], ans: 1, why: 'Năng lượng luôn BẢO TOÀN, không mất đi mà chuyển hoá sang nhiệt và âm!' },
+      { id: 23, grp: 3, bai: 'Bài 49', q: 'Trong quá trình chuyển hoá và truyền năng lượng, phần năng lượng HAO PHÍ thường xuất hiện chủ yếu dưới dạng nào?', opts: ['Nhiệt năng', 'Thế năng hấp dẫn', 'Hoá năng'], ans: 0, why: 'Năng lượng hao phí thường toả ra môi trường dưới dạng nhiệt năng.' },
+      { id: 24, grp: 3, bai: 'Bài 49', q: 'Cùng nhận 100 J điện năng (Hình 49.3 SGK), loại bóng đèn nào chuyển hoá thành ánh sáng nhiều nhất (80 J)?', opts: ['Đèn sợi đốt', 'Đèn compact', 'Đèn LED'], ans: 2, why: 'Đèn LED cho 80 J ánh sáng / 20 J nhiệt — hiệu quả nhất!' },
+      { id: 25, grp: 3, bai: 'Bài 50', q: 'Nhóm nào sau đây CHỈ GỒM các nguồn năng lượng TÁI TẠO?', opts: ['Mặt Trời, gió, nước, địa nhiệt, sinh khối', 'Than đá, dầu mỏ, khí tự nhiên, Urani', 'Gió, nước, Urani (hạt nhân)'], ans: 0, why: 'Bẫy thi: Urani (hạt nhân) cùng than, dầu, khí thuộc nhóm KHÔNG tái tạo!' }
+    ];
+
+    var GRP_NAMES = {
+      1: 'Đo lường (B5–8)',
+      2: 'Lực (B40–45)',
+      3: 'Năng lượng (B46–51)'
+    };
+
+    var activeQuestions = EXAM_BANK.slice();
+    var userChoices = {};
+    var lastWrongIds = [];
+
+    function renderExam() {
+      var box = document.getElementById('examContainer');
+      box.innerHTML = '';
+      activeQuestions.forEach(function (item, idx) {
+        var card = document.createElement('div');
+        card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5';
+        var html = '<div class="flex items-start justify-between gap-2"><div class="font-bold text-sm">Câu ' + (idx + 1) + ': ' + item.q + '</div><span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">' + item.bai + '</span></div><div class="grid grid-cols-1 gap-2">';
+        item.opts.forEach(function (opt, oIdx) {
+          html += '<label id="ex-lbl-' + item.id + '-' + oIdx + '" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-amber-400 cursor-pointer transition">' +
+            '<input type="radio" name="exq-' + item.id + '" value="' + oIdx + '" onchange="userChoices[' + item.id + ']=' + oIdx + '" class="accent-amber-600" />' +
+            '<span>' + opt + '</span></label>';
+        });
+        html += '</div><div id="ex-fb-' + item.id + '" class="hidden text-xs font-semibold pt-1"></div>';
+        card.innerHTML = html;
+        box.appendChild(card);
+      });
+    }
+
+    function gradeExam() {
+      var total = activeQuestions.length;
+      var correct = 0;
+      var grpStats = { 1: { ok: 0, tot: 0 }, 2: { ok: 0, tot: 0 }, 3: { ok: 0, tot: 0 } };
+      var weakBai = {};
+      lastWrongIds = [];
+
+      activeQuestions.forEach(function (item) {
+        var picked = userChoices[item.id];
+        var isRight = (picked === item.ans);
+        if (grpStats[item.grp]) grpStats[item.grp].tot++;
+        var fb = document.getElementById('ex-fb-' + item.id);
+        fb.classList.remove('hidden');
+
+        item.opts.forEach(function (_, i) {
+          var lbl = document.getElementById('ex-lbl-' + item.id + '-' + i);
+          if (i === item.ans) {
+            lbl.className = 'flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-bold border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200';
+          } else if (i === picked && !isRight) {
+            lbl.className = 'flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm border-2 border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300';
+          }
+        });
+
+        if (isRight) {
+          correct++;
+          if (grpStats[item.grp]) grpStats[item.grp].ok++;
+          fb.className = 'text-xs font-semibold pt-1 text-emerald-700 dark:text-emerald-400';
+          fb.textContent = '✅ Chính xác! ' + item.why;
+        } else {
+          lastWrongIds.push(item.id);
+          weakBai[item.bai] = (weakBai[item.bai] || 0) + 1;
+          fb.className = 'text-xs font-semibold pt-1 text-rose-600 dark:text-rose-400';
+          fb.textContent = '❌ Chưa đúng (' + (picked === undefined ? 'chưa chọn' : 'sai') + ')! ' + item.why;
+        }
+      });
+
+      var score10 = ((correct / total) * 10).toFixed(1).replace('.0', '');
+      var res = document.getElementById('examResult');
+      res.classList.remove('hidden');
+
+      var weakKeys = Object.keys(weakBai);
+      var weakHtml = weakKeys.length
+        ? '<div class="text-xs md:text-sm"><strong>📌 Các bài con nên xem lại ở Tab 2 &amp; Tab 3:</strong> ' +
+            weakKeys.map(function (k) { return '<span class="inline-block ml-1 mt-1 px-2.5 py-1 rounded-lg bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-200 font-bold">' + k + ' (' + weakBai[k] + ' câu)</span>'; }).join('') +
+          '</div>'
+        : '';
+
+      var retryWrongBtn = lastWrongIds.length
+        ? '<button type="button" onclick="retryWrongOnly()" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs md:text-sm font-extrabold shadow transition">🔁 Chỉ làm lại ' + lastWrongIds.length + ' câu con vừa sai!</button>'
+        : '<div class="font-extrabold text-emerald-700 dark:text-emerald-300">🏆 TUYỆT ĐỐI 10/10! Con đã chinh phục trọn bộ Vật lí 6 rồi!</div>';
+
+      res.innerHTML =
+        '<div class="flex flex-wrap items-center justify-between gap-3">' +
+          '<div><div class="text-xs font-bold uppercase text-amber-600 dark:text-amber-400">Kết quả chấm điểm</div>' +
+          '<div class="text-3xl font-extrabold text-slate-900 dark:text-white">' + score10 + ' / 10 điểm <span class="text-sm font-bold text-slate-500">(' + correct + '/' + total + ' câu đúng)</span></div></div>' +
+          retryWrongBtn +
+        '</div>' +
+        '<div class="grid grid-cols-3 gap-2 text-center text-xs">' +
+          [1, 2, 3].map(function (g) {
+            return '<div class="p-2 rounded-xl bg-white/80 dark:bg-slate-900"><strong>' + GRP_NAMES[g] + '</strong><br/>' + grpStats[g].ok + '/' + grpStats[g].tot + ' đúng</div>';
+          }).join('') +
+        '</div>' + weakHtml;
+
+      res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function retryWrongOnly() {
+      if (!lastWrongIds.length) return;
+      activeQuestions = EXAM_BANK.filter(function (q) { return lastWrongIds.indexOf(q.id) !== -1; });
+      userChoices = {};
+      document.getElementById('examResult').classList.add('hidden');
+      document.getElementById('examSubtitle').innerHTML = '🔁 <strong>Chế độ Lấp Lỗ Hổng:</strong> Chỉ làm lại đúng <strong>' + activeQuestions.length + ' câu vừa sai</strong> cho tới khi đúng 100%!';
+      renderExam();
+      window.scrollTo({ top: 180, behavior: 'smooth' });
+    }
+
+    function startFullExam() {
+      activeQuestions = EXAM_BANK.slice();
+      userChoices = {};
+      lastWrongIds = [];
+      document.getElementById('examResult').classList.add('hidden');
+      document.getElementById('examSubtitle').innerHTML = 'Phủ đủ 3 mảng (Đo lường · Lực · Năng lượng — 0,4 điểm/câu), gài sẵn bẫy thi thật. Nộp bài xem điểm 10 và làm lại riêng câu sai!';
+      renderExam();
+    }
+
+    startFullExam();
+  </script>
+  <script src="assets/common.js"></script>
+</body>
+</html>

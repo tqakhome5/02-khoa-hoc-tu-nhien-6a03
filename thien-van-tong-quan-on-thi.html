@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tổng Quan &amp; Ôn Thi 10 Điểm — Thiên văn học 6 (Lớp 6A03)</title>
+  <meta name="description" content="Bản đồ tư duy, 3 nguyên lý gốc, 4 hình SGK tương tác SVG (Ngày đêm, 8 Pha Mặt Trăng, Hệ Mặt Trời 8 hành tinh, Ngân Hà), 6 bẫy thi, 12 flashcard, 8 câu tự luận và Đề thi thử 20 câu thang 10 điểm Chương X KHTN 6." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] } } } };</script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <a href="index.html#thien-van" class="px-3 py-1.5 rounded-xl bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-sm font-bold hover:bg-indigo-100 transition">← Trang chủ Thiên văn 6</a>
+      <div class="flex items-center gap-2">
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-6 space-y-6 pb-28">
+
+    <!-- HERO -->
+    <section class="rounded-3xl p-6 bg-gradient-to-r from-indigo-700 via-violet-700 to-purple-700 text-white shadow-lg">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div class="max-w-2xl">
+          <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full">🌌 Trung tâm Tổng quan &amp; Luyện thi 10 điểm · Chương X (Bài 52–55)</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold mt-2">Khám Phá Trái Đất &amp; Bầu Trời — Tự Tin 10 Điểm Thiên Văn 6</h1>
+          <p class="text-sm text-indigo-100 mt-1">Gom trọn 4 bài (Mặt Trời · Mặt Trăng · Hệ Mặt Trời · Ngân Hà) vào 3 nguyên lý gốc, 4 mô phỏng chuẩn SGK, 6 bẫy thi dễ nhầm, 8 câu tự luận ăn điểm 9–10 và Đề thi thử 20 câu chấm điểm 10.</p>
+        </div>
+        <button type="button" onclick="startTTS('tv-3-nguyen-ly', '3 Nguyên lý gốc của Thiên văn học lớp 6', 'Cả 4 bài Thiên văn học lớp 6 chỉ xoay quanh đúng 3 nguyên lý rất dễ hình dung. Nguyên lý 1 là Chuyển động thực và Chuyển động nhìn thấy: thực chất Trái Đất tự quay quanh trục từ Tây sang Đông hết 24 giờ, nên ta nhìn thấy Mặt Trời mọc hướng Đông, lặn hướng Tây và có ngày đêm luân phiên. Nguyên lý 2 là Ánh sáng và Vị trí tương đối: chỉ có Sao như Mặt Trời mới tự phát sáng; còn hành tinh, vệ tinh và sao chổi đều phản chiếu ánh sáng Mặt Trời; khi Mặt Trăng quay quanh Trái Đất, góc nhìn thay đổi tạo ra 8 pha Mặt Trăng với chu kì Tuần Trăng 29,5 ngày. Nguyên lý 3 là Bậc thang Vũ trụ: từ Trái Đất và Mặt Trăng, rộng ra Hệ Mặt Trời gồm 8 hành tinh đo bằng đơn vị thiên văn AU, rồi tới dải Ngân Hà xoắn ốc 4 cánh tay rộng 100 nghìn năm ánh sáng!')" class="shrink-0 px-4 py-2.5 rounded-xl bg-white text-indigo-700 font-bold text-xs md:text-sm shadow hover:bg-indigo-50 transition">
+          🔊 Nghe 3 Nguyên lý gốc
+        </button>
+      </div>
+    </section>
+
+    <!-- 5 TAB CHÍNH -->
+    <nav class="grid grid-cols-2 sm:grid-cols-5 gap-2.5" aria-label="5 phần ôn tập Thiên văn 6">
+      <button id="hub-tab-ban-do" type="button" onclick="switchHubTab('ban-do')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">🗺️</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">1. Bản đồ &amp; Bản chất</div>
+        <div class="text-[11px] opacity-80">Mind Map + 3 Nguyên lý</div>
+      </button>
+      <button id="hub-tab-hinh-sgk" type="button" onclick="switchHubTab('hinh-sgk')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">🔭</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">2. Mô phỏng SGK</div>
+        <div class="text-[11px] opacity-80">4 Hình chạm tương tác</div>
+      </button>
+      <button id="hub-tab-on-nhanh" type="button" onclick="switchHubTab('on-nhanh')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">⚡</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">3. Bẫy thi &amp; Flashcard</div>
+        <div class="text-[11px] opacity-80">6 Bẫy khó + 12 Thẻ lật</div>
+      </button>
+      <button id="hub-tab-tu-luan" type="button" onclick="switchHubTab('tu-luan')" class="hub-tab rounded-2xl p-3 text-left border-2 transition">
+        <div class="text-xl">💬</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">4. Tự luận 9–10 điểm</div>
+        <div class="text-[11px] opacity-80">8 câu "Tại sao?" kinh điển</div>
+      </button>
+      <button id="hub-tab-thi-thu" type="button" onclick="switchHubTab('thi-thu')" class="hub-tab rounded-2xl p-3 text-left border-2 transition col-span-2 sm:col-span-1">
+        <div class="text-xl">📝</div>
+        <div class="font-extrabold text-xs md:text-sm mt-1">5. Đề Thi Thử 20 Câu</div>
+        <div class="text-[11px] opacity-80">Thang 10 + Ôn câu sai</div>
+      </button>
+    </nav>
+
+    <!-- =================================================================== -->
+    <!-- TAB 1: BẢN ĐỒ MIND MAP SVG & 3 NGUYÊN LÝ GỐC                         -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-ban-do" class="hub-panel space-y-6">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div>
+          <h2 class="text-lg font-extrabold">🗺️ Bản Đồ Tư Duy Chương X: Trái Đất &amp; Bầu Trời (Bấm vào từng bài!)</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Hành trình phóng dần tầm mắt ra ngoài vũ trụ: <strong>Trái Đất &amp; Mặt Trời → Mặt Trăng → Hệ Mặt Trời (8 hành tinh) → Ngân Hà</strong>.</p>
+        </div>
+
+        <div class="rounded-2xl bg-slate-950 p-3 overflow-x-auto">
+          <svg viewBox="0 0 820 280" class="w-full min-w-[640px] h-auto" role="img" aria-label="Bản đồ tư duy Thiên văn học 6 gồm 4 bài">
+            <!-- Đường nối -->
+            <path d="M168 140 C220 140, 220 42, 285 42" fill="none" stroke="#f59e0b" stroke-width="3.5" />
+            <path d="M168 140 C220 140, 220 108, 285 108" fill="none" stroke="#38bdf8" stroke-width="3.5" />
+            <path d="M168 140 C220 140, 220 174, 285 174" fill="none" stroke="#34d399" stroke-width="3.5" />
+            <path d="M168 140 C220 140, 220 240, 285 240" fill="none" stroke="#a78bfa" stroke-width="3.5" />
+
+            <!-- Tâm -->
+            <rect x="16" y="96" width="154" height="88" rx="20" fill="#4f46e5" stroke="#818cf8" stroke-width="2" />
+            <text x="93" y="135" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">🌌 THIÊN VĂN 6</text>
+            <text x="93" y="156" text-anchor="middle" font-size="11" fill="#e0e7ff">Chương X · 4 Bài</text>
+
+            <!-- 4 Bài -->
+            <g class="cursor-pointer" onclick="selectMapNode(52)">
+              <rect x="285" y="18" width="515" height="48" rx="14" fill="#1e293b" stroke="#f59e0b" stroke-width="2" />
+              <text x="303" y="39" font-size="12.5" font-weight="800" fill="#fcd34d">☀️ Bài 52: Chuyển động nhìn thấy của Mặt Trời · Thiên thể (tr. 179–182)</text>
+              <text x="303" y="56" font-size="11" fill="#cbd5e1">Trái Đất quay Tây → Đông (24h) · Phân biệt Sao, Hành tinh, Vệ tinh, Sao chổi</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode(53)">
+              <rect x="285" y="84" width="515" height="48" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+              <text x="303" y="105" font-size="12.5" font-weight="800" fill="#7dd3fc">🌕 Bài 53: Mặt Trăng (tr. 183–186)</text>
+              <text x="303" y="122" font-size="11" fill="#cbd5e1">Phản chiếu ánh sáng Mặt Trời · 8 pha (Hình 53.2) · Tuần Trăng 29,5 ngày</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode(54)">
+              <rect x="285" y="150" width="515" height="48" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="2" />
+              <text x="303" y="171" font-size="12.5" font-weight="800" fill="#6ee7b7">🪐 Bài 54: Hệ Mặt Trời (tr. 187–189)</text>
+              <text x="303" y="188" font-size="11" fill="#cbd5e1">Mặt Trời + 4 hành tinh đá + Vành đai tiểu hành tinh + 4 hành tinh khí · 1 AU ≈ 150 triệu km</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectMapNode(55)">
+              <rect x="285" y="216" width="515" height="48" rx="14" fill="#1e293b" stroke="#a78bfa" stroke-width="2" />
+              <text x="303" y="237" font-size="12.5" font-weight="800" fill="#c4b5fd">🌀 Bài 55: Ngân Hà (tr. 190–192)</text>
+              <text x="303" y="254" font-size="11" fill="#cbd5e1">Xoắn ốc 4 cánh tay · Đường kính 100 000 năm ánh sáng · Hệ MT ở rìa cách tâm 26 000 n.á.s</text>
+            </g>
+          </svg>
+        </div>
+
+        <div id="mapDetailBox" class="rounded-2xl p-4 bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <div id="mapDetailTitle" class="font-extrabold text-sm text-indigo-900 dark:text-indigo-200">👆 Bấm vào một bài trên Bản đồ ở trên!</div>
+            <div id="mapDetailText" class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">Xem ngay tóm tắt cốt lõi và mẹo tránh bẫy thi của từng bài.</div>
+          </div>
+          <button id="mapDetailBtn" type="button" onclick="switchHubTab('hinh-sgk')" class="hidden shrink-0 px-3.5 py-2 rounded-xl bg-indigo-600 text-white text-xs font-bold hover:bg-indigo-700 transition">Mở mô phỏng SGK ▶</button>
+        </div>
+      </div>
+
+      <!-- 3 NGUYÊN LÝ GỐC -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border-2 border-amber-200 dark:border-amber-800 shadow-sm space-y-2">
+          <div class="text-xs font-extrabold uppercase text-amber-600">Nguyên lý 1 · Bài 52</div>
+          <h3 class="font-extrabold text-base">🌍 Quay thật vs Nhìn thấy</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Giống ngồi trên xe ô tô chạy về trước thấy hàng cây lùi lại: <strong>Trái Đất tự quay từ Tây sang Đông</strong> (24h/vòng) nên ta thấy Mặt Trời mọc ở <strong>Đông</strong>, lặn ở <strong>Tây</strong>.</p>
+        </div>
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border-2 border-sky-200 dark:border-sky-800 shadow-sm space-y-2">
+          <div class="text-xs font-extrabold uppercase text-sky-600">Nguyên lý 2 · Bài 52–53</div>
+          <h3 class="font-extrabold text-base">🌕 Tự phát sáng vs Phản chiếu</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Chỉ <strong>Sao</strong> (Mặt Trời) tự phát sáng. <strong>Hành tinh, Vệ tinh, Sao chổi</strong> đều phản chiếu ánh sáng Mặt Trời → góc nhìn Mặt Trăng thay đổi sinh ra <strong>8 pha</strong> (Tuần Trăng 29,5 ngày).</p>
+        </div>
+        <div class="rounded-3xl p-5 bg-white dark:bg-slate-900 border-2 border-indigo-200 dark:border-indigo-800 shadow-sm space-y-2">
+          <div class="text-xs font-extrabold uppercase text-indigo-600">Nguyên lý 3 · Bài 54–55</div>
+          <h3 class="font-extrabold text-base">📏 Bậc thang kích thước Vũ trụ</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Trái Đất &amp; Mặt Trăng ⊂ <strong>Hệ Mặt Trời</strong> (đo bằng <strong>AU ≈ 150 triệu km</strong>) ⊂ <strong>Ngân Hà</strong> (đo bằng <strong>năm ánh sáng ≈ 95 nghìn tỉ km</strong>) ⊂ Vũ trụ.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 2: 4 MÔ PHỎNG HÌNH SGK TƯƠNG TÁC SVG                             -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-hinh-sgk" class="hub-panel hidden space-y-6">
+
+      <!-- MÔ PHỎNG 1: HÌNH 52.1 & 52.2 — NGÀY ĐÊM & CHUYỂN ĐỘNG MẶT TRỜI -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <span class="text-[11px] font-extrabold uppercase text-amber-600">Mô phỏng Hình 52.1 &amp; 52.2 SGK (tr. 179–180)</span>
+            <h2 class="text-lg font-extrabold">☀️ 1. Kéo Thanh Giờ Xem Mặt Trời Mọc Đông – Lặn Tây!</h2>
+          </div>
+          <span id="sunTimeBadge" class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300">6:00 sáng · Mặt Trời mọc hướng Đông</span>
+        </div>
+
+        <div class="rounded-2xl bg-slate-950 p-3 overflow-hidden">
+          <svg viewBox="0 0 760 200" class="w-full h-auto" role="img" aria-label="Mô phỏng vị trí nhìn thấy của Mặt Trời theo giờ trong ngày">
+            <!-- Bầu trời đổi màu theo giờ -->
+            <rect id="skyBg" x="0" y="0" width="760" height="150" rx="12" fill="#0f172a" />
+            <!-- Đường chân trời & đất -->
+            <rect x="0" y="150" width="760" height="50" fill="#14532d" />
+            <!-- Quỹ đạo biểu kiến vòm cung -->
+            <path d="M100 150 A280 120 0 0 1 660 150" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 6" opacity="0.5" />
+            <!-- Mặt Trời di chuyển -->
+            <circle id="sunOrb" cx="100" cy="145" r="20" fill="#fde047" stroke="#f59e0b" stroke-width="4" />
+            <!-- Người quan sát ở giữa -->
+            <circle cx="380" cy="136" r="6" fill="#ffffff" />
+            <line x1="380" y1="142" x2="380" y2="160" stroke="#ffffff" stroke-width="3" />
+            <!-- Hướng Đông - Tây -->
+            <text x="90" y="182" text-anchor="middle" font-size="13" font-weight="800" fill="#fde047">⬅ HƯỚNG ĐÔNG (Mọc)</text>
+            <text x="380" y="182" text-anchor="middle" font-size="12" font-weight="700" fill="#bbf7d0">🧍 Người trên Trái Đất (TĐ quay Tây → Đông)</text>
+            <text x="670" y="182" text-anchor="middle" font-size="13" font-weight="800" fill="#fb923c">HƯỚNG TÂY (Lặn) ➡</text>
+          </svg>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <label for="hourSlider" class="text-xs font-bold">Kéo giờ trong ngày (0h → 24h):</label>
+          <input id="hourSlider" type="range" min="0" max="24" step="1" value="6" oninput="updateSunSim(this.value)" class="flex-1 accent-amber-500" />
+          <div class="flex gap-1.5">
+            <button type="button" onclick="setSunHour(6)" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-200">6h Sáng</button>
+            <button type="button" onclick="setSunHour(12)" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-200">12h Trưa</button>
+            <button type="button" onclick="setSunHour(18)" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-200">18h Chiều</button>
+            <button type="button" onclick="setSunHour(0)" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-200 dark:bg-slate-800">0h Đêm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MÔ PHỎNG 2: HÌNH 53.2 SGK — 8 PHA MẶT TRĂNG -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <span class="text-[11px] font-extrabold uppercase text-sky-600">Mô phỏng Hình 53.2a &amp; 53.2b SGK (tr. 184)</span>
+            <h2 class="text-lg font-extrabold">🌕 2. Máy Xem 8 Pha Mặt Trăng (Tuần Trăng 29,5 Ngày)</h2>
+          </div>
+          <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-sky-100 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300">Nửa đầu: Sáng PHẢI · Nửa cuối: Sáng TRÁI</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+          <div class="rounded-2xl bg-slate-950 p-4 flex flex-col items-center justify-center space-y-2">
+            <svg viewBox="0 0 180 180" class="w-40 h-40" role="img" aria-label="Hình dạng Mặt Trăng nhìn từ Trái Đất">
+              <circle cx="90" cy="90" r="68" fill="#1e293b" stroke="#475569" stroke-width="2" />
+              <g id="moonPhaseGraphic"></g>
+            </svg>
+            <div id="moonPhaseTitle" class="text-base font-extrabold text-amber-300 text-center">Ngày 16 · Trăng tròn</div>
+            <div id="moonPhaseDesc" class="text-xs text-slate-300 text-center">Mặt Trăng nằm đối diện Mặt Trời qua Trái Đất → ta nhìn thấy trọn vẹn nửa được chiếu sáng!</div>
+          </div>
+
+          <div class="space-y-2.5">
+            <p class="text-xs font-bold text-slate-600 dark:text-slate-400">Bấm chọn từng mốc ngày chuẩn theo Hình 53.2 SGK:</p>
+            <div id="moonBtnGrid" class="grid grid-cols-2 gap-2"></div>
+            <div class="rounded-xl p-3 bg-sky-50 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800 text-xs">
+              💡 <strong>Bẫy thi nhớ kỹ:</strong> Mặt Trăng quay 1 vòng quanh Trái Đất hết <strong>27,32 ngày</strong>, nhưng chu kì giữa 2 lần Trăng tròn (Tuần Trăng) là <strong>29,5 ngày</strong> (~4 tuần).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MÔ PHỎNG 3: HÌNH 54.1 SGK — HỆ MẶT TRỜI 8 HÀNH TINH -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase text-emerald-600">Mô phỏng Hình 54.1 &amp; Bảng số liệu SGK (tr. 187–188)</span>
+          <h2 class="text-lg font-extrabold">🪐 3. Chạm Vào Từng Hành Tinh Trong Hệ Mặt Trời (Từ Gần → Xa)</h2>
+        </div>
+
+        <div class="rounded-2xl bg-slate-950 p-3 overflow-x-auto">
+          <svg viewBox="0 0 840 165" class="w-full min-w-[680px] h-auto" role="img" aria-label="8 hành tinh trong Hệ Mặt Trời theo Hình 54.1 SGK">
+            <!-- Mặt Trời bên trái -->
+            <circle cx="-10" cy="82" r="76" fill="#f59e0b" />
+            <circle cx="-10" cy="82" r="64" fill="#fde047" />
+            <text x="26" y="86" font-size="11" font-weight="800" fill="#78350f">MẶT TRỜI</text>
+
+            <!-- Vành đai tiểu hành tinh giữa Hoả & Mộc -->
+            <line x1="365" y1="15" x2="365" y2="145" stroke="#94a3b8" stroke-width="3" stroke-dasharray="3 6" />
+            <text x="365" y="158" text-anchor="middle" font-size="9.5" font-weight="700" fill="#94a3b8">Vành đai tiểu hành tinh</text>
+
+            <!-- 8 Hành tinh click được -->
+            <g class="cursor-pointer" onclick="selectPlanet(0)">
+              <circle cx="115" cy="82" r="9" fill="#94a3b8" /><text x="115" y="122" text-anchor="middle" font-size="10.5" font-weight="700" fill="#e2e8f0">1. Thuỷ</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectPlanet(1)">
+              <circle cx="170" cy="82" r="14" fill="#fbbf24" /><text x="170" y="122" text-anchor="middle" font-size="10.5" font-weight="700" fill="#fde68a">2. Kim</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectPlanet(2)">
+              <circle cx="235" cy="82" r="15" fill="#38bdf8" stroke="#22c55e" stroke-width="3" /><text x="235" y="122" text-anchor="middle" font-size="10.5" font-weight="800" fill="#7dd3fc">3. Trái Đất</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectPlanet(3)">
+              <circle cx="305" cy="82" r="12" fill="#ef4444" /><text x="305" y="122" text-anchor="middle" font-size="10.5" font-weight="700" fill="#fca5a5">4. Hoả</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectPlanet(4)">
+              <circle cx="445" cy="82" r="34" fill="#d97706" stroke="#fde68a" stroke-width="2" /><text x="445" y="135" text-anchor="middle" font-size="11" font-weight="800" fill="#fcd34d">5. Mộc tinh</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectPlanet(5)">
+              <ellipse cx="565" cy="82" rx="44" ry="12" fill="none" stroke="#eab308" stroke-width="5" />
+              <circle cx="565" cy="82" r="26" fill="#ca8a04" /><text x="565" y="135" text-anchor="middle" font-size="11" font-weight="800" fill="#fef08a">6. Thổ tinh</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectPlanet(6)">
+              <circle cx="675" cy="82" r="20" fill="#22d3ee" /><text x="675" y="135" text-anchor="middle" font-size="10.5" font-weight="700" fill="#a5f3fc">7. Thiên Vương</text>
+            </g>
+            <g class="cursor-pointer" onclick="selectPlanet(7)">
+              <circle cx="775" cy="82" r="19" fill="#3b82f6" /><text x="775" y="135" text-anchor="middle" font-size="10.5" font-weight="700" fill="#93c5fd">8. Hải Vương</text>
+            </g>
+          </svg>
+        </div>
+
+        <div id="planetInfoBox" class="rounded-2xl p-4 bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 text-sm">
+          <strong>🌍 3. Trái Đất (Vòng trong — Đất đá):</strong> Cách Mặt Trời đúng <strong>1 AU (≈ 150 triệu km)</strong> · Tự quay: <strong>1 ngày</strong> · Quay quanh Mặt Trời: <strong>365,2 ngày</strong>. <em>(Bấm các hành tinh khác trên hình để so sánh!)</em>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400">💡 <strong>Mẹo thuộc thứ tự 8 hành tinh:</strong> <em>"<strong>T</strong>huỷ <strong>K</strong>im <strong>T</strong>rái <strong>H</strong>oả — (Vành đai) — <strong>M</strong>ộc <strong>T</strong>hổ <strong>T</strong>hiên <strong>H</strong>ải"</em>.</p>
+      </div>
+
+      <!-- MÔ PHỎNG 4: HÌNH 55.1 & 55.3 SGK — NGÂN HÀ XOẮN ỐC -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-3">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase text-purple-600">Mô phỏng Hình 55.1 &amp; 55.3 SGK (tr. 190–191)</span>
+          <h2 class="text-lg font-extrabold">🌀 4. Dải Ngân Hà Xoắn Ốc 4 Cánh Tay &amp; Vị Trí Hệ Mặt Trời</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+          <div class="rounded-2xl bg-slate-950 p-3 flex justify-center">
+            <svg viewBox="0 0 320 200" class="w-full max-w-[320px] h-auto" role="img" aria-label="Sơ đồ Ngân Hà xoắn ốc 4 cánh tay và vị trí Hệ Mặt Trời">
+              <!-- 4 cánh tay xoắn ốc -->
+              <path d="M160 100 C180 60, 240 50, 285 85" fill="none" stroke="#818cf8" stroke-width="10" stroke-linecap="round" opacity="0.55" />
+              <path d="M160 100 C140 140, 80 150, 35 115" fill="none" stroke="#818cf8" stroke-width="10" stroke-linecap="round" opacity="0.55" />
+              <path d="M160 100 C120 75, 110 35, 155 18" fill="none" stroke="#c084fc" stroke-width="9" stroke-linecap="round" opacity="0.55" />
+              <path d="M160 100 C200 125, 210 165, 165 182" fill="none" stroke="#c084fc" stroke-width="9" stroke-linecap="round" opacity="0.55" />
+              <!-- Tâm Ngân Hà sáng rực -->
+              <circle cx="160" cy="100" r="24" fill="#fde047" opacity="0.35" />
+              <circle cx="160" cy="100" r="12" fill="#fef08a" />
+              <text x="160" y="104" text-anchor="middle" font-size="8.5" font-weight="800" fill="#713f12">TÂM</text>
+              <!-- Vị trí Hệ Mặt Trời ở rìa cánh tay -->
+              <circle cx="242" cy="68" r="6" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+              <line x1="160" y1="100" x2="242" y2="68" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 3" />
+              <text x="242" y="54" text-anchor="middle" font-size="10" font-weight="800" fill="#7dd3fc">⭐ Hệ Mặt Trời</text>
+              <text x="210" y="114" font-size="9.5" font-weight="700" fill="#bae6fd">~26 000 n.á.s</text>
+              <text x="160" y="196" text-anchor="middle" font-size="10" font-weight="700" fill="#cbd5e1">Đường kính: ~100 000 năm ánh sáng · Bề dày: ~300 n.á.s</text>
+            </svg>
+          </div>
+          <div class="text-xs md:text-sm space-y-2 text-slate-700 dark:text-slate-300">
+            <p>• <strong>Cấu trúc:</strong> Hình <strong>xoắn ốc với 4 vòng xoắn chính</strong>, chứa hàng trăm tỉ thiên thể liên kết bằng lực hấp dẫn.</p>
+            <p>• <strong>Vị trí Hệ Mặt Trời:</strong> Nằm ở <strong>rìa một vòng xoắn</strong>, cách tâm Ngân Hà khoảng <strong>26 000 năm ánh sáng</strong>.</p>
+            <p>• <strong>1 năm ánh sáng ≈ 95 nghìn tỉ km</strong> — là đơn vị đo <strong>KHOẢNG CÁCH</strong> (quãng đường ánh sáng đi được trong 1 năm).</p>
+            <p>• Tại Việt Nam có 2 đài thiên văn nổi tiếng trong SGK: <strong>Đài thiên văn Hoà Lạc</strong> (Hà Nội) và <strong>Đài thiên văn Nha Trang</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 3: 6 BẪY THI KINH ĐIỂN & 12 FLASHCARD LẬT THẺ                    -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-on-nhanh" class="hub-panel hidden space-y-6">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <h2 class="text-lg font-extrabold">⚡ 6 Bẫy Thi Thiên Văn 6 Kinh Điển (Tránh mất điểm oan!)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+          <div class="rounded-2xl p-4 bg-rose-50/70 dark:bg-slate-800/60 border border-rose-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-rose-700 dark:text-rose-400">1. Bẫy tên gọi "Sao Kim, Sao Hoả, Sao chổi"</div>
+            <p>Dân gian gọi là "sao" nhưng thực chất Kim tinh, Hoả tinh, Thổ tinh là <strong>HÀNH TINH</strong>; Sao chổi là <strong>tiểu hành tinh đặc biệt</strong> (băng + bụi). Trong Hệ Mặt Trời, <strong>chỉ Mặt Trời là SAO</strong> (tự phát sáng).</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-amber-50/70 dark:bg-slate-800/60 border border-amber-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-amber-700 dark:text-amber-400">2. Bẫy Vệ tinh nhân tạo có phải Thiên thể không?</div>
+            <p><strong>KHÔNG!</strong> Thiên thể phải là vật thể <strong>tự nhiên</strong> trong không gian vũ trụ. Vệ tinh nhân tạo do con người chế tạo nên không phải thiên thể.</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-indigo-50/70 dark:bg-slate-800/60 border border-indigo-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-indigo-700 dark:text-indigo-400">3. Bẫy "Năm ánh sáng" &amp; "AU" là đơn vị gì?</div>
+            <p>Cả hai đều là đơn vị đo <strong>KHOẢNG CÁCH</strong> (KHÔNG phải thời gian!): <strong>1 AU ≈ 150 triệu km</strong>; <strong>1 năm ánh sáng ≈ 95 nghìn tỉ km</strong>.</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-sky-50/70 dark:bg-slate-800/60 border border-sky-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-sky-700 dark:text-sky-400">4. Bẫy Chu kì Mặt Trăng &amp; Chiều sáng</div>
+            <p>Quay 1 vòng quanh Trái Đất: <strong>27,32 ngày</strong>. Giữa 2 lần Trăng tròn (Tuần Trăng): <strong>29,5 ngày</strong>. Nửa đầu tháng sáng bên <strong>PHẢI</strong>; nửa cuối tháng sáng bên <strong>TRÁI</strong>.</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-emerald-50/70 dark:bg-slate-800/60 border border-emerald-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-emerald-700 dark:text-emerald-400">5. Bẫy Bảng số liệu 8 Hành tinh (Bài 54)</div>
+            <p><strong>Kim tinh</strong> có 1 ngày (244 ngày) DÀI HƠN 1 năm (224,7 ngày)! Hành tinh có 1 ngày gần bằng Trái Đất nhất là <strong>Hoả tinh</strong> (1,03 ngày). Giữa Hoả và Mộc có <strong>Vành đai tiểu hành tinh</strong>.</p>
+          </div>
+          <div class="rounded-2xl p-4 bg-purple-50/70 dark:bg-slate-800/60 border border-purple-200 dark:border-slate-700 space-y-1">
+            <div class="font-extrabold text-purple-700 dark:text-purple-400">6. Bẫy 2 Ảnh vệ tinh chụp 2 nửa Trái Đất (Hình 52.3)</div>
+            <p>Trái Đất tự quay 1 vòng hết 24 giờ → để chụp được 2 bán cầu đối diện nhau từ cùng vị trí vệ tinh, hai ảnh phải chụp cách nhau ít nhất <strong>12 giờ</strong>!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12 FLASHCARD -->
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">🃏 12 Thẻ Flashcard Lật Nhanh Thiên Văn 6</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Bấm vào từng thẻ để lật đáp án — bố mẹ hỏi miệng con 5 phút là thuộc hết!</p>
+          </div>
+          <button type="button" onclick="resetFlashcards()" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Úp lại tất cả</button>
+        </div>
+        <div id="flashcardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 4: 8 CÂU TỰ LUẬN "TẠI SAO?" ĂN ĐIỂM 9–10                         -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-tu-luan" class="hub-panel hidden space-y-4">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">💬 8 Câu Tự Luận "Tại sao?" Ăn Điểm 9–10 Thiên Văn 6</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Tự trả lời trước rồi mở <strong>Khung trả lời 2 bước</strong> để kiểm tra xem đủ ý ăn trọn điểm chưa nhé!</p>
+          </div>
+          <span id="essayCount" class="px-3 py-1 rounded-full text-xs font-extrabold bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300">✅ Đã thuộc 0 / 8 câu</span>
+        </div>
+        <div id="essayList" class="space-y-3"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- TAB 5: ĐỀ THI THỬ 20 CÂU (THANG 10 + LÀM LẠI CÂU SAI)                -->
+    <!-- =================================================================== -->
+    <section id="hub-panel-thi-thu" class="hub-panel hidden space-y-4">
+      <div class="rounded-3xl p-5 md:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-extrabold">📝 Đề Thi Thử Tổng Hợp Thiên Văn 6 (20 câu · Thang 10 điểm)</h2>
+            <p id="examSubtitle" class="text-xs text-slate-500 dark:text-slate-400">Phủ đủ 4 bài Chương X (0,5 điểm/câu), có sẵn bẫy thi thật. Nộp bài xong xem điểm 10 và làm lại riêng câu sai!</p>
+          </div>
+          <button type="button" onclick="startFullExam()" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔄 Làm lại cả 20 câu</button>
+        </div>
+
+        <div id="examResult" class="hidden rounded-2xl p-5 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-slate-800 dark:to-slate-800 border-2 border-indigo-300 dark:border-indigo-700 space-y-3"></div>
+        <div id="examContainer" class="space-y-4"></div>
+
+        <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+          <button id="submitExamBtn" type="button" onclick="gradeExam()" class="px-6 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-sm md:text-base shadow-md transition">
+            ✅ Nộp bài &amp; Chấm điểm 10
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-5 text-center text-xs text-slate-500 dark:text-slate-400">
+    Trung tâm Tổng quan &amp; Ôn thi 10 điểm Thiên văn học 6 · Lớp 6A03 · Học hiểu bản chất
+  </footer>
+
+  <script>
+    /* ===== 1. ĐIỀU KHIỂN 5 TAB CHÍNH ===== */
+    var HUB_TABS = ['ban-do', 'hinh-sgk', 'on-nhanh', 'tu-luan', 'thi-thu'];
+    function switchHubTab(key) {
+      if (HUB_TABS.indexOf(key) === -1) key = 'ban-do';
+      HUB_TABS.forEach(function (k) {
+        var btn = document.getElementById('hub-tab-' + k);
+        var pnl = document.getElementById('hub-panel-' + k);
+        var active = (k === key);
+        var spanCls = (k === 'thi-thu') ? ' col-span-2 sm:col-span-1' : '';
+        if (btn) btn.className = 'hub-tab rounded-2xl p-3 text-left border-2 transition' + spanCls + ' ' + (active
+          ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-900 dark:text-indigo-100 shadow-sm'
+          : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:border-indigo-300');
+        if (pnl) pnl.classList.toggle('hidden', !active);
+      });
+      if (window.history && window.history.replaceState) window.history.replaceState(null, '', '#' + key);
+    }
+    (function () {
+      var h = (window.location.hash || '').replace('#', '');
+      switchHubTab(HUB_TABS.indexOf(h) !== -1 ? h : 'ban-do');
+    })();
+
+    /* ===== 2. BẢN ĐỒ TƯ DUY ===== */
+    var MAP_NODES = {
+      52: { title: 'Bài 52: Chuyển động nhìn thấy của Mặt Trời · Thiên thể (SGK tr. 179–182)', text: 'Mặt Trời mọc Đông lặn Tây là chuyển động nhìn thấy do Trái Đất tự quay từ Tây sang Đông hết 24 giờ. Thiên thể là vật thể TỰ NHIÊN trong vũ trụ: Sao (tự phát sáng), Hành tinh, Vệ tinh, Sao chổi (phản chiếu ánh sáng).' },
+      53: { title: 'Bài 53: Mặt Trăng (SGK tr. 183–186)', text: 'Mặt Trăng phản chiếu ánh sáng Mặt Trời. Do vị trí tương đối giữa MT – TĐ – Mặt Trăng thay đổi nên có 8 pha (Hình 53.2). Chu kì Tuần Trăng: 29,5 ngày (quay quanh TĐ: 27,32 ngày). Nửa đầu tháng sáng phải, nửa cuối sáng trái.' },
+      54: { title: 'Bài 54: Hệ Mặt Trời (SGK tr. 187–189)', text: 'Gồm Mặt Trời ở tâm và 8 hành tinh: 4 vòng trong (Thuỷ, Kim, Trái Đất, Hoả — đá/kim loại, nóng) + Vành đai tiểu hành tinh + 4 vòng ngoài (Mộc, Thổ, Thiên Vương, Hải Vương — khí khổng lồ, lạnh). 1 AU ≈ 150 triệu km.' },
+      55: { title: 'Bài 55: Ngân Hà (SGK tr. 190–192)', text: 'Hình xoắn ốc 4 cánh tay, chứa hàng trăm tỉ thiên thể, đường kính ~100 000 năm ánh sáng, bề dày ~300 n.á.s. Hệ Mặt Trời nằm ở rìa 1 cánh tay, cách tâm ~26 000 n.á.s. 1 năm ánh sáng ≈ 95 nghìn tỉ km (đo KHOẢNG CÁCH).' }
+    };
+    function selectMapNode(n) {
+      var d = MAP_NODES[n];
+      document.getElementById('mapDetailTitle').textContent = '📌 ' + d.title;
+      document.getElementById('mapDetailText').textContent = d.text;
+      document.getElementById('mapDetailBtn').classList.remove('hidden');
+    }
+
+    /* ===== 3. MÔ PHỎNG MẶT TRỜI, 8 PHA MẶT TRĂNG & 8 HÀNH TINH ===== */
+    function setSunHour(h) {
+      document.getElementById('hourSlider').value = h;
+      updateSunSim(h);
+    }
+    function updateSunSim(val) {
+      var h = Number(val);
+      var sky = document.getElementById('skyBg');
+      var orb = document.getElementById('sunOrb');
+      var badge = document.getElementById('sunTimeBadge');
+      if (h >= 6 && h <= 18) {
+        var t = (h - 6) / 12; // 0 -> 1
+        var angle = Math.PI * (1 - t); // pi -> 0
+        var cx = 380 + 280 * Math.cos(angle);
+        var cy = 150 - 115 * Math.sin(angle);
+        orb.setAttribute('cx', cx.toFixed(1));
+        orb.setAttribute('cy', cy.toFixed(1));
+        orb.setAttribute('opacity', '1');
+        sky.setAttribute('fill', (h <= 7 || h >= 17) ? '#9a3412' : '#0284c7');
+        var label = h === 6 ? 'Mặt Trời mọc hướng Đông' : (h === 12 ? 'Mặt Trời lên cao nhất (giữa trưa)' : (h === 18 ? 'Mặt Trời lặn hướng Tây' : (h < 12 ? 'Buổi sáng · Đang lên cao' : 'Buổi chiều · Đang hạ dần về Tây')));
+        badge.textContent = h + ':00 · ' + label;
+      } else {
+        orb.setAttribute('opacity', '0');
+        sky.setAttribute('fill', '#0f172a');
+        badge.textContent = h + ':00 · Ban đêm (nửa Trái Đất quay vào vùng tối)';
+      }
+    }
+    updateSunSim(6);
+
+    var MOON_PHASES = [
+      { day: 'Ngày 0', name: 'Không Trăng (Trăng non)', desc: 'Mặt Trăng nằm giữa Mặt Trời và Trái Đất → mặt hướng về Trái Đất hoàn toàn tối.', svg: '' },
+      { day: '4 ngày sau', name: 'Trăng khuyết (lưỡi liềm đầu tháng)', desc: 'Nửa đầu tháng: bắt đầu thấy vành sáng mảnh nằm bên PHẢI.', svg: '<path d="M90 22 A68 68 0 0 1 90 158 A44 68 0 0 0 90 22 Z" fill="#fef08a" />' },
+      { day: '8 ngày sau', name: 'Trăng bán nguyệt (đầu tháng)', desc: 'Nhìn thấy đúng nửa hình tròn sáng ở bên PHẢI.', svg: '<path d="M90 22 A68 68 0 0 1 90 158 Z" fill="#fef08a" />' },
+      { day: '12 ngày sau', name: 'Trăng khuyết (lớn, gần tròn)', desc: 'Phần sáng chiếm hơn nửa đĩa Trăng ở phía PHẢI.', svg: '<path d="M90 22 A68 68 0 0 1 90 158 A36 68 0 0 1 90 22 Z" fill="#fef08a" />' },
+      { day: '16 ngày sau', name: 'Trăng tròn (Rằm)', desc: 'Trái Đất ở giữa Mặt Trời và Mặt Trăng → nhìn thấy trọn vẹn nửa được chiếu sáng!', svg: '<circle cx="90" cy="90" r="68" fill="#fef08a" />' },
+      { day: '19 ngày sau', name: 'Trăng khuyết (lớn, nửa cuối tháng)', desc: 'Bắt đầu khuyết dần từ bên phải; phần sáng còn lại lớn ở phía TRÁI.', svg: '<path d="M90 22 A68 68 0 0 0 90 158 A36 68 0 0 0 90 22 Z" fill="#fef08a" />' },
+      { day: '23 ngày sau', name: 'Trăng bán nguyệt (cuối tháng)', desc: 'Nhìn thấy đúng nửa hình tròn sáng ở bên TRÁI.', svg: '<path d="M90 22 A68 68 0 0 0 90 158 Z" fill="#fef08a" />' },
+      { day: '27 ngày sau', name: 'Trăng khuyết (lưỡi liềm cuối tháng)', desc: 'Chỉ còn lưỡi liềm mảnh sáng ở bên TRÁI, sắp quay lại ngày Không Trăng.', svg: '<path d="M90 22 A68 68 0 0 0 90 158 A44 68 0 0 1 90 22 Z" fill="#fef08a" />' }
+    ];
+    function selectMoonPhase(idx) {
+      var p = MOON_PHASES[idx];
+      document.getElementById('moonPhaseGraphic').innerHTML = p.svg;
+      document.getElementById('moonPhaseTitle').textContent = p.day + ' · ' + p.name;
+      document.getElementById('moonPhaseDesc').textContent = p.desc;
+      MOON_PHASES.forEach(function (_, i) {
+        var b = document.getElementById('mbtn-' + i);
+        if (b) b.className = (i === idx)
+          ? 'text-left px-3 py-2 rounded-xl text-xs font-extrabold bg-indigo-600 text-white shadow transition'
+          : 'text-left px-3 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 transition';
+      });
+    }
+    (function initMoonBtns() {
+      var g = document.getElementById('moonBtnGrid');
+      MOON_PHASES.forEach(function (p, i) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.id = 'mbtn-' + i;
+        b.onclick = function () { selectMoonPhase(i); };
+        b.textContent = (i + 1) + '. ' + p.day + ' · ' + p.name.split(' (')[0];
+        g.appendChild(b);
+      });
+      selectMoonPhase(4);
+    })();
+
+    var PLANETS = [
+      '<strong>1. Thuỷ tinh (Vòng trong — Đá/Kim loại):</strong> Gần Mặt Trời nhất (<strong>0,39 AU</strong>) · Tự quay: 58,9 ngày · Quay quanh MT: <strong>88 ngày</strong> (năm ngắn nhất!).',
+      '<strong>2. Kim tinh (Vòng trong — Đá/Kim loại):</strong> Cách MT <strong>0,72 AU</strong> · <strong>⭐ BẪY THI:</strong> Tự quay <strong>244 ngày</strong> > Quay quanh MT <strong>224,7 ngày</strong> (1 ngày dài hơn 1 năm!).',
+      '<strong>🌍 3. Trái Đất (Vòng trong — Đá/Kim loại):</strong> Cách MT đúng <strong>1 AU (≈ 150 triệu km)</strong> · Tự quay: <strong>1 ngày</strong> · Quay quanh MT: <strong>365,2 ngày</strong>. Hành tinh duy nhất được biết có sự sống.',
+      '<strong>4. Hoả tinh (Vòng trong — Đá/Kim loại):</strong> Cách MT <strong>1,52 AU</strong> · Tự quay: <strong>1,03 ngày</strong> (gần bằng Trái Đất nhất!) · Quay quanh MT: 687 ngày.',
+      '<strong>5. Mộc tinh (Vòng ngoài — Khí khổng lồ):</strong> Cách MT <strong>5,20 AU</strong> · Lớn nhất Hệ Mặt Trời · Tự quay nhanh nhất (<strong>0,41 ngày</strong>) · Quay quanh MT: 4 343,5 ngày.',
+      '<strong>🪐 6. Thổ tinh (Vòng ngoài — Khí khổng lồ):</strong> Cách MT <strong>9,54 AU</strong> · Nổi tiếng với hệ thống vành đai lớn rực rỡ · Tự quay: 0,43 ngày · Quay quanh MT: 10 767,5 ngày.',
+      '<strong>7. Thiên Vương tinh (Vòng ngoài — Khí khổng lồ):</strong> Cách MT <strong>19,2 AU</strong> · Nhiệt độ rất thấp · Tự quay: 0,72 ngày · Quay quanh MT: 30 587 ngày.',
+      '<strong>8. Hải Vương tinh (Vòng ngoài — Khí khổng lồ):</strong> Xa Mặt Trời nhất (<strong>30,07 AU</strong>) · Đứng ở đây thấy Mặt Trời nhỏ hơn ~30 lần · Quay quanh MT: 60 152 ngày.'
+    ];
+    function selectPlanet(i) {
+      document.getElementById('planetInfoBox').innerHTML = PLANETS[i];
+    }
+
+    /* ===== 4. 12 FLASHCARD ===== */
+    var FLASHCARDS = [
+      { q: 'Tại sao hằng ngày ta thấy Mặt Trời mọc hướng Đông, lặn hướng Tây?', a: 'Vì đó là chuyển động nhìn thấy do Trái Đất tự quay quanh trục từ Tây sang Đông (mất 24 giờ/vòng).' },
+      { q: 'Phân biệt nhanh Sao, Hành tinh và Vệ tinh?', a: 'Sao tự phát sáng (Mặt Trời); Hành tinh quay quanh sao (Trái Đất); Vệ tinh quay quanh hành tinh (Mặt Trăng). Hành tinh & vệ tinh không tự phát sáng.' },
+      { q: 'Vệ tinh nhân tạo bay quanh Trái Đất có phải là thiên thể không?', a: 'KHÔNG! Thiên thể phải là vật thể TỰ NHIÊN tồn tại trong không gian vũ trụ.' },
+      { q: 'Sao chổi có phải là một ngôi sao tự phát sáng không?', a: 'KHÔNG! Sao chổi là tiểu hành tinh đặc biệt cấu tạo từ khí đóng băng và bụi, chỉ phản xạ ánh sáng Mặt Trời.' },
+      { q: 'Thời gian Mặt Trăng quay 1 vòng quanh Trái Đất và chu kì Tuần Trăng là bao nhiêu ngày?', a: 'Quay quanh Trái Đất: 27,32 ngày. Chu kì Tuần Trăng (2 lần Trăng tròn liên tiếp): 29,5 ngày.' },
+      { q: 'Nhìn Trăng bán nguyệt trên trời, làm sao biết đó là đầu tháng hay cuối tháng âm lịch?', a: 'Nửa đầu tháng phần sáng nằm bên PHẢI; nửa cuối tháng phần sáng nằm bên TRÁI.' },
+      { q: 'Kể đúng thứ tự 8 hành tinh từ gần đến xa Mặt Trời?', a: 'Thuỷ tinh → Kim tinh → Trái Đất → Hoả tinh → (Vành đai tiểu hành tinh) → Mộc tinh → Thổ tinh → Thiên Vương tinh → Hải Vương tinh.' },
+      { q: '4 hành tinh vòng trong và 4 hành tinh vòng ngoài khác nhau gì về cấu tạo?', a: '4 hành tinh vòng trong chủ yếu bằng đá (silicat & kim loại), nhiệt độ cao; 4 hành tinh vòng ngoài là hành tinh khí khổng lồ, nhiệt độ thấp.' },
+      { q: '1 Đơn vị thiên văn (1 AU) là gì và bằng khoảng bao nhiêu km?', a: 'Là khoảng cách từ Trái Đất đến Mặt Trời, 1 AU ≈ 150 triệu km (đơn vị đo KHOẢNG CÁCH).' },
+      { q: 'Hành tinh nào có "1 ngày" dài hơn "1 năm"?', a: 'Kim tinh! (Tự quay 1 vòng hết 244 ngày > quay quanh Mặt Trời hết 224,7 ngày).' },
+      { q: 'Ngân Hà có hình dạng gì và Hệ Mặt Trời nằm ở đâu trong Ngân Hà?', a: 'Hình xoắn ốc 4 cánh tay (đường kính ~100 000 n.á.s); Hệ Mặt Trời nằm ở rìa 1 cánh tay, cách tâm ~26 000 n.á.s.' },
+      { q: '"Năm ánh sáng" là đơn vị đo thời gian hay khoảng cách? Bằng khoảng bao nhiêu km?', a: 'Là đơn vị đo KHOẢNG CÁCH (quãng đường ánh sáng đi trong 1 năm), 1 năm ánh sáng ≈ 95 nghìn tỉ km.' }
+    ];
+    function renderFlashcards() {
+      var g = document.getElementById('flashcardGrid'); g.innerHTML = '';
+      FLASHCARDS.forEach(function (fc, idx) {
+        var btn = document.createElement('button');
+        btn.type = 'button'; btn.id = 'fc-' + idx; btn.dataset.flipped = '0';
+        btn.onclick = function () { toggleCard(idx); };
+        btn.className = 'text-left rounded-2xl p-4 min-h-[126px] border-2 border-indigo-200 dark:border-slate-700 bg-indigo-50/50 dark:bg-slate-800/70 hover:border-indigo-400 transition flex flex-col justify-between';
+        btn.innerHTML = '<div class="text-[11px] font-bold text-indigo-600 dark:text-indigo-400">Thẻ ' + (idx + 1) + ' · Bấm lật đáp án 🔄</div><div class="font-bold text-sm mt-1">' + fc.q + '</div>';
+        g.appendChild(btn);
+      });
+    }
+    function toggleCard(idx) {
+      var el = document.getElementById('fc-' + idx), fc = FLASHCARDS[idx];
+      var flipped = el.dataset.flipped === '1';
+      el.dataset.flipped = flipped ? '0' : '1';
+      if (!flipped) {
+        el.className = 'text-left rounded-2xl p-4 min-h-[126px] border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 transition flex flex-col justify-between';
+        el.innerHTML = '<div class="text-[11px] font-bold text-emerald-700 dark:text-emerald-300">✅ Đáp án (Bấm úp lại)</div><div class="font-semibold text-sm text-emerald-950 dark:text-emerald-100 mt-1">' + fc.a + '</div>';
+      } else {
+        el.className = 'text-left rounded-2xl p-4 min-h-[126px] border-2 border-indigo-200 dark:border-slate-700 bg-indigo-50/50 dark:bg-slate-800/70 hover:border-indigo-400 transition flex flex-col justify-between';
+        el.innerHTML = '<div class="text-[11px] font-bold text-indigo-600 dark:text-indigo-400">Thẻ ' + (idx + 1) + ' · Bấm lật đáp án 🔄</div><div class="font-bold text-sm mt-1">' + fc.q + '</div>';
+      }
+    }
+    function resetFlashcards() { renderFlashcards(); }
+    renderFlashcards();
+
+    /* ===== 5. 8 CÂU TỰ LUẬN "TẠI SAO?" ===== */
+    var ESSAYS = [
+      { q: 'Câu 1 (Bài 52): Tại sao hằng ngày ta nhìn thấy Mặt Trời mọc ở hướng Đông và lặn ở hướng Tây?', step1: 'Đó là chuyển động nhìn thấy (biểu kiến), không phải Mặt Trời quay quanh Trái Đất.', step2: 'Vì Trái Đất tự quay quanh trục của nó theo chiều từ TÂY sang ĐÔNG (hết 24 giờ mỗi vòng), nên người đứng trên Trái Đất nhìn thấy Mặt Trời như đang chuyển động ngược lại từ Đông sang Tây.' },
+      { q: 'Câu 2 (Bài 52): Tại sao trên Trái Đất có ngày và đêm luân phiên liên tiếp nhau?', step1: 'Do hai nguyên nhân: hình dạng Trái Đất và chuyển động tự quay của nó.', step2: 'Trái Đất có dạng hình cầu nên Mặt Trời luôn chỉ chiếu sáng được một nửa (ban ngày), nửa còn lại nằm trong bóng tối (ban đêm). Nhờ Trái Đất tự quay liên tục quanh trục (24h/vòng) mà mọi nơi đều lần lượt có ngày và đêm.' },
+      { q: 'Câu 3 (Bài 52–53): Tại sao Mặt Trăng và các hành tinh (Kim tinh, Hoả tinh...) không tự phát sáng mà ta vẫn nhìn thấy chúng sáng trên bầu trời đêm?', step1: 'Khác với Sao tự phát sáng, hành tinh và vệ tinh không tự phát sáng.', step2: 'Chúng nhận ánh sáng từ Mặt Trời chiếu tới rồi PHẢN CHIẾU (phản xạ) ánh sáng đó tới mắt người quan sát trên Trái Đất nên ta nhìn thấy chúng phát sáng.' },
+      { q: 'Câu 4 (Bài 53 — Hay ra thi nhất!): Tại sao trong một tháng âm lịch ta lại nhìn thấy Mặt Trăng có các hình dạng (pha) khác nhau: Không Trăng, Trăng khuyết, Bán nguyệt, Trăng tròn?', step1: 'Nửa Mặt Trăng hướng về phía Mặt Trời luôn được chiếu sáng, nửa kia tối.', step2: 'Do Mặt Trăng quay quanh Trái Đất và Trái Đất quay quanh Mặt Trời nên vị trí tương đối giữa 3 thiên thể thay đổi liên tục → từ Trái Đất ta nhìn thấy phần được chiếu sáng dưới các góc khác nhau, tạo nên 8 pha lặp lại theo chu kì 29,5 ngày.' },
+      { q: 'Câu 5 (Bài 53): Tại sao từ Trái Đất, ta luôn chỉ nhìn thấy duy nhất một phía (một mặt) của Mặt Trăng?', step1: 'Xét hai chuyển động đồng thời của Mặt Trăng: tự quay quanh trục và quay quanh Trái Đất.', step2: 'Vì thời gian Mặt Trăng tự quay một vòng quanh trục ĐÚNG BẰNG thời gian nó quay một vòng quanh Trái Đất (cùng 27,32 ngày), nên luôn chỉ có một mặt cố định của Mặt Trăng hướng về phía Trái Đất.' },
+      { q: 'Câu 6 (Bài 54): Nếu đứng trên Hải Vương tinh nhìn về phía Mặt Trời, ta sẽ thấy Mặt Trời lớn hơn hay nhỏ hơn rất nhiều so với nhìn từ Trái Đất? Vì sao?', step1: 'So sánh khoảng cách từ Hải Vương tinh và Trái Đất đến Mặt Trời (theo đơn vị AU).', step2: 'Ta sẽ thấy Mặt Trời NHỎ HƠN RẤT NHIỀU (như một chấm sáng lớn), vì Hải Vương tinh cách Mặt Trời tới 30,07 AU — xa gấp hơn 30 lần khoảng cách từ Trái Đất đến Mặt Trời (1 AU).' },
+      { q: 'Câu 7 (Bài 55): Tại sao Ngân Hà có hình xoắn ốc nhưng nhìn từ Trái Đất trong đêm quang mây, ta chỉ thấy nó là một dải sáng mờ ("dòng sông bạc") vắt ngang bầu trời?', step1: 'Xác định vị trí của Hệ Mặt Trời (và Trái Đất) bên trong Ngân Hà.', step2: 'Vì Hệ Mặt Trời nằm ở RÌA của một trong 4 vòng xoắn ốc (cách tâm ~26 000 năm ánh sáng), nên đứng từ bên trong đĩa xoắn nhìn ngang ra, ta chỉ thấy được một phần của vòng xoắn như một dải sáng mờ kéo dài trên bầu trời.' },
+      { q: 'Câu 8 (Bài 52 & 55): Dải Ngân Hà có chuyển động trên bầu trời đêm giống như các ngôi sao không? Vì sao?', step1: 'Liên hệ giữa chuyển động tự quay của Trái Đất và bầu trời đêm.', step2: 'CÓ! Do Trái Đất tự quay quanh trục từ Tây sang Đông nên ta thấy cả bầu trời sao và dải Ngân Hà đều chuyển động biểu kiến từ Đông sang Tây trong đêm (ngoài ra bản thân Ngân Hà cũng quay quanh lõi của nó).' }
+    ];
+    var masteredEssays = {};
+    function renderEssays() {
+      var box = document.getElementById('essayList'); box.innerHTML = '';
+      ESSAYS.forEach(function (e, i) {
+        var div = document.createElement('div');
+        div.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5';
+        div.innerHTML =
+          '<div class="font-bold text-sm md:text-base">' + e.q + '</div>' +
+          '<div class="flex flex-wrap items-center gap-2">' +
+            '<button type="button" onclick="toggleEssay(' + i + ')" id="ebtn-' + i + '" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-200 hover:bg-indigo-200 transition">💡 Xem khung trả lời 2 bước</button>' +
+            '<button type="button" onclick="markEssay(' + i + ')" id="emrk-' + i + '" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition">⬜ Đánh dấu đã hiểu</button>' +
+          '</div>' +
+          '<div id="eans-' + i + '" class="hidden rounded-xl p-3.5 bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-800 text-xs md:text-sm space-y-1.5">' +
+            '<div><span class="font-extrabold text-indigo-700 dark:text-indigo-400">Bước 1 (Nêu bản chất):</span> ' + e.step1 + '</div>' +
+            '<div><span class="font-extrabold text-emerald-700 dark:text-emerald-400">Bước 2 (Giải thích ăn trọn điểm):</span> ' + e.step2 + '</div>' +
+          '</div>';
+        box.appendChild(div);
+      });
+    }
+    function toggleEssay(i) {
+      var a = document.getElementById('eans-' + i), b = document.getElementById('ebtn-' + i);
+      var show = a.classList.contains('hidden');
+      a.classList.toggle('hidden');
+      b.textContent = show ? '🙈 Ẩn khung trả lời' : '💡 Xem khung trả lời 2 bước';
+    }
+    function markEssay(i) {
+      masteredEssays[i] = !masteredEssays[i];
+      var b = document.getElementById('emrk-' + i);
+      b.textContent = masteredEssays[i] ? '✅ Con đã trả lời được!' : '⬜ Đánh dấu đã hiểu';
+      b.className = masteredEssays[i]
+        ? 'px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white transition'
+        : 'px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-300 dark:border-slate-600 hover:bg-emerald-50 transition';
+      var cnt = Object.values(masteredEssays).filter(Boolean).length;
+      document.getElementById('essayCount').textContent = '✅ Đã thuộc ' + cnt + ' / ' + ESSAYS.length + ' câu';
+    }
+    renderEssays();
+
+    /* ===== 6. ĐỀ THI THỬ 20 CÂU ===== */
+    var EXAM_BANK = [
+      // Bài 52 (5 câu)
+      { id: 1, b: 52, bai: 'Bài 52', q: 'Hằng ngày ta thấy Mặt Trời mọc ở hướng Đông và lặn ở hướng Tây là do:', opts: ['Mặt Trời quay quanh Trái Đất từ Đông sang Tây', 'Trái Đất tự quay quanh trục từ Tây sang Đông', 'Trái Đất tự quay quanh trục từ Đông sang Tây'], ans: 1, why: 'Trái Đất tự quay từ Tây sang Đông (24h/vòng) tạo ra chuyển động nhìn thấy của Mặt Trời từ Đông sang Tây.' },
+      { id: 2, b: 52, bai: 'Bài 52', q: 'Trong các vật thể sau, vật thể nào KHÔNG PHẢI là thiên thể?', opts: ['Mặt Trăng', 'Vệ tinh nhân tạo bay quanh Trái Đất', 'Sao chổi'], ans: 1, why: 'Thiên thể phải là vật thể TỰ NHIÊN trong vũ trụ; vệ tinh nhân tạo do con người làm ra.' },
+      { id: 3, b: 52, bai: 'Bài 52', q: 'Thiên thể nào sau đây có khả năng TỰ PHÁT SÁNG?', opts: ['Mặt Trời (Sao)', 'Kim tinh (Sao Kim)', 'Mặt Trăng'], ans: 0, why: 'Chỉ có Sao (như Mặt Trời) mới tự phát sáng; hành tinh và vệ tinh chỉ phản chiếu ánh sáng.' },
+      { id: 4, b: 52, bai: 'Bài 52', q: 'Sao chổi thực chất là loại thiên thể nào?', opts: ['Một ngôi sao đang bốc cháy', 'Tiểu hành tinh đặc biệt cấu tạo chủ yếu từ khí đóng băng và bụi vũ trụ', 'Một hành tinh khí khổng lồ'], ans: 1, why: 'Sao chổi không tự phát sáng, cấu tạo từ khối khí đóng băng và bụi, có đuôi dài khi gần Mặt Trời.' },
+      { id: 5, b: 52, bai: 'Bài 52', q: 'Hai ảnh vệ tinh chụp 2 bán cầu đối diện nhau của Trái Đất (Hình 52.3 SGK) phải chụp cách nhau ít nhất bao nhiêu giờ?', opts: ['6 giờ', '12 giờ', '24 giờ'], ans: 1, why: 'Trái Đất quay 1 vòng mất 24h → quay nửa vòng sang bán cầu đối diện mất 12 giờ.' },
+      // Bài 53 (5 câu)
+      { id: 6, b: 53, bai: 'Bài 53', q: 'Ta nhìn thấy Mặt Trăng sáng trên bầu trời đêm là vì:', opts: ['Mặt Trăng tự phát sáng', 'Mặt Trăng phản chiếu ánh sáng từ Mặt Trời tới Trái Đất', 'Trái Đất chiếu sáng lên Mặt Trăng'], ans: 1, why: 'Mặt Trăng là vệ tinh tự nhiên, không tự phát sáng mà phản xạ ánh sáng Mặt Trời.' },
+      { id: 7, b: 53, bai: 'Bài 53', q: 'Khoảng thời gian giữa hai lần TRĂNG TRÒN liên tiếp (chu kì Tuần Trăng) là khoảng:', opts: ['24 giờ', '29,5 ngày', '365 ngày'], ans: 1, why: 'Chu kì Tuần Trăng là 29,5 ngày (~4 tuần); còn quay quanh TĐ mất 27,32 ngày.' },
+      { id: 8, b: 53, bai: 'Bài 53', q: 'Vào đêm Không Trăng (Trăng non), vị trí của Mặt Trăng nằm ở đâu?', opts: ['Nằm giữa Mặt Trời và Trái Đất', 'Trái Đất nằm giữa Mặt Trời và Mặt Trăng', 'Vuông góc với đường nối Mặt Trời – Trái Đất'], ans: 0, why: 'Khi Mặt Trăng ở giữa Mặt Trời và Trái Đất, mặt hướng về ta hoàn toàn tối → Không Trăng.' },
+      { id: 9, b: 53, bai: 'Bài 53', q: 'Quan sát thấy Trăng bán nguyệt có nửa sáng nằm bên PHẢI. Đây là thời điểm nào trong tháng âm lịch?', opts: ['Khoảng ngày 8 (nửa đầu tháng)', 'Ngày Rằm (15–16)', 'Khoảng ngày 23 (nửa cuối tháng)'], ans: 0, why: 'Nửa đầu tháng âm lịch phần sáng nằm bên PHẢI; nửa cuối tháng sáng bên TRÁI.' },
+      { id: 10, b: 53, bai: 'Bài 53', q: 'Nguyên nhân chính khiến Mặt Trăng có các hình dạng nhìn thấy (pha) khác nhau trong tháng là:', opts: ['Hình dạng thật của Mặt Trăng bị co giãn', 'Vị trí tương đối giữa Mặt Trời – Trái Đất – Mặt Trăng thay đổi liên tục', 'Mây che khuất Mặt Trăng'], ans: 1, why: 'Góc nhìn từ Trái Đất tới phần được Mặt Trời chiếu sáng của Mặt Trăng thay đổi liên tục.' },
+      // Bài 54 (5 câu)
+      { id: 11, b: 54, bai: 'Bài 54', q: 'Thứ tự ĐÚNG của 4 hành tinh vòng trong từ gần Mặt Trời ra ngoài là:', opts: ['Thuỷ tinh → Kim tinh → Trái Đất → Hoả tinh', 'Kim tinh → Thuỷ tinh → Trái Đất → Hoả tinh', 'Thuỷ tinh → Trái Đất → Kim tinh → Hoả tinh'], ans: 0, why: 'Nhớ mẹo: Thuỷ – Kim – Trái – Hoả (4 hành tinh đất đá/kim loại).' },
+      { id: 12, b: 54, bai: 'Bài 54', q: 'Vành đai tiểu hành tinh chính nằm giữa quỹ đạo của hai hành tinh nào?', opts: ['Trái Đất và Hoả tinh', 'Hoả tinh và Mộc tinh', 'Mộc tinh và Thổ tinh'], ans: 1, why: 'Vành đai tiểu hành tinh ngăn cách nhóm vòng trong (Hoả tinh) và vòng ngoài (Mộc tinh).' },
+      { id: 13, b: 54, bai: 'Bài 54', q: 'Đơn vị thiên văn (1 AU) là đơn vị đo đại lượng nào và có giá trị xấp xỉ bao nhiêu?', opts: ['Đo thời gian · 1 AU ≈ 365 ngày', 'Đo khoảng cách · 1 AU ≈ 150 triệu km', 'Đo khối lượng · 1 AU ≈ 150 triệu tấn'], ans: 1, why: '1 AU là khoảng cách từ Trái Đất đến Mặt Trời, xấp xỉ 150 triệu km.' },
+      { id: 14, b: 54, bai: 'Bài 54', q: 'Bốn hành tinh vòng ngoài (Mộc tinh, Thổ tinh, Thiên Vương tinh, Hải Vương tinh) có đặc điểm chung là:', opts: ['Cấu tạo chủ yếu từ khí, kích thước rất lớn, nhiệt độ thấp', 'Cấu tạo chủ yếu từ đá, kích thước nhỏ, rất nóng', 'Đều tự phát sáng như Mặt Trời'], ans: 0, why: '4 hành tinh vòng ngoài là các hành tinh khí khổng lồ, xa Mặt Trời nên rất lạnh.' },
+      { id: 15, b: 54, bai: 'Bài 54', q: 'Theo bảng số liệu SGK Bài 54, hành tinh nào có thời gian tự quay 1 vòng ("1 ngày") DÀI HƠN thời gian quay 1 vòng quanh Mặt Trời ("1 năm")?', opts: ['Thuỷ tinh', 'Kim tinh (244 ngày > 224,7 ngày)', 'Mộc tinh'], ans: 1, why: 'Bẫy thi cực hay: Kim tinh tự quay 1 vòng mất 244 ngày, trong khi 1 năm của nó chỉ 224,7 ngày!' },
+      // Bài 55 (5 câu)
+      { id: 16, b: 55, bai: 'Bài 55', q: 'Ngân Hà (chứa Hệ Mặt Trời của chúng ta) có hình dạng gì khi nhìn từ trên xuống?', opts: ['Hình cầu đặc', 'Hình xoắn ốc với 4 vòng xoắn chính', 'Hình vuông'], ans: 1, why: 'Theo Hình 55.1 SGK, Ngân Hà có dạng xoắn ốc với 4 cánh tay (vòng xoắn) chính.' },
+      { id: 17, b: 55, bai: 'Bài 55', q: 'Hệ Mặt Trời nằm ở vị trí nào trong Ngân Hà?', opts: ['Ngay tại tâm Ngân Hà', 'Ở rìa của một trong 4 vòng xoắn, cách tâm khoảng 26 000 năm ánh sáng', 'Nằm hoàn toàn ngoài Ngân Hà'], ans: 1, why: 'Hệ Mặt Trời nằm ở rìa cánh tay xoắn ốc, cách tâm Ngân Hà khoảng 26 000 năm ánh sáng.' },
+      { id: 18, b: 55, bai: 'Bài 55', q: '"Năm ánh sáng" là đơn vị dùng để đo đại lượng nào?', opts: ['Thời gian', 'Khoảng cách trong vũ trụ (1 n.á.s ≈ 95 nghìn tỉ km)', 'Tốc độ ánh sáng'], ans: 1, why: 'Bẫy số 1 Bài 55! Năm ánh sáng là QUÃNG ĐƯỜNG (khoảng cách) ánh sáng đi trong 1 năm.' },
+      { id: 19, b: 55, bai: 'Bài 55', q: 'Đường kính của Ngân Hà vào khoảng bao nhiêu?', opts: ['100 000 km', '100 000 năm ánh sáng', '300 năm ánh sáng'], ans: 1, why: 'Ngân Hà có đường kính khoảng 100 000 năm ánh sáng và bề dày khoảng 300 năm ánh sáng.' },
+      { id: 20, b: 55, bai: 'Bài 55', q: 'Các thiên thể trong Ngân Hà liên kết chặt chẽ với nhau tạo thành hệ thống nhờ lực nào?', opts: ['Lực ma sát', 'Lực hấp dẫn', 'Lực đàn hồi'], ans: 1, why: 'Hàng trăm tỉ thiên thể trong Ngân Hà liên kết với nhau bằng lực hấp dẫn.' }
+    ];
+
+    var activeQuestions = EXAM_BANK.slice();
+    var userChoices = {};
+    var lastWrongIds = [];
+
+    function renderExam() {
+      var box = document.getElementById('examContainer');
+      box.innerHTML = '';
+      activeQuestions.forEach(function (item, idx) {
+        var card = document.createElement('div');
+        card.className = 'rounded-2xl p-4 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 space-y-2.5';
+        var html = '<div class="flex items-start justify-between gap-2"><div class="font-bold text-sm">Câu ' + (idx + 1) + ': ' + item.q + '</div><span class="shrink-0 text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">' + item.bai + '</span></div><div class="grid grid-cols-1 gap-2">';
+        item.opts.forEach(function (opt, oIdx) {
+          html += '<label id="ex-lbl-' + item.id + '-' + oIdx + '" class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-indigo-400 cursor-pointer transition">' +
+            '<input type="radio" name="exq-' + item.id + '" value="' + oIdx + '" onchange="userChoices[' + item.id + ']=' + oIdx + '" class="accent-indigo-600" />' +
+            '<span>' + opt + '</span></label>';
+        });
+        html += '</div><div id="ex-fb-' + item.id + '" class="hidden text-xs font-semibold pt-1"></div>';
+        card.innerHTML = html;
+        box.appendChild(card);
+      });
+    }
+
+    function gradeExam() {
+      var total = activeQuestions.length;
+      var correct = 0;
+      var bStats = { 52: { ok: 0, tot: 0 }, 53: { ok: 0, tot: 0 }, 54: { ok: 0, tot: 0 }, 55: { ok: 0, tot: 0 } };
+      lastWrongIds = [];
+
+      activeQuestions.forEach(function (item) {
+        var picked = userChoices[item.id];
+        var isRight = (picked === item.ans);
+        if (bStats[item.b]) bStats[item.b].tot++;
+        var fb = document.getElementById('ex-fb-' + item.id);
+        fb.classList.remove('hidden');
+
+        item.opts.forEach(function (_, i) {
+          var lbl = document.getElementById('ex-lbl-' + item.id + '-' + i);
+          if (i === item.ans) {
+            lbl.className = 'flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm font-bold border-2 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-200';
+          } else if (i === picked && !isRight) {
+            lbl.className = 'flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-sm border-2 border-rose-400 bg-rose-50 dark:bg-rose-950/50 text-rose-700 dark:text-rose-300';
+          }
+        });
+
+        if (isRight) {
+          correct++;
+          if (bStats[item.b]) bStats[item.b].ok++;
+          fb.className = 'text-xs font-semibold pt-1 text-emerald-700 dark:text-emerald-400';
+          fb.textContent = '✅ Chính xác! ' + item.why;
+        } else {
+          lastWrongIds.push(item.id);
+          fb.className = 'text-xs font-semibold pt-1 text-rose-600 dark:text-rose-400';
+          fb.textContent = '❌ Chưa đúng (' + (picked === undefined ? 'chưa chọn' : 'sai') + ')! ' + item.why;
+        }
+      });
+
+      var score10 = ((correct / total) * 10).toFixed(1).replace('.0', '');
+      var res = document.getElementById('examResult');
+      res.classList.remove('hidden');
+
+      var retryWrongBtn = lastWrongIds.length
+        ? '<button type="button" onclick="retryWrongOnly()" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs md:text-sm font-extrabold shadow transition">🔁 Chỉ làm lại ' + lastWrongIds.length + ' câu con vừa sai!</button>'
+        : '<div class="font-extrabold text-emerald-700 dark:text-emerald-300">🏆 TUYỆT ĐỐI 10/10! Con đã chinh phục trọn bộ Thiên văn học 6!</div>';
+
+      res.innerHTML =
+        '<div class="flex flex-wrap items-center justify-between gap-3">' +
+          '<div><div class="text-xs font-bold uppercase text-indigo-600 dark:text-indigo-400">Kết quả chấm điểm</div>' +
+          '<div class="text-3xl font-extrabold text-slate-900 dark:text-white">' + score10 + ' / 10 điểm <span class="text-sm font-bold text-slate-500">(' + correct + '/' + total + ' câu đúng)</span></div></div>' +
+          retryWrongBtn +
+        '</div>' +
+        '<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs">' +
+          [52, 53, 54, 55].map(function (b) {
+            return '<div class="p-2 rounded-xl bg-white/80 dark:bg-slate-900"><strong>Bài ' + b + '</strong><br/>' + bStats[b].ok + '/' + bStats[b].tot + ' đúng</div>';
+          }).join('') +
+        '</div>';
+
+      res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function retryWrongOnly() {
+      if (!lastWrongIds.length) return;
+      activeQuestions = EXAM_BANK.filter(function (q) { return lastWrongIds.indexOf(q.id) !== -1; });
+      userChoices = {};
+      document.getElementById('examResult').classList.add('hidden');
+      document.getElementById('examSubtitle').innerHTML = '🔁 <strong>Chế độ Lấp Lỗ Hổng:</strong> Chỉ làm lại đúng <strong>' + activeQuestions.length + ' câu vừa sai</strong> cho tới khi đúng 100%!';
+      renderExam();
+      window.scrollTo({ top: 180, behavior: 'smooth' });
+    }
+
+    function startFullExam() {
+      activeQuestions = EXAM_BANK.slice();
+      userChoices = {};
+      lastWrongIds = [];
+      document.getElementById('examResult').classList.add('hidden');
+      document.getElementById('examSubtitle').innerHTML = 'Phủ đủ 4 bài Chương X (0,5 điểm/câu), có sẵn bẫy thi thật. Nộp bài xong xem điểm 10 và làm lại riêng câu sai!';
+      renderExam();
+    }
+
+    startFullExam();
+  </script>
+  <script src="assets/common.js"></script>
+</body>
+</html>
