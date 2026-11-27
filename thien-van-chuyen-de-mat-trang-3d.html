@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuyên đề 3D: Mặt Trời – Trái Đất – Mặt Trăng, 8 Pha Trăng, Nhật thực &amp; Nguyệt thực — KHTN 6</title>
+  <meta name="description" content="Mô phỏng 3D tương tác chuyển động Mặt Trời – Trái Đất – Mặt Trăng trong 1 tuần trăng (29,5 ngày), giải thích độ nghiêng quỹ đạo 5°, 8 pha Mặt Trăng, ngày Không trăng, Nhật thực và Nguyệt thực." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Be Vietnam Pro"', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <style>
+    #sceneWrap canvas { display: block; width: 100% !important; height: 100% !important; cursor: grab; }
+    #sceneWrap canvas:active { cursor: grabbing; }
+    input[type="range"].lunar-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #334155 0%, #6366f1 25%, #facc15 50%, #6366f1 75%, #334155 100%);
+      outline: none;
+    }
+    input[type="range"].lunar-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 3px solid #4f46e5;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+
+  <!-- Thanh điều hướng trên cùng -->
+  <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <a href="index.html#thien-van" class="px-3 py-1.5 rounded-xl bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-sm font-bold hover:bg-indigo-100 dark:hover:bg-indigo-900/70 transition">← Quay lại Thiên văn</a>
+        <a href="thien-van-tong-quan-on-thi.html" class="hidden sm:inline-flex px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition">🌌 Trung tâm Thiên văn 6</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <button type="button" onclick="readQuickGuide()" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white transition">🔊 Nghe giải thích</button>
+        <button id="shareBtn" type="button" onclick="copyShareLink('shareBtn')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">🔗 Chia sẻ</button>
+        <button id="themeToggle" type="button" class="px-3 py-1.5 rounded-xl text-xs font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Tối</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-5 space-y-6 pb-28">
+
+    <!-- Banner tiêu đề chuyên đề -->
+    <section class="rounded-3xl bg-gradient-to-r from-indigo-950 via-slate-900 to-violet-950 text-white p-5 md:p-6 shadow-lg border border-indigo-500/30">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/25 border border-indigo-400/40 text-indigo-200 text-xs font-bold">
+            🪐 Chuyên đề 3D trực quan · SGK KHTN 6 (Bài 53)
+          </span>
+          <h1 class="text-xl md:text-3xl font-extrabold mt-2 leading-tight">
+            Mặt Trời – Trái Đất – Mặt Trăng trong 1 Tuần Trăng (29,5 ngày)
+          </h1>
+          <p class="text-xs md:text-sm text-indigo-100/90 mt-1.5 max-w-3xl">
+            Tự xoay không gian 3D 360° để thấy rõ <strong>độ nghiêng 5° của quỹ đạo Mặt Trăng</strong>, giải đáp vì sao có <strong>Ngày Không Trăng</strong>, <strong>8 pha của Trăng</strong>, và cơ chế xảy ra <strong>Nhật thực &amp; Nguyệt thực</strong>.
+          </p>
+        </div>
+        <div class="text-xs bg-white/10 rounded-2xl px-3.5 py-2.5 border border-white/15 space-y-1">
+          <div>🖱️ <strong>Kéo chuột / Vuốt tay:</strong> Xoay góc nhìn 3D</div>
+          <div>🔍 <strong>Cuộn chuột / 2 ngón:</strong> Phóng to – Thu nhỏ</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- BƯỚC 1: SÂN KHẤU MÔ PHỎNG 3D TƯƠNG TÁC                    -->
+    <!-- ========================================================= -->
+    <section class="space-y-4">
+
+      <!-- Thanh chọn 3 kịch bản chính -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+        <button id="mode-normal" type="button" onclick="setScenario('normal')" class="scenario-btn rounded-2xl p-3.5 text-left border-2 transition">
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-sm">🌍 1. Tháng bình thường (Nghiêng 5°)</span>
+            <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300">Mặc định</span>
+          </div>
+          <div class="text-xs opacity-80 mt-1">Quỹ đạo Mặt Trăng nghiêng nên bóng tối <strong>bay sượt qua</strong> → Không có Nhật/Nguyệt thực.</div>
+        </button>
+
+        <button id="mode-solar" type="button" onclick="setScenario('solar')" class="scenario-btn rounded-2xl p-3.5 text-left border-2 transition">
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-sm">🌑 2. Nhật thực (Thẳng hàng Mùng 1)</span>
+            <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/60 text-amber-700 dark:text-amber-300">Ban ngày</span>
+          </div>
+          <div class="text-xs opacity-80 mt-1">Mặt Trăng cắt ngang mặt phẳng đúng <strong>Ngày Không Trăng</strong> → Bóng Trăng chiếu lên Trái Đất!</div>
+        </button>
+
+        <button id="mode-lunar" type="button" onclick="setScenario('lunar')" class="scenario-btn rounded-2xl p-3.5 text-left border-2 transition">
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-sm">🩸 3. Nguyệt thực (Thẳng hàng Rằm 15)</span>
+            <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-rose-100 dark:bg-rose-900/60 text-rose-700 dark:text-rose-300">Ban đêm</span>
+          </div>
+          <div class="text-xs opacity-80 mt-1">Mặt Trăng cắt ngang mặt phẳng đúng <strong>Ngày Trăng Tròn</strong> → Chui lọt vào bóng Trái Đất (Trăng máu)!</div>
+        </button>
+      </div>
+
+      <!-- Khung chính: Cảnh 3D bên trái + Góc nhìn từ Trái Đất bên phải -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
+
+        <!-- CỘT TRÁI: SÂN KHẤU 3D (8/12 cột) -->
+        <div class="lg:col-span-8 rounded-3xl overflow-hidden bg-slate-950 border border-slate-800 shadow-xl flex flex-col">
+
+          <!-- Thanh chọn góc Camera & Lớp hiển thị -->
+          <div class="px-3.5 py-2.5 bg-slate-900/95 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2 text-xs">
+            <div class="flex flex-wrap items-center gap-1.5">
+              <span class="text-slate-400 font-semibold mr-1">📷 Góc nhìn:</span>
+              <button type="button" id="cam-earth" onclick="setCameraPreset('earth')" class="cam-btn px-2.5 py-1 rounded-lg font-bold transition">🛰️ Quanh Trái Đất (3D)</button>
+              <button type="button" id="cam-side" onclick="setCameraPreset('side')" class="cam-btn px-2.5 py-1 rounded-lg font-bold transition">📐 Nhìn ngang (Thấy góc nghiêng)</button>
+              <button type="button" id="cam-top" onclick="setCameraPreset('top')" class="cam-btn px-2.5 py-1 rounded-lg font-bold transition">⬆️ Nhìn từ Bắc Cực</button>
+              <button type="button" id="cam-system" onclick="setCameraPreset('system')" class="cam-btn px-2.5 py-1 rounded-lg font-bold transition">☀️ Toàn cảnh 1 tháng</button>
+            </div>
+            <div class="flex items-center gap-2">
+              <label class="inline-flex items-center gap-1 text-slate-300 cursor-pointer select-none">
+                <input id="togglePlanes" type="checkbox" checked onchange="updateVisibility()" class="accent-indigo-500 rounded" />
+                <span>Mặt phẳng</span>
+              </label>
+              <label class="inline-flex items-center gap-1 text-slate-300 cursor-pointer select-none">
+                <input id="toggleShadows" type="checkbox" checked onchange="updateVisibility()" class="accent-amber-500 rounded" />
+                <span>Nón bóng tối</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Vùng Canvas WebGL 3D -->
+          <div id="sceneWrap" class="relative w-full h-[380px] sm:h-[440px] lg:h-[470px] bg-slate-950">
+            <!-- Nhãn nổi góc trên trái -->
+            <div class="pointer-events-none absolute top-3 left-3 z-10 flex flex-wrap gap-1.5 text-[11px] font-semibold">
+              <span class="px-2.5 py-1 rounded-full bg-slate-900/80 border border-sky-500/40 text-sky-300 backdrop-blur">🟦 Mặt phẳng hoàng đạo (Trái Đất quanh Mặt Trời)</span>
+              <span class="px-2.5 py-1 rounded-full bg-slate-900/80 border border-fuchsia-500/40 text-fuchsia-300 backdrop-blur">🟣 Quỹ đạo Mặt Trăng (nghiêng 5,14°)</span>
+            </div>
+
+            <!-- Nhãn trạng thái nổi khi xảy ra Nhật thực / Nguyệt thực -->
+            <div id="eclipseBadge" class="pointer-events-none hidden absolute bottom-3 left-1/2 -translate-x-1/2 z-10 px-4 py-1.5 rounded-full text-xs font-extrabold shadow-lg backdrop-blur border"></div>
+
+            <!-- Ghi chú tỉ lệ -->
+            <div class="pointer-events-none absolute bottom-2 right-3 z-10 text-[10px] text-slate-400/80">
+              * Kích thước &amp; góc nghiêng 5,14° được phóng đại nhẹ để dễ quan sát 3D
+            </div>
+
+            <!-- Thông báo dự phòng nếu Three.js chưa tải được -->
+            <div id="webglFallback" class="hidden absolute inset-0 flex items-center justify-center p-6 text-center text-slate-300 text-sm">
+              Đang tải không gian 3D... (Nếu trình duyệt tắt WebGL hoặc mất mạng, hãy thử tải lại trang).
+            </div>
+          </div>
+
+          <!-- Thanh điều khiển Thời gian (0 -> 29.5 ngày) -->
+          <div class="p-3.5 bg-slate-900 border-t border-slate-800 space-y-3 text-white">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <button id="playBtn" type="button" onclick="togglePlay()" class="px-3.5 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-xs font-extrabold transition shadow">
+                  ▶ Chạy 1 tháng
+                </button>
+                <div class="flex items-center gap-1 bg-slate-800 rounded-xl p-1 text-[11px]">
+                  <button type="button" onclick="setSpeed(0.5)" data-spd="0.5" class="spd-btn px-2 py-0.5 rounded-lg font-bold">0.5x</button>
+                  <button type="button" onclick="setSpeed(1)" data-spd="1" class="spd-btn px-2 py-0.5 rounded-lg font-bold">1x</button>
+                  <button type="button" onclick="setSpeed(2.5)" data-spd="2.5" class="spd-btn px-2 py-0.5 rounded-lg font-bold">2.5x</button>
+                </div>
+              </div>
+              <div class="text-xs sm:text-sm font-extrabold text-amber-300">
+                📅 Ngày <span id="dayLabel">0.0</span> / 29,5 (Âm lịch: <span id="lunarDateLabel">Mùng 1</span>)
+              </div>
+            </div>
+
+            <input id="daySlider" type="range" min="0" max="29.53" step="0.05" value="0" oninput="onSliderInput(this.value)" class="lunar-slider w-full" aria-label="Chọn ngày trong tuần trăng" />
+
+            <!-- 8 nút chọn nhanh 8 pha của Mặt Trăng -->
+            <div class="grid grid-cols-4 sm:grid-cols-8 gap-1.5">
+              <button type="button" onclick="jumpToPhase(0)" data-phase="0" class="phase-btn px-1.5 py-1.5 rounded-xl border text-[11px] font-bold text-center transition">
+                <div class="text-base leading-none">🌑</div>
+                <div class="mt-1 truncate">Không trăng</div>
+              </button>
+              <button type="button" onclick="jumpToPhase(1)" data-phase="1" class="phase-btn px-1.5 py-1.5 rounded-xl border text-[11px] font-bold text-center transition">
+                <div class="text-base leading-none">🌒</div>
+                <div class="mt-1 truncate">Lưỡi liềm</div>
+              </button>
+              <button type="button" onclick="jumpToPhase(2)" data-phase="2" class="phase-btn px-1.5 py-1.5 rounded-xl border text-[11px] font-bold text-center transition">
+                <div class="text-base leading-none">🌓</div>
+                <div class="mt-1 truncate">Bán nguyệt</div>
+              </button>
+              <button type="button" onclick="jumpToPhase(3)" data-phase="3" class="phase-btn px-1.5 py-1.5 rounded-xl border text-[11px] font-bold text-center transition">
+                <div class="text-base leading-none">🌔</div>
+                <div class="mt-1 truncate">Khuyết đầu</div>
+              </button>
+              <button type="button" onclick="jumpToPhase(4)" data-phase="4" class="phase-btn px-1.5 py-1.5 rounded-xl border text-[11px] font-bold text-center transition">
+                <div class="text-base leading-none">🌕</div>
+                <div class="mt-1 truncate">Trăng tròn</div>
+              </button>
+              <button type="button" onclick="jumpToPhase(5)" data-phase="5" class="phase-btn px-1.5 py-1.5 rounded-xl border text-[11px] font-bold text-center transition">
+                <div class="text-base leading-none">🌖</div>
+                <div class="mt-1 truncate">Khuyết cuối</div>
+              </button>
+              <button type="button" onclick="jumpToPhase(6)" data-phase="6" class="phase-btn px-1.5 py-1.5 rounded-xl border text-[11px] font-bold text-center transition">
+                <div class="text-base leading-none">🌗</div>
+                <div class="mt-1 truncate">Bán nguyệt</div>
+              </button>
+              <button type="button" onclick="jumpToPhase(7)" data-phase="7" class="phase-btn px-1.5 py-1.5 rounded-xl border text-[11px] font-bold text-center transition">
+                <div class="text-base leading-none">🌘</div>
+                <div class="mt-1 truncate">Lưỡi liềm</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CỘT PHẢI: GÓC NHÌN TỪ TRÁI ĐẤT & GIẢI THÍCH ĐỘNG (4/12 cột) -->
+        <div class="lg:col-span-4 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg p-5 flex flex-col justify-between gap-4">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <h2 class="text-base font-extrabold text-slate-900 dark:text-white">👁️ Nhìn từ Trái Đất (Việt Nam)</h2>
+              <span id="illumBadge" class="text-xs font-extrabold px-2.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300">Sáng 0%</span>
+            </div>
+
+            <!-- Canvas 2D vẽ chính xác hình dạng Mặt Trăng nhìn từ Trái Đất -->
+            <div class="rounded-2xl bg-slate-950 border border-slate-800 p-4 flex flex-col items-center justify-center relative overflow-hidden">
+              <canvas id="earthViewCanvas" width="220" height="220" class="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px]"></canvas>
+              <div id="earthViewCaption" class="mt-2 text-xs font-bold text-amber-300 text-center">🌑 Ngày Không Trăng (Trăng non)</div>
+              <div id="earthViewSub" class="text-[11px] text-slate-400 text-center mt-0.5">Mặt tối quay về Trái Đất</div>
+            </div>
+
+            <!-- Bảng thông tin vị trí trực quan -->
+            <div class="space-y-2.5 text-xs">
+              <div class="rounded-2xl p-3 bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200/80 dark:border-indigo-800/60">
+                <div class="font-extrabold text-indigo-800 dark:text-indigo-300">📍 Mặt Trăng đang ở đâu?</div>
+                <p id="infoLocation" class="mt-1 text-slate-700 dark:text-slate-300 leading-relaxed"></p>
+              </div>
+
+              <div class="rounded-2xl p-3 bg-amber-50 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-800/60">
+                <div class="font-extrabold text-amber-800 dark:text-amber-300">💡 Tại sao ta thấy hình dạng này?</div>
+                <p id="infoReason" class="mt-1 text-slate-700 dark:text-slate-300 leading-relaxed"></p>
+              </div>
+
+              <div class="rounded-2xl p-3 bg-slate-100 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700">
+                <div class="font-extrabold text-slate-800 dark:text-slate-200">📐 So với mặt phẳng hoàng đạo:</div>
+                <p id="infoEclipse" class="mt-1 text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gợi ý nhỏ -->
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 pt-3">
+            💡 <strong>Mẹo quan sát:</strong> Bấm góc <strong>📐 Nhìn ngang</strong> rồi đổi qua lại giữa <em>Tháng bình thường</em> và <em>Nhật thực / Nguyệt thực</em> để thấy rõ độ nghiêng 5°!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- BƯỚC 2: GIẢI ĐÁP 3 CÂU HỎI KHÓ HÌNH DUNG NHẤT             -->
+    <!-- ========================================================= -->
+    <section class="space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg md:text-xl font-extrabold text-slate-900 dark:text-white">💡 Giải ngố 3 điều khó hình dung nhất (Đọc trong 2 phút)</h2>
+        <button type="button" onclick="readQuickGuide()" class="px-3 py-1.5 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 text-xs font-bold hover:bg-emerald-200 transition">🔊 Nghe đọc phần này</button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Thẻ 1 -->
+        <article class="rounded-3xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
+          <div class="text-2xl">🌑</div>
+          <h3 class="font-extrabold text-base text-indigo-700 dark:text-indigo-300">1. Ngày Không Trăng, Mặt Trăng ở đâu?</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Mặt Trăng <strong>không hề biến mất</strong>! Vào ngày Mùng 1 Âm lịch, nó nằm <strong>ngay giữa Mặt Trời và Trái Đất</strong>.
+          </p>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Ánh nắng chiếu sáng nửa lưng quay về Mặt Trời, còn <strong>nửa mặt quay về Trái Đất lại tối om</strong> (lại ở cùng hướng Mặt Trời ban ngày) nên ta không nhìn thấy nó!
+          </p>
+        </article>
+
+        <!-- Thẻ 2 -->
+        <article class="rounded-3xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
+          <div class="text-2xl">📐</div>
+          <h3 class="font-extrabold text-base text-fuchsia-700 dark:text-fuchsia-300">2. Hai quỹ đạo có cùng 1 mặt phẳng không?</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            <strong>KHÔNG trùng nhau!</strong> Quỹ đạo Mặt Trăng quanh Trái Đất <strong>nghiêng khoảng 5,14°</strong> so với mặt phẳng quỹ đạo Trái Đất quanh Mặt Trời (mặt phẳng hoàng đạo).
+          </p>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Vì nghiêng nên hầu hết các tháng, vào ngày Mùng 1 hay Rằm 15, Mặt Trăng nằm <strong>lệch lên trên hoặc xuống dưới</strong> bóng tối → Không có Nhật thực, Nguyệt thực mỗi tháng!
+          </p>
+        </article>
+
+        <!-- Thẻ 3 -->
+        <article class="rounded-3xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
+          <div class="text-2xl">🌘🩸</div>
+          <h3 class="font-extrabold text-base text-amber-700 dark:text-amber-300">3. Phân biệt Nhật thực &amp; Nguyệt thực</h3>
+          <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1.5 leading-relaxed">
+            <li>• <strong>🌑 Nhật thực (Ban ngày · Mùng 1):</strong> Thứ tự <em>Mặt Trời → <strong>Mặt Trăng</strong> → Trái Đất</em>. Mặt Trăng chen vào giữa, che khuất Mặt Trời.</li>
+            <li>• <strong>🩸 Nguyệt thực (Ban đêm · Rằm 15):</strong> Thứ tự <em>Mặt Trời → <strong>Trái Đất</strong> → Mặt Trăng</em>. Trái Đất chen vào giữa, đổ bóng che khuất Mặt Trăng.</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- Bảng tóm tắt 1 nhìn cho 1 Tuần Trăng -->
+      <div class="rounded-3xl p-5 bg-gradient-to-br from-slate-100 to-indigo-50/70 dark:from-slate-900 dark:to-indigo-950/30 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-extrabold text-sm md:text-base text-slate-900 dark:text-white mb-2">🧭 Mẹo nhớ nhanh nửa đầu tháng &amp; nửa cuối tháng (Đứng ở Việt Nam)</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+          <div class="rounded-2xl p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <span class="font-extrabold text-indigo-600 dark:text-indigo-400">🌒🌓🌔 Nửa đầu tháng (Mùng 1 → Rằm 15):</span>
+            Mặt Trăng <strong>sáng bên PHẢI</strong> và lớn dần từng ngày cho đến khi Trăng tròn.
+          </div>
+          <div class="rounded-2xl p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <span class="font-extrabold text-amber-600 dark:text-amber-400">🌖🌗🌘 Nửa cuối tháng (Rằm 15 → Cuối tháng):</span>
+            Mặt Trăng <strong>sáng bên TRÁI</strong> và nhỏ dần từng ngày cho đến khi Không Trăng.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- BƯỚC 3: THỬ THÁCH NHANH 5 CÂU KIẾM 5 SAO                  -->
+    <!-- ========================================================= -->
+    <section class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm p-5 md:p-6 space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <h2 class="text-lg font-extrabold text-slate-900 dark:text-white">⭐ Thử thách 5 câu — Kiểm tra xem đã hình dung chuẩn chưa!</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Chọn đáp án đúng để gom đủ 5 ngôi sao ⭐</p>
+        </div>
+        <div id="quizScore" class="px-3 py-1.5 rounded-xl bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-sm font-extrabold">
+          0 / 5 ⭐
+        </div>
+      </div>
+
+      <div id="quizContainer" class="space-y-3"></div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-5 text-center text-xs text-slate-500 dark:text-slate-400">
+    Chuyên đề Thiên văn 3D · Khoa học tự nhiên 6 · Lớp 6A03
+  </footer>
+
+  <!-- Three.js r128 UMD & OrbitControls -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="assets/common.js"></script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* =====================================================================
+       * 1. DỮ LIỆU 8 PHA MẶT TRĂNG (CHUẨN SGK KHTN 6 BÀI 53)
+       * ===================================================================== */
+      var SYNODIC_MONTH = 29.53;
+      var PHASES = [
+        {
+          day: 0,
+          name: 'Không Trăng (Trăng non)',
+          emoji: '🌑',
+          lunar: 'Mùng 1',
+          location: 'Mặt Trăng nằm ngay GIỮA Mặt Trời và Trái Đất.',
+          reason: 'Nửa được Mặt Trời chiếu sáng quay về phía Mặt Trời, còn nửa quay về Trái Đất hoàn toàn tối om → ta không thấy Trăng!'
+        },
+        {
+          day: 3.7,
+          name: 'Trăng lưỡi liềm đầu tháng',
+          emoji: '🌒',
+          lunar: 'Mùng 4',
+          location: 'Mặt Trăng vừa rời khỏi khoảng giữa Mặt Trời – Trái Đất, đi lệch sang một bên khoảng 45°.',
+          reason: 'Từ Trái Đất ta bắt đầu nhìn hé thấy một mép sáng mỏng cong như lưỡi liềm ở bên PHẢI.'
+        },
+        {
+          day: 7.38,
+          name: 'Bán nguyệt đầu tháng',
+          emoji: '🌓',
+          lunar: 'Mùng 8',
+          location: 'Mặt Trăng tạo góc vuông 90° với đường nối Mặt Trời – Trái Đất.',
+          reason: 'Ta nhìn thấy đúng một nửa phần sáng (nửa bên PHẢI sáng, nửa bên trái tối) như hình chữ D.'
+        },
+        {
+          day: 11.1,
+          name: 'Trăng khuyết đầu tháng',
+          emoji: '🌔',
+          lunar: 'Ngày 12',
+          location: 'Mặt Trăng đã đi quá góc vuông, tiến gần về phía đối diện Mặt Trời (~135°).',
+          reason: 'Hơn 3/4 bề mặt hướng về Trái Đất đang được nắng chiếu sáng, chỉ còn khuyết nhẹ ở mép trái.'
+        },
+        {
+          day: 14.77,
+          name: 'Trăng tròn',
+          emoji: '🌕',
+          lunar: 'Rằm 15–16',
+          location: 'Trái Đất nằm GIỮA Mặt Trời và Mặt Trăng (Mặt Trăng ở phía đối diện Mặt Trời).',
+          reason: 'Toàn bộ nửa bề mặt Mặt Trăng đang được Mặt Trời chiếu sáng đều hướng thẳng về Trái Đất → Trăng sáng tròn vành vạnh!'
+        },
+        {
+          day: 18.45,
+          name: 'Trăng khuyết cuối tháng',
+          emoji: '🌖',
+          lunar: 'Ngày 19',
+          location: 'Mặt Trăng tiếp tục vòng ngược chiều kim đồng hồ, rời khỏi vị trí đối diện Mặt Trời (~225°).',
+          reason: 'Mép bên phải bắt đầu chìm vào bóng tối, phần sáng rộng lớn nằm ở bên TRÁI.'
+        },
+        {
+          day: 22.15,
+          name: 'Bán nguyệt cuối tháng',
+          emoji: '🌗',
+          lunar: 'Ngày 23',
+          location: 'Mặt Trăng lại tạo góc vuông 90° với đường nối Mặt Trời – Trái Đất (ở phía đối diện ngày Mùng 8).',
+          reason: 'Ta nhìn thấy đúng nửa bên TRÁI của Mặt Trăng được chiếu sáng.'
+        },
+        {
+          day: 25.85,
+          name: 'Trăng lưỡi liềm cuối tháng',
+          emoji: '🌘',
+          lunar: 'Ngày 27',
+          location: 'Mặt Trăng sắp quay trở lại khoảng giữa Mặt Trời và Trái Đất (~315°).',
+          reason: 'Chỉ còn một dải sáng rất mỏng hình chữ C ở mép bên TRÁI trước khi bước sang tháng mới (Không Trăng).'
+        }
+      ];
+
+      /* =====================================================================
+       * 2. TRẠNG THÁI MÔ PHỎNG
+       * ===================================================================== */
+      var state = {
+        day: 0,
+        playing: false,
+        speed: 1,
+        scenario: 'normal', // 'normal' | 'solar' | 'lunar'
+        camPreset: 'earth', // 'earth' | 'side' | 'top' | 'system'
+        showPlanes: true,
+        showShadows: true
+      };
+
+      // Hằng số hình học 3D
+      var R_SUN = 5.5;
+      var R_EARTH_ORBIT = 44;
+      var R_EARTH = 2.4;
+      var R_MOON_ORBIT = 9.5;
+      var R_MOON = 0.85;
+      var VISUAL_TILT = 15 * Math.PI / 180; // Thực tế 5.14°, phóng đại nhẹ lên 15° để dễ quan sát 3D
+
+      var scene, camera, renderer, controls;
+      var sunMesh, earthSystemGroup, earthMesh, earthClouds, umbraSpotMesh;
+      var moonOrbitTiltGroup, moonMesh, moonMaterial, moonShadowCone, earthShadowCone;
+      var eclipticPlaneMesh, moonPlaneDisc, sunRayGroup, moonTrailLine, nodeLineMesh;
+      var prevEarthPos = new THREE.Vector3();
+      var threeReady = false;
+
+      /* =====================================================================
+       * 3. TẠO TEXTURE PROCEDURAL BẰNG CANVAS (KHÔNG DÙNG BASE64)
+       * ===================================================================== */
+      function createEarthTexture() {
+        var c = document.createElement('canvas');
+        c.width = 512;
+        c.height = 256;
+        var ctx = c.getContext('2d');
+
+        // Đại dương
+        var grad = ctx.createLinearGradient(0, 0, 0, 256);
+        grad.addColorStop(0, '#1e40af');
+        grad.addColorStop(0.5, '#0284c7');
+        grad.addColorStop(1, '#1e3a8a');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, 512, 256);
+
+        // Chỏm băng 2 cực
+        ctx.fillStyle = '#e2e8f0';
+        ctx.fillRect(0, 0, 512, 16);
+        ctx.fillRect(0, 240, 512, 16);
+
+        // Các lục địa cách điệu
+        ctx.fillStyle = '#22c55e';
+        var blobs = [
+          [90, 90, 52, 34], [120, 155, 32, 42], // Châu Mỹ
+          [245, 82, 38, 22], [255, 138, 34, 44], // Âu - Phi
+          [345, 92, 68, 38], [395, 165, 32, 22], // Á - Úc
+          [365, 128, 16, 18] // Đông Nam Á
+        ];
+        blobs.forEach(function (b) {
+          ctx.beginPath();
+          ctx.ellipse(b[0], b[1], b[2], b[3], 0.25, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        // Vài dải mây nhẹ
+        ctx.fillStyle = 'rgba(255,255,255,0.28)';
+        for (var i = 0; i < 16; i++) {
+          ctx.beginPath();
+          ctx.ellipse((i * 37) % 512, 35 + ((i * 53) % 185), 26 + (i % 3) * 14, 5, 0, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        return new THREE.CanvasTexture(c);
+      }
+
+      function createMoonTexture() {
+        var c = document.createElement('canvas');
+        c.width = 512;
+        c.height = 256;
+        var ctx = c.getContext('2d');
+
+        ctx.fillStyle = '#cbd5e1';
+        ctx.fillRect(0, 0, 512, 256);
+
+        // Biển tối (Maria — hình chú Cuội)
+        ctx.fillStyle = '#94a3b8';
+        var maria = [
+          [160, 95, 42, 30], [220, 110, 36, 28], [260, 140, 48, 26],
+          [320, 98, 34, 24], [115, 135, 30, 22], [385, 130, 40, 28]
+        ];
+        maria.forEach(function (m) {
+          ctx.beginPath();
+          ctx.ellipse(m[0], m[1], m[2], m[3], 0.2, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        // Hố va chạm (Craters)
+        for (var i = 0; i < 55; i++) {
+          var x = (i * 97 + 23) % 512;
+          var y = 20 + ((i * 61 + 17) % 216);
+          var r = 3 + (i % 7) * 1.8;
+          ctx.beginPath();
+          ctx.arc(x, y, r, 0, Math.PI * 2);
+          ctx.fillStyle = i % 2 === 0 ? 'rgba(100,116,139,0.45)' : 'rgba(241,245,249,0.5)';
+          ctx.fill();
+        }
+        return new THREE.CanvasTexture(c);
+      }
+
+      function createSunGlowTexture() {
+        var c = document.createElement('canvas');
+        c.width = 256;
+        c.height = 256;
+        var ctx = c.getContext('2d');
+        var g = ctx.createRadialGradient(128, 128, 12, 128, 128, 128);
+        g.addColorStop(0, 'rgba(255, 251, 200, 1)');
+        g.addColorStop(0.25, 'rgba(253, 224, 71, 0.85)');
+        g.addColorStop(0.55, 'rgba(249, 115, 22, 0.35)');
+        g.addColorStop(1, 'rgba(249, 115, 22, 0)');
+        ctx.fillStyle = g;
+        ctx.fillRect(0, 0, 256, 256);
+        return new THREE.CanvasTexture(c);
+      }
+
+      /* =====================================================================
+       * 4. KHỞI TẠO KHÔNG GIAN 3D THREE.JS
+       * ===================================================================== */
+      function init3D() {
+        var wrap = document.getElementById('sceneWrap');
+        if (typeof THREE === 'undefined' || !wrap) {
+          var fb = document.getElementById('webglFallback');
+          if (fb) fb.classList.remove('hidden');
+          return;
+        }
+
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x030712);
+
+        camera = new THREE.PerspectiveCamera(45, wrap.clientWidth / wrap.clientHeight, 0.1, 600);
+
+        renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
+        renderer.setSize(wrap.clientWidth, wrap.clientHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        wrap.appendChild(renderer.domElement);
+
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.07;
+        controls.minDistance = 8;
+        controls.maxDistance = 160;
+
+        // Nền sao vũ trụ
+        var starGeo = new THREE.BufferGeometry();
+        var starCount = 900;
+        var starPos = new Float32Array(starCount * 3);
+        for (var i = 0; i < starCount; i++) {
+          var rad = 160 + Math.random() * 140;
+          var theta = Math.random() * Math.PI * 2;
+          var phi = Math.acos(2 * Math.random() - 1);
+          starPos[i * 3] = rad * Math.sin(phi) * Math.cos(theta);
+          starPos[i * 3 + 1] = rad * Math.cos(phi);
+          starPos[i * 3 + 2] = rad * Math.sin(phi) * Math.sin(theta);
+        }
+        starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+        var stars = new THREE.Points(
+          starGeo,
+          new THREE.PointsMaterial({ color: 0xe2e8f0, size: 0.75, transparent: true, opacity: 0.85 })
+        );
+        scene.add(stars);
+
+        // Ánh sáng: PointLight từ Mặt Trời + Ambient nhẹ để vẫn nhìn rõ phần tối trong không gian 3D
+        var sunLight = new THREE.PointLight(0xffffff, 2.3, 300, 0.15);
+        sunLight.position.set(0, 0, 0);
+        scene.add(sunLight);
+        scene.add(new THREE.AmbientLight(0x334155, 0.42));
+
+        // 1) MẶT TRỜI
+        sunMesh = new THREE.Mesh(
+          new THREE.SphereGeometry(R_SUN, 36, 36),
+          new THREE.MeshBasicMaterial({ color: 0xfde047 })
+        );
+        scene.add(sunMesh);
+
+        var glowSprite = new THREE.Sprite(
+          new THREE.SpriteMaterial({
+            map: createSunGlowTexture(),
+            transparent: true,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false
+          })
+        );
+        glowSprite.scale.set(R_SUN * 5.2, R_SUN * 5.2, 1);
+        sunMesh.add(glowSprite);
+
+        // 2) MẶT PHẲNG HOÀNG ĐẠO (ECLIPTIC PLANE) & QUỸ ĐẠO TRÁI ĐẤT
+        eclipticPlaneMesh = new THREE.Group();
+
+        // Đĩa hoàng đạo bán trong suốt
+        var ecDisc = new THREE.Mesh(
+          new THREE.RingGeometry(R_SUN + 3, R_EARTH_ORBIT + 14, 96),
+          new THREE.MeshBasicMaterial({
+            color: 0x0284c7,
+            transparent: true,
+            opacity: 0.08,
+            side: THREE.DoubleSide,
+            depthWrite: false
+          })
+        );
+        ecDisc.rotation.x = -Math.PI / 2;
+        eclipticPlaneMesh.add(ecDisc);
+
+        // Đường tròn quỹ đạo Trái Đất
+        var earthOrbitPts = [];
+        for (var j = 0; j <= 128; j++) {
+          var a = (j / 128) * Math.PI * 2;
+          earthOrbitPts.push(new THREE.Vector3(R_EARTH_ORBIT * Math.cos(a), 0, -R_EARTH_ORBIT * Math.sin(a)));
+        }
+        var earthOrbitLine = new THREE.Line(
+          new THREE.BufferGeometry().setFromPoints(earthOrbitPts),
+          new THREE.LineBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.75 })
+        );
+        eclipticPlaneMesh.add(earthOrbitLine);
+
+        // Đánh dấu cung 1 tháng của Trái Đất (từ 0° đến ~29.1°)
+        var monthArcPts = [];
+        for (var k = 0; k <= 32; k++) {
+          var am = (k / 32) * (SYNODIC_MONTH / 365.25) * Math.PI * 2;
+          monthArcPts.push(new THREE.Vector3(R_EARTH_ORBIT * Math.cos(am), 0.06, -R_EARTH_ORBIT * Math.sin(am)));
+        }
+        var monthArcLine = new THREE.Line(
+          new THREE.BufferGeometry().setFromPoints(monthArcPts),
+          new THREE.LineBasicMaterial({ color: 0xfacc15, linewidth: 2 })
+        );
+        eclipticPlaneMesh.add(monthArcLine);
+
+        scene.add(eclipticPlaneMesh);
+
+        // 3) HỆ TRÁI ĐẤT – MẶT TRĂNG
+        earthSystemGroup = new THREE.Group();
+        scene.add(earthSystemGroup);
+
+        // Quả địa cầu Trái Đất (nghiêng trục 23.4°)
+        earthMesh = new THREE.Mesh(
+          new THREE.SphereGeometry(R_EARTH, 36, 36),
+          new THREE.MeshStandardMaterial({
+            map: createEarthTexture(),
+            roughness: 0.72,
+            metalness: 0.05
+          })
+        );
+        earthMesh.rotation.z = 23.4 * Math.PI / 180;
+        earthSystemGroup.add(earthMesh);
+
+        // Vòng sáng khí quyển mỏng
+        earthClouds = new THREE.Mesh(
+          new THREE.SphereGeometry(R_EARTH * 1.04, 32, 32),
+          new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.14, side: THREE.BackSide })
+        );
+        earthSystemGroup.add(earthClouds);
+
+        // Đốm bóng tối Nhật thực trên bề mặt Trái Đất (ẩn mặc định)
+        umbraSpotMesh = new THREE.Mesh(
+          new THREE.CircleGeometry(0.65, 24),
+          new THREE.MeshBasicMaterial({ color: 0x020617, transparent: true, opacity: 0.88, side: THREE.DoubleSide })
+        );
+        umbraSpotMesh.visible = false;
+        earthSystemGroup.add(umbraSpotMesh);
+
+        // Đĩa tham chiếu mặt phẳng hoàng đạo ngay quanh Trái Đất (để so góc nghiêng cực dễ!)
+        var localEclipticRing = new THREE.Mesh(
+          new THREE.RingGeometry(R_MOON_ORBIT - 0.12, R_MOON_ORBIT + 0.12, 72),
+          new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.45, side: THREE.DoubleSide })
+        );
+        localEclipticRing.rotation.x = -Math.PI / 2;
+        earthSystemGroup.add(localEclipticRing);
+        // Gắn chung biến ẩn hiện
+        eclipticPlaneMesh.userData.localRing = localEclipticRing;
+
+        // Nón bóng tối của Trái Đất (hướng ra xa Mặt Trời)
+        var earthConeLen = R_MOON_ORBIT + 5.5;
+        var earthConeGeo = new THREE.CylinderGeometry(R_EARTH * 0.45, R_EARTH * 0.98, earthConeLen, 32, 1, true);
+        earthConeGeo.translate(0, earthConeLen / 2, 0);
+        earthConeGeo.rotateZ(-Math.PI / 2); // hướng dọc +X
+        earthShadowCone = new THREE.Mesh(
+          earthConeGeo,
+          new THREE.MeshBasicMaterial({
+            color: 0x0f172a,
+            transparent: true,
+            opacity: 0.55,
+            side: THREE.DoubleSide,
+            depthWrite: false
+          })
+        );
+        earthSystemGroup.add(earthShadowCone);
+
+        // Nhóm tia sáng Mặt Trời chiếu tới Trái Đất
+        sunRayGroup = new THREE.Group();
+        var rayMat = new THREE.LineBasicMaterial({ color: 0xfde047, transparent: true, opacity: 0.35 });
+        [-2.2, 0, 2.2].forEach(function (offsetZ) {
+          var pts = [new THREE.Vector3(-18, 0, offsetZ), new THREE.Vector3(-R_EARTH - 0.4, 0, offsetZ)];
+          sunRayGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), rayMat));
+        });
+        earthSystemGroup.add(sunRayGroup);
+
+        // 4) NHÓM QUỸ ĐẠO NGHIÊNG CỦA MẶT TRĂNG
+        moonOrbitTiltGroup = new THREE.Group();
+        earthSystemGroup.add(moonOrbitTiltGroup);
+
+        // Vòng tròn quỹ đạo Mặt Trăng màu tím hồng
+        var moonOrbitPts = [];
+        for (var m = 0; m <= 96; m++) {
+          var am2 = (m / 96) * Math.PI * 2;
+          moonOrbitPts.push(new THREE.Vector3(R_MOON_ORBIT * Math.cos(am2), 0, -R_MOON_ORBIT * Math.sin(am2)));
+        }
+        var moonOrbitLine = new THREE.Line(
+          new THREE.BufferGeometry().setFromPoints(moonOrbitPts),
+          new THREE.LineBasicMaterial({ color: 0xe879f9, transparent: true, opacity: 0.9 })
+        );
+        moonOrbitTiltGroup.add(moonOrbitLine);
+
+        // Đĩa mờ mặt phẳng quỹ đạo Mặt Trăng
+        moonPlaneDisc = new THREE.Mesh(
+          new THREE.RingGeometry(R_EARTH + 0.8, R_MOON_ORBIT, 64),
+          new THREE.MeshBasicMaterial({
+            color: 0xd946ef,
+            transparent: true,
+            opacity: 0.12,
+            side: THREE.DoubleSide,
+            depthWrite: false
+          })
+        );
+        moonPlaneDisc.rotation.x = -Math.PI / 2;
+        moonOrbitTiltGroup.add(moonPlaneDisc);
+
+        // Đường nối 2 điểm nút (Line of Nodes — giao tuyến 2 mặt phẳng)
+        var nodeGeo = new THREE.BufferGeometry().setFromPoints([
+          new THREE.Vector3(-R_MOON_ORBIT - 1, 0, 0),
+          new THREE.Vector3(R_MOON_ORBIT + 1, 0, 0)
+        ]);
+        nodeLineMesh = new THREE.Line(
+          nodeGeo,
+          new THREE.LineBasicMaterial({ color: 0x2dd4bf, transparent: true, opacity: 0.5 })
+        );
+        moonOrbitTiltGroup.add(nodeLineMesh);
+
+        // MẶT TRĂNG
+        moonMaterial = new THREE.MeshStandardMaterial({
+          map: createMoonTexture(),
+          roughness: 0.92,
+          metalness: 0.02
+        });
+        moonMesh = new THREE.Mesh(new THREE.SphereGeometry(R_MOON, 32, 32), moonMaterial);
+        earthSystemGroup.add(moonMesh);
+
+        // Nón bóng tối của Mặt Trăng
+        var moonConeLen = R_MOON_ORBIT + 1.2;
+        var moonConeGeo = new THREE.CylinderGeometry(0.18, R_MOON * 0.95, moonConeLen, 24, 1, true);
+        moonConeGeo.translate(0, moonConeLen / 2, 0);
+        moonConeGeo.rotateZ(-Math.PI / 2);
+        moonShadowCone = new THREE.Mesh(
+          moonConeGeo,
+          new THREE.MeshBasicMaterial({
+            color: 0x020617,
+            transparent: true,
+            opacity: 0.62,
+            side: THREE.DoubleSide,
+            depthWrite: false
+          })
+        );
+        earthSystemGroup.add(moonShadowCone);
+
+        threeReady = true;
+        updateSimulation(true);
+        setCameraPreset('earth');
+
+        window.addEventListener('resize', onResize);
+        animate();
+      }
+
+      function onResize() {
+        var wrap = document.getElementById('sceneWrap');
+        if (!wrap || !renderer || !camera) return;
+        camera.aspect = wrap.clientWidth / wrap.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(wrap.clientWidth, wrap.clientHeight);
+      }
+
+      /* =====================================================================
+       * 5. CẬP NHẬT VỊ TRÍ VẬT LÍ & HIỆU ỨNG NHẬT/NGUYỆT THỰC
+       * ===================================================================== */
+      function getAnglesForDay(day) {
+        var earthAngle = (day / 365.25) * Math.PI * 2; // Trái Đất đi ~29.1° trong 1 tháng
+        var phaseAngle = (day / SYNODIC_MONTH) * Math.PI * 2; // 0 = Không trăng, PI = Trăng tròn
+        var moonAngleWorld = earthAngle + Math.PI + phaseAngle; // Ngược chiều kim đồng hồ từ Bắc Cực
+        return { earthAngle: earthAngle, phaseAngle: phaseAngle, moonAngleWorld: moonAngleWorld };
+      }
+
+      function getNodeAngleForScenario() {
+        // Giao tuyến mặt phẳng (trục X của moonOrbitTiltGroup) là nơi y_moon = 0
+        // Khi moonAngleWorld == nodeAngle hoặc nodeAngle + PI -> Mặt Trăng cắt qua mặt phẳng hoàng đạo!
+        if (state.scenario === 'solar') {
+          // Cắt mặt phẳng đúng lúc day = 0 (earthAngle = 0, moonAngleWorld = PI)
+          return 0;
+        }
+        if (state.scenario === 'lunar') {
+          // Cắt mặt phẳng đúng lúc day = 14.77 (earthAngle ≈ 0.254 rad, moonAngleWorld ≈ 0.254 + 2PI)
+          return (14.77 / 365.25) * Math.PI * 2;
+        }
+        // Tháng bình thường: đặt điểm nút lệch 90° so với đường Mặt Trời – Trái Đất
+        // -> Lúc Không Trăng & Trăng tròn, Mặt Trăng ở ĐỈNH CAO NHẤT / THẤP NHẤT của quỹ đạo nghiêng!
+        return Math.PI / 2;
+      }
+
+      function updateSimulation(skipCameraDelta) {
+        var ang = getAnglesForDay(state.day);
+        var eX = R_EARTH_ORBIT * Math.cos(ang.earthAngle);
+        var eZ = -R_EARTH_ORBIT * Math.sin(ang.earthAngle);
+
+        var nodeAngle = getNodeAngleForScenario();
+        // Góc của Mặt Trăng trong hệ tọa độ của mặt phẳng nghiêng
+        var localAngle = ang.moonAngleWorld - nodeAngle;
+        var mLocal = new THREE.Vector3(
+          R_MOON_ORBIT * Math.cos(localAngle),
+          0,
+          -R_MOON_ORBIT * Math.sin(localAngle)
+        );
+        // Nghiêng quanh trục X cục bộ (đường nối 2 điểm nút) rồi xoay quanh Y theo nodeAngle
+        mLocal.applyAxisAngle(new THREE.Vector3(1, 0, 0), VISUAL_TILT);
+        mLocal.applyAxisAngle(new THREE.Vector3(0, 1, 0), nodeAngle);
+
+        // Kiểm tra điều kiện Nhật thực / Nguyệt thực
+        var distToNew = Math.min(state.day, SYNODIC_MONTH - state.day);
+        var distToFull = Math.abs(state.day - SYNODIC_MONTH / 2);
+        var isSolarEclipse = (state.scenario === 'solar' && distToNew < 0.55);
+        var isLunarEclipse = (state.scenario === 'lunar' && distToFull < 0.75);
+
+        if (threeReady) {
+          var newEarthPos = new THREE.Vector3(eX, 0, eZ);
+          if (!skipCameraDelta && state.camPreset !== 'system') {
+            var delta = new THREE.Vector3().subVectors(newEarthPos, prevEarthPos);
+            camera.position.add(delta);
+            controls.target.add(delta);
+          }
+          prevEarthPos.copy(newEarthPos);
+
+          earthSystemGroup.position.copy(newEarthPos);
+          // Trái Đất tự quay quanh trục (1 vòng mỗi ngày)
+          earthMesh.rotation.y = state.day * Math.PI * 2 * 0.25;
+
+          // Căn chỉnh mặt phẳng quỹ đạo Mặt Trăng
+          moonOrbitTiltGroup.rotation.set(0, 0, 0);
+          moonOrbitTiltGroup.rotation.order = 'YXZ';
+          moonOrbitTiltGroup.rotation.y = nodeAngle;
+          moonOrbitTiltGroup.rotation.x = VISUAL_TILT;
+
+          // Đặt Mặt Trăng
+          moonMesh.position.copy(mLocal);
+          // Mặt Trăng luôn quay 1 mặt về Trái Đất (khóa thủy triều)
+          moonMesh.lookAt(newEarthPos);
+
+          // Căn chỉnh bóng tối Trái Đất & Tia sáng Mặt Trời luôn thẳng hàng với đường Mặt Trời -> Trái Đất
+          earthShadowCone.rotation.y = ang.earthAngle;
+          sunRayGroup.rotation.y = ang.earthAngle;
+
+          // Căn chỉnh bóng tối Mặt Trăng luôn hướng ngược tia sáng Mặt Trời
+          moonShadowCone.position.copy(mLocal);
+          moonShadowCone.rotation.y = ang.earthAngle;
+
+          // Hiệu ứng Nhật thực: Đốm bóng tối hiện lên trên bề mặt Trái Đất
+          if (isSolarEclipse) {
+            var intensityS = Math.max(0, 1 - distToNew / 0.55);
+            umbraSpotMesh.visible = true;
+            var dirToSun = new THREE.Vector3(-Math.cos(ang.earthAngle), 0, Math.sin(ang.earthAngle));
+            umbraSpotMesh.position.copy(dirToSun.multiplyScalar(R_EARTH + 0.06));
+            umbraSpotMesh.lookAt(0, 0, 0);
+            umbraSpotMesh.scale.setScalar(0.5 + 0.7 * intensityS);
+          } else {
+            umbraSpotMesh.visible = false;
+          }
+
+          // Hiệu ứng Nguyệt thực: Mặt Trăng chuyển màu đỏ đồng (Trăng máu) khi chui vào bóng Trái Đất
+          if (isLunarEclipse) {
+            var intensityL = Math.max(0, 1 - distToFull / 0.75);
+            moonMaterial.color.setRGB(1, 1 - 0.65 * intensityL, 1 - 0.75 * intensityL);
+            moonMaterial.emissive.setRGB(0.45 * intensityL, 0.08 * intensityL, 0.03 * intensityL);
+          } else {
+            moonMaterial.color.setRGB(1, 1, 1);
+            moonMaterial.emissive.setRGB(0, 0, 0);
+          }
+        }
+
+        updateEarthView2D(ang.phaseAngle, isSolarEclipse, isLunarEclipse, distToNew, distToFull);
+        updateInfoPanels(ang.phaseAngle, mLocal.y, isSolarEclipse, isLunarEclipse);
+      }
+
+      /* =====================================================================
+       * 6. VẼ KHUNG 2D "👁️ NHÌN TỪ TRÁI ĐẤT" (ĐỒNG BỘ 100% THỜI GIAN THỰC)
+       * ===================================================================== */
+      function updateEarthView2D(phaseAngle, isSolarEclipse, isLunarEclipse, distToNew, distToFull) {
+        var canvas = document.getElementById('earthViewCanvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var w = canvas.width;
+        var h = canvas.height;
+        var cx = w / 2;
+        var cy = h / 2;
+        var r = 74;
+
+        ctx.clearRect(0, 0, w, h);
+
+        // Nền trời đêm đầy sao nhỏ
+        ctx.fillStyle = '#020617';
+        ctx.fillRect(0, 0, w, h);
+        ctx.fillStyle = 'rgba(226, 232, 240, 0.55)';
+        var starCoords = [[22, 30], [185, 42], [40, 175], [192, 165], [160, 20], [28, 105], [198, 98], [75, 198]];
+        starCoords.forEach(function (s) {
+          ctx.beginPath();
+          ctx.arc(s[0], s[1], 1.2, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        // Trường hợp 1: NHẬT THỰC TOÀN PHẦN (Nhìn lên thấy Mặt Trăng đen che Mặt Trời!)
+        if (isSolarEclipse) {
+          var tS = Math.max(0, 1 - distToNew / 0.55);
+          // Vành nhật hoa rực sáng
+          var corona = ctx.createRadialGradient(cx, cy, r * 0.85, cx, cy, r * 1.48);
+          corona.addColorStop(0, 'rgba(255, 250, 210, 0.95)');
+          corona.addColorStop(0.35, 'rgba(251, 191, 36, 0.55)');
+          corona.addColorStop(1, 'rgba(251, 191, 36, 0)');
+          ctx.fillStyle = corona;
+          ctx.beginPath();
+          ctx.arc(cx, cy, r * 1.48, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Đĩa Mặt Trời
+          ctx.fillStyle = '#fef08a';
+          ctx.beginPath();
+          ctx.arc(cx, cy, r * 0.92, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Đĩa Mặt Trăng tối trượt ngang che kín Mặt Trời
+          var offsetX = (state.day > 15 ? state.day - SYNODIC_MONTH : state.day) * 70;
+          ctx.fillStyle = '#020617';
+          ctx.beginPath();
+          ctx.arc(cx - offsetX, cy, r * 0.91, 0, Math.PI * 2);
+          ctx.fill();
+          return;
+        }
+
+        // Trường hợp bình thường & Nguyệt thực: Vẽ chính xác pha Mặt Trăng (Bắc bán cầu)
+        // Bước 1: Đĩa nền tối của Mặt Trăng
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        ctx.fillStyle = '#1e293b';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(148, 163, 184, 0.35)';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        // Bước 2: Vẽ phần được chiếu sáng bằng hình chiếu bán cầu chuẩn thiên văn
+        // phaseAngle: 0 (New) -> PI/2 (First Q, sáng phải) -> PI (Full) -> 3PI/2 (Last Q, sáng trái)
+        var p = ((phaseAngle % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2);
+        var litColor = '#f8fafc';
+        if (isLunarEclipse) {
+          var tL = Math.max(0, 1 - distToFull / 0.75);
+          var gCh = Math.round(250 - 175 * tL);
+          var bCh = Math.round(252 - 205 * tL);
+          litColor = 'rgb(225, ' + gCh + ', ' + bCh + ')';
+        }
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(cx, cy, r - 0.5, 0, Math.PI * 2);
+        ctx.clip();
+
+        var cosP = Math.cos(p); // 1 at New, 0 at Quarter, -1 at Full
+        var rx = Math.abs(cosP) * r;
+
+        if (p <= Math.PI) {
+          // Nửa đầu tháng (0 -> PI): Sáng bên PHẢI
+          // Nửa phải hình tròn
+          ctx.fillStyle = litColor;
+          ctx.beginPath();
+          ctx.arc(cx, cy, r, -Math.PI / 2, Math.PI / 2, false);
+          ctx.fill();
+
+          // Bù hoặc cắt bằng nửa elip ở giữa
+          ctx.fillStyle = cosP > 0 ? '#1e293b' : litColor;
+          ctx.beginPath();
+          ctx.ellipse(cx, cy, rx, r, 0, -Math.PI / 2, Math.PI / 2, cosP < 0);
+          ctx.fill();
+        } else {
+          // Nửa cuối tháng (PI -> 2PI): Sáng bên TRÁI
+          ctx.fillStyle = litColor;
+          ctx.beginPath();
+          ctx.arc(cx, cy, r, Math.PI / 2, -Math.PI / 2, false);
+          ctx.fill();
+
+          ctx.fillStyle = cosP > 0 ? '#1e293b' : litColor;
+          ctx.beginPath();
+          ctx.ellipse(cx, cy, rx, r, 0, Math.PI / 2, -Math.PI / 2, cosP < 0);
+          ctx.fill();
+        }
+
+        // Vẽ nhẹ họa tiết bề mặt (chú Cuội / biển tối) phủ lên phần sáng
+        ctx.fillStyle = isLunarEclipse ? 'rgba(69, 10, 10, 0.25)' : 'rgba(100, 116, 139, 0.22)';
+        var spots = [[-18, -22, 18, 14], [12, -14, 16, 12], [22, 14, 20, 12], [-22, 18, 14, 12], [0, 26, 15, 10]];
+        spots.forEach(function (sp) {
+          ctx.beginPath();
+          ctx.ellipse(cx + sp[0], cy + sp[1], sp[2], sp[3], 0.3, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        ctx.restore();
+      }
+
+      /* =====================================================================
+       * 7. CẬP NHẬT CHỮ GIẢI THÍCH & NÚT BẤM
+       * ===================================================================== */
+      function getNearestPhaseIndex(day) {
+        var idx = Math.round((day / SYNODIC_MONTH) * 8) % 8;
+        return idx;
+      }
+
+      function updateInfoPanels(phaseAngle, moonY, isSolarEclipse, isLunarEclipse) {
+        var pIdx = getNearestPhaseIndex(state.day);
+        var info = PHASES[pIdx];
+        var illum = Math.round(((1 - Math.cos(phaseAngle)) / 2) * 100);
+
+        document.getElementById('dayLabel').textContent = state.day.toFixed(1);
+        var lunarDay = Math.floor(state.day) + 1;
+        if (lunarDay > 30) lunarDay = 1;
+        document.getElementById('lunarDateLabel').textContent = lunarDay <= 10 ? ('Mùng ' + lunarDay) : ('Ngày ' + lunarDay);
+
+        document.getElementById('illumBadge').textContent = isSolarEclipse
+          ? '🌑 Đang Nhật thực!'
+          : (isLunarEclipse ? '🩸 Đang Nguyệt thực!' : 'Sáng ' + illum + '%');
+
+        var cap = document.getElementById('earthViewCaption');
+        var sub = document.getElementById('earthViewSub');
+        var badge = document.getElementById('eclipseBadge');
+
+        if (isSolarEclipse) {
+          cap.textContent = '🌑 NHẬT THỰC TOÀN PHẦN!';
+          sub.textContent = 'Mặt Trăng đen che kín Mặt Trời giữa ban ngày';
+          badge.textContent = '🌑 NHẬT THỰC: Bóng tối Mặt Trăng đang chiếu thẳng lên Trái Đất!';
+          badge.className = 'pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 z-10 px-4 py-1.5 rounded-full text-xs font-extrabold shadow-lg backdrop-blur border bg-amber-500/90 text-slate-950 border-amber-300';
+        } else if (isLunarEclipse) {
+          cap.textContent = '🩸 NGUYỆT THỰC (TRĂNG MÁU)!';
+          sub.textContent = 'Mặt Trăng chui vào bóng tối Trái Đất vào đêm Rằm';
+          badge.textContent = '🩸 NGUYỆT THỰC: Mặt Trăng đang chui lọt vào nón bóng tối của Trái Đất!';
+          badge.className = 'pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 z-10 px-4 py-1.5 rounded-full text-xs font-extrabold shadow-lg backdrop-blur border bg-rose-600/90 text-white border-rose-300';
+        } else {
+          cap.textContent = info.emoji + ' ' + info.name;
+          sub.textContent = 'Quanh ngày ' + info.lunar + ' Âm lịch';
+          badge.className = 'hidden';
+        }
+
+        document.getElementById('infoLocation').textContent = info.location;
+        document.getElementById('infoReason').textContent = isSolarEclipse
+          ? 'Đúng ngày Không Trăng lại đi ngang qua mặt phẳng hoàng đạo → Mặt Trăng chắn trọn tia sáng Mặt Trời chiếu xuống một vùng trên Trái Đất!'
+          : (isLunarEclipse
+            ? 'Đúng đêm Trăng tròn lại đi ngang qua mặt phẳng hoàng đạo → Trái Đất chắn ánh nắng, Mặt Trăng chìm vào bóng tối và ánh lên màu đỏ đồng!'
+            : info.reason);
+
+        var elEl = document.getElementById('infoEclipse');
+        if (Math.abs(moonY) < 0.35) {
+          elEl.textContent = 'Mặt Trăng đang cắt ngang mặt phẳng hoàng đạo (tại Điểm nút). Nếu đúng ngày Mùng 1 sẽ có Nhật thực, đúng Rằm 15 sẽ có Nguyệt thực!';
+        } else if (moonY > 0) {
+          elEl.textContent = 'Mặt Trăng đang nằm CAO HƠN mặt phẳng hoàng đạo (do quỹ đạo nghiêng ~5°) → Bóng tối trượt qua phía trên, không gây Nhật/Nguyệt thực.';
+        } else {
+          elEl.textContent = 'Mặt Trăng đang nằm THẤP HƠN mặt phẳng hoàng đạo (do quỹ đạo nghiêng ~5°) → Bóng tối trượt qua phía dưới, không gây Nhật/Nguyệt thực.';
+        }
+
+        // Highlight nút pha đang chọn
+        document.querySelectorAll('.phase-btn').forEach(function (btn) {
+          var isAct = parseInt(btn.getAttribute('data-phase'), 10) === pIdx;
+          btn.className = isAct
+            ? 'phase-btn px-1.5 py-1.5 rounded-xl border text-[11px] font-bold text-center transition bg-indigo-600 border-indigo-400 text-white shadow'
+            : 'phase-btn px-1.5 py-1.5 rounded-xl border text-[11px] font-bold text-center transition bg-slate-800/80 border-slate-700 text-slate-300 hover:bg-slate-700';
+        });
+      }
+
+      /* =====================================================================
+       * 8. ĐIỀU KHIỂN KỊCH BẢN, CAMERA, TIMELINE
+       * ===================================================================== */
+      window.setScenario = function (mode) {
+        state.scenario = mode;
+        ['normal', 'solar', 'lunar'].forEach(function (k) {
+          var btn = document.getElementById('mode-' + k);
+          if (!btn) return;
+          var active = (k === mode);
+          btn.className = active
+            ? 'scenario-btn rounded-2xl p-3.5 text-left border-2 transition border-indigo-500 bg-indigo-50 dark:bg-indigo-950/60 text-slate-900 dark:text-white shadow-sm'
+            : 'scenario-btn rounded-2xl p-3.5 text-left border-2 transition border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:border-indigo-300';
+        });
+
+        // Tự động đưa tới ngày tiêu biểu của kịch bản để thấy ngay lập tức
+        if (mode === 'solar') {
+          state.day = 0;
+          state.playing = false;
+        } else if (mode === 'lunar') {
+          state.day = 14.77;
+          state.playing = false;
+        }
+        syncPlayUI();
+        document.getElementById('daySlider').value = state.day;
+        updateSimulation(false);
+      };
+
+      window.setCameraPreset = function (preset) {
+        state.camPreset = preset;
+        ['earth', 'side', 'top', 'system'].forEach(function (k) {
+          var btn = document.getElementById('cam-' + k);
+          if (!btn) return;
+          var active = (k === preset);
+          btn.className = active
+            ? 'cam-btn px-2.5 py-1 rounded-lg font-bold transition bg-indigo-600 text-white'
+            : 'cam-btn px-2.5 py-1 rounded-lg font-bold transition bg-slate-800 text-slate-300 hover:bg-slate-700';
+        });
+
+        if (!threeReady) return;
+        var ang = getAnglesForDay(state.day);
+        var ePos = earthSystemGroup.position;
+        var radialOut = new THREE.Vector3(Math.cos(ang.earthAngle), 0, -Math.sin(ang.earthAngle));
+        var tangent = new THREE.Vector3(Math.sin(ang.earthAngle), 0, Math.cos(ang.earthAngle));
+
+        if (preset === 'earth') {
+          controls.target.copy(ePos);
+          camera.position.copy(ePos)
+            .addScaledVector(radialOut, 15)
+            .addScaledVector(tangent, 18)
+            .add(new THREE.Vector3(0, 12, 0));
+        } else if (preset === 'side') {
+          // Nhìn đúng ngang mặt phẳng hoàng đạo -> thấy độ nghiêng 5° cực rõ!
+          controls.target.copy(ePos);
+          camera.position.copy(ePos)
+            .addScaledVector(tangent, 24)
+            .add(new THREE.Vector3(0, 1.4, 0));
+        } else if (preset === 'top') {
+          // Nhìn thẳng từ Bắc Cực xuống -> giống hệt sơ đồ Hình 53.2a SGK!
+          controls.target.copy(ePos);
+          camera.position.copy(ePos).add(new THREE.Vector3(0, 29, 0.5));
+        } else if (preset === 'system') {
+          // Toàn cảnh Mặt Trời & Trái Đất chuyển động trong 1 tháng
+          controls.target.set(R_EARTH_ORBIT * 0.45, 0, -R_EARTH_ORBIT * 0.12);
+          camera.position.set(R_EARTH_ORBIT * 0.65, 58, 56);
+        }
+        controls.update();
+      };
+
+      window.updateVisibility = function () {
+        state.showPlanes = document.getElementById('togglePlanes').checked;
+        state.showShadows = document.getElementById('toggleShadows').checked;
+        if (!threeReady) return;
+        eclipticPlaneMesh.visible = state.showPlanes;
+        if (eclipticPlaneMesh.userData.localRing) {
+          eclipticPlaneMesh.userData.localRing.visible = state.showPlanes;
+        }
+        moonPlaneDisc.visible = state.showPlanes;
+        nodeLineMesh.visible = state.showPlanes;
+        earthShadowCone.visible = state.showShadows;
+        moonShadowCone.visible = state.showShadows;
+      };
+
+      window.onSliderInput = function (val) {
+        state.day = parseFloat(val);
+        updateSimulation(false);
+      };
+
+      window.jumpToPhase = function (idx) {
+        state.day = PHASES[idx].day;
+        document.getElementById('daySlider').value = state.day;
+        updateSimulation(false);
+      };
+
+      function syncPlayUI() {
+        var btn = document.getElementById('playBtn');
+        if (!btn) return;
+        btn.textContent = state.playing ? '⏸ Tạm dừng' : '▶ Chạy 1 tháng';
+        btn.className = state.playing
+          ? 'px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold transition shadow'
+          : 'px-3.5 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-extrabold transition shadow';
+      }
+
+      window.togglePlay = function () {
+        state.playing = !state.playing;
+        syncPlayUI();
+      };
+
+      window.setSpeed = function (spd) {
+        state.speed = spd;
+        document.querySelectorAll('.spd-btn').forEach(function (btn) {
+          var active = Math.abs(parseFloat(btn.getAttribute('data-spd')) - spd) < 0.01;
+          btn.className = active
+            ? 'spd-btn px-2 py-0.5 rounded-lg font-bold bg-indigo-600 text-white'
+            : 'spd-btn px-2 py-0.5 rounded-lg font-bold text-slate-300 hover:text-white';
+        });
+      };
+
+      /* =====================================================================
+       * 9. VÒNG LẶP ANIMATION 60 FPS
+       * ===================================================================== */
+      var lastTime = performance.now();
+      function animate(now) {
+        requestAnimationFrame(animate);
+        var dt = Math.min((now - lastTime) / 1000, 0.05);
+        lastTime = now || performance.now();
+
+        if (state.playing) {
+          state.day += dt * 1.8 * state.speed;
+          if (state.day >= SYNODIC_MONTH) state.day -= SYNODIC_MONTH;
+          document.getElementById('daySlider').value = state.day;
+          updateSimulation(false);
+        }
+
+        if (threeReady) {
+          controls.update();
+          renderer.render(scene, camera);
+        }
+      }
+
+      /* =====================================================================
+       * 10. ĐỌC GIỌNG NÓI TTS & THỬ THÁCH 5 CÂU KIẾM 5 SAO
+       * ===================================================================== */
+      window.readQuickGuide = function () {
+        var text =
+          'Chuyên đề Mặt Trời, Trái Đất và Mặt Trăng trong một tuần trăng 29 phẩy 5 ngày. ' +
+          'Thứ nhất: Ngày Không Trăng hay Mùng 1 âm lịch, Mặt Trăng không hề biến mất mà nằm ngay giữa Mặt Trời và Trái Đất. Nửa tối của nó quay về Trái Đất nên ta không nhìn thấy. ' +
+          'Thứ hai: Quỹ đạo Mặt Trăng quanh Trái Đất không trùng mặt phẳng với quỹ đạo Trái Đất quanh Mặt Trời, mà nghiêng khoảng 5 phẩy 14 độ. Vì thế bóng tối thường bay sượt qua trên hoặc dưới, nên không phải tháng nào cũng có Nhật thực hay Nguyệt thực. ' +
+          'Thứ ba: Nhật thực xảy ra vào ban ngày Mùng 1 khi Mặt Trăng chắn giữa Mặt Trời và Trái Đất. Còn Nguyệt thực xảy ra vào đêm Rằm 15 khi Trái Đất chắn giữa Mặt Trời và Mặt Trăng, khiến Mặt Trăng chui vào bóng tối Trái Đất và có màu đỏ đồng.';
+        if (window.startTTS) {
+          window.startTTS('chuyen-de-mat-trang-3d', 'Giải thích nhanh: 8 Pha Trăng, Nhật thực & Nguyệt thực', text);
+        }
+      };
+
+      var QUIZ_DATA = [
+        {
+          q: 'Câu 1. Vào ngày Không Trăng (Mùng 1 Âm lịch), Mặt Trăng đang nằm ở vị trí nào?',
+          opts: [
+            'Nằm ở phía sau Trái Đất, rất xa Mặt Trời.',
+            'Nằm ngay giữa Mặt Trời và Trái Đất, nửa tối hướng về Trái Đất.',
+            'Mặt Trăng tạm thời ngừng phản chiếu ánh sáng.'
+          ],
+          ans: 1,
+          exp: 'Chính xác! Mặt Trăng vẫn ở ngay giữa Mặt Trời và Trái Đất, nhưng mặt sáng quay về Mặt Trời còn mặt tối quay về phía ta.'
+        },
+        {
+          q: 'Câu 2. Vì sao không phải tháng nào vào ngày Mùng 1 cũng có Nhật thực và Rằm 15 cũng có Nguyệt thực?',
+          opts: [
+            'Vì quỹ đạo Mặt Trăng nghiêng khoảng 5,14° so với mặt phẳng quỹ đạo Trái Đất quanh Mặt Trời.',
+            'Vì Mặt Trăng quay quá nhanh nên bóng không kịp chiếu tới.',
+            'Vì Mặt Trời thỉnh thoảng tắt ánh sáng vào ngày Rằm.'
+          ],
+          ans: 0,
+          exp: 'Chuẩn luôn! Do độ nghiêng ~5,14°, phần lớn các tháng bóng của Mặt Trăng hoặc Trái Đất bị lệch lên trên hoặc xuống dưới.'
+        },
+        {
+          q: 'Câu 3. Khi xảy ra hiện tượng NHẬT THỰC, thứ tự thẳng hàng của 3 thiên thể là gì?',
+          opts: [
+            'Mặt Trời → Trái Đất → Mặt Trăng',
+            'Mặt Trời → Mặt Trăng → Trái Đất',
+            'Trái Đất → Mặt Trời → Mặt Trăng'
+          ],
+          ans: 1,
+          exp: 'Đúng rồi! Nhật thực là Mặt Trăng chen vào giữa (vào ban ngày Mùng 1) để che khuất Mặt Trời.'
+        },
+        {
+          q: 'Câu 4. Hiện tượng NGUYỆT THỰC (Trăng máu) chỉ có thể xảy ra vào pha nào của Mặt Trăng?',
+          opts: [
+            'Ngày Không Trăng (Mùng 1 Âm lịch)',
+            'Ngày Bán nguyệt (Mùng 8 Âm lịch)',
+            'Ngày Trăng tròn (Rằm 15–16 Âm lịch)'
+          ],
+          ans: 2,
+          exp: 'Xuất sắc! Đêm Trăng tròn, Trái Đất nằm giữa Mặt Trời và Mặt Trăng nên có thể đổ bóng che khuất Mặt Trăng.'
+        },
+        {
+          q: 'Câu 5. Ở Việt Nam (Bắc bán cầu), vào nửa đầu tháng (từ Mùng 1 đến Rằm 15), phần sáng của Trăng khuyết nằm ở bên nào?',
+          opts: [
+            'Sáng ở bên PHẢI và lớn dần tới Trăng tròn.',
+            'Sáng ở bên TRÁI và nhỏ dần tới Không Trăng.',
+            'Sáng ở phía trên đỉnh Mặt Trăng.'
+          ],
+          ans: 0,
+          exp: 'Tuyệt vời! Mẹo dễ nhớ: Nửa đầu tháng sáng bên PHẢI (lớn dần), nửa cuối tháng sáng bên TRÁI (nhỏ dần).'
+        }
+      ];
+
+      var answeredCorrect = {};
+
+      function renderQuiz() {
+        var box = document.getElementById('quizContainer');
+        if (!box) return;
+        box.innerHTML = QUIZ_DATA.map(function (item, idx) {
+          var btns = item.opts.map(function (opt, oIdx) {
+            return '<button type="button" onclick="checkQuiz(' + idx + ',' + oIdx + ')" id="q-' + idx + '-o-' + oIdx + '" class="w-full text-left px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/70 hover:border-indigo-400 text-xs sm:text-sm transition">' + opt + '</button>';
+          }).join('');
+          return (
+            '<div class="rounded-2xl p-4 border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/40 space-y-2.5">' +
+              '<div class="font-bold text-sm text-slate-900 dark:text-white">' + item.q + '</div>' +
+              '<div class="grid grid-cols-1 gap-2">' + btns + '</div>' +
+              '<div id="q-fb-' + idx + '" class="hidden text-xs font-semibold rounded-xl px-3 py-2"></div>' +
+            '</div>'
+          );
+        }).join('');
+      }
+
+      window.checkQuiz = function (qIdx, oIdx) {
+        var item = QUIZ_DATA[qIdx];
+        var fb = document.getElementById('q-fb-' + qIdx);
+        var isRight = (oIdx === item.ans);
+
+        item.opts.forEach(function (_, i) {
+          var b = document.getElementById('q-' + qIdx + '-o-' + i);
+          if (!b) return;
+          b.className = 'w-full text-left px-3.5 py-2.5 rounded-xl border text-xs sm:text-sm transition ' +
+            (i === oIdx
+              ? (isRight
+                ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200 font-bold'
+                : 'border-rose-500 bg-rose-50 dark:bg-rose-900/40 text-rose-800 dark:text-rose-200 font-bold')
+              : 'border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/70 hover:border-indigo-400');
+        });
+
+        if (isRight) {
+          answeredCorrect[qIdx] = true;
+          fb.textContent = '✅ ' + item.exp;
+          fb.className = 'text-xs font-semibold rounded-xl px-3 py-2 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200';
+        } else {
+          fb.textContent = '❌ Chưa đúng rồi! Hãy xoay thử hình 3D ở trên rồi chọn lại nhé.';
+          fb.className = 'text-xs font-semibold rounded-xl px-3 py-2 bg-rose-100 dark:bg-rose-900/40 text-rose-800 dark:text-rose-200';
+        }
+
+        var count = Object.keys(answeredCorrect).length;
+        document.getElementById('quizScore').textContent = count + ' / 5 ⭐' + (count === 5 ? ' 🏆 Xuất sắc!' : '');
+      };
+
+      // Khởi chạy toàn bộ trang
+      renderQuiz();
+      setSpeed(1);
+      setScenario('normal');
+      init3D();
+    })();
+  </script>
+</body>
+</html>

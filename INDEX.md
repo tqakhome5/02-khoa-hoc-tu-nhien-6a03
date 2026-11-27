@@ -26,6 +26,7 @@
 | 15 | **Sinh học** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Sinh 6** | [sinh-tong-quan-on-thi.html](sinh-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 4 Nguyên lý + 4 Hình SGK tương tác + 6 Bẫy thi + 16 Flashcard + 10 Tự luận + Đề 25 câu |
 | 16 | **Vật lí** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Vật lí 6** | [ly-tong-quan-on-thi.html](ly-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 3 Nguyên lý + 4 Mô phỏng SGK (Lò xo, Đèn LED 100J) + 6 Bẫy + 16 Flashcard + 10 Tự luận + Đề 25 câu |
 | 17 | **Thiên văn** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Thiên văn 6** | [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 3 Nguyên lý + 4 Mô phỏng SGK (Ngày đêm, 8 Pha Trăng, 8 Hành tinh, Ngân Hà) + 6 Bẫy + 12 Flashcard + 8 Tự luận + Đề 20 câu |
+| 18 | **Thiên văn** | **🪐 Chuyên đề 3D: Mặt Trời – Trái Đất – Mặt Trăng (1 Tuần Trăng)** | [thien-van-chuyen-de-mat-trang-3d.html](thien-van-chuyen-de-mat-trang-3d.html) | ✅ Sẵn sàng | Mô phỏng Three.js 3D xoay 360°: Quỹ đạo nghiêng 5°, 8 Pha Trăng (Góc nhìn từ Trái Đất), Nhật thực & Nguyệt thực + Quiz 5 sao |
 
 ### CODE MAP (Định vị mã nguồn cho các file HTML tổng hợp > 500 dòng)
 
@@ -49,6 +50,8 @@
 | [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | Tab 1–2: Mind Map SVG, 3 Nguyên lý & 4 Mô phỏng SGK (HTML) | `75–316` | Ngày đêm · 8 Pha Mặt Trăng · 8 Hành tinh · Ngân Hà |
 | [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | Tab 3–5: 6 Bẫy, 12 Flashcard, 8 Tự luận & Đề 20 câu (HTML) | `317–409` | 6 bảng vượt bẫy + 8 tự luận + khung đề 20 câu |
 | [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | Script: Tabs, Mô phỏng, Flashcard, Tự luận & Đề 20 câu | `410–730` | `updateSunSim()`, `selectMoonPhase()`, `selectPlanet()`, `EXAM_BANK` |
+| [thien-van-chuyen-de-mat-trang-3d.html](thien-van-chuyen-de-mat-trang-3d.html) | Giao diện 3D, Góc nhìn từ Trái Đất, 3 Thẻ giải đáp & Quiz 5 sao | `45–290` | 3 kịch bản (Thường · Nhật thực · Nguyệt thực), 4 góc camera, 8 nút pha |
+| [thien-van-chuyen-de-mat-trang-3d.html](thien-van-chuyen-de-mat-trang-3d.html) | Script Three.js 3D, Canvas 2D Pha Trăng, TTS & Quiz | `297–760` | `init3D()`, `updateSimulation()`, `updateEarthView2D()`, `setScenario()`, `QUIZ_DATA` |
 
 ---
 
