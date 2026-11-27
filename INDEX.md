@@ -27,6 +27,7 @@
 | 16 | **Vật lí** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Vật lí 6** | [ly-tong-quan-on-thi.html](ly-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 3 Nguyên lý + 4 Mô phỏng SGK (Lò xo, Đèn LED 100J) + 6 Bẫy + 16 Flashcard + 10 Tự luận + Đề 25 câu |
 | 17 | **Thiên văn** | **⭐ Trung tâm Tổng quan & Ôn thi 10 điểm Thiên văn 6** | [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | ✅ Sẵn sàng | Mind Map SVG + 3 Nguyên lý + 4 Mô phỏng SGK (Ngày đêm, 8 Pha Trăng, 8 Hành tinh, Ngân Hà) + 6 Bẫy + 12 Flashcard + 8 Tự luận + Đề 20 câu |
 | 18 | **Thiên văn** | **🪐 Chuyên đề 3D: Mặt Trời – Trái Đất – Mặt Trăng (1 Tuần Trăng)** | [thien-van-chuyen-de-mat-trang-3d.html](thien-van-chuyen-de-mat-trang-3d.html) | ✅ Sẵn sàng | Mô phỏng Three.js 3D xoay 360° + Tra cứu pha Trăng hôm nay/ngày bất kỳ + Hỏi–Đáp Nhật/Nguyệt thực thuộc pha nào + Quiz 5 sao |
+| 19 | **Tổng hợp HK1** | **🎯 Chuyên đề Ôn tập Học kì I (2026–2027)** | [on-tap-hk1.html](on-tap-hk1.html) | ✅ Sẵn sàng | 12 bài trọng tâm (Hoá 12–15 · Sinh 22, 23, 25–27 · Lí 7, 8, 40) + 12 Flashcard + Luyện & Giải 9 bài đề cương + Đề thi thử 16 TN & 4 TL + Checklist |
 
 ### CODE MAP (Định vị mã nguồn cho các file HTML tổng hợp > 500 dòng)
 
@@ -52,6 +53,9 @@
 | [thien-van-tong-quan-on-thi.html](thien-van-tong-quan-on-thi.html) | Script: Tabs, Mô phỏng, Flashcard, Tự luận & Đề 20 câu | `410–730` | `updateSunSim()`, `selectMoonPhase()`, `selectPlanet()`, `EXAM_BANK` |
 | [thien-van-chuyen-de-mat-trang-3d.html](thien-van-chuyen-de-mat-trang-3d.html) | Giao diện 3D, Góc nhìn từ Trái Đất, 3 Thẻ giải đáp & Quiz 5 sao | `45–290` | 3 kịch bản (Thường · Nhật thực · Nguyệt thực), 4 góc camera, 8 nút pha |
 | [thien-van-chuyen-de-mat-trang-3d.html](thien-van-chuyen-de-mat-trang-3d.html) | Script Three.js 3D, Canvas 2D Pha Trăng, TTS & Quiz | `297–760` | `init3D()`, `updateSimulation()`, `updateEarthView2D()`, `setScenario()`, `QUIZ_DATA` |
+| [on-tap-hk1.html](on-tap-hk1.html) | Tab 1: Kiến thức 12 bài trọng tâm (Hoá–Sinh–Lí) & SVG vi khuẩn | `96–295` | Bộ lọc 3 môn, TTS từng môn/cả 3 môn, lưới 12 Flashcard |
+| [on-tap-hk1.html](on-tap-hk1.html) | Tab 2: Luyện & Giải trọn bộ 9 bài đề cương HK1 | `297–510` | Bài 1 điền khuyết tương tác, Bài 5 bảng 5 giới + SVG khoá lưỡng phân, Bài 8c ghép nhiệt kế |
+| [on-tap-hk1.html](on-tap-hk1.html) | Tab 3–4 & Script: Đề thi thử 16 TN + 4 TL & Checklist localStorage | `512–745` | `EXAM_BANK`, `gradeExam()`, `retryWrongOnly()`, `ESSAY_BANK`, `CHECK_KEY` |
 
 ---
 
